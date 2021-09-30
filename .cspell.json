@@ -1,0 +1,10 @@
+﻿{
+    "version": "0.1",
+    "import": ["node_modules\\cspell-dict-ru_ru\\cspell-ext.json"],
+    "language": "en_US",
+    "dictionaryDefinitions": [
+        { "name": "customWords", "path": ".words" },
+    ],
+    "dictionaries": ["companies", "misc", "softwareTerms", "ru-ru", "russianWords", "englishWords"],
+    "ignorePaths": ["*.(json|lock|pdf|zip)", "node_modules", ".vscode"]
+}
