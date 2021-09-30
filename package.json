@@ -1,17 +1,17 @@
 {
-    "name": "business",
-    "version": "0.0.1",
-    "description": "Business projects",
-    "author": "Roman Petrov",
-    "private": true,
-    "devDependencies": {
-        "cspell": "5.8.2",
-        "cspell-dict-ru_ru": "1.4.0",
-        "prettier": "2.3.2"
-    },
-    "scripts": {
-        "build": "yarn prettier && yarn cspell",
-        "prettier": "prettier **/*.{json} --check",
-        "cspell": "cspell --no-progress **/*.*"
-    }
+  "name": "business",
+  "version": "0.0.1",
+  "description": "Business projects",
+  "author": "Roman Petrov",
+  "private": true,
+  "devDependencies": {
+    "cspell": "5.11.1",
+    "cspell-dict-ru_ru": "1.4.0",
+    "prettier": "2.4.1"
+  },
+  "scripts": {
+    "build": "yarn prettier && yarn cspell",
+    "prettier": "prettier **/*.json --check",
+    "cspell": "cspell --no-progress **/*.*"
+  }
 }

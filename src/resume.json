@@ -84,11 +84,7 @@
     {
       "name": "JobWindow",
       "description": "Job search system",
-      "keywords": [
-        "PHP",
-        "JavaScript",
-        "HTML"
-      ],
+      "keywords": ["PHP", "JavaScript", "HTML"],
       "startDate": "2019-01-01",
       "endDate": "2021-01-01",
       "url": "https://www.cpslabs.net/project/jobwindow-2-3.html",
@@ -99,14 +95,7 @@
     {
       "name": "ActiveSWF",
       "description": "PowerPoint to Flash conversion ActiveX component",
-      "keywords": [
-        "ActiveX",
-        "C++",
-        "Flash",
-        "ActionScript",
-        "SWF",
-        "Charts"
-      ],
+      "keywords": ["ActiveX", "C++", "Flash", "ActionScript", "SWF", "Charts"],
       "startDate": "2019-01-01",
       "endDate": "2021-01-01",
       "url": "http://web.archive.org/web/20060901042752/http://www.activeswf.com/",
@@ -117,14 +106,7 @@
     {
       "name": "SilverX",
       "description": "Flash to Silverlight conversion application",
-      "keywords": [
-        "Silverlight",
-        "WPF",
-        "C#",
-        "PHP",
-        "HTML",
-        "JavaScript"
-      ],
+      "keywords": ["Silverlight", "WPF", "C#", "PHP", "HTML", "JavaScript"],
       "startDate": "2019-01-01",
       "endDate": "2021-01-01",
       "url": "http://web.archive.org/web/20130406211226/http://www.silverx.net/",
@@ -135,14 +117,7 @@
     {
       "name": "TLUI",
       "description": "User-interface development framework with components.",
-      "keywords": [
-        "HTML",
-        "JavaScript",
-        "AngularJS",
-        "TypeScript",
-        "Dart",
-        "Flutter"
-      ],
+      "keywords": ["HTML", "JavaScript", "AngularJS", "TypeScript", "Dart", "Flutter"],
       "startDate": "2019-01-01",
       "endDate": "2021-01-01",
       "roles": ["Team Lead"],
