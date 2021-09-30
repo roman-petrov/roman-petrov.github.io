@@ -11,7 +11,7 @@
   },
   "scripts": {
     "build": "yarn prettier && yarn cspell",
-    "prettier": "prettier . --check",
-    "cspell": "cspell --no-progress ."
+    "prettier": "prettier --check .",
+    "cspell": "cspell --no-progress **"
   }
 }

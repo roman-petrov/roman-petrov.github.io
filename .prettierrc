@@ -7,7 +7,7 @@
     "proseWrap": "always",
     "overrides": [
         {
-            "files": ["*.html", "*.yaml", "*.json", "*.md"],
+            "files": ["*.json"],
             "options": {
                 "tabWidth": 2
             }
