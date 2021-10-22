@@ -1,4 +1,4 @@
-﻿{
+{
   "basics": {
     "name": "Roman Petrov",
     "label": "Programmer",
@@ -11,7 +11,8 @@
         "username": "roman-petrov",
         "url": "https://github.com/roman-petrov"
       }
-    ]
+    ],
+    "location": {}
   },
   "work": [
     {

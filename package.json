@@ -7,12 +7,16 @@
   "devDependencies": {
     "cspell": "5.11.1",
     "cspell-dict-ru_ru": "1.4.0",
+    "jsonresume-theme-elegant": "1.16.1",
     "prettier": "2.4.1",
+    "resume-cli": "3.0.5",
     "resume-schema": "1.0.0"
   },
   "scripts": {
-    "build": "yarn prettier && yarn cspell",
+    "build": "yarn prettier && yarn cspell && yarn resume-validate && yarn resume-build",
     "prettier": "prettier --check .",
-    "cspell": "cspell --no-progress **"
+    "cspell": "cspell --no-progress **",
+    "resume-validate": "resume export -r src/resume.json -f pdf -t .\\node_modules\\jsonresume-theme-elegant resume.pdf",
+    "resume-build": "resume validate -r src/resume.json"
   }
 }
