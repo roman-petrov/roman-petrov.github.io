@@ -19,5 +19,12 @@
     "node_modules": true
   },
   "files.encoding": "utf8bom",
-  "files.insertFinalNewline": true
+  "files.insertFinalNewline": true,
+  // json
+  "json.schemas": [
+    {
+      "fileMatch": ["resume.json"],
+      "url": "./node_modules/resume-schema/schema.json"
+    }
+  ]
 }
