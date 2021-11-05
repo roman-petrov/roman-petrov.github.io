@@ -1,5 +1,0 @@
-﻿petrov
-gpgpu
-silverlight
-tlui
-jsonresume

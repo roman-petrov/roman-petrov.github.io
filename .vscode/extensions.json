@@ -1,9 +1,0 @@
-{
-  "recommendations": [
-    // Code style
-    "esbenp.prettier-vscode",
-    "streetsidesoftware.code-spell-checker",
-    // Style
-    "vscode-icons-team.vscode-icons"
-  ]
-}

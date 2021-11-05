@@ -1,1 +1,0 @@
-@call yarn upgrade-interactive --latest
