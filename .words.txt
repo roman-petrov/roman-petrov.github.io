@@ -3,12 +3,11 @@ beeline
 bunx
 cpslabs
 fontsource
-Fraunces
 glassmorphism
 habrahabr
-Outfit
 Huffman
 ispringsolutions
+jetbrains
 JobWindow
 networkidle
 Occam
