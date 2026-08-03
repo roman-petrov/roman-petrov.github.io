@@ -94,10 +94,10 @@ design:
   theme: classic
   page:
     size: a4
-    top_margin: 0.65in
-    bottom_margin: 0.6in
-    left_margin: 0.7in
-    right_margin: 0.7in
+    top_margin: 0.6in
+    bottom_margin: 0.55in
+    left_margin: 0.65in
+    right_margin: 0.65in
     show_footer: true
     show_top_note: false
   colors:
@@ -109,7 +109,7 @@ design:
     links: rgb(20, 95, 120)
     footer: rgb(150, 155, 160)
   typography:
-    line_spacing: 0.65em
+    line_spacing: 0.75em
     alignment: left
     date_and_location_column_alignment: right
     font_family:
@@ -119,11 +119,11 @@ design:
       connections: Lato
       section_titles: Lato
     font_size:
-      body: 10pt
-      name: 28pt
-      headline: 11pt
-      connections: 9.5pt
-      section_titles: 1.2em
+      body: 11pt
+      name: 32pt
+      headline: 12pt
+      connections: 10.5pt
+      section_titles: 1.35em
     small_caps:
       name: false
       headline: true
@@ -133,48 +133,48 @@ design:
       name: true
       headline: false
       connections: false
-      section_titles: false
+      section_titles: true
   links:
     underline: false
     show_external_link_icon: false
   header:
     alignment: left
-    space_below_name: 0.25cm
-    space_below_headline: 0.4cm
-    space_below_connections: 0.6cm
+    space_below_name: 0.3cm
+    space_below_headline: 0.45cm
+    space_below_connections: 0.7cm
     connections:
       phone_number_format: international
       hyperlink: true
       show_icons: true
       display_urls_instead_of_usernames: false
       separator: "·"
-      space_between_connections: 0.45cm
+      space_between_connections: 0.5cm
   section_titles:
     type: with_partial_line
-    line_thickness: 0.7pt
-    space_above: 0.55cm
-    space_below: 0.3cm
+    line_thickness: 1pt
+    space_above: 0.85cm
+    space_below: 0.4cm
   sections:
     allow_page_break: true
-    space_between_regular_entries: 1em
-    space_between_text_based_entries: 0.32em
+    space_between_regular_entries: 1.2em
+    space_between_text_based_entries: 0.4em
     show_time_spans_in:
       - "💼 Experience"
   entries:
-    date_and_location_width: 3.8cm
+    date_and_location_width: 3.9cm
     side_space: 0.2cm
     space_between_columns: 0.15cm
     allow_page_break: false
     short_second_row: true
     summary:
-      space_above: 0.12cm
+      space_above: 0.14cm
       space_left: 0cm
     highlights:
       bullet: "•"
       nested_bullet: "◦"
       space_left: 0.15cm
-      space_above: 0.1cm
-      space_between_items: 0.1cm
+      space_above: 0.12cm
+      space_between_items: 0.12cm
       space_between_bullet_and_text: 0.5em
   templates:
     footer: "*NAME — PAGE_NUMBER/TOTAL_PAGES*"
