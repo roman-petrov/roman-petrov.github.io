@@ -1,0 +1,19 @@
+{
+  "recommendations": [
+    // IDE
+    "vscode-icons-team.vscode-icons",
+    "aaron-bond.better-comments",
+    "shardulm94.trailing-spaces",
+    "usernamehw.errorlens",
+    "fabiospampinato.vscode-highlight",
+    "oven.bun-vscode",
+    // Linters
+    "esbenp.prettier-vscode",
+    "DavidAnson.vscode-markdownlint",
+    "streetsidesoftware.code-spell-checker",
+    "stylelint.vscode-stylelint",
+    // Markdown
+    "yzhang.markdown-all-in-one",
+    "shd101wyy.markdown-preview-enhanced"
+  ]
+}

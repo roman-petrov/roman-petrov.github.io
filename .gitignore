@@ -1,5 +1,9 @@
-node_modules/
-dist/
+# Dot files/folders
+.logs
+# Others
+**/node_modules
+bun.lockb
+dist
 *.log
 .DS_Store
 Thumbs.db

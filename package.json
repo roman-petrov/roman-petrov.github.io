@@ -1,22 +1,29 @@
 {
   "name": "resume",
   "version": "1.0.0",
-  "private": true,
-  "description": "Roman Petrov resume (HTML/CSS → PDF)",
   "type": "module",
+  "description": "Roman Petrov resume (HTML/CSS → PDF)",
+  "private": true,
   "scripts": {
-    "pdf": "node scripts/print-pdf.mjs",
-    "preview": "npx --yes serve src -l 4173",
-    "format": "prettier --write .",
-    "lint:md": "markdownlint-cli2",
-    "spell": "cspell \"**/*.{md,html,css,js,mjs,json,jsonc}\"",
-    "check": "prettier --check . && npm run lint:md && npm run spell"
+    "cspell": "cspell .",
+    "lint": "bun run prettier && bun run stylelint && bun run cspell && bun run markdownlint",
+    "markdownlint": "markdownlint .",
+    "pdf": "bun scripts/print-pdf.mjs",
+    "prettier": "prettier --check .",
+    "prettier-fix": "prettier --write .",
+    "preview": "bunx --bun serve src -l 4173",
+    "stylelint": "stylelint --max-warnings=0 \"**/*.css\"",
+    "stylelint-fix": "stylelint --fix --max-warnings=0 \"**/*.css\""
   },
   "devDependencies": {
     "@cspell/dict-ru_ru": "^2.3.2",
     "cspell": "^9.2.0",
-    "markdownlint-cli2": "^0.18.1",
+    "markdownlint-cli": "^0.45.0",
     "prettier": "^3.6.2",
-    "puppeteer": "^24.22.0"
+    "prettier-plugin-pkg": "^0.21.0",
+    "puppeteer": "^24.22.0",
+    "stylelint": "^16.23.0",
+    "stylelint-config-recess-order": "^7.1.0",
+    "stylelint-config-standard": "^39.0.0"
   }
 }

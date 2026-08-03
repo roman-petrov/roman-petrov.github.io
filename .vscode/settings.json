@@ -1,0 +1,79 @@
+{
+  // Cursor
+  "cursor.composer.usageSummaryDisplay": "always",
+  "cursor.general.disableHttp2": true,
+
+  // Window
+  "window.zoomLevel": 0.4,
+
+  // Workbench
+  "workbench.colorTheme": "Default Dark Modern",
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.sideBar.location": "right",
+  "workbench.activityBar.orientation": "vertical",
+
+  // Explorer
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.expand": false,
+  "explorer.fileNesting.patterns": {
+    "package.json": "bun.lock, bun.lockb, bunfig.toml, .bun-version, .node-version",
+    "resume.html": "resume.css, photo.png",
+    "prettier.config.js": ".prettierignore",
+    "cspell.config.js": ".words.txt",
+    ".markdownlint.json": ".markdownlintignore"
+  },
+
+  // Editor
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "always",
+    "source.organizeImports": "never"
+  },
+  "editor.fontFamily": "Google Sans Code, Cascadia Code",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.linkedEditing": true,
+  "editor.rulers": [120],
+
+  // Better Comments
+  "better-comments.multilineComments": true,
+
+  // CSpell
+  "cSpell.diagnosticLevel": "Warning",
+
+  // Error Lens
+  "errorLens.gutterIconsEnabled": true,
+  "errorLens.gutterIconSet": "circle",
+  "errorLens.gutterIconSize": "150%",
+  "errorLens.messageEnabled": false,
+  "errorLens.statusBarIconsEnabled": true,
+
+  // Files
+  "files.exclude": {
+    "**/node_modules": true,
+    ".git": true,
+    "bun.lockb": true,
+    "dist": true
+  },
+
+  // Highlight
+  "highlight.regexes": {
+    "(\\{([a-z])+([A-Z][a-z]*)*\\})": {
+      "decorations": [
+        {
+          "color": "orange",
+          "fontWeight": "bold"
+        }
+      ],
+      "regexFlags": "g"
+    }
+  },
+
+  // Markdown
+  "markdown.validate.enabled": true,
+
+  // Stylelint
+  "stylelint.validate": ["css"],
+
+  // Npm / package manager
+  "npm.autoDetect": "off"
+}

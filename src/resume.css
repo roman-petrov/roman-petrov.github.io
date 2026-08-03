@@ -4,14 +4,14 @@
   --ink: #1c2430;
   --muted: #5a6572;
   --line: #d5dde6;
-  --paper: #ffffff;
+  --paper: #fff;
   --sidebar: #f0f5f9;
   --accent: #1a6aa8;
   --accent-soft: #e8f2fa;
-  --chip: #ffffff;
+  --chip: #fff;
   --sidebar-w: 14.6rem;
-  --font-display: 'Fraunces', 'Georgia', serif;
-  --font-body: 'DM Sans', 'Segoe UI', sans-serif;
+  --font-display: "Fraunces", "Georgia", serif;
+  --font-body: "DM Sans", "Segoe UI", sans-serif;
 }
 
 *,
@@ -27,12 +27,12 @@ html {
 
 body {
   margin: 0;
-  color: var(--ink);
-  background: #e8ecef;
   font-family: var(--font-body);
   font-size: 9.5pt;
-  line-height: 1.38;
   font-weight: 400;
+  line-height: 1.38;
+  color: var(--ink);
+  background: #e8ecef;
 }
 
 a {
@@ -47,11 +47,11 @@ a:hover {
 .page {
   width: 210mm;
   min-height: 297mm;
-  margin: 1.5rem auto;
   padding: 0 0 0.85rem;
-  background: var(--paper);
-  box-shadow: 0 12px 40px rgba(20, 35, 55, 0.12);
+  margin: 1.5rem auto;
   overflow: hidden;
+  background: var(--paper);
+  box-shadow: 0 12px 40px rgb(20 35 55 / 12%);
 }
 
 /* —— Header —— */
@@ -61,17 +61,17 @@ a:hover {
   gap: 1rem;
   align-items: center;
   padding: 0.95rem 1.25rem 0.85rem;
-  border-bottom: 3px solid var(--accent);
   background: linear-gradient(180deg, #f7fafc 0%, var(--paper) 100%);
+  border-bottom: 3px solid var(--accent);
 }
 
 .photo {
   width: 4.6rem;
   height: 4.6rem;
-  border-radius: 10px;
   object-fit: cover;
   border: 2px solid var(--accent-soft);
-  box-shadow: 0 2px 10px rgba(26, 106, 168, 0.14);
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgb(26 106 168 / 14%);
 }
 
 .identity h1 {
@@ -79,9 +79,9 @@ a:hover {
   font-family: var(--font-display);
   font-size: 1.75rem;
   font-weight: 650;
-  letter-spacing: -0.02em;
   line-height: 1.1;
   color: var(--ink);
+  letter-spacing: -0.02em;
 }
 
 .headline {
@@ -102,8 +102,8 @@ a:hover {
 .contacts span,
 .contacts a {
   display: inline-flex;
-  align-items: center;
   gap: 0.28rem;
+  align-items: center;
 }
 
 .contacts .ico {
@@ -120,8 +120,8 @@ a:hover {
 .sidebar {
   float: right;
   width: var(--sidebar-w);
-  margin: 0 0 0.75rem 1rem;
   padding: 0.85rem 0.85rem 0.95rem;
+  margin: 0 0 0.75rem 1rem;
   background: var(--sidebar);
   border: 1px solid var(--line);
   border-radius: 10px;
@@ -142,15 +142,15 @@ a:hover {
 
 .section-title {
   display: flex;
-  align-items: center;
   gap: 0.35rem;
-  margin: 0 0 0.55rem;
+  align-items: center;
   padding-bottom: 0.3rem;
-  border-bottom: 1.5px solid var(--line);
+  margin: 0 0 0.55rem;
   font-family: var(--font-display);
   font-size: 0.95rem;
   font-weight: 650;
   color: var(--accent);
+  border-bottom: 1.5px solid var(--line);
 }
 
 .sidebar .section-title {
@@ -159,12 +159,12 @@ a:hover {
 
 /* —— Sidebar —— */
 .meta-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
   display: grid;
   gap: 0.5rem;
+  padding: 0;
+  margin: 0;
   font-size: 0.84rem;
+  list-style: none;
 }
 
 .meta-list li {
@@ -174,15 +174,15 @@ a:hover {
 
 .meta-list .label {
   font-size: 0.68rem;
+  font-weight: 600;
+  color: var(--muted);
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  color: var(--muted);
-  font-weight: 600;
 }
 
 .meta-list .value {
   color: var(--ink);
-  word-break: break-word;
+  overflow-wrap: anywhere;
 }
 
 .chips {
@@ -194,19 +194,19 @@ a:hover {
 .chip {
   display: inline-block;
   padding: 0.16rem 0.4rem;
-  border-radius: 5px;
-  background: var(--chip);
-  border: 1px solid var(--line);
   font-size: 0.72rem;
   font-weight: 500;
-  color: var(--ink);
   line-height: 1.3;
+  color: var(--ink);
+  background: var(--chip);
+  border: 1px solid var(--line);
+  border-radius: 5px;
 }
 
 .lang-row {
   padding: 0.22rem 0;
-  border-bottom: 1px dashed var(--line);
   font-size: 0.84rem;
+  border-bottom: 1px dashed var(--line);
 }
 
 .lang-row:last-child {
@@ -234,8 +234,8 @@ a:hover {
 }
 
 .bullets {
-  margin: 0.15rem 0 0.55rem;
   padding-left: 1.05rem;
+  margin: 0.15rem 0 0.55rem;
 }
 
 .bullets li {
@@ -266,9 +266,9 @@ a:hover {
 .activity-head,
 .edu-head {
   display: flex;
-  justify-content: space-between;
-  align-items: baseline;
   gap: 0.7rem;
+  align-items: baseline;
+  justify-content: space-between;
   margin-bottom: 0.15rem;
 }
 
@@ -316,25 +316,25 @@ a:hover {
 }
 
 @page {
-  size: A4;
+  size: a4;
   margin: 9mm 11mm;
 }
 
 @media print {
   body {
-    background: none;
-    margin: 0;
     padding: 0;
+    margin: 0;
     font-size: 9.25pt;
+    background: none;
   }
 
   .page {
     width: auto;
     min-height: auto;
-    margin: 0;
     padding: 0;
-    box-shadow: none;
+    margin: 0;
     overflow: visible;
+    box-shadow: none;
   }
 
   .header {

@@ -1,6 +1,6 @@
 # Roman Petrov
 
-**Software Developer**
+Software Developer
 
 ## Details
 
@@ -69,7 +69,8 @@ September 1999 — May 2004
 **2013 — Present**  
 [www.travelline.ru](https://www.travelline.ru/)
 
-I'm currently working for TravelLine company as a front-end architect, team lead and developer. My primary goal is to move company products from outdated and ineffective development stack to Flutter:
+I'm currently working for TravelLine company as a front-end architect, team lead and developer. My primary goal is to
+move company products from outdated and ineffective development stack to Flutter:
 
 - make products cross-platform
 - improve user experience and user interface quality
@@ -77,7 +78,8 @@ I'm currently working for TravelLine company as a front-end architect, team lead
 
 **Projects:**
 
-- **TLUI3.0 (NOW)** — TravelLine User Interface library and design system based on Flutter (architect, lead developer and team lead)
+- **TLUI3.0 (NOW)** — TravelLine User Interface library and design system based on Flutter (architect, lead developer
+  and team lead)
 - **TLF** — TravelLine Flutter tool to automate workflow for company Flutter projects (single developer)
 - **TLUI** — TravelLine User Interface library and design system (lead developer and team lead)
 - Payment module front-end for online booking engine (single developer)
@@ -90,8 +92,10 @@ I'm currently working for TravelLine company as a front-end architect, team lead
 **Projects:**
 
 - Flash media player & charting library (developer)
-- [SilverX](https://web.archive.org/web/20120506055102/http://www.silverx.net/) — Flash to Silverlight converter (single developer, website developer)
-- [PowerMessage](https://web.archive.org/web/20171020002940/http://www.powermessagepro.com/) — PowerPoint add-on to build presentations from templates (single developer)
+- [SilverX](https://web.archive.org/web/20120506055102/http://www.silverx.net/) — Flash to Silverlight converter (single
+  developer, website developer)
+- [PowerMessage](https://web.archive.org/web/20171020002940/http://www.powermessagepro.com/) — PowerPoint add-on to
+  build presentations from templates (single developer)
 
 ### Lead developer and team lead at CPS Labs
 
@@ -101,26 +105,27 @@ I'm currently working for TravelLine company as a front-end architect, team lead
 **Projects:**
 
 - [JobWindow](https://www.cpslabs.net/project/jobwindow-2-3.html) — Job search system in Switzerland (developer)
-- [ActiveSWF](https://www.cpslabs.net/product/activeswf-3-5.html) — SWF file (Flash) generation library (single developer)
-- SlingPlayer — Streaming media player for [SlingMedia](https://en.wikipedia.org/wiki/Sling_Media) (lead developer and team lead)
+- [ActiveSWF](https://www.cpslabs.net/product/activeswf-3-5.html) — SWF file (Flash) generation library (single
+  developer)
+- SlingPlayer — Streaming media player for [SlingMedia](https://en.wikipedia.org/wiki/Sling_Media) (lead developer and
+  team lead)
 
 ## Challenging activities
 
-### Machine learning contest
+### Machine learning contest (2015)
 
-**2015**
-
-I took part in the Beeline Big Data contest. It was my first experience in machine learning so it's been quite a challenge for me. I was ranked the 236 out of 832 participants.
+I took part in the Beeline Big Data contest. It was my first experience in machine learning so it's been quite a
+challenge for me. I was ranked the 236 out of 832 participants.
 
 **References (in Russian):**
 
 - Contest info and results at [beeline.ru](https://special.habrahabr.ru/beeline/)
 
-### ZX-Spectrum
+### ZX-Spectrum (1995 — 2000)
 
-**1995 — 2000**
-
-During my school years my favorite hobby was assembler programming on ZX-Spectrum. I'm the author of RIP (Real Information Packer) — LZW/Huffman data compression algorithm and application. This was a challenge and I managed to achieve one of the best compression ratios compared to other ZX-Spectrum data compression tools.
+During my school years my favorite hobby was assembler programming on ZX-Spectrum. I'm the author of RIP (Real
+Information Packer) — LZW/Huffman data compression algorithm and application. This was a challenge and I managed to
+achieve one of the best compression ratios compared to other ZX-Spectrum data compression tools.
 
 **References (in Russian):**
 
