@@ -7,13 +7,11 @@
     "beeline",
     "cpslabs",
     "cspell",
-    "engineeringclassic",
-    "engineeringresumes",
+    "Fraunces",
     "habrahabr",
     "Huffman",
     "ispringsolutions",
     "JobWindow",
-    "Lato",
     "markdownlint",
     "Occam",
     "Petrov",
@@ -22,7 +20,7 @@
     "PowerMessage",
     "prettierignore",
     "prettierrc",
-    "rendercv",
+    "puppeteer",
     "romanpetrov",
     "Silverlight",
     "SilverX",
@@ -32,9 +30,16 @@
     "travelline",
     "TLF",
     "TLUI",
-    "Typst",
     "Yoshkar",
     "zxpress"
   ],
-  "ignorePaths": ["node_modules", "rendercv_output", "package-lock.json", "*.pdf", "*.png", "*.typ"]
+  "ignorePaths": [
+    "node_modules",
+    "rendercv_output",
+    "dist",
+    "package-lock.json",
+    "*.pdf",
+    "*.png",
+    "*.typ"
+  ]
 }
