@@ -12,7 +12,7 @@ export const meta = {
   photo: "photo.png",
   pdf: "Roman_Petrov_CV.pdf",
   github: "https://github.com/roman-petrov",
-  siteUrl: "https://roman-petrov.github.io/resume/",
+  siteUrl: "https://roman-petrov.github.io/",
 };
 
 export const contacts = [
