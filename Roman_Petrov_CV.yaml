@@ -9,146 +9,177 @@ cv:
     - network: GitHub
       username: roman-petrov
   sections:
-    profile:
-      - My favorite tool in software development is Occam's razor. I prefer functional programming to an object-oriented approach; my favorite code unit is the pure function.
-      - "Looking for a company that cares about **code quality**, **user experience**, and provides room to grow as a professional."
-    proficiency:
-      - bullet: "**problem solving** — analysis, communication, decomposition, MVP"
-      - bullet: "**programming** — modular, testable, readable, compact, efficient code"
-      - bullet: "**code quality** — automated analysis, linting, code review"
-      - bullet: "**project workflow** — automation, simplification, documentation"
-      - bullet: "**user experience** — simplicity, visual perfection, screenshot tests"
-      - bullet: "**open source** — use, contribute, learn"
-    education:
-      - institution: Volga State University of Technology
-        area: Yoshkar-Ola
-        degree: Master
-        start_date: 1999-09
-        end_date: 2004-05
-    experience:
+    "🛠 Skills":
+      - label: "💻 Skills"
+        details: Programming · User experience · Git · Dart/Flutter · TypeScript/JavaScript · HTML / CSS · React · C# · C/C++ · Markdown
+      - label: "🌍 Languages"
+        details: English · Russian
+      - label: "🎸 Hobbies"
+        details: Programming, Travel, Camping, Guitar
+
+    "👤 Profile":
+      - My favorite tool in software development is Occam's razor.
+      - "The areas of my proficiency are:"
+
+    "✨ Proficiency":
+      - bullet: "**problem solving:** analysis, communication, decomposition, MVP"
+      - bullet: "**programming:** modular, testable, readable, compact, efficient code"
+      - bullet: "**code quality:** automated code analysis, linting, code review"
+      - bullet: "**project workflow:** automation, simplification, documentation"
+      - bullet: "**user experience:** simplicity, visual perfection, screenshot tests"
+      - bullet: "**open source:** use, contribute, learn"
+
+    "💭 Looking for":
+      - name: "I prefer functional programming to object oriented approach and my favorite code unit is pure function."
+        summary: "I would like to land a software developer position in a company that"
+        highlights:
+          - cares about the code quality in projects
+          - cares about the user experience quality in products
+          - provides possibilities to grow as professional
+
+    "💼 Experience":
       - company: "[TravelLine](https://www.travelline.ru/)"
         position: Lead developer and team lead
         start_date: 2013
         end_date: present
-        summary: Front-end architect, team lead and developer — moving company products from an outdated stack to Flutter.
+        summary: "I'm currently working for TravelLine company as a front-end architect, team lead and developer. My primary goal is to move company products from outdated and ineffective development stack to Flutter:"
         highlights:
-          - Cross-platform products; stronger UX/UI; Flutter ecosystem, tools, components, and workflow
-          - "**TLUI3.0 (NOW)** — Flutter UI library and design system (architect, lead developer, team lead)"
-          - "**TLF** — Flutter workflow automation for company projects (single developer)"
-          - "**TLUI** — UI library and design system (lead developer, team lead)"
+          - make products cross-platform
+          - improve user experience and user interface quality
+          - design and develop Flutter ecosystem, tools, components, and workflow
+          - "**TLUI3.0 (NOW)** — TravelLine User Interface library and design system based on Flutter (architect, lead developer and team lead)"
+          - "**TLF** — TravelLine Flutter tool to automate workflow for company Flutter projects (single developer)"
+          - "**TLUI** — TravelLine User Interface library and design system (lead developer and team lead)"
           - Payment module front-end for online booking engine (single developer)
       - company: "[iSpring](http://www.ispringsolutions.com/)"
         position: Developer
         start_date: 2007
         end_date: 2013
         highlights:
-          - Flash media player and charting library (developer)
-          - "[SilverX](https://web.archive.org/web/20120506055102/http://www.silverx.net/) — Flash to Silverlight converter (single developer)"
-          - "[PowerMessage](https://web.archive.org/web/20171020002940/http://www.powermessagepro.com/) — PowerPoint add-on for template-based presentations (single developer)"
+          - Flash media player & charting library (developer)
+          - "[SilverX](https://web.archive.org/web/20120506055102/http://www.silverx.net/) — Flash to Silverlight converter (single developer, website developer)"
+          - "[PowerMessage](https://web.archive.org/web/20171020002940/http://www.powermessagepro.com/) — PowerPoint add-on to build presentations from templates (single developer)"
       - company: "[CPS Labs](https://www.cpslabs.net/)"
         position: Lead developer and team lead
         start_date: 2003
         end_date: 2007
         highlights:
           - "[JobWindow](https://www.cpslabs.net/project/jobwindow-2-3.html) — Job search system in Switzerland (developer)"
-          - "[ActiveSWF](https://www.cpslabs.net/product/activeswf-3-5.html) — SWF (Flash) generation library (single developer)"
-          - "SlingPlayer — Streaming media player for [SlingMedia](https://en.wikipedia.org/wiki/Sling_Media) (lead developer, team lead)"
-    challenging_activities:
-      - name: Machine learning contest
+          - "[ActiveSWF](https://www.cpslabs.net/product/activeswf-3-5.html) — SWF file (Flash) generation library (single developer)"
+          - "SlingPlayer — Streaming media player for [SlingMedia](https://en.wikipedia.org/wiki/Sling_Media) (lead developer and team lead)"
+
+    "🚀 Challenging activities":
+      - name: "🏆 Machine learning contest"
         date: 2015
-        summary: "Beeline Big Data contest — first ML experience; ranked **236 / 832**. [Results](https://special.habrahabr.ru/beeline/)."
-      - name: ZX-Spectrum / RIP
+        summary: I took part in the Beeline Big Data contest. It was my first experience in machine learning so it's been quite a challenge for me. I was ranked the 236 out of 832 participants.
+        highlights:
+          - "References (in Russian): contest info and results at [beeline.ru](https://special.habrahabr.ru/beeline/)"
+      - name: "🕹 ZX-Spectrum"
         start_date: 1995
         end_date: 2000
-        summary: "Author of RIP (Real Information Packer) — LZW/Huffman compression with one of the best ratios on ZX-Spectrum. [About](https://speccy.info/%D0%A0%D0%BE%D0%BC%D0%B0%D0%BD_%D0%9F%D0%B5%D1%82%D1%80%D0%BE%D0%B2) · [RIP](https://speccy.info/RIP_(%D1%83%D0%BF%D0%B0%D0%BA%D0%BE%D0%B2%D1%89%D0%B8%D0%BA)) · [zxpress.ru](https://zxpress.ru/article.php?id=8510)"
-    skills:
-      - label: Technical
-        details: Dart/Flutter, TypeScript/JavaScript, HTML/CSS, React, C#, C/C++, Git, Markdown
-      - label: Focus
-        details: Programming, user experience, code quality
-      - label: Languages
-        details: English, Russian
-      - label: Hobbies
-        details: Programming, travel, camping, guitar
+        summary: During my school years my favorite hobby was assembler programming on ZX-Spectrum. I'm the author of RIP (Real Information Packer) — LZW/Huffman data compression algorithm and application. This was a challenge and I managed to achieve one of the best compression ratios compared to other ZX-Spectrum data compression tools.
+        highlights:
+          - "About me at [speccy.info](https://speccy.info/%D0%A0%D0%BE%D0%BC%D0%B0%D0%BD_%D0%9F%D0%B5%D1%82%D1%80%D0%BE%D0%B2)"
+          - "RIP at [speccy.info](https://speccy.info/RIP_(%D1%83%D0%BF%D0%B0%D0%BA%D0%BE%D0%B2%D1%89%D0%B8%D0%BA))"
+          - "About RIP at [zxpress.ru](https://zxpress.ru/article.php?id=8510)"
+
+    "🎓 Education":
+      - institution: Volga State University of Technology
+        area: Yoshkar-Ola
+        degree: Master
+        start_date: 1999-09
+        end_date: 2004-05
+
 design:
-  theme: engineeringresumes
+  theme: classic
   page:
     size: a4
-    top_margin: 0.5in
-    bottom_margin: 0.45in
-    left_margin: 0.55in
-    right_margin: 0.55in
+    top_margin: 0.65in
+    bottom_margin: 0.6in
+    left_margin: 0.7in
+    right_margin: 0.7in
     show_footer: true
     show_top_note: false
   colors:
-    body: rgb(28, 28, 28)
-    name: rgb(18, 52, 90)
-    headline: rgb(18, 52, 90)
-    connections: rgb(50, 60, 70)
-    section_titles: rgb(18, 52, 90)
-    links: rgb(18, 52, 90)
-    footer: rgb(130, 130, 130)
+    body: rgb(32, 36, 40)
+    name: rgb(15, 70, 95)
+    headline: rgb(70, 85, 95)
+    connections: rgb(75, 90, 100)
+    section_titles: rgb(15, 70, 95)
+    links: rgb(20, 95, 120)
+    footer: rgb(150, 155, 160)
   typography:
-    line_spacing: 0.5em
+    line_spacing: 0.65em
     alignment: left
+    date_and_location_column_alignment: right
     font_family:
-      body: Source Sans 3
-      name: Source Sans 3
-      headline: Source Sans 3
-      connections: Source Sans 3
-      section_titles: Source Sans 3
+      body: Lato
+      name: Lato
+      headline: Lato
+      connections: Lato
+      section_titles: Lato
     font_size:
-      body: 9.5pt
-      name: 22pt
-      headline: 10.5pt
-      connections: 9pt
-      section_titles: 1.15em
+      body: 10pt
+      name: 28pt
+      headline: 11pt
+      connections: 9.5pt
+      section_titles: 1.2em
+    small_caps:
+      name: false
+      headline: true
+      connections: false
+      section_titles: true
     bold:
       name: true
-      section_titles: true
+      headline: false
+      connections: false
+      section_titles: false
   links:
     underline: false
     show_external_link_icon: false
   header:
     alignment: left
-    space_below_name: 0.18cm
-    space_below_headline: 0.28cm
-    space_below_connections: 0.35cm
+    space_below_name: 0.25cm
+    space_below_headline: 0.4cm
+    space_below_connections: 0.6cm
     connections:
       phone_number_format: international
       hyperlink: true
       show_icons: true
       display_urls_instead_of_usernames: false
-      separator: "|"
-      space_between_connections: 0.3cm
+      separator: "·"
+      space_between_connections: 0.45cm
   section_titles:
-    type: with_full_line
-    line_thickness: 0.5pt
-    space_above: 0.32cm
-    space_below: 0.16cm
+    type: with_partial_line
+    line_thickness: 0.7pt
+    space_above: 0.55cm
+    space_below: 0.3cm
   sections:
     allow_page_break: true
-    space_between_regular_entries: 0.35cm
-    space_between_text_based_entries: 0.12cm
+    space_between_regular_entries: 1em
+    space_between_text_based_entries: 0.32em
     show_time_spans_in:
-      - experience
+      - "💼 Experience"
   entries:
-    date_and_location_width: 3.4cm
-    side_space: 0.1cm
-    space_between_columns: 0.08cm
+    date_and_location_width: 3.8cm
+    side_space: 0.2cm
+    space_between_columns: 0.15cm
     allow_page_break: false
     short_second_row: true
     summary:
-      space_above: 0.04cm
+      space_above: 0.12cm
       space_left: 0cm
     highlights:
       bullet: "•"
       nested_bullet: "◦"
-      space_left: 0cm
-      space_above: 0.04cm
-      space_between_items: 0.04cm
-      space_between_bullet_and_text: 0.35em
+      space_left: 0.15cm
+      space_above: 0.1cm
+      space_between_items: 0.1cm
+      space_between_bullet_and_text: 0.5em
   templates:
+    footer: "*NAME — PAGE_NUMBER/TOTAL_PAGES*"
+    one_line_entry:
+      main_column: "**LABEL** · DETAILS"
     education_entry:
       main_column: |-
         **DEGREE**, INSTITUTION
@@ -160,7 +191,8 @@ design:
         DATE
     experience_entry:
       main_column: |-
-        **POSITION**, COMPANY
+        **COMPANY**
+        *POSITION*
         SUMMARY
         HIGHLIGHTS
       date_and_location_column: |-
@@ -171,10 +203,10 @@ design:
         SUMMARY
         HIGHLIGHTS
       date_and_location_column: DATE
-    one_line_entry:
-      main_column: "**LABEL:** DETAILS"
+
 locale:
   language: english
+
 settings:
   current_date: today
   render_command:
