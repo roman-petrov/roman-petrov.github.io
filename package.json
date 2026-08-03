@@ -5,7 +5,7 @@
   "description": "Roman Petrov resume (HTML/CSS → PDF)",
   "private": true,
   "scripts": {
-    "build": "bun run pdf",
+    "build": "bun scripts/build.mjs",
     "ci": "bun run lint && bun run build",
     "cspell": "cspell .",
     "lint": "bun run prettier && bun run stylelint && bun run cspell && bun run markdownlint",
@@ -13,7 +13,7 @@
     "pdf": "bun scripts/print-pdf.mjs",
     "prettier": "prettier --check .",
     "prettier-fix": "prettier --write .",
-    "preview": "bunx --bun serve . -l 4173",
+    "preview": "bun run build && bunx --bun serve dist -l 4173",
     "stylelint": "stylelint --max-warnings=0 \"**/*.css\"",
     "stylelint-fix": "stylelint --fix --max-warnings=0 \"**/*.css\""
   },

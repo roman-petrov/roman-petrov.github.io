@@ -1,17 +1,14 @@
-import { pathToFileURL } from "node:url";
 import path from "node:path";
-import { fileURLToPath } from "node:url";
-import { mkdir } from "node:fs/promises";
+import { fileURLToPath, pathToFileURL } from "node:url";
 import puppeteer from "puppeteer";
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const root = path.resolve(__dirname, "..");
-const htmlPath = path.join(root, "src", "resume.html");
+const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
+const htmlPath = path.join(root, "dist", "resume.html");
 const outPath = path.join(root, "dist", "Roman_Petrov_CV.pdf");
 
-async function main() {
+/** Renders the built print sheet to PDF. Requires `bun run build` to have produced dist/resume.html. */
+export async function printPdf() {
   const started = performance.now();
-  await mkdir(path.dirname(outPath), { recursive: true });
 
   const browser = await puppeteer.launch({
     headless: true,
@@ -21,30 +18,21 @@ async function main() {
   try {
     const page = await browser.newPage();
     await page.emulateMediaType("print");
-    await page.goto(pathToFileURL(htmlPath).href, {
-      waitUntil: "load",
-      timeout: 30_000,
-    });
-
+    await page.goto(pathToFileURL(htmlPath).href, { waitUntil: "load", timeout: 30_000 });
     await page.evaluate(async () => {
       await document.fonts.ready;
     });
 
-    // Page gutters come from CSS @page { margin } — keep in sync with resume.css
-    await page.pdf({
-      path: outPath,
-      printBackground: true,
-      preferCSSPageSize: true,
-    });
+    // Page gutters come from CSS @page { margin } — keep in sync with print.css
+    await page.pdf({ path: outPath, printBackground: true, preferCSSPageSize: true });
 
-    const ms = Math.round(performance.now() - started);
-    console.log(`PDF written: ${outPath} (${ms}ms)`);
+    return { outPath, ms: Math.round(performance.now() - started) };
   } finally {
     await browser.close();
   }
 }
 
-main().catch(err => {
-  console.error(err);
-  process.exit(1);
-});
+if (import.meta.main) {
+  const { outPath: file, ms } = await printPdf();
+  console.log(`PDF written: ${file} (${ms}ms)`);
+}
