@@ -1,0 +1,7 @@
+/* Local fonts via @fontsource (no Google Fonts CDN) */
+@import url("../node_modules/@fontsource/outfit/latin-400.css");
+@import url("../node_modules/@fontsource/outfit/latin-500.css");
+@import url("../node_modules/@fontsource/outfit/latin-600.css");
+@import url("../node_modules/@fontsource/outfit/latin-700.css");
+@import url("../node_modules/@fontsource/fraunces/latin-600.css");
+@import url("../node_modules/@fontsource/fraunces/latin-700.css");

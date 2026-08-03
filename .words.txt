@@ -2,8 +2,11 @@ ActiveSWF
 beeline
 bunx
 cpslabs
+fontsource
 Fraunces
+glassmorphism
 habrahabr
+Outfit
 Huffman
 ispringsolutions
 JobWindow

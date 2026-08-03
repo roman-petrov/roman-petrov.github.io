@@ -4,34 +4,32 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Roman Petrov — Software Developer</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,650;1,9..40,400&family=Fraunces:opsz,wght@9..144,650&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="./fonts.css" />
     <link rel="stylesheet" href="./resume.css" />
   </head>
   <body>
     <article class="page">
-      <header class="header">
-        <img class="photo" src="./photo.png" alt="Roman Petrov" width="400" height="400" />
+      <div class="atmosphere" aria-hidden="true">
+        <span class="orb orb-a"></span>
+        <span class="orb orb-b"></span>
+        <span class="orb orb-c"></span>
+        <span class="mesh"></span>
+      </div>
+
+      <header class="hero glass">
+        <div class="photo-wrap">
+          <img class="photo" src="./photo.png" alt="Roman Petrov" width="400" height="400" />
+        </div>
         <div class="identity">
           <h1>Roman Petrov</h1>
           <p class="headline">Software Developer</p>
-          <div class="contacts">
-            <span><span class="ico" aria-hidden="true">📍</span> Yoshkar-Ola, Russian Federation</span>
-            <a href="mailto:romanpetrov@list.ru"><span class="ico" aria-hidden="true">✉️</span> romanpetrov@list.ru</a>
-            <a href="tel:+79061370326"><span class="ico" aria-hidden="true">📞</span> +79061370326</a>
-            <a href="https://github.com/roman-petrov"><span class="ico" aria-hidden="true">🔗</span> GitHub</a>
-          </div>
         </div>
       </header>
 
-      <div class="body">
-        <aside class="sidebar">
-          <section class="section">
-            <h2 class="section-title"><span class="ico" aria-hidden="true">📋</span> Details</h2>
+      <section class="overview glass" aria-label="Summary">
+        <div class="overview-grid">
+          <div class="panel">
+            <h2 class="panel-title"><span class="ico" aria-hidden="true">📋</span> Details</h2>
             <ul class="meta-list">
               <li>
                 <span class="label">Location</span>
@@ -46,20 +44,24 @@
                 <span class="value"><a href="mailto:romanpetrov@list.ru">romanpetrov@list.ru</a></span>
               </li>
             </ul>
-          </section>
+          </div>
 
-          <section class="section">
-            <h2 class="section-title"><span class="ico" aria-hidden="true">🔗</span> Links</h2>
+          <div class="panel">
+            <h2 class="panel-title"><span class="ico" aria-hidden="true">🔗</span> Links</h2>
             <ul class="meta-list">
               <li>
                 <span class="label">GitHub</span>
                 <span class="value"><a href="https://github.com/roman-petrov">github.com/roman-petrov</a></span>
               </li>
             </ul>
-          </section>
+            <h2 class="panel-title panel-title-spaced"><span class="ico" aria-hidden="true">🌍</span> Languages</h2>
+            <p class="inline-meta">English · Russian</p>
+            <h2 class="panel-title panel-title-spaced"><span class="ico" aria-hidden="true">🎸</span> Hobbies</h2>
+            <p class="inline-meta">Programming, Travel, Camping, Guitar</p>
+          </div>
 
-          <section class="section">
-            <h2 class="section-title"><span class="ico" aria-hidden="true">🛠</span> Skills</h2>
+          <div class="panel panel-skills">
+            <h2 class="panel-title"><span class="ico" aria-hidden="true">🛠</span> Skills</h2>
             <div class="chips">
               <span class="chip">Programming</span>
               <span class="chip">User experience</span>
@@ -72,187 +74,176 @@
               <span class="chip">C/C++</span>
               <span class="chip">Markdown</span>
             </div>
-          </section>
+          </div>
+        </div>
+      </section>
 
-          <section class="section">
-            <h2 class="section-title"><span class="ico" aria-hidden="true">🌍</span> Languages</h2>
-            <div class="lang-row"><span>English</span></div>
-            <div class="lang-row"><span>Russian</span></div>
-          </section>
+      <main class="main">
+        <section class="section glass">
+          <h2 class="section-title"><span class="ico" aria-hidden="true">👤</span> Profile</h2>
+          <p class="lead">My favorite tool in software development is <strong>Occam's razor</strong>.</p>
+          <p class="intro-label">The areas of my proficiency are:</p>
+          <ul class="bullets">
+            <li><strong>problem solving:</strong> analysis, communication, decomposition, MVP</li>
+            <li><strong>programming:</strong> modular, testable, readable, compact, efficient code</li>
+            <li><strong>code quality:</strong> automated code analysis, linting, code review</li>
+            <li><strong>project workflow:</strong> automation, simplification, documentation</li>
+            <li><strong>user experience:</strong> simplicity, visual perfection, screenshot tests</li>
+            <li><strong>open source:</strong> use, contribute, learn</li>
+          </ul>
+          <p class="lead">
+            I prefer functional programming to object oriented approach and my favorite code unit is
+            <strong>pure function</strong>.
+          </p>
+          <p class="intro-label">I would like to land a software developer position in a company that:</p>
+          <ul class="bullets">
+            <li>cares about the code quality in projects</li>
+            <li>cares about the user experience quality in products</li>
+            <li>provides possibilities to grow as professional</li>
+          </ul>
+        </section>
 
-          <section class="section">
-            <h2 class="section-title"><span class="ico" aria-hidden="true">🎸</span> Hobbies</h2>
-            <p class="hobbies">Programming, Travel, Camping, Guitar</p>
-          </section>
-        </aside>
-
-        <main class="main">
-          <section class="section">
-            <h2 class="section-title"><span class="ico" aria-hidden="true">👤</span> Profile</h2>
-            <p class="lead">My favorite tool in software development is <strong>Occam's razor</strong>.</p>
-            <p class="intro-label">The areas of my proficiency are:</p>
-            <ul class="bullets">
-              <li><strong>problem solving:</strong> analysis, communication, decomposition, MVP</li>
-              <li><strong>programming:</strong> modular, testable, readable, compact, efficient code</li>
-              <li><strong>code quality:</strong> automated code analysis, linting, code review</li>
-              <li><strong>project workflow:</strong> automation, simplification, documentation</li>
-              <li><strong>user experience:</strong> simplicity, visual perfection, screenshot tests</li>
-              <li><strong>open source:</strong> use, contribute, learn</li>
-            </ul>
-            <p class="lead">
-              I prefer functional programming to object oriented approach and my favorite code unit is
-              <strong>pure function</strong>.
-            </p>
-            <p class="intro-label">I would like to land a software developer position in a company that:</p>
-            <ul class="bullets">
-              <li>cares about the code quality in projects</li>
-              <li>cares about the user experience quality in products</li>
-              <li>provides possibilities to grow as professional</li>
-            </ul>
-          </section>
-
-          <section class="section">
-            <h2 class="section-title"><span class="ico" aria-hidden="true">🎓</span> Education</h2>
-            <div class="edu">
-              <div class="edu-head">
-                <h3 class="edu-title">Master, Volga State University of Technology, Yoshkar-Ola</h3>
-                <span class="when">September 1999 — May 2004</span>
-              </div>
+        <section class="section glass">
+          <h2 class="section-title"><span class="ico" aria-hidden="true">🎓</span> Education</h2>
+          <div class="edu">
+            <div class="edu-head">
+              <h3 class="edu-title">Master, Volga State University of Technology, Yoshkar-Ola</h3>
+              <span class="when">September 1999 — May 2004</span>
             </div>
-          </section>
+          </div>
+        </section>
 
-          <section class="section">
-            <h2 class="section-title"><span class="ico" aria-hidden="true">💼</span> Employment History</h2>
+        <section class="section glass">
+          <h2 class="section-title"><span class="ico" aria-hidden="true">💼</span> Employment History</h2>
 
-            <article class="job">
-              <div class="job-head">
-                <h3 class="job-title">Lead developer and team lead at TravelLine</h3>
-                <span class="when">2013 — Present</span>
-              </div>
-              <a class="job-link" href="https://www.travelline.ru/">www.travelline.ru</a>
-              <p class="lead">
-                I'm currently working for TravelLine company as a front-end architect, team lead and developer. My
-                primary goal is to move company products from outdated and ineffective development stack to Flutter:
-              </p>
-              <ul class="bullets compact">
-                <li>make products cross-platform</li>
-                <li>improve user experience and user interface quality</li>
-                <li>design and develop Flutter ecosystem, tools, components, and workflow</li>
-              </ul>
-              <p class="subhead">Projects:</p>
-              <ul class="bullets">
-                <li>
-                  <strong>TLUI3.0 (NOW)</strong> — TravelLine User Interface library and design system based on Flutter
-                  (architect, lead developer and team lead)
-                </li>
-                <li>
-                  <strong>TLF</strong> — TravelLine Flutter tool to automate workflow for company Flutter projects
-                  (single developer)
-                </li>
-                <li>
-                  <strong>TLUI</strong> — TravelLine User Interface library and design system (lead developer and team
-                  lead)
-                </li>
-                <li>Payment module front-end for online booking engine (single developer)</li>
-              </ul>
-            </article>
+          <article class="job">
+            <div class="job-head">
+              <h3 class="job-title">Lead developer and team lead at TravelLine</h3>
+              <span class="when">2013 — Present</span>
+            </div>
+            <a class="job-link" href="https://www.travelline.ru/">www.travelline.ru</a>
+            <p class="lead">
+              I'm currently working for TravelLine company as a front-end architect, team lead and developer. My primary
+              goal is to move company products from outdated and ineffective development stack to Flutter:
+            </p>
+            <ul class="bullets compact">
+              <li>make products cross-platform</li>
+              <li>improve user experience and user interface quality</li>
+              <li>design and develop Flutter ecosystem, tools, components, and workflow</li>
+            </ul>
+            <p class="subhead">Projects:</p>
+            <ul class="bullets">
+              <li>
+                <strong>TLUI3.0 (NOW)</strong> — TravelLine User Interface library and design system based on Flutter
+                (architect, lead developer and team lead)
+              </li>
+              <li>
+                <strong>TLF</strong> — TravelLine Flutter tool to automate workflow for company Flutter projects (single
+                developer)
+              </li>
+              <li>
+                <strong>TLUI</strong> — TravelLine User Interface library and design system (lead developer and team
+                lead)
+              </li>
+              <li>Payment module front-end for online booking engine (single developer)</li>
+            </ul>
+          </article>
 
-            <article class="job">
-              <div class="job-head">
-                <h3 class="job-title">Developer at iSpring</h3>
-                <span class="when">2007 — 2013</span>
-              </div>
-              <a class="job-link" href="http://www.ispringsolutions.com/">www.ispringsolutions.com</a>
-              <p class="subhead">Projects:</p>
-              <ul class="bullets">
-                <li>Flash media player &amp; charting library (developer)</li>
-                <li>
-                  <a href="https://web.archive.org/web/20120506055102/http://www.silverx.net/">SilverX</a>
-                  — Flash to Silverlight converter (single developer, website developer)
-                </li>
-                <li>
-                  <a href="https://web.archive.org/web/20171020002940/http://www.powermessagepro.com/">PowerMessage</a>
-                  — PowerPoint add-on to build presentations from templates (single developer)
-                </li>
-              </ul>
-            </article>
+          <article class="job">
+            <div class="job-head">
+              <h3 class="job-title">Developer at iSpring</h3>
+              <span class="when">2007 — 2013</span>
+            </div>
+            <a class="job-link" href="http://www.ispringsolutions.com/">www.ispringsolutions.com</a>
+            <p class="subhead">Projects:</p>
+            <ul class="bullets">
+              <li>Flash media player &amp; charting library (developer)</li>
+              <li>
+                <a href="https://web.archive.org/web/20120506055102/http://www.silverx.net/">SilverX</a>
+                — Flash to Silverlight converter (single developer, website developer)
+              </li>
+              <li>
+                <a href="https://web.archive.org/web/20171020002940/http://www.powermessagepro.com/">PowerMessage</a>
+                — PowerPoint add-on to build presentations from templates (single developer)
+              </li>
+            </ul>
+          </article>
 
-            <article class="job">
-              <div class="job-head">
-                <h3 class="job-title">Lead developer and team lead at CPS Labs</h3>
-                <span class="when">2003 — 2007</span>
-              </div>
-              <a class="job-link" href="https://www.cpslabs.net/">www.cpslabs.net</a>
-              <p class="subhead">Projects:</p>
-              <ul class="bullets">
-                <li>
-                  <a href="https://www.cpslabs.net/project/jobwindow-2-3.html">JobWindow</a> — Job search system in
-                  Switzerland (developer)
-                </li>
-                <li>
-                  <a href="https://www.cpslabs.net/product/activeswf-3-5.html">ActiveSWF</a> — SWF file (Flash)
-                  generation library (single developer)
-                </li>
-                <li>
-                  SlingPlayer — Streaming media player for
-                  <a href="https://en.wikipedia.org/wiki/Sling_Media">SlingMedia</a> (lead developer and team lead)
-                </li>
-              </ul>
-            </article>
-          </section>
+          <article class="job">
+            <div class="job-head">
+              <h3 class="job-title">Lead developer and team lead at CPS Labs</h3>
+              <span class="when">2003 — 2007</span>
+            </div>
+            <a class="job-link" href="https://www.cpslabs.net/">www.cpslabs.net</a>
+            <p class="subhead">Projects:</p>
+            <ul class="bullets">
+              <li>
+                <a href="https://www.cpslabs.net/project/jobwindow-2-3.html">JobWindow</a> — Job search system in
+                Switzerland (developer)
+              </li>
+              <li>
+                <a href="https://www.cpslabs.net/product/activeswf-3-5.html">ActiveSWF</a> — SWF file (Flash) generation
+                library (single developer)
+              </li>
+              <li>
+                SlingPlayer — Streaming media player for
+                <a href="https://en.wikipedia.org/wiki/Sling_Media">SlingMedia</a> (lead developer and team lead)
+              </li>
+            </ul>
+          </article>
+        </section>
 
-          <section class="section">
-            <h2 class="section-title"><span class="ico" aria-hidden="true">🚀</span> Challenging activities</h2>
+        <section class="section glass">
+          <h2 class="section-title"><span class="ico" aria-hidden="true">🚀</span> Challenging activities</h2>
 
-            <article class="activity">
-              <div class="activity-head">
-                <h3 class="activity-title">🏆 Machine learning contest</h3>
-                <span class="when">2015</span>
-              </div>
-              <p class="lead">
-                I took part in the Beeline Big Data contest. It was my first experience in machine learning so it's been
-                quite a challenge for me. I was ranked the 236 out of 832 participants.
-              </p>
-              <p class="ref-label">References (in Russian):</p>
-              <ul class="bullets compact">
-                <li>
-                  Contest info and results at
-                  <a href="https://special.habrahabr.ru/beeline/">beeline.ru</a>
-                </li>
-              </ul>
-            </article>
+          <article class="activity">
+            <div class="activity-head">
+              <h3 class="activity-title">🏆 Machine learning contest</h3>
+              <span class="when">2015</span>
+            </div>
+            <p class="lead">
+              I took part in the Beeline Big Data contest. It was my first experience in machine learning so it's been
+              quite a challenge for me. I was ranked the 236 out of 832 participants.
+            </p>
+            <p class="ref-label">References (in Russian):</p>
+            <ul class="bullets compact">
+              <li>
+                Contest info and results at
+                <a href="https://special.habrahabr.ru/beeline/">beeline.ru</a>
+              </li>
+            </ul>
+          </article>
 
-            <article class="activity">
-              <div class="activity-head">
-                <h3 class="activity-title">🕹 ZX-Spectrum</h3>
-                <span class="when">1995 — 2000</span>
-              </div>
-              <p class="lead">
-                During my school years my favorite hobby was assembler programming on ZX-Spectrum. I'm the author of RIP
-                (Real Information Packer) — LZW/Huffman data compression algorithm and application. This was a challenge
-                and I managed to achieve one of the best compression ratios compared to other ZX-Spectrum data
-                compression tools.
-              </p>
-              <p class="ref-label">References (in Russian):</p>
-              <ul class="bullets compact">
-                <li>
-                  About me at
-                  <a href="https://speccy.info/%D0%A0%D0%BE%D0%BC%D0%B0%D0%BD_%D0%9F%D0%B5%D1%82%D1%80%D0%BE%D0%B2"
-                    >speccy.info</a
-                  >
-                </li>
-                <li>
-                  RIP at
-                  <a href="https://speccy.info/RIP_(%D1%83%D0%BF%D0%B0%D0%BA%D0%BE%D0%B2%D1%89%D0%B8%D0%BA)"
-                    >speccy.info</a
-                  >
-                </li>
-                <li>About RIP at <a href="https://zxpress.ru/article.php?id=8510">zxpress.ru</a></li>
-              </ul>
-            </article>
-          </section>
-        </main>
-      </div>
+          <article class="activity">
+            <div class="activity-head">
+              <h3 class="activity-title">🕹 ZX-Spectrum</h3>
+              <span class="when">1995 — 2000</span>
+            </div>
+            <p class="lead">
+              During my school years my favorite hobby was assembler programming on ZX-Spectrum. I'm the author of RIP
+              (Real Information Packer) — LZW/Huffman data compression algorithm and application. This was a challenge
+              and I managed to achieve one of the best compression ratios compared to other ZX-Spectrum data compression
+              tools.
+            </p>
+            <p class="ref-label">References (in Russian):</p>
+            <ul class="bullets compact">
+              <li>
+                About me at
+                <a href="https://speccy.info/%D0%A0%D0%BE%D0%BC%D0%B0%D0%BD_%D0%9F%D0%B5%D1%82%D1%80%D0%BE%D0%B2"
+                  >speccy.info</a
+                >
+              </li>
+              <li>
+                RIP at
+                <a href="https://speccy.info/RIP_(%D1%83%D0%BF%D0%B0%D0%BA%D0%BE%D0%B2%D1%89%D0%B8%D0%BA)"
+                  >speccy.info</a
+                >
+              </li>
+              <li>About RIP at <a href="https://zxpress.ru/article.php?id=8510">zxpress.ru</a></li>
+            </ul>
+          </article>
+        </section>
+      </main>
     </article>
   </body>
 </html>
