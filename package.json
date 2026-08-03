@@ -5,6 +5,8 @@
   "description": "Roman Petrov resume (HTML/CSS → PDF)",
   "private": true,
   "scripts": {
+    "build": "bun run pdf",
+    "ci": "bun run lint && bun run build",
     "cspell": "cspell .",
     "lint": "bun run prettier && bun run stylelint && bun run cspell && bun run markdownlint",
     "markdownlint": "markdownlint .",
