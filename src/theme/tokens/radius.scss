@@ -1,0 +1,40 @@
+@use "../token";
+
+$-values: (
+  xs: 4,
+  sm: 8,
+  md: 12,
+  lg: 16,
+);
+$-fixed: (
+  full: 999px,
+);
+
+@mixin root {
+  @include token.scale("radius", $-values);
+  @include token.root("radius", $-fixed);
+}
+
+@function -radius($name) {
+  @return token.ref("radius", $name);
+}
+
+@function xs() {
+  @return -radius("xs");
+}
+
+@function sm() {
+  @return -radius("sm");
+}
+
+@function md() {
+  @return -radius("md");
+}
+
+@function lg() {
+  @return -radius("lg");
+}
+
+@function full() {
+  @return -radius("full");
+}

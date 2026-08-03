@@ -1,0 +1,20 @@
+@use "sass:math";
+@use "sass:meta";
+
+$-root-font-size: 16;
+
+@function r($px) {
+  @if meta.type-of($px) != number {
+    @error "r: expected number, got #{meta.type-of($px)}";
+  }
+
+  @if $px == 0 {
+    @return 0;
+  }
+
+  @if math.unit($px) != "" {
+    @error "r: expected unitless pixel magnitude, got #{$px}";
+  }
+
+  @return math.div($px, $-root-font-size) * 1rem;
+}

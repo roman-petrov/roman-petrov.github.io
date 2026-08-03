@@ -1,0 +1,32 @@
+@use "../token";
+
+$-values: (
+  regular: 400,
+  medium: 500,
+  semibold: 600,
+  bold: 700,
+);
+
+@mixin root {
+  @include token.root("weight", $-values);
+}
+
+@function -weight($name) {
+  @return token.ref("weight", $name);
+}
+
+@function regular() {
+  @return -weight("regular");
+}
+
+@function medium() {
+  @return -weight("medium");
+}
+
+@function semibold() {
+  @return -weight("semibold");
+}
+
+@function bold() {
+  @return -weight("bold");
+}

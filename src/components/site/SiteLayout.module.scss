@@ -1,7 +1,0 @@
-@use "../../styles/tokens" as tokens;
-
-// Shared page gutter: every full-width band centers its content with this class.
-.wrap {
-  width: min(100% - 2.5rem, #{tokens.size(wrap)});
-  margin: 0 auto;
-}

@@ -1,0 +1,60 @@
+@use "../theme/core" as *;
+@use "../theme/primitives";
+@use "../theme/tokens/color";
+@use "../theme/tokens/leading";
+@use "../theme/tokens/metrics";
+@use "../theme/tokens/radius";
+@use "../theme/tokens/space";
+@use "../theme/tokens/text";
+@use "../theme/tokens/weight";
+
+.root {
+  display: grid;
+  gap: space.sm();
+  padding: space.lg() space.xl();
+  margin-bottom: space.md();
+}
+
+.row {
+  display: grid;
+  grid-template-columns: #{metrics.rail()} 1fr;
+  gap: space.xl();
+  align-items: baseline;
+}
+
+.label {
+  @include primitives.label(text.micro());
+
+  display: flex;
+  gap: space.xs();
+  align-items: baseline;
+  margin: 0;
+  color: color.muted();
+}
+
+.text {
+  margin: 0;
+  font-size: text.sm();
+  font-weight: weight.medium();
+  color: color.ink-soft();
+}
+
+.chips {
+  @include primitives.row-list(space.x2s() space.xs());
+}
+
+.chip {
+  padding: space.x2s() space.sm();
+  font-size: text.sm();
+  font-weight: weight.medium();
+  line-height: leading.snug();
+  color: color.accent-deep();
+  background: color.accent-soft();
+  border-radius: radius.xs();
+}
+
+@include print {
+  .root {
+    break-inside: avoid;
+  }
+}

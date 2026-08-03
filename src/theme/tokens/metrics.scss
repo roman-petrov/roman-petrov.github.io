@@ -1,0 +1,40 @@
+@use "../token";
+
+$-values: (
+  marker: 8,
+  nav: 64,
+  rail: 136,
+);
+$-fixed: (
+  ico: 0.9em,
+  wrap: 1080px,
+);
+
+@mixin root {
+  @include token.scale("metrics", $-values);
+  @include token.root("metrics", $-fixed);
+}
+
+@function -metrics($name) {
+  @return token.ref("metrics", $name);
+}
+
+@function ico() {
+  @return -metrics("ico");
+}
+
+@function marker() {
+  @return -metrics("marker");
+}
+
+@function nav() {
+  @return -metrics("nav");
+}
+
+@function rail() {
+  @return -metrics("rail");
+}
+
+@function wrap() {
+  @return -metrics("wrap");
+}

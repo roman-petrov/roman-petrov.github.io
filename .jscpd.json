@@ -1,0 +1,11 @@
+{
+  "absolute": true,
+  "ignore": [".github/**", ".jscpd/**", "**/*.json", "**/*.module.scss.d.ts", "**/dist/**", "**/node_modules/**"],
+  "ignorePattern": ["import.*from.*", "@use.*"],
+  "mode": "strict",
+  "noGitignore": false,
+  "output": ".jscpd",
+  "path": ["."],
+  "reporters": ["console"],
+  "threshold": 0
+}

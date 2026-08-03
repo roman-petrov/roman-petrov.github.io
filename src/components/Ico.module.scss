@@ -1,8 +1,9 @@
-@use "../styles/tokens" as tokens;
+@use "../theme/tokens/font";
+@use "../theme/tokens/metrics";
 
 .root {
-  font-family: tokens.font(emoji);
-  font-size: tokens.size(ico);
+  font-family: font.emoji();
+  font-size: metrics.ico();
   font-style: normal;
   line-height: 1;
 }

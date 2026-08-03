@@ -1,0 +1,41 @@
+@use "../token";
+
+$-values: (
+  sans: (
+    "Inter Tight",
+    "Segoe UI",
+    sans-serif,
+  ),
+  mono: (
+    "JetBrains Mono",
+    "Cascadia Mono",
+    consolas,
+    monospace,
+  ),
+  emoji: (
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Noto Color Emoji",
+    sans-serif,
+  ),
+);
+
+@mixin root {
+  @include token.root("font", $-values);
+}
+
+@function -font($name) {
+  @return token.ref("font", $name);
+}
+
+@function sans() {
+  @return -font("sans");
+}
+
+@function mono() {
+  @return -font("mono");
+}
+
+@function emoji() {
+  @return -font("emoji");
+}

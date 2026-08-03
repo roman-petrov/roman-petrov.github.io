@@ -2,7 +2,7 @@
 export default {
   defaultSeverity: `warning`,
   extends: [`stylelint-config-standard-scss`, `stylelint-config-recess-order`],
-  ignoreFiles: [`.build`, `**/dist/**`],
+  ignoreFiles: [`.build`, `.jscpd`, `**/dist/**`],
   reportInvalidScopeDisables: true,
   reportNeedlessDisables: true,
   rules: {

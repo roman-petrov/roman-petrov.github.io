@@ -1,10 +1,3 @@
-/**
- * Single source of truth for every output: the site, the print sheet (PDF) and resume.md.
- *
- * Text fields accept a minimal markdown subset: `**bold**` and `[label](href)`.
- * Parentheses inside URLs must be percent-encoded (%28 / %29).
- */
-
 export type Block = { items: string[]; type: `list` } | { text: string; type: `label` | `lead` | `pull` | `text` };
 
 export type Contact = { href?: string; icon: string; label: string; value: string };
@@ -17,7 +10,7 @@ export type Link = { href: string; label: string };
 
 export type Section = { blocks?: Block[]; entries?: Entry[]; icon: string; id: string; index: string; title: string };
 
-export const Meta = {
+const meta = {
   github: `https://github.com/roman-petrov`,
   name: `Roman Petrov`,
   pdf: `Roman_Petrov_CV.pdf`,
@@ -27,14 +20,14 @@ export const Meta = {
   tagline: `Front-end architect, team lead and developer. Flutter, TypeScript, clean code.`,
 };
 
-export const Contacts: Contact[] = [
+const contacts: Contact[] = [
   { icon: `📍`, label: `Location`, value: `Yoshkar-Ola, Russian Federation` },
   { href: `tel:+79061370326`, icon: `📞`, label: `Phone`, value: `+79061370326` },
   { href: `mailto:romanpetrov@list.ru`, icon: `✉️`, label: `Email`, value: `romanpetrov@list.ru` },
-  { href: Meta.github, icon: `🔗`, label: `GitHub`, value: `github.com/roman-petrov` },
+  { href: meta.github, icon: `🔗`, label: `GitHub`, value: `github.com/roman-petrov` },
 ];
 
-export const Facts: Fact[] = [
+const facts: Fact[] = [
   {
     chips: [
       `Programming`,
@@ -55,17 +48,7 @@ export const Facts: Fact[] = [
   { icon: `🎸`, label: `Hobbies`, text: `Programming, Travel, Camping, Guitar` },
 ];
 
-export const SectionById = (id: string) => {
-  const section = Sections.find(item => item.id === id);
-
-  if (section === undefined) {
-    throw new Error(`Unknown section: ${id}`);
-  }
-
-  return section;
-};
-
-export const Sections: Section[] = [
+const sections: Section[] = [
   {
     blocks: [
       { text: `My favorite tool in software development is **Occam's razor**.`, type: `pull` },
@@ -233,3 +216,15 @@ export const Sections: Section[] = [
     title: `Challenging activities`,
   },
 ];
+
+const section = (id: string) => {
+  const found = sections.find(item => item.id === id);
+
+  if (found === undefined) {
+    throw new Error(`Unknown section: ${id}`);
+  }
+
+  return found;
+};
+
+export const Content = { contacts, facts, meta, section, sections };

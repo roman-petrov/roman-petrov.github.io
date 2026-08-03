@@ -1,0 +1,29 @@
+@use "../theme/core" as *;
+@use "../theme/primitives";
+@use "../theme/tokens/color";
+@use "../theme/tokens/space";
+@use "../theme/tokens/text";
+@use "../theme/tokens/weight";
+
+.root {
+  @include primitives.pill(space.xs());
+
+  padding: space.xs() space.md();
+  font-size: text.sm();
+  font-weight: weight.medium();
+  color: color.ink-soft();
+  background: color.glass();
+  border-color: color.line();
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+a.root {
+  @include hover {
+    color: color.ink();
+    border-color: color.accent();
+    transform: translateY(-2px);
+  }
+}

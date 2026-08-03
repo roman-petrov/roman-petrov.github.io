@@ -1,0 +1,32 @@
+@use "../token";
+
+$-values: (
+  tight: 1.1,
+  snug: 1.32,
+  normal: 1.46,
+  loose: 1.6,
+);
+
+@mixin root {
+  @include token.root("leading", $-values);
+}
+
+@function -leading($name) {
+  @return token.ref("leading", $name);
+}
+
+@function tight() {
+  @return -leading("tight");
+}
+
+@function snug() {
+  @return -leading("snug");
+}
+
+@function normal() {
+  @return -leading("normal");
+}
+
+@function loose() {
+  @return -leading("loose");
+}

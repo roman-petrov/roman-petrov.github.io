@@ -1,5 +1,6 @@
 dist
 .build
+.jscpd
 **/node_modules
 bun.lock
 bun.lockb

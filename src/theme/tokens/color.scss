@@ -1,0 +1,149 @@
+@use "../token";
+
+@function -color($name) {
+  @return token.ref("color", $name);
+}
+
+@function accent() {
+  @return -color("accent");
+}
+
+@function accent-bright() {
+  @return -color("accent-bright");
+}
+
+@function accent-deep() {
+  @return -color("accent-deep");
+}
+
+@function accent-glow() {
+  @return -color("accent-glow");
+}
+
+@function accent-light() {
+  @return -color("accent-light");
+}
+
+@function accent-line() {
+  @return -color("accent-line");
+}
+
+@function accent-soft() {
+  @return -color("accent-soft");
+}
+
+@function bg() {
+  @return -color("bg");
+}
+
+@function border() {
+  @return -color("border");
+}
+
+@function card-head() {
+  @return -color("card-head");
+}
+
+@function chrome() {
+  @return -color("chrome");
+}
+
+@function chrome-strong() {
+  @return -color("chrome-strong");
+}
+
+@function desk() {
+  @return -color("desk");
+}
+
+@function glass() {
+  @return -color("glass");
+}
+
+@function glass-strong() {
+  @return -color("glass-strong");
+}
+
+@function glow() {
+  @return -color("glow");
+}
+
+@function hero-edge() {
+  @return -color("hero-edge");
+}
+
+@function hero-from() {
+  @return -color("hero-from");
+}
+
+@function hero-line() {
+  @return -color("hero-line");
+}
+
+@function hero-muted() {
+  @return -color("hero-muted");
+}
+
+@function hero-text() {
+  @return -color("hero-text");
+}
+
+@function hero-to() {
+  @return -color("hero-to");
+}
+
+@function ink() {
+  @return -color("ink");
+}
+
+@function ink-fade() {
+  @return -color("ink-fade");
+}
+
+@function ink-soft() {
+  @return -color("ink-soft");
+}
+
+@function line() {
+  @return -color("line");
+}
+
+@function line-strong() {
+  @return -color("line-strong");
+}
+
+@function muted() {
+  @return -color("muted");
+}
+
+@function on-accent() {
+  @return -color("on-accent");
+}
+
+@function paper() {
+  @return -color("paper");
+}
+
+@function rule() {
+  @return -color("rule");
+}
+
+@function shadow() {
+  @return -color("shadow");
+}
+
+@function shadow-soft() {
+  @return -color("shadow-soft");
+}
+
+@function sky() {
+  @return -color("sky");
+}
+
+@function sky-bright() {
+  @return -color("sky-bright");
+}
+
+@function track() {
+  @return -color("track");
+}

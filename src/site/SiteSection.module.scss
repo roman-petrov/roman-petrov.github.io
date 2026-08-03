@@ -1,0 +1,43 @@
+@use "../theme/primitives";
+@use "../theme/tokens/color";
+@use "../theme/tokens/leading";
+@use "../theme/tokens/metrics";
+@use "../theme/tokens/space";
+@use "../theme/tokens/text";
+@use "../theme/tokens/tracking";
+@use "../theme/tokens/weight";
+
+.root {
+  padding: space.x3xl() 0;
+  scroll-margin-top: calc(#{metrics.nav()} + #{space.lg()});
+}
+
+.head {
+  display: flex;
+  gap: space.lg();
+  align-items: center;
+  margin-bottom: space.x2xl();
+}
+
+.index {
+  @include primitives.mono(text.xs());
+
+  color: color.accent();
+  letter-spacing: tracking.mono();
+}
+
+.title {
+  display: flex;
+  gap: space.sm();
+  align-items: baseline;
+  margin: 0;
+  font-size: text.title();
+  font-weight: weight.semibold();
+  line-height: leading.tight();
+}
+
+.rule {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, color.line-strong(), transparent);
+}

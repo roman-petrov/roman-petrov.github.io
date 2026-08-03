@@ -1,0 +1,56 @@
+import { Content } from "../Content";
+import styles from "./SiteDocument.module.scss";
+import { SiteFooter } from "./SiteFooter";
+import { SiteHero } from "./SiteHero";
+import motion from "./SiteMotion.module.scss";
+import { SiteNav } from "./SiteNav";
+import { SiteProse } from "./SiteProse";
+import { SiteSection } from "./SiteSection";
+import { SiteStack } from "./SiteStack";
+import { SiteTimeline } from "./SiteTimeline";
+
+const title = `${Content.meta.name} — ${Content.meta.role}`;
+
+const enableMotion = `document.documentElement.classList.add("${motion.js}");`;
+
+const profile = Content.section(`profile`);
+
+export const SiteDocument = () => (
+  <html lang="en">
+    <head>
+      <meta charSet="utf-8" />
+      <meta content="width=device-width, initial-scale=1" name="viewport" />
+      <title>{title}</title>
+      <meta content={Content.meta.tagline} name="description" />
+      <meta content="#0b1020" name="theme-color" />
+      <meta content="website" property="og:type" />
+      <meta content={title} property="og:title" />
+      <meta content={Content.meta.tagline} property="og:description" />
+      <meta content={Content.meta.siteUrl} property="og:url" />
+      <meta content={`${Content.meta.siteUrl}assets/og.png`} property="og:image" />
+      <meta content="summary_large_image" name="twitter:card" />
+      <link href="./assets/favicon.svg" rel="icon" type="image/svg+xml" />
+      <link href="./assets/fonts.css" rel="stylesheet" />
+      <link href="./assets/site.css" rel="stylesheet" />
+      <script dangerouslySetInnerHTML={{ __html: enableMotion }} />
+      <script defer src="./assets/site.js" />
+    </head>
+    <body>
+      <div className={styles.progress}>
+        <span className={styles.bar} />
+      </div>
+      <SiteNav />
+      <main>
+        <SiteHero />
+        <SiteSection icon={profile.icon} id={profile.id} title={profile.title}>
+          <SiteProse blocks={profile.blocks ?? []} />
+        </SiteSection>
+        <SiteStack />
+        <SiteTimeline section={Content.section(`experience`)} />
+        <SiteTimeline section={Content.section(`education`)} />
+        <SiteTimeline section={Content.section(`activities`)} />
+      </main>
+      <SiteFooter />
+    </body>
+  </html>
+);

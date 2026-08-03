@@ -1,0 +1,17 @@
+@use "core" as *;
+
+@mixin root($prefix, $values) {
+  @each $name, $value in $values {
+    --#{$prefix}-#{$name}: #{$value};
+  }
+}
+
+@mixin scale($prefix, $values) {
+  @each $name, $px in $values {
+    --#{$prefix}-#{$name}: #{r($px)};
+  }
+}
+
+@function ref($prefix, $name) {
+  @return var(--#{$prefix}-#{$name});
+}

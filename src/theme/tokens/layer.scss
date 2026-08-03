@@ -1,0 +1,23 @@
+@use "sass:map";
+
+$-levels: (
+  raised: 1,
+  nav: 10,
+  progress: 12,
+);
+
+@function -level($name) {
+  @return map.get($-levels, $name);
+}
+
+@mixin raised {
+  z-index: -level(raised);
+}
+
+@mixin nav {
+  z-index: -level(nav);
+}
+
+@mixin progress {
+  z-index: -level(progress);
+}

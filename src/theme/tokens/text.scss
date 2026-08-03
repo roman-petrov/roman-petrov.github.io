@@ -1,0 +1,64 @@
+@use "../token";
+
+$-values: (
+  micro: 11,
+  xs: 12,
+  sm: 13,
+  md: 14,
+  lg: 16,
+  xl: 17,
+  "2xl": 19,
+  display: 37,
+);
+
+@mixin root {
+  @include token.scale("text", $-values);
+}
+
+@function -text($name) {
+  @return token.ref("text", $name);
+}
+
+@function micro() {
+  @return -text("micro");
+}
+
+@function xs() {
+  @return -text("xs");
+}
+
+@function sm() {
+  @return -text("sm");
+}
+
+@function md() {
+  @return -text("md");
+}
+
+@function lg() {
+  @return -text("lg");
+}
+
+@function xl() {
+  @return -text("xl");
+}
+
+@function x2xl() {
+  @return -text("2xl");
+}
+
+@function display() {
+  @return -text("display");
+}
+
+@function hero() {
+  @return -text("hero");
+}
+
+@function title() {
+  @return -text("title");
+}
+
+@function pull() {
+  @return -text("pull");
+}

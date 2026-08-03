@@ -1,0 +1,25 @@
+@use "../tokens/font";
+@use "../tokens/leading";
+@use "../tokens/metrics";
+@use "../tokens/radius";
+@use "../tokens/space";
+@use "../tokens/text";
+@use "../tokens/tracking";
+@use "../tokens/weight";
+
+:root {
+  @include font.root;
+  @include leading.root;
+  @include metrics.root;
+  @include radius.root;
+  @include space.root;
+  @include text.root;
+  @include tracking.root;
+  @include weight.root;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}

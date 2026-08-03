@@ -1,0 +1,52 @@
+@use "../token";
+
+$-values: (
+  "2xs": 2,
+  xs: 4,
+  sm: 8,
+  md: 12,
+  lg: 16,
+  xl: 24,
+  "2xl": 32,
+  "3xl": 48,
+);
+
+@mixin root {
+  @include token.scale("space", $-values);
+}
+
+@function -space($name) {
+  @return token.ref("space", $name);
+}
+
+@function x2s() {
+  @return -space("2xs");
+}
+
+@function xs() {
+  @return -space("xs");
+}
+
+@function sm() {
+  @return -space("sm");
+}
+
+@function md() {
+  @return -space("md");
+}
+
+@function lg() {
+  @return -space("lg");
+}
+
+@function xl() {
+  @return -space("xl");
+}
+
+@function x2xl() {
+  @return -space("2xl");
+}
+
+@function x3xl() {
+  @return -space("3xl");
+}

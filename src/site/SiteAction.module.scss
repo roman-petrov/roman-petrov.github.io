@@ -1,0 +1,51 @@
+@use "../theme/core" as *;
+@use "../theme/primitives";
+@use "../theme/tokens/color";
+@use "../theme/tokens/space";
+@use "../theme/tokens/text";
+@use "../theme/tokens/weight";
+
+.root {
+  @include primitives.pill(space.sm());
+
+  padding: space.sm() space.lg();
+  font-size: text.md();
+  font-weight: weight.semibold();
+  color: color.on-accent();
+  white-space: nowrap;
+  border-color: transparent;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.lg {
+  padding: space.md() space.xl();
+  font-size: text.lg();
+}
+
+.primary {
+  @include hover {
+    color: color.on-accent();
+    box-shadow: 0 12px 30px color.accent-glow();
+    transform: translateY(-2px);
+  }
+
+  background: linear-gradient(140deg, color.accent(), color.accent-deep());
+  box-shadow: 0 8px 24px color.accent-glow();
+}
+
+.ghost {
+  @include hover {
+    color: color.ink();
+    background: color.glass-strong();
+    border-color: color.accent();
+    transform: translateY(-2px);
+  }
+
+  color: color.ink();
+  background: color.glass();
+  border-color: color.line-strong();
+}

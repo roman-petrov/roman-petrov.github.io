@@ -1,0 +1,32 @@
+@use "../token";
+
+$-values: (
+  tight: -0.04em,
+  snug: -0.02em,
+  mono: 0.12em,
+  wide: 0.16em,
+);
+
+@mixin root {
+  @include token.root("tracking", $-values);
+}
+
+@function -tracking($name) {
+  @return token.ref("tracking", $name);
+}
+
+@function tight() {
+  @return -tracking("tight");
+}
+
+@function snug() {
+  @return -tracking("snug");
+}
+
+@function mono() {
+  @return -tracking("mono");
+}
+
+@function wide() {
+  @return -tracking("wide");
+}

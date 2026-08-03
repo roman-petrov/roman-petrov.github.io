@@ -5,6 +5,7 @@
 bun.lockb
 dist
 .build
+.jscpd
 *.log
 .DS_Store
 Thumbs.db

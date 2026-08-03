@@ -13,5 +13,5 @@ export const Paths = {
   print: path.join(root, `dist`, `resume.html`),
   root,
   site: path.join(root, `dist`, `index.html`),
-  src: path.join(root, `src`),
+  srcAssets: path.join(root, `src`, `assets`),
 };

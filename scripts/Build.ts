@@ -9,10 +9,9 @@ import { Og } from "./Og";
 import { Paths } from "./Paths";
 import { Pdf } from "./Pdf";
 
-/** Font weights copied from Fontsource packages into dist/assets/fonts. */
 const fonts = [
-  { family: `Inter Tight`, pkg: `inter-tight`, weights: [400, 500, 600, 700] },
-  { family: `JetBrains Mono`, pkg: `jetbrains-mono`, weights: [400, 500] },
+  { family: `Inter Tight`, pkg: `inter-tight`, weights: [`400`, `500`, `600`, `700`] },
+  { family: `JetBrains Mono`, pkg: `jetbrains-mono`, weights: [`400`, `500`] },
 ];
 
 const assetFiles = [`photo.png`, `favicon.svg`];
@@ -29,7 +28,7 @@ const step = async <T>(label: string, task: () => Promise<T>) => {
 
 const copyAssets = async () => {
   await mkdir(Paths.assets, { recursive: true });
-  await Promise.all(assetFiles.map(file => cp(path.join(Paths.src, file), path.join(Paths.assets, file))));
+  await Promise.all(assetFiles.map(file => cp(path.join(Paths.srcAssets, file), path.join(Paths.assets, file))));
 };
 
 const copyFonts = async () => {
@@ -39,14 +38,14 @@ const copyFonts = async () => {
 
   for (const { family, pkg, weights } of fonts) {
     for (const weight of weights) {
-      const file = `${pkg}-latin-${String(weight)}-normal.woff2`;
+      const file = `${pkg}-latin-${weight}-normal.woff2`;
       await cp(path.join(Paths.root, `node_modules`, `@fontsource`, pkg, `files`, file), path.join(fontsDir, file));
       faces.push(
         [
           `@font-face {`,
           `  font-family: "${family}";`,
           `  font-style: normal;`,
-          `  font-weight: ${String(weight)};`,
+          `  font-weight: ${weight};`,
           `  font-display: swap;`,
           `  src: url("./fonts/${file}") format("woff2");`,
           `}`,
@@ -71,7 +70,6 @@ const cssFile = (chunks: { fileName: string }[]) => {
   return asset.fileName;
 };
 
-/** Renders one page from its Vite bundle: the same bundle also emits the page stylesheet. */
 const renderPage = async (entry: string, page: string, stylesheet: string) => {
   const outDir = path.join(Paths.build, entry);
   const result = await build({ build: { outDir, ssr: `src/${entry}.ts`, ssrEmitAssets: true } });
@@ -81,11 +79,13 @@ const renderPage = async (entry: string, page: string, stylesheet: string) => {
   await writeFile(page, module_.render(), `utf8`);
 };
 
-/** The client script is a classic script tag, so it is bundled on its own as an IIFE. */
 const buildClientScript = async () => {
-  const outDir = path.join(Paths.build, `Site`);
+  const outDir = path.join(Paths.build, `EntryClient`);
   await build({
-    build: { lib: { entry: `src/Site.ts`, fileName: () => `site.js`, formats: [`iife`], name: `ResumeSite` }, outDir },
+    build: {
+      lib: { entry: `src/EntryClient.ts`, fileName: () => `site.js`, formats: [`iife`], name: `ResumeSite` },
+      outDir,
+    },
   });
   await cp(path.join(outDir, `site.js`), path.join(Paths.assets, `site.js`));
 };
@@ -105,12 +105,13 @@ console.log(`Building resume site…`);
 await step(`clean dist`, () => rm(Paths.dist, { force: true, recursive: true }));
 await step(`copy assets`, copyAssets);
 await step(`copy fonts`, copyFonts);
-await step(`render site`, () => renderPage(`RenderSite`, Paths.site, `site.css`));
-await step(`render print sheet`, () => renderPage(`RenderPrint`, Paths.print, `print.css`));
+await step(`render site`, () => renderPage(`EntrySite`, Paths.site, `site.css`));
+await step(`render print sheet`, () => renderPage(`EntryPrint`, Paths.print, `print.css`));
 await step(`build client script`, buildClientScript);
 await step(`write resume.md`, writeMarkdown);
 const { ms } = await step(`render pdf`, Pdf.render);
 await step(`render og image`, Og.render);
 
-const kilobytes = Math.round(Bun.file(Paths.pdf).size / 1024);
+const kilobyte = 1024;
+const kilobytes = Math.round(Bun.file(Paths.pdf).size / kilobyte);
 console.log(`Done: dist/ ready (pdf ${String(kilobytes)} kB in ${String(ms)}ms)`);
