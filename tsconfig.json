@@ -22,7 +22,7 @@
     "strict": true,
     "strictNullChecks": true,
     "target": "ESNext",
-    "types": ["bun"],
+    "types": ["bun", "vite/client"],
     "verbatimModuleSyntax": true
   },
   "exclude": ["**/dist/**", "**/node_modules/**"],

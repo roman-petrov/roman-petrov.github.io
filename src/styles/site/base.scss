@@ -1,0 +1,75 @@
+@use "../core" as *;
+@use "../tokens" as tokens;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100%;
+  margin: 0;
+  font-family: tokens.font(sans);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: tokens.color(ink-soft);
+  background:
+    radial-gradient(60rem 40rem at 85% -10%, rgb(111 123 255 / 18%), transparent 60%),
+    radial-gradient(50rem 34rem at 0% 30%, rgb(56 189 248 / 8%), transparent 60%), tokens.color(bg);
+  background-attachment: fixed;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+  color: tokens.color(ink);
+  letter-spacing: -0.02em;
+}
+
+p {
+  margin: 0 0 0.9rem;
+}
+
+a {
+  color: tokens.color(accent);
+  text-decoration: none;
+  border-bottom: 1px solid tokens.color(accent-line);
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+a:hover {
+  color: tokens.color(accent-bright);
+  border-bottom-color: currentcolor;
+}
+
+strong {
+  font-weight: 600;
+  color: tokens.color(ink);
+}
+
+ul {
+  margin: 0;
+}
+
+:focus-visible {
+  outline: 2px solid tokens.color(accent);
+  outline-offset: 3px;
+}
+
+::selection {
+  background: tokens.color(accent-line);
+}
+
+@include reduced-motion {
+  html {
+    scroll-behavior: auto;
+  }
+}

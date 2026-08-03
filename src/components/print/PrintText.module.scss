@@ -1,0 +1,59 @@
+@use "../../styles/core" as *;
+@use "../../styles/tokens" as tokens;
+
+.pull {
+  padding-left: 0.1rem;
+  margin-bottom: tokens.space(3);
+  font-size: tokens.text(lg);
+  font-weight: tokens.weight(medium);
+  line-height: tokens.leading(snug);
+  color: tokens.color(ink);
+
+  &::before {
+    margin-right: 0.45rem;
+    font-family: tokens.font(mono);
+    font-size: 0.9em;
+    font-weight: tokens.weight(medium);
+    color: tokens.color(accent-bright);
+    content: "//";
+  }
+}
+
+.lead {
+  margin-bottom: tokens.space(2);
+}
+
+.label {
+  margin: tokens.space(3) 0 tokens.space(1);
+  font-family: tokens.font(mono);
+  font-size: tokens.mono(xs);
+  font-weight: tokens.weight(medium);
+  color: tokens.color(muted);
+  text-transform: uppercase;
+  letter-spacing: tokens.tracking(mono);
+}
+
+.list {
+  padding-left: 1.1em;
+  margin: 0 0 tokens.space(2);
+
+  li {
+    padding-left: 0.15em;
+    margin-bottom: 0.12rem;
+
+    &::marker {
+      color: tokens.color(accent-bright);
+    }
+  }
+}
+
+@include print {
+  .label,
+  .lead {
+    break-after: avoid;
+  }
+
+  .list li {
+    break-inside: avoid;
+  }
+}

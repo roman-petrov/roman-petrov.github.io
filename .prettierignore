@@ -1,6 +1,8 @@
 dist
+.build
 **/node_modules
 bun.lock
 bun.lockb
 *.pdf
 *.png
+*.module.scss.d.ts

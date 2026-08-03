@@ -1,5 +1,3 @@
-import type { BlockClasses } from "../index";
-
 export type SiteLink = { id: string; label: string };
 
 /** Site order differs from the print sheet, so section numbers are derived from it. */
@@ -12,5 +10,3 @@ export const SiteOrder: SiteLink[] = [
 ];
 
 export const SiteIndex = (id: string) => String(SiteOrder.findIndex(item => item.id === id) + 1).padStart(2, `0`);
-
-export const SiteBlockClasses: BlockClasses = { label: `kicker`, lead: `lead`, list: `bullets`, pull: `pull` };

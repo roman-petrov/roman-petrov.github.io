@@ -16,8 +16,8 @@
     "prettier": "prettier --check .",
     "prettier-fix": "prettier --write .",
     "preview": "bun run build && bunx --bun serve dist -l 4173",
-    "stylelint": "stylelint --max-warnings=0 \"**/*.css\"",
-    "stylelint-fix": "stylelint --fix --max-warnings=0 \"**/*.css\"",
+    "stylelint": "stylelint --max-warnings=0 \"**/*.scss\"",
+    "stylelint-fix": "stylelint --fix --max-warnings=0 \"**/*.scss\"",
     "tsc": "tsc --noEmit"
   },
   "devDependencies": {
@@ -42,10 +42,14 @@
     "puppeteer": "^24.22.0",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
-    "stylelint": "^16.23.0",
-    "stylelint-config-recess-order": "^7.1.0",
-    "stylelint-config-standard": "^39.0.0",
+    "sass-embedded": "^1.100.0",
+    "stylelint": "^17",
+    "stylelint-config-recess-order": "^7.7.0",
+    "stylelint-config-standard-scss": "^17.0.0",
+    "stylelint-order": "^8",
     "typescript": "^6",
-    "typescript-eslint": "^8.65.0"
+    "typescript-eslint": "^8.65.0",
+    "vite": "^8.2.0",
+    "vite-plugin-sass-dts": "^1.3.37"
   }
 }

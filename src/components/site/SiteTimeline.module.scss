@@ -1,0 +1,127 @@
+@use "../../styles/core" as *;
+@use "../../styles/tokens" as tokens;
+
+$-track-x: calc(#{tokens.size(rail)} + #{tokens.size(rail-gap)} / 2);
+
+.root {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.item {
+  position: relative;
+  display: grid;
+  grid-template-columns: tokens.size(rail) minmax(0, 1fr);
+  gap: tokens.size(rail-gap);
+  padding-bottom: 1.75rem;
+
+  // Rail line, cut off after the last entry.
+  &::before {
+    position: absolute;
+    top: 0.55rem;
+    bottom: 0;
+    left: $-track-x;
+    width: 1px;
+    content: "";
+    background: linear-gradient(180deg, rgb(111 123 255 / 55%), rgb(111 123 255 / 10%));
+  }
+
+  &::after {
+    position: absolute;
+    top: 0.45rem;
+    left: calc(#{$-track-x} - 4px);
+    width: 9px;
+    height: 9px;
+    content: "";
+    background: tokens.color(accent);
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px rgb(111 123 255 / 18%);
+  }
+
+  &:last-child {
+    padding-bottom: 0;
+
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.meta {
+  position: sticky;
+  top: calc(#{tokens.size(nav)} + 1.25rem);
+  align-self: start;
+  text-align: right;
+}
+
+.date {
+  margin: 0 0 0.3rem;
+  font-family: tokens.font(mono);
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: tokens.color(ink);
+
+  &.is-now {
+    color: tokens.color(accent);
+  }
+}
+
+.link {
+  font-size: 0.8rem;
+  overflow-wrap: anywhere;
+}
+
+.card {
+  padding: 1.5rem 1.75rem;
+
+  &:hover {
+    border-color: tokens.color(line-strong);
+    box-shadow: 0 18px 40px rgb(5 8 16 / 35%);
+    transform: translateY(-2px);
+  }
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+.title {
+  margin: 0 0 0.8rem;
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+@include mobile {
+  .item {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.75rem;
+    padding-left: 1.25rem;
+
+    &::before {
+      left: 0;
+    }
+
+    &::after {
+      left: -4px;
+    }
+  }
+
+  .meta {
+    position: static;
+    display: flex;
+    gap: 0.9rem;
+    align-items: baseline;
+    text-align: left;
+  }
+
+  .card {
+    padding: 1.35rem 1.25rem;
+  }
+}
+
+@include reduced-motion {
+  .card:hover {
+    transform: none;
+  }
+}

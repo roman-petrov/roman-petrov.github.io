@@ -1,0 +1,56 @@
+@use "../../styles/core" as *;
+@use "../../styles/tokens" as tokens;
+
+.root {
+  display: inline-flex;
+  gap: 0.5rem;
+  align-items: center;
+  padding: 0.55rem 1rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #fff;
+  white-space: nowrap;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.lg {
+  padding: 0.75rem 1.35rem;
+  font-size: 0.95rem;
+}
+
+.primary {
+  background: linear-gradient(140deg, tokens.color(accent), tokens.color(accent-deep));
+  box-shadow: 0 8px 24px rgb(74 83 214 / 35%);
+
+  &:hover {
+    color: #fff;
+    box-shadow: 0 12px 30px rgb(74 83 214 / 45%);
+    transform: translateY(-2px);
+  }
+}
+
+.ghost {
+  color: tokens.color(ink);
+  background: tokens.color(glass);
+  border-color: tokens.color(line-strong);
+
+  &:hover {
+    color: tokens.color(ink);
+    background: tokens.color(glass-strong);
+    border-color: tokens.color(accent);
+    transform: translateY(-2px);
+  }
+}
+
+// Comes last so it overrides the lift on the variants above.
+@include reduced-motion {
+  .root:hover {
+    transform: none;
+  }
+}

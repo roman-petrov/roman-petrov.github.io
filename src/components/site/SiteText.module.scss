@@ -1,0 +1,55 @@
+@use "../../styles/tokens" as tokens;
+
+.pull {
+  margin: 0 0 1.5rem;
+  font-size: clamp(1.15rem, 2.2vw, 1.45rem);
+  font-weight: 500;
+  line-height: 1.4;
+  color: tokens.color(ink);
+
+  &::before {
+    margin-right: 0.6rem;
+    font-family: tokens.font(mono);
+    font-size: 0.85em;
+    color: tokens.color(accent);
+    content: "//";
+  }
+}
+
+.lead {
+  margin: 1.4rem 0 0.8rem;
+  color: tokens.color(ink-soft);
+}
+
+.label {
+  margin: 1.4rem 0 0.7rem;
+  font-family: tokens.font(mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: tokens.color(muted);
+  text-transform: uppercase;
+  letter-spacing: tokens.tracking(mono);
+}
+
+.list {
+  padding: 0;
+  margin: 0 0 1rem;
+  list-style: none;
+
+  li {
+    position: relative;
+    padding-left: 1.3rem;
+    margin-bottom: 0.45rem;
+
+    &::before {
+      position: absolute;
+      top: 0.62em;
+      left: 0.15rem;
+      width: 6px;
+      height: 6px;
+      content: "";
+      background: tokens.color(accent);
+      border-radius: 2px;
+    }
+  }
+}

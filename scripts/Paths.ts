@@ -5,6 +5,7 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), `..`);
 
 export const Paths = {
   assets: path.join(root, `dist`, `assets`),
+  build: path.join(root, `.build`),
   dist: path.join(root, `dist`),
   markdown: path.join(root, `resume.md`),
   og: path.join(root, `dist`, `assets`, `og.png`),

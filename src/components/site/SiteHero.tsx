@@ -1,6 +1,8 @@
 import { Contacts, Meta } from "../../Content";
-import { Ico } from "../index";
-import { SiteGithubLink, SitePdfLink } from "./SiteActions";
+import { Cn, Ico } from "../index";
+import { SiteActionSize, SiteGithubLink, SitePdfLink } from "./SiteActions";
+import styles from "./SiteHero.module.scss";
+import layout from "./SiteLayout.module.scss";
 
 const contactBody = (icon: string, value: string) => (
   <>
@@ -10,42 +12,42 @@ const contactBody = (icon: string, value: string) => (
 );
 
 export const SiteHero = () => (
-  <section className={`hero`} id="top">
-    <div aria-hidden="true" className={`hero-glow`} data-parallax />
-    <div className={`hero-inner`}>
-      <div className={`hero-text`}>
-        <p className={`hero-kicker`}>
-          <span className={`hero-slash`}>{`//`}</span>
+  <section className={styles.root} id="top">
+    <div aria-hidden="true" className={styles.glow} data-parallax />
+    <div className={Cn(styles.inner, layout.wrap)}>
+      <div>
+        <p className={styles.kicker}>
+          <span className={styles.slash}>{`//`}</span>
           {` ${Meta.role}`}
-          <span aria-hidden="true" className={`caret`} />
+          <span aria-hidden="true" className={styles.caret} />
         </p>
-        <h1 className={`hero-name`}>{Meta.name}</h1>
-        <p className={`hero-tagline`}>{Meta.tagline}</p>
-        <ul className={`hero-contacts`}>
+        <h1 className={styles.name}>{Meta.name}</h1>
+        <p className={styles.tagline}>{Meta.tagline}</p>
+        <ul className={styles.contacts}>
           {Contacts.map(({ href, icon, label, value }) => (
             <li key={label}>
               {href === undefined ? (
-                <span aria-label={label} className={`pill`}>
+                <span aria-label={label} className={styles.pill}>
                   {contactBody(icon, value)}
                 </span>
               ) : (
-                <a aria-label={label} className={`pill`} href={href}>
+                <a aria-label={label} className={styles.pill} href={href}>
                   {contactBody(icon, value)}
                 </a>
               )}
             </li>
           ))}
         </ul>
-        <div className={`hero-cta`}>
-          <SitePdfLink cn={`btn-lg`} />
-          <SiteGithubLink cn={`btn-lg`} />
+        <div className={styles.cta}>
+          <SitePdfLink cn={SiteActionSize.lg} />
+          <SiteGithubLink cn={SiteActionSize.lg} />
         </div>
       </div>
-      <figure className={`hero-photo`}>
+      <figure className={styles.photo}>
         <img alt={Meta.name} height={320} src={`./assets/${Meta.photo}`} width={320} />
       </figure>
     </div>
-    <a aria-label="Scroll to profile" className={`scroll-cue`} href="#profile">
+    <a aria-label="Scroll to profile" className={styles.cue} href="#profile">
       <span aria-hidden="true" />
     </a>
   </section>

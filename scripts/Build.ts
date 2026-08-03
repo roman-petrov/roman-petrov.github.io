@@ -1,9 +1,10 @@
 import { cp, mkdir, rm, writeFile } from "node:fs/promises";
 import path from "node:path";
+import { pathToFileURL } from "node:url";
 import * as prettier from "prettier";
+import { build } from "vite";
 
 import { Markdown } from "../src/Markdown";
-import { Render } from "../src/Render";
 import { Og } from "./Og";
 import { Paths } from "./Paths";
 import { Pdf } from "./Pdf";
@@ -14,7 +15,9 @@ const fonts = [
   { family: `JetBrains Mono`, pkg: `jetbrains-mono`, weights: [400, 500] },
 ];
 
-const assetFiles = [`print.css`, `site.css`, `photo.png`, `favicon.svg`];
+const assetFiles = [`photo.png`, `favicon.svg`];
+
+type RenderModule = { render: () => string };
 
 const step = async <T>(label: string, task: () => Promise<T>) => {
   const started = performance.now();
@@ -55,20 +58,36 @@ const copyFonts = async () => {
   await writeFile(path.join(Paths.assets, `fonts.css`), `${faces.join(`\n\n`)}\n`, `utf8`);
 };
 
-const buildClientScript = async () => {
-  const built = await Bun.build({ entrypoints: [path.join(Paths.src, `Site.ts`)], minify: true, target: `browser` });
-  const [output] = built.outputs;
+const outputs = (result: Awaited<ReturnType<typeof build>>) =>
+  (Array.isArray(result) ? result : [result]).flatMap(item => (`output` in item ? item.output : []));
 
-  if (output === undefined) {
-    throw new Error(`Client script build produced no output: ${built.logs.map(log => log.message).join(`\n`)}`);
+const cssFile = (chunks: { fileName: string }[]) => {
+  const asset = chunks.find(chunk => chunk.fileName.endsWith(`.css`));
+
+  if (asset === undefined) {
+    throw new Error(`The bundle produced no stylesheet.`);
   }
 
-  await Bun.write(path.join(Paths.assets, `site.js`), output);
+  return asset.fileName;
 };
 
-const writeHtml = async () => {
-  await writeFile(Paths.site, Render.site(), `utf8`);
-  await writeFile(Paths.print, Render.print(), `utf8`);
+/** Renders one page from its Vite bundle: the same bundle also emits the page stylesheet. */
+const renderPage = async (entry: string, page: string, stylesheet: string) => {
+  const outDir = path.join(Paths.build, entry);
+  const result = await build({ build: { outDir, ssr: `src/${entry}.ts`, ssrEmitAssets: true } });
+
+  await cp(path.join(outDir, cssFile(outputs(result))), path.join(Paths.assets, stylesheet));
+  const module_ = (await import(pathToFileURL(path.join(outDir, `${entry}.js`)).href)) as RenderModule;
+  await writeFile(page, module_.render(), `utf8`);
+};
+
+/** The client script is a classic script tag, so it is bundled on its own as an IIFE. */
+const buildClientScript = async () => {
+  const outDir = path.join(Paths.build, `Site`);
+  await build({
+    build: { lib: { entry: `src/Site.ts`, fileName: () => `site.js`, formats: [`iife`], name: `ResumeSite` }, outDir },
+  });
+  await cp(path.join(outDir, `site.js`), path.join(Paths.assets, `site.js`));
 };
 
 const writeMarkdown = async () => {
@@ -86,8 +105,9 @@ console.log(`Building resume site…`);
 await step(`clean dist`, () => rm(Paths.dist, { force: true, recursive: true }));
 await step(`copy assets`, copyAssets);
 await step(`copy fonts`, copyFonts);
+await step(`render site`, () => renderPage(`RenderSite`, Paths.site, `site.css`));
+await step(`render print sheet`, () => renderPage(`RenderPrint`, Paths.print, `print.css`));
 await step(`build client script`, buildClientScript);
-await step(`render html`, writeHtml);
 await step(`write resume.md`, writeMarkdown);
 const { ms } = await step(`render pdf`, Pdf.render);
 await step(`render og image`, Og.render);

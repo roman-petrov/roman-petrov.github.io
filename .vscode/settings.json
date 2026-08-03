@@ -19,7 +19,10 @@
     "package.json": "bun.lock, bun.lockb, bunfig.toml, .bun-version, .node-version, tsconfig.json",
     "prettier.config.js": ".prettierignore",
     "cspell.config.js": ".words.txt",
-    ".markdownlint.json": ".markdownlintignore"
+    ".markdownlint.json": ".markdownlintignore",
+    "*.ts": "${capture}.*",
+    "*.tsx": "${capture}.*",
+    "*.module.scss": "${capture}.module.scss.d.ts"
   },
 
   // Editor
@@ -72,10 +75,10 @@
 
   // TypeScript
   "js/ts.implicitProjectConfig.checkJs": true,
-  "typescript.tsdk": "node_modules/typescript/lib",
+  "js/ts.tsdk.path": "./node_modules/typescript/lib",
 
   // Stylelint
-  "stylelint.validate": ["css"],
+  "stylelint.validate": ["scss"],
 
   // Npm / package manager
   "npm.autoDetect": "off"

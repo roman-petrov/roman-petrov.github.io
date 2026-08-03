@@ -1,0 +1,26 @@
+@use "../../styles/core" as *;
+
+// `js` is set on <html> by an inline script, so reveals stay visible without scripting.
+.js {
+  .reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition:
+      opacity 0.7s cubic-bezier(0.22, 0.7, 0.2, 1),
+      transform 0.7s cubic-bezier(0.22, 0.7, 0.2, 1);
+    transition-delay: calc(var(--i, 0) * 70ms);
+
+    &.is-visible {
+      opacity: 1;
+      transform: none;
+    }
+  }
+}
+
+@include reduced-motion {
+  .js .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

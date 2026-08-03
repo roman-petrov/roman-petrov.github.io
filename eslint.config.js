@@ -9,7 +9,7 @@ import { defineConfig, globalIgnores } from "eslint/config";
 import tseslint from "typescript-eslint";
 
 export default defineConfig(
-  globalIgnores([`dist`]),
+  globalIgnores([`dist`, `.build`, `**/*.module.scss.d.ts`]),
   js.configs.recommended,
   tseslint.configs.strictTypeChecked,
   react.configs.flat.recommended,

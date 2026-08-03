@@ -26,5 +26,6 @@ jobs:
       - name: Build
         run: bun run build
 
-      - name: Check generated resume.md is committed
-        run: git diff --exit-code -- resume.md
+      # resume.md and the *.module.scss.d.ts files are build outputs that live in the repo.
+      - name: Check generated files are committed
+        run: git diff --exit-code

@@ -1,0 +1,43 @@
+@use "../core" as *;
+
+:root {
+  /* Color */
+  --color-bg: #080c16;
+  --color-bg-soft: #0c1220;
+  --color-ink: #eaeef7;
+  --color-ink-soft: #b7c0d2;
+  --color-muted: #7c8798;
+  --color-accent: #6f7bff;
+  --color-accent-bright: #9aa3ff;
+  --color-accent-deep: #4a53d6;
+  --color-accent-soft: rgb(111 123 255 / 14%);
+  --color-accent-line: rgb(111 123 255 / 35%);
+  --color-chrome: rgb(8 12 22 / 72%);
+  --color-chrome-strong: rgb(8 12 22 / 88%);
+  --color-line: rgb(255 255 255 / 10%);
+  --color-line-strong: rgb(255 255 255 / 18%);
+  --color-glass: rgb(255 255 255 / 4%);
+  --color-glass-strong: rgb(255 255 255 / 7%);
+
+  /* Type */
+  --font-sans: "Inter Tight", "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", "Cascadia Mono", consolas, monospace;
+  --font-emoji: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
+  --tracking-mono: 0.14em;
+
+  /* Metrics */
+  --size-wrap: 1080px;
+  --size-nav: #{r(64)};
+  --size-rail: #{r(136)};
+  --size-rail-gap: #{r(32)};
+  --size-ico: 0.9em;
+  --radius-md: 18px;
+  --radius-sm: 10px;
+}
+
+@include compact {
+  :root {
+    --size-rail: #{r(104)};
+    --size-rail-gap: #{r(20)};
+  }
+}

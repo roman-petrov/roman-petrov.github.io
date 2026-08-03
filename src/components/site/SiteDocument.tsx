@@ -1,9 +1,10 @@
 import { Meta, SectionById } from "../../Content";
-import { Blocks } from "../index";
+import styles from "./SiteDocument.module.scss";
 import { SiteFooter } from "./SiteFooter";
 import { SiteHero } from "./SiteHero";
+import motion from "./SiteMotion.module.scss";
 import { SiteNav } from "./SiteNav";
-import { SiteBlockClasses } from "./SiteOrder";
+import { SiteProse } from "./SiteProse";
 import { SiteSection } from "./SiteSection";
 import { SiteStack } from "./SiteStack";
 import { SiteTimeline } from "./SiteTimeline";
@@ -11,7 +12,7 @@ import { SiteTimeline } from "./SiteTimeline";
 const title = `${Meta.name} — ${Meta.role}`;
 
 // Reveal animations only apply when scripting is available.
-const enableMotion = `document.documentElement.classList.add("js");`;
+const enableMotion = `document.documentElement.classList.add("${motion.js}");`;
 
 const profile = SectionById(`profile`);
 
@@ -37,19 +38,17 @@ export const SiteDocument = () => (
       <script defer src="./assets/site.js" />
     </head>
     <body>
-      <a className={`skip`} href="#profile">
+      <a className={styles.skip} href="#profile">
         Skip to content
       </a>
-      <div aria-hidden="true" className={`progress`}>
-        <span className={`progress-bar`} />
+      <div aria-hidden="true" className={styles.progress}>
+        <span className={styles.bar} />
       </div>
       <SiteNav />
       <main>
         <SiteHero />
         <SiteSection icon={profile.icon} id={profile.id} title={profile.title}>
-          <div className={`prose reveal glass`}>
-            <Blocks blocks={profile.blocks ?? []} classes={SiteBlockClasses} />
-          </div>
+          <SiteProse blocks={profile.blocks ?? []} />
         </SiteSection>
         <SiteStack />
         <SiteTimeline section={SectionById(`experience`)} />
