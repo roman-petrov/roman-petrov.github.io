@@ -13,6 +13,7 @@
     "ispringsolutions",
     "JobWindow",
     "markdownlint",
+    "networkidle",
     "Occam",
     "Petrov",
     "petrov",
@@ -27,19 +28,12 @@
     "SlingMedia",
     "SlingPlayer",
     "speccy",
+    "stylesheet",
     "travelline",
     "TLF",
     "TLUI",
     "Yoshkar",
     "zxpress"
   ],
-  "ignorePaths": [
-    "node_modules",
-    "rendercv_output",
-    "dist",
-    "package-lock.json",
-    "*.pdf",
-    "*.png",
-    "*.typ"
-  ]
+  "ignorePaths": ["node_modules", "dist", "package-lock.json", "*.pdf", "*.png"]
 }

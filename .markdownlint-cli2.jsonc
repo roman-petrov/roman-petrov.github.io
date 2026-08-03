@@ -8,5 +8,5 @@
     "MD041": false,
   },
   "globs": ["**/*.md"],
-  "ignores": ["node_modules/**", "rendercv_output/**"],
+  "ignores": ["node_modules/**", "dist/**"],
 }

@@ -1,8 +1,5 @@
 node_modules/
-rendercv_output/
 dist/
 package-lock.json
 *.pdf
 *.png
-*.typ
-Roman_Petrov_CV.yaml

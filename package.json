@@ -6,16 +6,11 @@
   "type": "module",
   "scripts": {
     "pdf": "node scripts/print-pdf.mjs",
-    "build": "npm run pdf",
     "preview": "npx --yes serve src -l 4173",
-    "preview:pages": "node scripts/preview-pages.mjs",
     "format": "prettier --write .",
-    "format:check": "prettier --check .",
     "lint:md": "markdownlint-cli2",
-    "lint:md:fix": "markdownlint-cli2 --fix",
     "spell": "cspell \"**/*.{md,html,css,js,mjs,json,jsonc}\"",
-    "check": "npm run format:check && npm run lint:md && npm run spell",
-    "fix": "npm run format && npm run lint:md:fix && npm run spell"
+    "check": "prettier --check . && npm run lint:md && npm run spell"
   },
   "devDependencies": {
     "@cspell/dict-ru_ru": "^2.3.2",
