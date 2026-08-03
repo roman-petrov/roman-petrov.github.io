@@ -1,6 +1,6 @@
 import path from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
-import puppeteer from "puppeteer";
+import { launchBrowser } from "./browser.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const htmlPath = path.join(root, "dist", "resume.html");
@@ -10,10 +10,7 @@ const outPath = path.join(root, "dist", "Roman_Petrov_CV.pdf");
 export async function printPdf() {
   const started = performance.now();
 
-  const browser = await puppeteer.launch({
-    headless: true,
-    args: ["--disable-dev-shm-usage", "--font-render-hinting=none"],
-  });
+  const browser = await launchBrowser();
 
   try {
     const page = await browser.newPage();

@@ -1,6 +1,6 @@
 import path from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
-import puppeteer from "puppeteer";
+import { launchBrowser } from "./browser.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const sitePath = path.join(root, "dist", "index.html");
@@ -8,10 +8,7 @@ const outPath = path.join(root, "dist", "assets", "og.png");
 
 /** Social preview: the hero of the built site at 1200x630. */
 export async function renderOgImage() {
-  const browser = await puppeteer.launch({
-    headless: true,
-    args: ["--disable-dev-shm-usage", "--font-render-hinting=none"],
-  });
+  const browser = await launchBrowser();
 
   try {
     const page = await browser.newPage();
