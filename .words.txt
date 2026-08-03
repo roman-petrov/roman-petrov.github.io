@@ -3,13 +3,11 @@ beeline
 bunx
 cpslabs
 fontsource
-glassmorphism
 habrahabr
 Huffman
 ispringsolutions
 jetbrains
 JobWindow
-networkidle
 Occam
 Petrov
 petrov

@@ -2,7 +2,7 @@
 
 Software Developer
 
-[Web version](https://roman-petrov.github.io/resume/) · [PDF](https://roman-petrov.github.io/resume/Roman_Petrov_CV.pdf)
+[Web version](https://roman-petrov.github.io/) · [PDF](https://roman-petrov.github.io/Roman_Petrov_CV.pdf)
 
 ## Details
 

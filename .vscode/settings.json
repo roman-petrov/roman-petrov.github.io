@@ -16,8 +16,7 @@
   "explorer.fileNesting.enabled": true,
   "explorer.fileNesting.expand": false,
   "explorer.fileNesting.patterns": {
-    "package.json": "bun.lock, bun.lockb, bunfig.toml, .bun-version, .node-version",
-    "resume.html": "resume.css, photo.png",
+    "package.json": "bun.lock, bun.lockb, bunfig.toml, .bun-version, .node-version, tsconfig.json",
     "prettier.config.js": ".prettierignore",
     "cspell.config.js": ".words.txt",
     ".markdownlint.json": ".markdownlintignore"
@@ -70,6 +69,10 @@
 
   // Markdown
   "markdown.validate.enabled": true,
+
+  // TypeScript
+  "js/ts.implicitProjectConfig.checkJs": true,
+  "typescript.tsdk": "node_modules/typescript/lib",
 
   // Stylelint
   "stylelint.validate": ["css"],
