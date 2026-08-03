@@ -1,0 +1,6 @@
+node_modules/
+rendercv_output/
+package-lock.json
+*.pdf
+*.png
+*.typ

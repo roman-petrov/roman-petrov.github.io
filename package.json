@@ -1,0 +1,23 @@
+{
+  "name": "resume",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Roman Petrov resume (RenderCV)",
+  "scripts": {
+    "render": "rendercv render Roman_Petrov_CV.yaml",
+    "render:watch": "rendercv render --watch Roman_Petrov_CV.yaml",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint:md": "markdownlint-cli2",
+    "lint:md:fix": "markdownlint-cli2 --fix",
+    "spell": "cspell \"**/*.{md,yaml,yml,json,jsonc}\"",
+    "check": "npm run format:check && npm run lint:md && npm run spell",
+    "fix": "npm run format && npm run lint:md:fix && npm run spell"
+  },
+  "devDependencies": {
+    "@cspell/dict-ru_ru": "^2.3.2",
+    "cspell": "^9.2.0",
+    "markdownlint-cli2": "^0.18.1",
+    "prettier": "^3.6.2"
+  }
+}
