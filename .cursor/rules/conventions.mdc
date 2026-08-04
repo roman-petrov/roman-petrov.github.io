@@ -1,0 +1,41 @@
+---
+description: How to use the coding conventions stored in docs/conventions
+alwaysApply: true
+---
+
+# 📐 Using conventions
+
+`docs/conventions/` holds the coding norms of this repository as **atoms**: one norm per markdown file, grouped by
+directory (`agent`, `programming`, `typescript`, `react`, `css`, `testing`, `eslint`, `markdown`, `unused`). Each atom
+declares `id`, `emoji` and `applies`, and has fixed sections `📐 Norm`, `🔍 Detect`, `🔧 Fix`, `📝 Examples`. The format
+itself is described in `docs/conventions/README.md`.
+
+## Loading
+
+Before writing or reviewing code, read the atoms of the groups that match the target files:
+
+- any file — `agent`, `programming`
+- `*.ts`, `*.tsx` — `typescript`
+- `*.tsx` — `react`, plus `react/view-state` when splitting a component into `Entry`/`State`/`View`
+- `*.scss` — `css`
+- `*.test.ts` — `testing`
+- `*.md` — `markdown`
+- `eslint-disable` comments — `eslint`
+- dead code hunts and cleanups — `unused`
+
+Read the files from disk with Glob and Read; never answer from memory of what a convention says. Enforce an atom only
+when its `applies` glob matches the path (`*` = any path) and the pattern it talks about actually exists here.
+
+## Applying
+
+- Atoms are the source of truth. They outrank your habits, your preference, and patterns already present in the code —
+  if existing code contradicts an atom, the code is wrong.
+- Verify with each atom's `🔍 Detect` section using grep or a file read, not by assumption.
+- Report a violation as one line starting with that atom's `emoji` field, then the file and place, the problem, and the
+  fix. Do not paste atom bodies or cite atom ids in the report.
+- Never edit an atom to make current code look correct. Atoms change only when the user asks to change a convention.
+
+## Adding
+
+Add `docs/conventions/<group>/<kebab-name>.md` (or `<group>/<topic>/<kebab-name>.md`) in the atom format, with `id`
+mirroring the path without `.md`. A new group is just a new subdirectory. Nothing else in the directory needs an edit.
