@@ -1,32 +1,51 @@
-name: CI
+name: 🔁 CI
 
 on:
   workflow_dispatch:
 
 jobs:
-  check:
+  ci:
+    name: ${{ matrix.task.name }}
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        task:
+          - name: 🏗️ build
+            arg: build
+          - name: 🧪 test
+            arg: test
+          - name: 📘 tsc
+            arg: tsc
+          - name: 🔍 eslint
+            arg: eslint
+          - name: ✨ prettier
+            arg: prettier
+          - name: 🎨 stylelint
+            arg: stylelint
+          - name: 📝 cspell
+            arg: cspell
+          - name: 📋 jscpd
+            arg: jscpd
+          - name: 🧹 knip
+            arg: knip
+          - name: 📄 markdownlint
+            arg: markdownlint
+
     steps:
-      - uses: actions/checkout@v4
+      - name: 📥 Checkout
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
 
-      - uses: oven-sh/setup-bun@v2
-        with:
-          bun-version-file: .bun-version
+      - name: 🔧 Setup repository
+        uses: ./.github/actions/setup-repo
 
-      - name: Install dependencies
-        run: bun install --frozen-lockfile
-
-      - name: Install Chrome for Puppeteer
+      - name: 🌐 Setup Chrome
+        if: matrix.task.arg == 'build'
         run: bunx puppeteer browsers install chrome
 
-      - name: Test
-        run: bun run test
+      - name: ▶️ Run ${{ matrix.task.name }}
+        run: bun run ${{ matrix.task.arg }}
 
-      - name: Lint
-        run: bun run lint
-
-      - name: Build
-        run: bun run build
-
-      - name: Check generated files are committed
+      - name: 🔎 Check generated files are committed
+        if: matrix.task.arg == 'build'
         run: git diff --exit-code
