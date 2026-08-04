@@ -65,11 +65,12 @@ only the architecture but the whole product concept — Reactor started as my id
 
 **Projects:**
 
-- **Reactor** — Internal front-end platform. A new SPA project starts with no setup and gets the design system, state
-  management, router, localization, own storybook, screenshot testing and coding conventions out of the box. One CLI
-  tool covers the whole workflow: dev server, build, linting, tests, visual regression and release. 25 packages that
-  work as a single product, and few platforms give so much out of the box. Already in production, and the technical
-  teams in the company are moving to it.
+- **Reactor** — Internal front-end platform of 25 packages that work as a single product. It unifies the development
+  stack and the design of all TravelLine products, and keeps the API and the tools simple. A new SPA project needs no
+  setup and no boilerplate and is production ready in about five minutes: design system, state management, router,
+  localization, our own storybook, screenshot testing and coding conventions out of the box, and one CLI tool for the
+  whole workflow from dev server and build to linting, tests, visual regression and release. Already in production, and
+  the technical teams in the company are moving to it.
   - **Roles:** architect · tech lead · lead developer
   - **Stack:** `TypeScript` · `React` · `Vite` · `SCSS`
 - **TLUI3.0** — Move of the front-end stack to Flutter Web. In one year the team built the design system components, the
