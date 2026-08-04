@@ -11,9 +11,10 @@ const chip = (text: string) => `\`${text}\``;
 const paragraph = ({ text, type }: Extract<Block, { text: string }>) =>
   type === `pull` ? `> // ${text}` : type === `label` ? `**${text}:**` : text;
 
-const projectItem = ({ href, name, note, roles, stack }: Project) =>
+const projectItem = ({ href, name, note: [lead, ...rest], roles, stack }: Project) =>
   [
-    bullet(`${href === undefined ? `**${name}**` : `[${name}](${href})`}${note === undefined ? `` : ` — ${note}`}`),
+    bullet(`${href === undefined ? `**${name}**` : `[${name}](${href})`}${lead === undefined ? `` : ` — ${lead}`}`),
+    ...rest.map(item => `\n  ${item}\n`),
     `  - **Roles:** ${roles.join(` · `)}`,
     `  - **Stack:** ${stack.map(chip).join(` · `)}`,
   ].join(`\n`);
@@ -47,9 +48,9 @@ const stackBlocks = (): Block[] => {
 
 const blocks = ({ blocks: own, id }: Section) => own ?? (id === `stack` ? stackBlocks() : []);
 
-const headline = ({ icon, id, title }: Section) => `${Content.index(id)} ${icon} ${title}`;
+const headline = ({ icon, title }: Section) => `${icon} ${title}`;
 
-const navLink = (item: Section) => `[${item.icon} ${item.title}](#${slug(headline(item))})`;
+const navLink = (item: Section) => `[${headline(item)}](#${slug(headline(item))})`;
 
 const section = (item: Section) =>
   [`## ${headline(item)}`, ...(item.entries ?? []).map(entry), ...blocks(item).map(block)].join(`\n\n`);

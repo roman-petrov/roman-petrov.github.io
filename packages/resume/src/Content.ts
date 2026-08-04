@@ -19,7 +19,7 @@ export type Heading = { icon: string; title: string };
 
 export type Link = { href: string; label: string };
 
-export type Project = { href?: string; name: string; note?: string; roles: string[]; stack: string[] };
+export type Project = { href?: string; name: string; note: string[]; roles: string[]; stack: string[] };
 
 export type Section = Heading & { blocks?: Block[]; entries?: Entry[]; id: string };
 
@@ -41,10 +41,14 @@ const link = (url: string): Link => ({ href: url, label: new URL(url).host.repla
 
 const bold = (text: string) => `**${text}**`;
 
+const paragraphs = (text: string) => text.split(`\n`);
+
+const textBlocks = (text: string): Block[] => paragraphs(text).map(item => ({ text: item, type: `text` }));
+
 const project = ({ name, note, roles, stack, url }: Job[`projects`][number]): Project => ({
   href: url,
   name,
-  note,
+  note: note === undefined ? [] : paragraphs(note),
   roles,
   stack,
 });
@@ -62,7 +66,7 @@ const profileBlocks = ({ approach, motto, proficiency, wishes }: Resume[`profile
 
 const jobEntry = (job: Job): Entry => ({
   blocks: [
-    ...(job.summary === undefined ? [] : [{ text: job.summary, type: `text` } as const]),
+    ...(job.summary === undefined ? [] : textBlocks(job.summary)),
     ...(job.duties === undefined
       ? []
       : [{ text: `Responsibilities`, type: `label` } as const, { items: job.duties, type: `list` } as const]),
@@ -82,7 +86,7 @@ const studyEntry = (study: Study): Entry => ({
 
 const activityEntry = ({ from, references, summary, title, to }: Activity): Entry => ({
   blocks: [
-    { text: summary, type: `text` },
+    ...textBlocks(summary),
     ...(references === undefined
       ? []
       : [{ text: references.label, type: `label` } as const, { items: references.items, type: `list` } as const]),
@@ -121,6 +125,4 @@ const section = (id: string) => {
   return found;
 };
 
-const index = (id: string) => String(sections.findIndex(item => item.id === id) + 1).padStart(2, `0`);
-
-export const Content = { contacts, facts, index, meta: resume.meta, section, sections };
+export const Content = { contacts, facts, meta: resume.meta, section, sections };

@@ -22,11 +22,11 @@ export const Projects = ({ classes, items }: ProjectsProps) => (
           )}
           <span className={classes.roles}>{roles.join(` · `)}</span>
         </p>
-        {note === undefined ? undefined : (
-          <p className={classes.note}>
-            <Inline text={note} />
+        {note.map((item, index) => (
+          <p className={classes.note} key={index}>
+            <Inline text={item} />
           </p>
-        )}
+        ))}
         <ul className={classes.stack}>
           {stack.map(item => (
             <li className={classes.chip} key={item}>

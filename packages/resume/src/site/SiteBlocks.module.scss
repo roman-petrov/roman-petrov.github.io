@@ -83,6 +83,10 @@
 
 .note {
   margin: 0;
+
+  & + & {
+    margin-top: space.sm();
+  }
 }
 
 .chip {

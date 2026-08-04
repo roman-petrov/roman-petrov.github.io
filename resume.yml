@@ -88,23 +88,28 @@ experience:
         - name: Reactor
           note: >-
             Internal front-end platform of 25 packages that work as a single product. It unifies the development stack
-            and the design of all TravelLine products, and keeps the API and the tools simple. A new SPA project needs
-            no setup and no boilerplate and is production ready in about five minutes: design system, state management,
-            router, localization, our own storybook, screenshot testing and coding conventions out of the box, and one
-            CLI tool for the whole workflow from dev server and build to linting, tests, visual regression and release.
+            and the design of all TravelLine products, and keeps the API and the tools simple.
+
+            A new SPA project needs no setup and no boilerplate and is production ready in about five minutes: design
+            system, state management, router, localization, our own storybook, screenshot testing and coding conventions
+            out of the box, and one CLI tool for the whole workflow from dev server and build to linting, tests, visual
+            regression and release.
+
             Already in production, and the technical teams in the company are moving to it.
           roles: [architect, tech lead, lead developer]
           stack: [TypeScript, React, Vite, SCSS]
         - name: TLUI3.0
           note: >-
             Move of the front-end stack to Flutter Web. In one year the team built the design system components, the
-            build and workflow tools and a way to start a new project in minutes. The company did not adopt Flutter, so
-            only a part of the work went to production.
+            build and workflow tools and a way to start a new project in minutes.
+
+            The company did not adopt Flutter, so only a part of the work went to production.
           roles: [architect, tech lead, lead developer]
           stack: [Dart, Flutter]
         - name: TLUI
           note: >-
             Design system and component library that made the whole B2B account and intranet look and work the same way.
+
             The stack is old and there were almost no tools around it, but the library still runs every screen of the
             TravelLine back office and is supported and improved.
           roles: [developer, tech lead]
@@ -180,8 +185,10 @@ activities:
       to: 2000
       summary: >-
         During my school years my favorite hobby was assembler programming on ZX-Spectrum. I'm the author of RIP (Real
-        Information Packer) — LZW/Huffman data compression algorithm and application. This was a challenge and I managed
-        to achieve one of the best compression ratios compared to other ZX-Spectrum data compression tools.
+        Information Packer) — LZW/Huffman data compression algorithm and application.
+
+        This was a challenge and I managed to achieve one of the best compression ratios compared to other ZX-Spectrum
+        data compression tools.
       references:
         label: References (in Russian)
         items:

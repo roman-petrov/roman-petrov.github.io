@@ -2,8 +2,8 @@
 
 `// SOFTWARE DEVELOPER`
 
-[👤 Profile](#01--profile) · [🛠 Stack](#02--stack) · [💼 Experience](#03--experience) · [🎓 Education](#04--education) ·
-[🚀 Activities](#05--activities)
+[👤 Profile](#-profile) · [🛠 Stack](#-stack) · [💼 Experience](#-experience) · [🎓 Education](#-education) ·
+[🚀 Activities](#-activities)
 
 Front-end architect, team lead and developer. Flutter, TypeScript, clean code.
 
@@ -17,7 +17,7 @@ Front-end architect, team lead and developer. Flutter, TypeScript, clean code.
 
 ---
 
-## 01 👤 Profile
+## 👤 Profile
 
 > // My favorite tool in software development is **Occam's razor**.
 
@@ -38,7 +38,7 @@ I would like to land a software developer position in a company that:
 - cares about the user experience quality in products
 - provides possibilities to grow as professional
 
-## 02 🛠 Stack
+## 🛠 Stack
 
 `Programming` · `User experience` · `Git` · `Dart/Flutter` · `TypeScript/JavaScript` · `HTML / CSS` · `React` · `C#` ·
 `C/C++` · `Markdown`
@@ -46,7 +46,7 @@ I would like to land a software developer position in a company that:
 - 🌍 **Languages:** English · Russian
 - 🎸 **Hobbies:** Programming · Travel · Camping · Guitar
 
-## 03 💼 Experience
+## 💼 Experience
 
 ### Front-end architect, tech lead and lead developer at TravelLine
 
@@ -66,21 +66,31 @@ only the architecture but the whole product concept — Reactor started as my id
 **Projects:**
 
 - **Reactor** — Internal front-end platform of 25 packages that work as a single product. It unifies the development
-  stack and the design of all TravelLine products, and keeps the API and the tools simple. A new SPA project needs no
-  setup and no boilerplate and is production ready in about five minutes: design system, state management, router,
-  localization, our own storybook, screenshot testing and coding conventions out of the box, and one CLI tool for the
-  whole workflow from dev server and build to linting, tests, visual regression and release. Already in production, and
-  the technical teams in the company are moving to it.
+  stack and the design of all TravelLine products, and keeps the API and the tools simple.
+
+  A new SPA project needs no setup and no boilerplate and is production ready in about five minutes: design system,
+  state management, router, localization, our own storybook, screenshot testing and coding conventions out of the box,
+  and one CLI tool for the whole workflow from dev server and build to linting, tests, visual regression and release.
+
+  Already in production, and the technical teams in the company are moving to it.
+
   - **Roles:** architect · tech lead · lead developer
   - **Stack:** `TypeScript` · `React` · `Vite` · `SCSS`
+
 - **TLUI3.0** — Move of the front-end stack to Flutter Web. In one year the team built the design system components, the
-  build and workflow tools and a way to start a new project in minutes. The company did not adopt Flutter, so only a
-  part of the work went to production.
+  build and workflow tools and a way to start a new project in minutes.
+
+  The company did not adopt Flutter, so only a part of the work went to production.
+
   - **Roles:** architect · tech lead · lead developer
   - **Stack:** `Dart` · `Flutter`
+
 - **TLUI** — Design system and component library that made the whole B2B account and intranet look and work the same
-  way. The stack is old and there were almost no tools around it, but the library still runs every screen of the
-  TravelLine back office and is supported and improved.
+  way.
+
+  The stack is old and there were almost no tools around it, but the library still runs every screen of the TravelLine
+  back office and is supported and improved.
+
   - **Roles:** developer · tech lead
   - **Stack:** `TypeScript` · `JavaScript` · `AngularJS` · `Less`
 
@@ -117,13 +127,13 @@ only the architecture but the whole product concept — Reactor started as my id
   - **Roles:** lead developer · team lead
   - **Stack:** `C#` · `C/C++` · `WPF` · `Silverlight`
 
-## 04 🎓 Education
+## 🎓 Education
 
 ### Master, Volga State University of Technology, Yoshkar-Ola
 
 `1999 — 2004`
 
-## 05 🚀 Activities
+## 🚀 Activities
 
 ### Machine learning contest
 
@@ -142,8 +152,10 @@ challenge for me. I was ranked the 236 out of 832 participants.
 `1995 — 2000`
 
 During my school years my favorite hobby was assembler programming on ZX-Spectrum. I'm the author of RIP (Real
-Information Packer) — LZW/Huffman data compression algorithm and application. This was a challenge and I managed to
-achieve one of the best compression ratios compared to other ZX-Spectrum data compression tools.
+Information Packer) — LZW/Huffman data compression algorithm and application.
+
+This was a challenge and I managed to achieve one of the best compression ratios compared to other ZX-Spectrum data
+compression tools.
 
 **References (in Russian):**
 

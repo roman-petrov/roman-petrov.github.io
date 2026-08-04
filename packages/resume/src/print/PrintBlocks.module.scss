@@ -67,6 +67,10 @@
   font-size: text.lg();
   line-height: leading.snug();
   color: color.ink-soft();
+
+  & + & {
+    margin-top: space.sm();
+  }
 }
 
 .chip {
