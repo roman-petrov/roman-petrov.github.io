@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="RP">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
   <defs>
     <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#6f7bff" />
@@ -7,12 +7,15 @@
   </defs>
   <rect width="64" height="64" rx="14" fill="url(#g)" />
   <text
-    x="32"
-    y="42"
+    x="33.2"
+    y="48.1"
     text-anchor="middle"
-    font-family="monospace"
-    font-size="26"
-    font-weight="500"
+    textLength="50"
+    lengthAdjust="spacingAndGlyphs"
+    letter-spacing="6"
+    font-family="ui-sans-serif, system-ui, Helvetica, Arial, sans-serif"
+    font-size="46"
+    font-weight="700"
     fill="#fff"
   >
     RP
