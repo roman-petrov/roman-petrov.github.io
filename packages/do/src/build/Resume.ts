@@ -16,17 +16,7 @@ const fonts = [
 
 const assetFiles = [`photo.png`, `favicon.svg`];
 
-const kilobyte = 1024;
-
 type RenderModule = { render: () => string };
-
-const step = async <T>(label: string, task: () => Promise<T>) => {
-  const started = performance.now();
-  const result = await task();
-  console.log(`  ${label} (${String(Math.round(performance.now() - started))}ms)`);
-
-  return result;
-};
 
 const copyAssets = async () => {
   await mkdir(Paths.assets, { recursive: true });
@@ -106,22 +96,17 @@ const writeMarkdown = async () => {
 };
 
 const run = async () => {
-  console.log(`Building resume site…`);
+  await rm(Paths.dist, { force: true, recursive: true });
+  await copyAssets();
+  await copyFonts();
+  await renderPage(`EntrySite`, Paths.site, `site.css`);
+  await renderPage(`EntryPrint`, Paths.print, `print.css`);
+  await buildClientScript();
+  await writeMarkdown();
+  await Pdf.render();
+  await Og.render();
 
-  await step(`clean dist`, () => rm(Paths.dist, { force: true, recursive: true }));
-  await step(`copy assets`, copyAssets);
-  await step(`copy fonts`, copyFonts);
-  await step(`render site`, () => renderPage(`EntrySite`, Paths.site, `site.css`));
-  await step(`render print sheet`, () => renderPage(`EntryPrint`, Paths.print, `print.css`));
-  await step(`build client script`, buildClientScript);
-  await step(`write README.md`, writeMarkdown);
-  const { ms } = await step(`render pdf`, Pdf.render);
-  await step(`render og image`, Og.render);
-
-  const kilobytes = Math.round(Bun.file(Paths.pdf).size / kilobyte);
-  console.log(`Done: dist/ ready (pdf ${String(kilobytes)} kB in ${String(ms)}ms)`);
-
-  return 0;
+  return { exitCode: 0, output: `` };
 };
 
 export const Resume = { build: run };

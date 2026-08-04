@@ -6,9 +6,9 @@ import { Run } from "../Run";
 const port = `4173`;
 
 const run = async () => {
-  const code = await Resume.build();
+  const built = await Resume.build();
 
-  return code === 0 ? Run.spawn([`bun`, `x`, `--bun`, `serve`, `dist`, `-l`, port]) : code;
+  return built.exitCode === 0 ? Run.interactive([`bun`, `x`, `--bun`, `serve`, `dist`, `-l`, port]) : built;
 };
 
 export const Preview: Command = {
