@@ -4,17 +4,13 @@ const titled = { icon: z.string(), title: z.string() };
 
 const span = { from: z.int(), to: z.int() };
 
-const target = { label: z.string().optional(), url: z.url() };
-
 export const ResumeSchema = z.strictObject({
   activities: z.strictObject({
     ...titled,
     items: z.array(
       z.strictObject({
         ...span,
-        references: z
-          .strictObject({ label: z.string(), links: z.array(z.strictObject({ ...target, note: z.string() })) })
-          .optional(),
+        references: z.strictObject({ items: z.array(z.string()), label: z.string() }).optional(),
         summary: z.string(),
         title: z.string(),
       }),
@@ -34,7 +30,6 @@ export const ResumeSchema = z.strictObject({
         duties: z.array(z.string()).optional(),
         projects: z.array(
           z.strictObject({
-            link: z.strictObject(target).optional(),
             name: z.string(),
             note: z.string().optional(),
             roles: z.array(z.string()),

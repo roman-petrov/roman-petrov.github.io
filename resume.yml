@@ -145,10 +145,7 @@ experience:
           roles: [single developer]
           stack: [C/C++, COM, ActiveX]
         - name: SlingPlayer
-          note: Streaming media player for
-          link:
-            url: https://en.wikipedia.org/wiki/Sling_Media
-            label: SlingMedia
+          note: Streaming media player for [SlingMedia](https://en.wikipedia.org/wiki/Sling_Media)
           roles: [lead developer, team lead]
           stack: [C#, C/C++, WPF, Silverlight]
 
@@ -174,10 +171,10 @@ activities:
         challenge for me. I was ranked the 236 out of 832 participants.
       references:
         label: References (in Russian)
-        links:
-          - note: Contest info and results at
-            url: https://web.archive.org/web/20150920022250/https://special.habrahabr.ru/beeline/
-            label: beeline.ru
+        items:
+          - >-
+            Contest info and results at
+            [beeline.ru](https://web.archive.org/web/20150920022250/https://special.habrahabr.ru/beeline/)
     - title: ZX-Spectrum
       from: 1995
       to: 2000
@@ -187,10 +184,9 @@ activities:
         to achieve one of the best compression ratios compared to other ZX-Spectrum data compression tools.
       references:
         label: References (in Russian)
-        links:
-          - note: About me at
-            url: https://speccy.info/%D0%A0%D0%BE%D0%BC%D0%B0%D0%BD_%D0%9F%D0%B5%D1%82%D1%80%D0%BE%D0%B2
-          - note: RIP at
-            url: https://speccy.info/RIP_%28%D1%83%D0%BF%D0%B0%D0%BA%D0%BE%D0%B2%D1%89%D0%B8%D0%BA%29
-          - note: About RIP at
-            url: https://zxpress.ru/article.php?id=8510
+        items:
+          - >-
+            About me at
+            [speccy.info](https://speccy.info/%D0%A0%D0%BE%D0%BC%D0%B0%D0%BD_%D0%9F%D0%B5%D1%82%D1%80%D0%BE%D0%B2)
+          - RIP at [speccy.info](https://speccy.info/RIP_%28%D1%83%D0%BF%D0%B0%D0%BA%D0%BE%D0%B2%D1%89%D0%B8%D0%BA%29)
+          - About RIP at [zxpress.ru](https://zxpress.ru/article.php?id=8510)

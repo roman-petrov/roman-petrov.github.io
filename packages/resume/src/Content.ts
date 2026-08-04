@@ -33,25 +33,18 @@ type Span = { from: number; to: number };
 
 type Study = Resume[`education`][`studies`][number];
 
-type Target = { label?: string; url: string };
-
 const resume = Yaml as Resume;
 
 const period = ({ from, to }: Span) => (to === from ? String(from) : `${String(from)} — ${String(to)}`);
 
-const link = ({ label, url }: Target): Link => ({
-  href: url,
-  label: label ?? new URL(url).host.replace(/^www\./u, ``),
-});
+const link = (url: string): Link => ({ href: url, label: new URL(url).host.replace(/^www\./u, ``) });
 
 const bold = (text: string) => `**${text}**`;
 
-const anchor = (to: Target) => `[${link(to).label}](${to.url})`;
-
-const project = ({ link: tail, name, note, roles, stack, url }: Job[`projects`][number]): Project => ({
+const project = ({ name, note, roles, stack, url }: Job[`projects`][number]): Project => ({
   href: url,
   name,
-  note: note === undefined ? undefined : `${note}${tail === undefined ? `` : ` ${anchor(tail)}`}`,
+  note,
   roles,
   stack,
 });
@@ -77,7 +70,7 @@ const jobEntry = (job: Job): Entry => ({
     { items: job.projects.map(project), type: `projects` },
   ],
   date: period(job),
-  link: job.url === undefined ? undefined : link({ url: job.url }),
+  link: job.url === undefined ? undefined : link(job.url),
   title: `${job.role} at ${job.company}`,
 });
 
@@ -92,10 +85,7 @@ const activityEntry = ({ from, references, summary, title, to }: Activity): Entr
     { text: summary, type: `text` },
     ...(references === undefined
       ? []
-      : [
-          { text: references.label, type: `label` } as const,
-          { items: references.links.map(({ note, ...ref }) => `${note} ${anchor(ref)}`), type: `list` } as const,
-        ]),
+      : [{ text: references.label, type: `label` } as const, { items: references.items, type: `list` } as const]),
   ],
   date: period({ from, to }),
   title,

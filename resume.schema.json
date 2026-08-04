@@ -17,22 +17,10 @@
               "references": {
                 "type": "object",
                 "properties": {
-                  "label": { "type": "string" },
-                  "links": {
-                    "type": "array",
-                    "items": {
-                      "type": "object",
-                      "properties": {
-                        "label": { "type": "string" },
-                        "url": { "type": "string", "format": "uri" },
-                        "note": { "type": "string" }
-                      },
-                      "required": ["url", "note"],
-                      "additionalProperties": false
-                    }
-                  }
+                  "items": { "type": "array", "items": { "type": "string" } },
+                  "label": { "type": "string" }
                 },
-                "required": ["label", "links"],
+                "required": ["items", "label"],
                 "additionalProperties": false
               },
               "summary": { "type": "string" },
@@ -100,12 +88,6 @@
                 "items": {
                   "type": "object",
                   "properties": {
-                    "link": {
-                      "type": "object",
-                      "properties": { "label": { "type": "string" }, "url": { "type": "string", "format": "uri" } },
-                      "required": ["url"],
-                      "additionalProperties": false
-                    },
                     "name": { "type": "string" },
                     "note": { "type": "string" },
                     "roles": { "type": "array", "items": { "type": "string" } },
