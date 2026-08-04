@@ -1,4 +1,5 @@
 import { Content } from "../Content";
+import { SiteEntries } from "./SiteEntries";
 import { SiteFooter } from "./SiteFooter";
 import { SiteHero } from "./SiteHero";
 import { SiteNav } from "./SiteNav";
@@ -6,7 +7,6 @@ import { SiteProgress } from "./SiteProgress";
 import { SiteProse } from "./SiteProse";
 import { SiteSection } from "./SiteSection";
 import { SiteStack } from "./SiteStack";
-import { SiteTimeline } from "./SiteTimeline";
 
 export const SiteDocument = () => {
   const title = `${Content.meta.name} — ${Content.meta.role}`;
@@ -41,9 +41,9 @@ export const SiteDocument = () => {
             <SiteProse blocks={profile.blocks ?? []} />
           </SiteSection>
           <SiteStack />
-          <SiteTimeline section={Content.section(`experience`)} />
-          <SiteTimeline section={Content.section(`education`)} />
-          <SiteTimeline section={Content.section(`activities`)} />
+          <SiteEntries section={Content.section(`experience`)} />
+          <SiteEntries section={Content.section(`education`)} />
+          <SiteEntries section={Content.section(`activities`)} />
         </main>
         <SiteFooter />
       </body>

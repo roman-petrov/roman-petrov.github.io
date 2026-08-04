@@ -1,0 +1,45 @@
+@use "../theme/core" as *;
+@use "../theme/materials";
+@use "../theme/patterns";
+@use "../theme/tokens/color";
+@use "../theme/tokens/space";
+@use "../theme/tokens/text";
+@use "../theme/tokens/weight";
+
+.root {
+  display: grid;
+  gap: space.xl();
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.card {
+  @include materials.glass;
+
+  @include hover {
+    border-color: color.line-strong();
+    box-shadow: 0 18px 40px color.shadow-soft();
+    transform: translateY(-2px);
+  }
+
+  padding: space.xl() space.x2xl();
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+@include patterns.meta(space.md(), space.sm());
+
+.title {
+  margin: 0 0 space.md();
+  font-size: text.x2xl();
+  font-weight: weight.semibold();
+}
+
+@include mobile {
+  .card {
+    padding: space.lg();
+  }
+}

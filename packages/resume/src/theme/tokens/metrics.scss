@@ -2,7 +2,6 @@
 
 $-values: (
   icon: 26,
-  marker: 8,
   nav: 64,
   rail: 136,
   tap: 40,
@@ -27,10 +26,6 @@ $-fixed: (
 
 @function icon() {
   @return -metrics("icon");
-}
-
-@function marker() {
-  @return -metrics("marker");
 }
 
 @function nav() {

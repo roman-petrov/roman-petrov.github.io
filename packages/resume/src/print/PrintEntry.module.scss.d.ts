@@ -3,7 +3,6 @@ declare const classNames: {
   readonly meta: "meta";
   readonly date: "date";
   readonly link: "link";
-  readonly body: "body";
   readonly title: "title";
 };
 export default classNames;

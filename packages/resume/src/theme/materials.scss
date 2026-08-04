@@ -19,7 +19,7 @@
 
 @mixin chip($ink) {
   padding: space.x2s() space.sm();
-  font-size: text.sm();
+  font-size: text.md();
   font-weight: weight.medium();
   line-height: leading.snug();
   color: $ink;

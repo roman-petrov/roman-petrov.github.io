@@ -4,6 +4,27 @@
 @use "tokens/text";
 @use "tokens/weight";
 
+@mixin meta($gap, $below) {
+  .meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $gap;
+    align-items: baseline;
+    margin: 0 0 $below;
+  }
+
+  .date {
+    @include primitives.label(text.xs());
+
+    color: color.accent();
+  }
+
+  .link {
+    font-size: text.sm();
+    overflow-wrap: anywhere;
+  }
+}
+
 @mixin project($gap) {
   .head {
     display: flex;
@@ -19,7 +40,7 @@
   }
 
   .roles {
-    @include primitives.label(text.micro());
+    @include primitives.label(text.xs());
 
     color: color.muted();
   }
