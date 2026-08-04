@@ -1,9 +1,8 @@
 import { Browser } from "./Browser";
 import { Paths } from "./Paths";
 
-const size = { height: 630, width: 1200 };
-
 const render = async () => {
+  const size = { height: 630, width: 1200 };
   const { browser, page } = await Browser.open();
 
   try {

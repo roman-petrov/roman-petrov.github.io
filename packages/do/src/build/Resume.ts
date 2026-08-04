@@ -9,21 +9,20 @@ import { Og } from "./Og";
 import { Paths } from "./Paths";
 import { Pdf } from "./Pdf";
 
-const fonts = [
-  { family: `Inter Tight`, pkg: `inter-tight`, weights: [`400`, `500`, `600`, `700`] },
-  { family: `JetBrains Mono`, pkg: `jetbrains-mono`, weights: [`400`, `500`] },
-];
-
-const assetFiles = [`photo.png`, `favicon.svg`];
-
 type RenderModule = { render: () => string };
 
 const copyAssets = async () => {
+  const assetFiles = [`photo.png`, `favicon.svg`];
+
   await mkdir(Paths.assets, { recursive: true });
   await Promise.all(assetFiles.map(file => cp(path.join(Paths.srcAssets, file), path.join(Paths.assets, file))));
 };
 
 const copyFonts = async () => {
+  const fonts = [
+    { family: `Inter Tight`, pkg: `inter-tight`, weights: [`400`, `500`, `600`, `700`] },
+    { family: `JetBrains Mono`, pkg: `jetbrains-mono`, weights: [`400`, `500`] },
+  ];
   const fontsDir = path.join(Paths.assets, `fonts`);
   await mkdir(fontsDir, { recursive: true });
   const faces: string[] = [];

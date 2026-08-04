@@ -48,8 +48,6 @@ const part = ({ id, label }: SiteLink): Part => ({
   label,
 });
 
-const parts = SiteOrder.map(part);
-
 const headline = ({ icon, index, title }: Part) => `${index} ${icon} ${title}`;
 
 const navLink = (item: Part) => `[${item.icon} ${item.label}](#${slug(headline(item))})`;
@@ -57,25 +55,26 @@ const navLink = (item: Part) => `[${item.icon} ${item.label}](#${slug(headline(i
 const section = (item: Part) =>
   [`## ${headline(item)}`, ...(item.entries ?? []).map(entry), ...(item.blocks ?? []).map(block)].join(`\n\n`);
 
-const actions = [
-  `[🌐 Web version](${Content.meta.siteUrl})`,
-  `[⬇ Download PDF](${Content.meta.siteUrl}${Content.meta.pdf})`,
-  `[🔗 GitHub](${Content.meta.github})`,
-].join(` · `);
+const render = () => {
+  const parts = SiteOrder.map(part);
 
-const render = () =>
-  `${[
+  return `${[
     `# ${Content.meta.name}`,
     chip(`// ${Content.meta.role.toUpperCase()}`),
     parts.map(navLink).join(` · `),
     Content.meta.tagline,
     Content.contacts.map(contactLine).join(`\n`),
-    actions,
+    [
+      `[🌐 Web version](${Content.meta.siteUrl})`,
+      `[⬇ Download PDF](${Content.meta.siteUrl}${Content.meta.pdf})`,
+      `[🔗 GitHub](${Content.meta.github})`,
+    ].join(` · `),
     `---`,
     ...parts.map(section),
     `---`,
     chip(`// built with HTML, CSS and Bun`),
     `© ${Content.meta.name}`,
   ].join(`\n\n`)}\n`;
+};
 
 export const Markdown = { render };

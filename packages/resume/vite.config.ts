@@ -11,7 +11,7 @@ const generateScopedName = (name: string, fileName: string) => {
 };
 
 export default defineConfig({
-  build: { target: `esnext` },
+  build: { cssTarget: [`chrome120`, `edge120`, `firefox120`, `safari17`], target: `esnext` },
   css: { modules: { generateScopedName, localsConvention: `camelCaseOnly` } },
   logLevel: `warn`,
   plugins: [sassDts({ enabledMode: [`production`], esmExport: true, legacyFileFormat: true })],

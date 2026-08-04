@@ -3,20 +3,24 @@ import type { CommandOutcome, CommandRun } from "./Command";
 import { CommandRegistry } from "./CommandRegistry";
 import { Log } from "./Log";
 
-const second = 1000;
-const branch = `├─ `;
 const last = `└─ `;
-const bar = `│  `;
-const space = `   `;
 
 type Frame = { connector: string; indent: string };
 
 const find = (name: string) => CommandRegistry.find(command => command.name === name);
 
-const seconds = (started: number) => `${String(Math.round((performance.now() - started) / second))}s`;
+const seconds = (started: number) => {
+  const second = 1000;
 
-const nest = ({ connector, indent }: Frame) =>
-  connector === `` ? indent : `${indent}${connector === last ? space : bar}`;
+  return `${String(Math.round((performance.now() - started) / second))}s`;
+};
+
+const nest = ({ connector, indent }: Frame) => {
+  const bar = `│  `;
+  const space = `   `;
+
+  return connector === `` ? indent : `${indent}${connector === last ? space : bar}`;
+};
 
 const outcome = async (run: CommandRun): Promise<CommandOutcome> => {
   try {
@@ -57,6 +61,7 @@ const execute = async (name: string, frame: Frame): Promise<number> => {
 };
 
 const children = async (names: readonly string[], indent: string) => {
+  const branch = `├─ `;
   const known = names.filter(name => find(name) !== undefined);
 
   for (const [index, name] of known.entries()) {
