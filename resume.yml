@@ -75,8 +75,9 @@ experience:
       from: 2013
       to: 2026
       summary: >-
-        I combined architecture, technical leadership and development, running the company design systems in a team of
-        5-7 engineers.
+        I ran the company design systems in a team of 5-7 engineers, combining architecture, technical leadership and
+        development. In the last years I owned the whole product concept, not only the architecture — Reactor is thought
+        out and designed by me from scratch.
       duties:
         - designed the whole architecture of the design systems and front-end products
         - "built the full development cycle of the internal projects: tooling, workflow, release, documentation"

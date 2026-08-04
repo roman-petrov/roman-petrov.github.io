@@ -52,8 +52,9 @@ I would like to land a software developer position in a company that:
 
 `2013 — 2026` · [travelline.ru](https://www.travelline.ru/)
 
-I combined architecture, technical leadership and development, running the company design systems in a team of 5-7
-engineers.
+I ran the company design systems in a team of 5-7 engineers, combining architecture, technical leadership and
+development. In the last years I owned the whole product concept, not only the architecture — Reactor is thought out and
+designed by me from scratch.
 
 **Responsibilities:**
 
