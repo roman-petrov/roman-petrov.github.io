@@ -1,12 +1,9 @@
-import { _ } from "@cv/core";
-
 import { Ico, Inline } from "../components";
 import { Content } from "../Content";
-import card from "./PrintCard.module.scss";
 import styles from "./PrintFacts.module.scss";
 
 export const PrintFacts = () => (
-  <section className={_.cn(card.root, styles.root)}>
+  <section className={styles.root}>
     {Content.facts.map(({ chips, icon, label, text }) => (
       <div className={styles.row} key={label}>
         <h2 className={styles.label}>

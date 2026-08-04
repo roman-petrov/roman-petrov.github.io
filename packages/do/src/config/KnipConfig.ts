@@ -14,7 +14,7 @@ const config: Config = {
       stylelint: [`src/config/StylelintConfig.js`],
     },
     "packages/resume": {
-      entry: [`src/Entry*.ts`, `src/**/*.test.ts`],
+      entry: [`src/Entry*.{ts,tsx}`, `src/**/*.test.ts`],
       ignoreDependencies: [`@fontsource/inter-tight`, `@fontsource/jetbrains-mono`],
     },
   },

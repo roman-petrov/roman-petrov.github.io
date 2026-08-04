@@ -1,4 +1,5 @@
 @use "../theme/core" as *;
+@use "../theme/materials";
 @use "../theme/primitives";
 @use "../theme/tokens/color";
 @use "../theme/tokens/metrics";
@@ -70,6 +71,8 @@ $-track-x: calc(#{metrics.rail()} + #{space.xl()} / 2);
 }
 
 .card {
+  @include materials.glass;
+
   @include hover {
     border-color: color.line-strong();
     box-shadow: 0 18px 40px color.shadow-soft();

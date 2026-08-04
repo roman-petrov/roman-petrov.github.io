@@ -1,3 +1,4 @@
+@use "../theme/primitives";
 @use "../theme/tokens/color";
 @use "../theme/tokens/space";
 @use "../theme/tokens/text";
@@ -8,16 +9,21 @@
 }
 
 .inner {
+  @include primitives.wrap;
+
   display: flex;
   flex-wrap: wrap;
   gap: space.lg();
   align-items: center;
   justify-content: space-between;
   padding: space.x2xl() 0;
+}
 
-  .label {
-    margin: 0;
-  }
+.label {
+  @include primitives.label(text.micro());
+
+  margin: 0;
+  color: color.muted();
 }
 
 .actions {

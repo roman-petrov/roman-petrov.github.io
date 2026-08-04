@@ -1,4 +1,5 @@
 export * from "./SiteAction";
+export * from "./SiteBlocks";
 export * from "./SiteContact";
 export * from "./SiteDocument";
 export * from "./SiteFooter";
@@ -7,7 +8,9 @@ export * from "./SiteHero";
 export * from "./SiteNav";
 export * from "./SiteOrder";
 export * from "./SitePdfAction";
+export * from "./SiteProgress";
 export * from "./SiteProse";
+export * from "./SiteReveal";
 export * from "./SiteSection";
 export * from "./SiteStack";
 export * from "./SiteTimeline";

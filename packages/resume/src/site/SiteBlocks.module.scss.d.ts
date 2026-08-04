@@ -3,5 +3,6 @@ declare const classNames: {
   readonly lead: "lead";
   readonly label: "label";
   readonly list: "list";
+  readonly columns: "columns";
 };
 export default classNames;

@@ -1,4 +1,5 @@
 declare const classNames: {
-  readonly wrap: "wrap";
+  readonly root: "root";
+  readonly bar: "bar";
 };
 export default classNames;

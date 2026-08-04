@@ -1,17 +1,14 @@
-import { _ } from "@cv/core";
-
 import { Content } from "../Content";
 import actions from "./SiteAction.module.scss";
 import { SiteContact } from "./SiteContact";
 import { SiteGithubAction } from "./SiteGithubAction";
 import styles from "./SiteHero.module.scss";
-import layout from "./SiteLayout.module.scss";
 import { SitePdfAction } from "./SitePdfAction";
 
 export const SiteHero = () => (
   <section className={styles.root} id="top">
-    <div className={styles.glow} data-parallax />
-    <div className={_.cn(styles.inner, layout.wrap)}>
+    <div className={styles.glow} />
+    <div className={styles.inner}>
       <div>
         <p className={styles.kicker}>
           <span className={styles.slash}>{`//`}</span>

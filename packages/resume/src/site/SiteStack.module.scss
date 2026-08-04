@@ -1,4 +1,5 @@
 @use "../theme/core" as *;
+@use "../theme/materials";
 @use "../theme/primitives";
 @use "../theme/tokens/color";
 @use "../theme/tokens/space";
@@ -43,11 +44,16 @@
 }
 
 .mini {
-  padding: space.lg() space.xl();
+  @include materials.glass;
 
-  .label {
-    margin-top: 0;
-  }
+  padding: space.lg() space.xl();
+}
+
+.label {
+  @include primitives.label(text.micro());
+
+  margin: 0 0 space.sm();
+  color: color.muted();
 }
 
 .text {

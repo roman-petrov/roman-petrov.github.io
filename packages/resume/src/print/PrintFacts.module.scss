@@ -1,4 +1,5 @@
 @use "../theme/core" as *;
+@use "../theme/materials";
 @use "../theme/primitives";
 @use "../theme/tokens/color";
 @use "../theme/tokens/leading";
@@ -9,6 +10,8 @@
 @use "../theme/tokens/weight";
 
 .root {
+  @include materials.card;
+
   display: grid;
   gap: space.sm();
   padding: space.lg() space.xl();

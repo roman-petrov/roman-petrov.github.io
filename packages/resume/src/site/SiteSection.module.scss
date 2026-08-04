@@ -8,6 +8,8 @@
 @use "../theme/tokens/weight";
 
 .root {
+  @include primitives.wrap;
+
   padding: space.x3xl() 0;
   scroll-margin-top: calc(#{metrics.nav()} + #{space.lg()});
 }

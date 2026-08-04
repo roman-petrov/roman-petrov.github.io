@@ -1,14 +1,11 @@
 @use "../theme/core" as *;
+@use "../theme/materials";
 @use "../theme/tokens/space";
 
 .root {
-  padding: space.x2xl();
-}
+  @include materials.glass;
 
-.columns {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(#{r(352)}, 100%), 1fr));
-  gap: space.sm() space.x2xl();
+  padding: space.x2xl();
 }
 
 @include mobile {

@@ -1,7 +1,0 @@
-@use "../theme/tokens/metrics";
-@use "../theme/tokens/space";
-
-.wrap {
-  width: min(100% - #{space.x2xl()}, #{metrics.wrap()});
-  margin: 0 auto;
-}

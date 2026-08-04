@@ -1,12 +1,8 @@
-import { _ } from "@cv/core";
-
-import { Ico, Inline, Stagger } from "../components";
+import { Ico, Inline } from "../components";
 import { Content } from "../Content";
-import motion from "./SiteMotion.module.scss";
+import { SiteReveal } from "./SiteReveal";
 import { SiteSection } from "./SiteSection";
 import styles from "./SiteStack.module.scss";
-import surface from "./SiteSurface.module.scss";
-import text from "./SiteText.module.scss";
 
 export const SiteStack = () => {
   const [skills, ...rest] = Content.facts;
@@ -14,24 +10,24 @@ export const SiteStack = () => {
   return (
     <SiteSection icon={Content.stack.icon} id="stack" title={Content.stack.title}>
       <div className={styles.root}>
-        <ul className={_.cn(styles.chips, motion.reveal)}>
-          {(skills.chips ?? []).map((chip, index) => (
-            <li className={styles.chip} key={chip} style={Stagger(index)}>
+        <SiteReveal cn={styles.chips} tag="ul">
+          {(skills.chips ?? []).map(chip => (
+            <li className={styles.chip} key={chip}>
               {chip}
             </li>
           ))}
-        </ul>
+        </SiteReveal>
         <div className={styles.aside}>
-          {rest.map(({ icon, label, text: body }, index) => (
-            <div className={_.cn(styles.mini, surface.glass, motion.reveal)} key={label} style={Stagger(index)}>
-              <p className={_.cn(text.label, styles.label)}>
+          {rest.map(({ icon, label, text }, index) => (
+            <SiteReveal cn={styles.mini} index={index} key={label}>
+              <p className={styles.label}>
                 <Ico>{icon}</Ico>
                 {` ${label}`}
               </p>
               <p className={styles.text}>
-                <Inline text={body ?? ``} />
+                <Inline text={text ?? ``} />
               </p>
-            </div>
+            </SiteReveal>
           ))}
         </div>
       </div>

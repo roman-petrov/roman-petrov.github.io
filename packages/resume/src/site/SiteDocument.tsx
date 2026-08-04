@@ -1,17 +1,14 @@
 import { Content } from "../Content";
-import styles from "./SiteDocument.module.scss";
 import { SiteFooter } from "./SiteFooter";
 import { SiteHero } from "./SiteHero";
-import motion from "./SiteMotion.module.scss";
 import { SiteNav } from "./SiteNav";
+import { SiteProgress } from "./SiteProgress";
 import { SiteProse } from "./SiteProse";
 import { SiteSection } from "./SiteSection";
 import { SiteStack } from "./SiteStack";
 import { SiteTimeline } from "./SiteTimeline";
 
 const title = `${Content.meta.name} — ${Content.meta.role}`;
-
-const enableMotion = `document.documentElement.classList.add("${motion.js}");`;
 
 const profile = Content.section(`profile`);
 
@@ -32,13 +29,10 @@ export const SiteDocument = () => (
       <link href="./assets/favicon.svg" rel="icon" type="image/svg+xml" />
       <link href="./assets/fonts.css" rel="stylesheet" />
       <link href="./assets/site.css" rel="stylesheet" />
-      <script dangerouslySetInnerHTML={{ __html: enableMotion }} />
       <script defer src="./assets/site.js" />
     </head>
     <body>
-      <div className={styles.progress}>
-        <span className={styles.bar} />
-      </div>
+      <SiteProgress />
       <SiteNav />
       <main>
         <SiteHero />

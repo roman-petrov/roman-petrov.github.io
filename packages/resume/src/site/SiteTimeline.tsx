@@ -2,11 +2,10 @@ import { _ } from "@cv/core";
 
 import type { Section } from "../Content";
 
-import { Blocks, Inline, Stagger } from "../components";
-import motion from "./SiteMotion.module.scss";
+import { Inline } from "../components";
+import { SiteBlocks } from "./SiteBlocks";
+import { SiteReveal } from "./SiteReveal";
 import { SiteSection } from "./SiteSection";
-import surface from "./SiteSurface.module.scss";
-import text from "./SiteText.module.scss";
 import styles from "./SiteTimeline.module.scss";
 
 export type SiteTimelineProps = { section: Section };
@@ -15,7 +14,7 @@ export const SiteTimeline = ({ section }: SiteTimelineProps) => (
   <SiteSection icon={section.icon} id={section.id} title={section.title}>
     <ol className={styles.root}>
       {(section.entries ?? []).map((entry, index) => (
-        <li className={_.cn(styles.item, motion.reveal)} key={entry.title} style={Stagger(index)}>
+        <SiteReveal cn={styles.item} index={index} key={entry.title} tag="li">
           <div className={styles.meta}>
             <p className={_.cn(styles.date, entry.current === true && styles.isNow)}>{entry.date}</p>
             {entry.link === undefined ? undefined : (
@@ -24,13 +23,13 @@ export const SiteTimeline = ({ section }: SiteTimelineProps) => (
               </a>
             )}
           </div>
-          <div className={_.cn(styles.card, surface.glass)}>
+          <div className={styles.card}>
             <h3 className={styles.title}>
               <Inline text={entry.title} />
             </h3>
-            <Blocks blocks={entry.blocks} classes={text} />
+            <SiteBlocks blocks={entry.blocks} />
           </div>
-        </li>
+        </SiteReveal>
       ))}
     </ol>
   </SiteSection>

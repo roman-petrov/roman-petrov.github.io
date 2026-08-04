@@ -77,9 +77,10 @@ const buildClientScript = async () => {
   await build({
     build: {
       emptyOutDir: true,
-      lib: { entry: `src/EntryClient.ts`, fileName: () => `site.js`, formats: [`iife`], name: `ResumeSite` },
+      lib: { entry: `src/EntryClient.tsx`, fileName: () => `site.js`, formats: [`iife`], name: `ResumeSite` },
       outDir,
     },
+    define: { "process.env.NODE_ENV": `"production"` },
     root: Paths.resume,
   });
   await cp(path.join(outDir, `site.js`), path.join(Paths.assets, `site.js`));

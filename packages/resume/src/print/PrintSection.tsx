@@ -1,17 +1,14 @@
-import { _ } from "@cv/core";
-
 import type { Section } from "../Content";
 
-import { Blocks, Ico } from "../components";
-import card from "./PrintCard.module.scss";
+import { Ico } from "../components";
+import { PrintBlocks } from "./PrintBlocks";
 import { PrintEntry } from "./PrintEntry";
 import styles from "./PrintSection.module.scss";
-import text from "./PrintText.module.scss";
 
 export type PrintSectionProps = { section: Section };
 
 export const PrintSection = ({ section }: PrintSectionProps) => (
-  <section className={_.cn(card.root, styles.root)}>
+  <section className={styles.root}>
     <header className={styles.head}>
       <span className={styles.index}>{section.index}</span>
       <h2 className={styles.title}>
@@ -21,7 +18,7 @@ export const PrintSection = ({ section }: PrintSectionProps) => (
     </header>
     <div className={styles.body}>
       {section.entries === undefined ? (
-        <Blocks blocks={section.blocks ?? []} classes={text} />
+        <PrintBlocks blocks={section.blocks ?? []} />
       ) : (
         section.entries.map(entry => <PrintEntry {...entry} key={entry.title} />)
       )}

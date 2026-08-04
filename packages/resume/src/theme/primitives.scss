@@ -2,8 +2,14 @@
 @use "tokens/leading";
 @use "tokens/metrics";
 @use "tokens/radius";
+@use "tokens/space";
 @use "tokens/tracking";
 @use "tokens/weight";
+
+@mixin wrap {
+  width: min(100% - #{space.x2xl()}, #{metrics.wrap()});
+  margin: 0 auto;
+}
 
 @mixin grid-center {
   display: grid;

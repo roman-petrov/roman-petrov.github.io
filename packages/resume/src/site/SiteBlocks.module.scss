@@ -1,11 +1,9 @@
 @use "../theme/core" as *;
 @use "../theme/primitives";
 @use "../theme/tokens/color";
-@use "../theme/tokens/leading";
 @use "../theme/tokens/radius";
 @use "../theme/tokens/space";
 @use "../theme/tokens/text";
-@use "../theme/tokens/weight";
 
 .pull {
   @include primitives.pull(text.pull());
@@ -54,4 +52,10 @@
       border-radius: radius.xs();
     }
   }
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(#{r(352)}, 100%), 1fr));
+  gap: space.sm() space.x2xl();
 }

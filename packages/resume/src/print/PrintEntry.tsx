@@ -2,9 +2,9 @@ import { _ } from "@cv/core";
 
 import type { Entry } from "../Content";
 
-import { Blocks, Inline } from "../components";
+import { Inline } from "../components";
+import { PrintBlocks } from "./PrintBlocks";
 import styles from "./PrintEntry.module.scss";
-import text from "./PrintText.module.scss";
 
 export type PrintEntryProps = Entry;
 
@@ -22,7 +22,7 @@ export const PrintEntry = ({ blocks, current, date, link, title }: PrintEntryPro
       <h3 className={styles.title}>
         <Inline text={title} />
       </h3>
-      <Blocks blocks={blocks} classes={text} />
+      <PrintBlocks blocks={blocks} />
     </div>
   </article>
 );

@@ -13,20 +13,24 @@
 
   position: sticky;
   top: 0;
-  background: color.chrome();
+  background-color: color.chrome();
   border-bottom: 1px solid transparent;
   backdrop-filter: blur(14px);
-  transition:
-    border-color 0.3s ease,
-    background 0.3s ease;
+  animation: chrome 1ms linear both;
+  animation-timeline: scroll();
+  animation-range: #{r(8)} #{r(24)};
+}
 
-  &.is-scrolled {
-    background: color.chrome-strong();
+@keyframes chrome {
+  to {
+    background-color: color.chrome-strong();
     border-bottom-color: color.line();
   }
 }
 
 .inner {
+  @include primitives.wrap;
+
   display: flex;
   gap: space.xl();
   align-items: center;
