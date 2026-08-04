@@ -19,6 +19,9 @@ jobs:
       - name: Install Chrome for Puppeteer
         run: bunx puppeteer browsers install chrome
 
+      - name: Test
+        run: bun run test
+
       - name: Lint
         run: bun run lint
 

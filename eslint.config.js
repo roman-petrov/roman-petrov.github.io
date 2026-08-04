@@ -1,5 +1,6 @@
 import js from "@eslint/js";
 import stylistic from "@stylistic/eslint-plugin";
+import vitest from "@vitest/eslint-plugin";
 import prettier from "eslint-config-prettier";
 import checkFile from "eslint-plugin-check-file";
 import perfectionist from "eslint-plugin-perfectionist";
@@ -40,6 +41,16 @@ export default defineConfig(
   {
     files: [`**/index.*`, `**/*.config.*`],
     rules: { "unicorn/filename-case": [`error`, { case: `camelCase`, checkDirectories: false }] },
+  },
+  {
+    files: [`**/*.test.ts`],
+    plugins: { vitest },
+    rules: {
+      ...vitest.configs.all.rules,
+      "vitest/max-expects": `off`,
+      "vitest/prefer-expect-assertions": `off`,
+      "vitest/prefer-lowercase-title": `off`,
+    },
   },
   { extends: [tseslint.configs.disableTypeChecked], files: [`**/*.js`] },
 );

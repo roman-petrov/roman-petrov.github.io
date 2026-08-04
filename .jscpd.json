@@ -1,6 +1,14 @@
 {
   "absolute": true,
-  "ignore": [".github/**", ".jscpd/**", "**/*.json", "**/*.module.scss.d.ts", "**/dist/**", "**/node_modules/**"],
+  "ignore": [
+    ".github/**",
+    ".jscpd/**",
+    "**/*.json",
+    "**/*.module.scss.d.ts",
+    "**/*.test.ts",
+    "**/dist/**",
+    "**/node_modules/**"
+  ],
   "ignorePattern": ["import.*from.*", "@use.*"],
   "mode": "strict",
   "noGitignore": false,
