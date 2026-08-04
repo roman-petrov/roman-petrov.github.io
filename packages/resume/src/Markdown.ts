@@ -1,6 +1,6 @@
 import { slug } from "github-slugger";
 
-import type { Block, Contact, Entry, Fact, Section } from "./Content";
+import type { Block, Contact, Entry, Fact, Project, Section } from "./Content";
 
 import { Content } from "./Content";
 
@@ -11,7 +11,19 @@ const chip = (text: string) => `\`${text}\``;
 const paragraph = ({ text, type }: Extract<Block, { text: string }>) =>
   type === `pull` ? `> // ${text}` : type === `label` ? `**${text}:**` : text;
 
-const block = (item: Block) => (item.type === `list` ? item.items.map(bullet).join(`\n`) : paragraph(item));
+const projectItem = ({ href, name, note, roles, stack }: Project) =>
+  [
+    bullet(`${href === undefined ? `**${name}**` : `[${name}](${href})`}${note === undefined ? `` : ` — ${note}`}`),
+    `  - **Roles:** ${roles.join(` · `)}`,
+    `  - **Stack:** ${stack.map(chip).join(` · `)}`,
+  ].join(`\n`);
+
+const block = (item: Block) =>
+  item.type === `projects`
+    ? item.items.map(projectItem).join(`\n`)
+    : item.type === `list`
+      ? item.items.map(bullet).join(`\n`)
+      : paragraph(item);
 
 const entry = ({ blocks, date, link, title }: Entry) => {
   const rail = link === undefined ? chip(date) : `${chip(date)} · [${link.label}](${link.href})`;

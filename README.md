@@ -65,11 +65,23 @@ engineers.
 
 **Projects:**
 
-- **TLUI3.0 (NOW)** — TravelLine User Interface library and design system based on Flutter (architect, lead developer
-  and team lead)
-- **TLF** — TravelLine Flutter tool to automate workflow for company Flutter projects (single developer)
-- **TLUI** — TravelLine User Interface library and design system (lead developer and team lead)
-- **Payment module front-end for online booking engine** (single developer)
+- **Reactor** — Internal front-end platform; a new SPA project starts with zero configuration and gets everything out of
+  the box: design system, state management, router, localization, own storybook, screenshot testing, coding conventions
+  and one CLI tool for the whole workflow from dev server and build to linting, tests, visual regression and release; 25
+  packages that work as a single product, and very few platforms on the market give so much out of the box; it is
+  already in production and the technical teams in the company are actively moving to it
+  - **Roles:** architect · tech lead · lead developer
+  - **Stack:** `TypeScript` · `React` · `Vite` · `SCSS`
+- **TLUI3.0** — Move of the front-end stack to Flutter Web: in one year the team built the design system components, the
+  build and workflow tooling and a way to start a new project in minutes; the company did not adopt the technology, so
+  only a part of the result went to production
+  - **Roles:** architect · tech lead · lead developer
+  - **Stack:** `Dart` · `Flutter`
+- **TLUI** — Design system and component library; it made the whole B2B account and intranet look and work the same way;
+  the stack is legacy and there was almost no tooling, but the library still runs every screen of the TravelLine back
+  office and it is supported and improved
+  - **Roles:** developer · tech lead
+  - **Stack:** `TypeScript` · `JavaScript` · `AngularJS` · `Less`
 
 ### Developer at iSpring
 
@@ -77,11 +89,16 @@ engineers.
 
 **Projects:**
 
-- **Flash media player & charting library** (developer)
-- [SilverX](https://web.archive.org/web/20120506055102/http://www.silverx.net/) — Flash to Silverlight converter (single
-  developer, website developer)
+- **Flash media player & charting library**
+  - **Roles:** developer
+  - **Stack:** `ActionScript 3.0` · `Flash`
+- [SilverX](https://web.archive.org/web/20120506055102/http://www.silverx.net/) — Flash to Silverlight converter
+  - **Roles:** single developer · website developer
+  - **Stack:** `C#` · `C++` · `PHP` · `JavaScript` · `Silverlight` · `HTML` · `CSS`
 - [PowerMessage](https://web.archive.org/web/20171020002940/http://www.powermessagepro.com/) — PowerPoint add-on to
-  build presentations from templates (single developer)
+  build presentations from templates
+  - **Roles:** single developer
+  - **Stack:** `C#` · `C++`
 
 ### Lead developer and team lead at CPS Labs
 
@@ -89,11 +106,15 @@ engineers.
 
 **Projects:**
 
-- [JobWindow](https://www.cpslabs.net/project/jobwindow-2-3.html) — Job search system in Switzerland (developer)
-- [ActiveSWF](https://www.cpslabs.net/product/activeswf-3-5.html) — SWF file (Flash) generation library (single
-  developer)
-- **SlingPlayer** — Streaming media player for [SlingMedia](https://en.wikipedia.org/wiki/Sling_Media) (lead developer
-  and team lead)
+- [JobWindow](https://www.cpslabs.net/project/jobwindow-2-3.html) — Job search system in Switzerland
+  - **Roles:** developer
+  - **Stack:** `PHP` · `JavaScript` · `HTML` · `CSS`
+- [ActiveSWF](https://www.cpslabs.net/product/activeswf-3-5.html) — SWF file (Flash) generation library
+  - **Roles:** single developer
+  - **Stack:** `C/C++` · `COM` · `ActiveX`
+- **SlingPlayer** — Streaming media player for [SlingMedia](https://en.wikipedia.org/wiki/Sling_Media)
+  - **Roles:** lead developer · team lead
+  - **Stack:** `C#` · `C/C++` · `WPF` · `Silverlight`
 
 ## 04 🎓 Education
 

@@ -3,7 +3,6 @@ declare const classNames: {
   readonly item: "item";
   readonly meta: "meta";
   readonly date: "date";
-  readonly isNow: "isNow";
   readonly link: "link";
   readonly card: "card";
   readonly title: "title";

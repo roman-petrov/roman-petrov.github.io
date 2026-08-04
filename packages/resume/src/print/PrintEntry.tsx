@@ -1,5 +1,3 @@
-import { _ } from "@cv/core";
-
 import type { Entry } from "../Content";
 
 import { Inline } from "../components";
@@ -8,10 +6,10 @@ import styles from "./PrintEntry.module.scss";
 
 export type PrintEntryProps = Entry;
 
-export const PrintEntry = ({ blocks, current, date, link, title }: PrintEntryProps) => (
+export const PrintEntry = ({ blocks, date, link, title }: PrintEntryProps) => (
   <article className={styles.root}>
     <div className={styles.meta}>
-      <p className={_.cn(styles.date, current && styles.isNow)}>{date}</p>
+      <p className={styles.date}>{date}</p>
       {link === undefined ? undefined : (
         <a className={styles.link} href={link.href}>
           {link.label}

@@ -1,6 +1,10 @@
 @use "core" as *;
 @use "tokens/color";
+@use "tokens/leading";
 @use "tokens/radius";
+@use "tokens/space";
+@use "tokens/text";
+@use "tokens/weight";
 
 @mixin glass {
   background: color.glass();
@@ -11,6 +15,16 @@
     transform 0.25s ease,
     border-color 0.25s ease,
     box-shadow 0.25s ease;
+}
+
+@mixin chip($ink) {
+  padding: space.x2s() space.sm();
+  font-size: text.sm();
+  font-weight: weight.medium();
+  line-height: leading.snug();
+  color: $ink;
+  background: color.accent-soft();
+  border-radius: radius.xs();
 }
 
 @mixin card {

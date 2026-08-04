@@ -1,6 +1,9 @@
 @use "../theme/core" as *;
+@use "../theme/materials";
+@use "../theme/patterns";
 @use "../theme/primitives";
 @use "../theme/tokens/color";
+@use "../theme/tokens/leading";
 @use "../theme/tokens/space";
 @use "../theme/tokens/text";
 
@@ -42,13 +45,42 @@
   }
 }
 
+.projects {
+  display: grid;
+  gap: space.sm();
+  padding: 0;
+  margin: 0 0 space.sm();
+  list-style: none;
+}
+
+.project {
+  display: grid;
+  gap: space.x2s();
+  padding-left: space.md();
+  border-left: #{r(2)} solid color.accent-line();
+}
+
+@include patterns.project(space.xs());
+
+.note {
+  margin: 0;
+  font-size: text.sm();
+  line-height: leading.snug();
+  color: color.ink-soft();
+}
+
+.chip {
+  @include materials.chip(color.accent-deep());
+}
+
 @include print {
   .label,
   .lead {
     break-after: avoid;
   }
 
-  .list li {
+  .list li,
+  .project {
     break-inside: avoid;
   }
 }

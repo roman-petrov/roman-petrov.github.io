@@ -2,9 +2,7 @@
 @use "../theme/materials";
 @use "../theme/primitives";
 @use "../theme/tokens/color";
-@use "../theme/tokens/leading";
 @use "../theme/tokens/metrics";
-@use "../theme/tokens/radius";
 @use "../theme/tokens/space";
 @use "../theme/tokens/text";
 @use "../theme/tokens/weight";
@@ -47,13 +45,7 @@
 }
 
 .chip {
-  padding: space.x2s() space.sm();
-  font-size: text.sm();
-  font-weight: weight.medium();
-  line-height: leading.snug();
-  color: color.accent-deep();
-  background: color.accent-soft();
-  border-radius: radius.xs();
+  @include materials.chip(color.accent-deep());
 }
 
 @include print {

@@ -1,0 +1,30 @@
+@use "primitives";
+@use "tokens/color";
+@use "tokens/space";
+@use "tokens/text";
+@use "tokens/weight";
+
+@mixin project($gap) {
+  .head {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $gap;
+    align-items: baseline;
+    margin: 0;
+    color: color.ink();
+  }
+
+  .name {
+    font-weight: weight.semibold();
+  }
+
+  .roles {
+    @include primitives.label(text.micro());
+
+    color: color.muted();
+  }
+
+  .stack {
+    @include primitives.row-list(space.x2s() space.xs());
+  }
+}

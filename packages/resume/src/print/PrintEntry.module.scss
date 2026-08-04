@@ -64,10 +64,6 @@ $-marker-y: r(11);
   margin: 0;
   line-height: leading.snug();
   color: color.ink-soft();
-
-  &.is-now {
-    color: color.accent();
-  }
 }
 
 .link {

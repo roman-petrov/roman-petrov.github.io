@@ -87,18 +87,30 @@ experience:
         - developed the core parts of the libraries hands-on
         - analyzed user experience and owned its quality
       projects:
+        - name: Reactor
+          note: >-
+            Internal front-end platform; a new SPA project starts with zero configuration and gets everything out of the
+            box: design system, state management, router, localization, own storybook, screenshot testing, coding
+            conventions and one CLI tool for the whole workflow from dev server and build to linting, tests, visual
+            regression and release; 25 packages that work as a single product, and very few platforms on the market give
+            so much out of the box; it is already in production and the technical teams in the company are actively
+            moving to it
+          roles: [architect, tech lead, lead developer]
+          stack: [TypeScript, React, Vite, SCSS]
         - name: TLUI3.0
-          current: true
-          note: TravelLine User Interface library and design system based on Flutter
-          role: architect, lead developer and team lead
-        - name: TLF
-          note: TravelLine Flutter tool to automate workflow for company Flutter projects
-          role: single developer
+          note: >-
+            Move of the front-end stack to Flutter Web: in one year the team built the design system components, the
+            build and workflow tooling and a way to start a new project in minutes; the company did not adopt the
+            technology, so only a part of the result went to production
+          roles: [architect, tech lead, lead developer]
+          stack: [Dart, Flutter]
         - name: TLUI
-          note: TravelLine User Interface library and design system
-          role: lead developer and team lead
-        - name: Payment module front-end for online booking engine
-          role: single developer
+          note: >-
+            Design system and component library; it made the whole B2B account and intranet look and work the same way;
+            the stack is legacy and there was almost no tooling, but the library still runs every screen of the
+            TravelLine back office and it is supported and improved
+          roles: [developer, tech lead]
+          stack: [TypeScript, JavaScript, AngularJS, Less]
     - role: Developer
       company: iSpring
       url: http://www.ispringsolutions.com/
@@ -106,15 +118,18 @@ experience:
       to: 2013
       projects:
         - name: Flash media player & charting library
-          role: developer
+          roles: [developer]
+          stack: [ActionScript 3.0, Flash]
         - name: SilverX
           url: https://web.archive.org/web/20120506055102/http://www.silverx.net/
           note: Flash to Silverlight converter
-          role: single developer, website developer
+          roles: [single developer, website developer]
+          stack: [C#, C++, PHP, JavaScript, Silverlight, HTML, CSS]
         - name: PowerMessage
           url: https://web.archive.org/web/20171020002940/http://www.powermessagepro.com/
           note: PowerPoint add-on to build presentations from templates
-          role: single developer
+          roles: [single developer]
+          stack: [C#, C++]
     - role: Lead developer and team lead
       company: CPS Labs
       url: https://www.cpslabs.net/
@@ -124,17 +139,20 @@ experience:
         - name: JobWindow
           url: https://www.cpslabs.net/project/jobwindow-2-3.html
           note: Job search system in Switzerland
-          role: developer
+          roles: [developer]
+          stack: [PHP, JavaScript, HTML, CSS]
         - name: ActiveSWF
           url: https://www.cpslabs.net/product/activeswf-3-5.html
           note: SWF file (Flash) generation library
-          role: single developer
+          roles: [single developer]
+          stack: [C/C++, COM, ActiveX]
         - name: SlingPlayer
           note: Streaming media player for
           link:
             url: https://en.wikipedia.org/wiki/Sling_Media
             label: SlingMedia
-          role: lead developer and team lead
+          roles: [lead developer, team lead]
+          stack: [C#, C/C++, WPF, Silverlight]
 
 education:
   icon: 🎓

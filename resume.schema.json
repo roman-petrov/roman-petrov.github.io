@@ -39,7 +39,7 @@
               "summary": { "type": "string" },
               "title": { "type": "string" }
             },
-            "required": ["from", "summary", "title"],
+            "required": ["from", "to", "summary", "title"],
             "additionalProperties": false
           }
         }
@@ -75,7 +75,7 @@
               "place": { "type": "string" },
               "school": { "type": "string" }
             },
-            "required": ["from", "degree", "place", "school"],
+            "required": ["from", "to", "degree", "place", "school"],
             "additionalProperties": false
           }
         }
@@ -103,7 +103,6 @@
                 "items": {
                   "type": "object",
                   "properties": {
-                    "current": { "type": "boolean" },
                     "link": {
                       "type": "object",
                       "properties": { "label": { "type": "string" }, "url": { "type": "string", "format": "uri" } },
@@ -112,10 +111,11 @@
                     },
                     "name": { "type": "string" },
                     "note": { "type": "string" },
-                    "role": { "type": "string" },
+                    "roles": { "type": "array", "items": { "type": "string" } },
+                    "stack": { "type": "array", "items": { "type": "string" } },
                     "url": { "type": "string", "format": "uri" }
                   },
-                  "required": ["name"],
+                  "required": ["name", "roles", "stack"],
                   "additionalProperties": false
                 }
               },
@@ -123,7 +123,7 @@
               "summary": { "type": "string" },
               "url": { "type": "string", "format": "uri" }
             },
-            "required": ["from", "company", "projects", "role"],
+            "required": ["from", "to", "company", "projects", "role"],
             "additionalProperties": false
           }
         }

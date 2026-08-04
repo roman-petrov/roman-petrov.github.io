@@ -4,17 +4,22 @@ import type { ResumeSchema } from "./ResumeSchema";
 
 import Yaml from "../../../resume.yml";
 
-export type Block = { items: string[]; type: `list` } | { text: string; type: `label` | `lead` | `pull` | `text` };
+export type Block =
+  | { items: Project[]; type: `projects` }
+  | { items: string[]; type: `list` }
+  | { text: string; type: `label` | `lead` | `pull` | `text` };
 
 export type Contact = { href?: string; icon: string; label: string; value: string };
 
-export type Entry = { blocks: Block[]; current: boolean; date: string; link?: Link; title: string };
+export type Entry = { blocks: Block[]; date: string; link?: Link; title: string };
 
 export type Fact = { chips?: string[]; icon: string; label: string; text?: string };
 
 export type Heading = { icon: string; nav: string; title: string };
 
 export type Link = { href: string; label: string };
+
+export type Project = { href?: string; name: string; note?: string; roles: string[]; stack: string[] };
 
 export type Section = Heading & { blocks?: Block[]; entries?: Entry[]; id: string };
 
@@ -24,7 +29,7 @@ type Job = Resume[`experience`][`jobs`][number];
 
 type Resume = z.infer<typeof ResumeSchema>;
 
-type Span = { from: number; to?: number };
+type Span = { from: number; to: number };
 
 type Study = Resume[`education`][`studies`][number];
 
@@ -32,12 +37,7 @@ type Target = { label?: string; url: string };
 
 const resume = Yaml as Resume;
 
-const period = ({ from, to }: Span) => {
-  const start = String(from);
-  const end = to === undefined ? `Present` : String(to);
-
-  return to === from ? start : `${start} — ${end}`;
-};
+const period = ({ from, to }: Span) => (to === from ? String(from) : `${String(from)} — ${String(to)}`);
 
 const link = ({ label, url }: Target): Link => ({
   href: url,
@@ -48,12 +48,13 @@ const bold = (text: string) => `**${text}**`;
 
 const anchor = (to: Target) => `[${link(to).label}](${to.url})`;
 
-const project = ({ current = false, link: tail, name, note, role, url }: Job[`projects`][number]) => {
-  const head = url === undefined ? bold(current ? `${name} (NOW)` : name) : anchor({ label: name, url });
-  const body = note === undefined ? `` : ` — ${note}${tail === undefined ? `` : ` ${anchor(tail)}`}`;
-
-  return `${head}${body}${role === undefined ? `` : ` (${role})`}`;
-};
+const project = ({ link: tail, name, note, roles, stack, url }: Job[`projects`][number]): Project => ({
+  href: url,
+  name,
+  note: note === undefined ? undefined : `${note}${tail === undefined ? `` : ` ${anchor(tail)}`}`,
+  roles,
+  stack,
+});
 
 const heading = ({ icon, nav, title }: Heading): Heading => ({ icon, nav, title });
 
@@ -73,9 +74,8 @@ const jobEntry = (job: Job): Entry => ({
       ? []
       : [{ text: `Responsibilities`, type: `label` } as const, { items: job.duties, type: `list` } as const]),
     { text: `Projects`, type: `label` },
-    { items: job.projects.map(project), type: `list` },
+    { items: job.projects.map(project), type: `projects` },
   ],
-  current: job.to === undefined,
   date: period(job),
   link: job.url === undefined ? undefined : link({ url: job.url }),
   title: `${job.role} at ${job.company}`,
@@ -83,7 +83,6 @@ const jobEntry = (job: Job): Entry => ({
 
 const studyEntry = (study: Study): Entry => ({
   blocks: [],
-  current: study.to === undefined,
   date: period(study),
   title: `${study.degree}, ${study.school}, ${study.place}`,
 });
@@ -98,7 +97,6 @@ const activityEntry = ({ from, references, summary, title, to }: Activity): Entr
           { items: references.links.map(({ note, ...ref }) => `${note} ${anchor(ref)}`), type: `list` } as const,
         ]),
   ],
-  current: to === undefined,
   date: period({ from, to }),
   title,
 });

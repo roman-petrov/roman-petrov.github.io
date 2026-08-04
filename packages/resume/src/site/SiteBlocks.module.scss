@@ -1,4 +1,6 @@
 @use "../theme/core" as *;
+@use "../theme/materials";
+@use "../theme/patterns";
 @use "../theme/primitives";
 @use "../theme/tokens/color";
 @use "../theme/tokens/radius";
@@ -58,4 +60,31 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(#{r(352)}, 100%), 1fr));
   gap: space.sm() space.x2xl();
+}
+
+.projects {
+  display: grid;
+  gap: space.md();
+  padding: 0;
+  margin: 0 0 space.lg();
+  list-style: none;
+}
+
+.project {
+  display: grid;
+  gap: space.xs();
+  padding: space.md() space.lg();
+  background: color.glass();
+  border-left: #{r(2)} solid color.accent-line();
+  border-radius: radius.sm();
+}
+
+@include patterns.project(space.sm());
+
+.note {
+  margin: 0;
+}
+
+.chip {
+  @include materials.chip(color.accent-bright());
 }

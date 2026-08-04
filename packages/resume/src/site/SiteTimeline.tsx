@@ -1,5 +1,3 @@
-import { _ } from "@cv/core";
-
 import type { Section } from "../Content";
 
 import { Inline } from "../components";
@@ -16,7 +14,7 @@ export const SiteTimeline = ({ section }: SiteTimelineProps) => (
       {(section.entries ?? []).map((entry, index) => (
         <SiteReveal cn={styles.item} index={index} key={entry.title} tag="li">
           <div className={styles.meta}>
-            <p className={_.cn(styles.date, entry.current && styles.isNow)}>{entry.date}</p>
+            <p className={styles.date}>{entry.date}</p>
             {entry.link === undefined ? undefined : (
               <a className={styles.link} href={entry.link.href}>
                 {entry.link.label}

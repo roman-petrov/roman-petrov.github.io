@@ -2,7 +2,7 @@ import { z } from "zod";
 
 const titled = { icon: z.string(), nav: z.string(), title: z.string() };
 
-const span = { from: z.int(), to: z.int().optional() };
+const span = { from: z.int(), to: z.int() };
 
 const target = { label: z.string().optional(), url: z.url() };
 
@@ -34,11 +34,11 @@ export const ResumeSchema = z.strictObject({
         duties: z.array(z.string()).optional(),
         projects: z.array(
           z.strictObject({
-            current: z.boolean().optional(),
             link: z.strictObject(target).optional(),
             name: z.string(),
             note: z.string().optional(),
-            role: z.string().optional(),
+            roles: z.array(z.string()),
+            stack: z.array(z.string()),
             url: z.url().optional(),
           }),
         ),
