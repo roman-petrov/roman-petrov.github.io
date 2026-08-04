@@ -8,7 +8,7 @@ const config: Config = {
     ".": { entry: [`*.config.js`, `vitest.config.ts`], ignoreDependencies: [`actions-up`] },
     "packages/do": {
       cspell: [`src/config/CspellConfig.js`],
-      entry: [`src/config/*.{js,ts}`],
+      entry: [`src/config/*.{js,ts}`, `src/**/*.test.ts`],
       ignoreDependencies: [`jscpd`, `markdownlint-cli`],
       prettier: [`src/config/PrettierConfig.js`],
       stylelint: [`src/config/StylelintConfig.js`],
