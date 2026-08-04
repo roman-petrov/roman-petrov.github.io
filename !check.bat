@@ -1,2 +1,2 @@
 @call !setup.bat
-@call bun run ci
+@call bun do ci

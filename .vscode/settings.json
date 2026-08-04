@@ -16,7 +16,7 @@
   "explorer.fileNesting.enabled": true,
   "explorer.fileNesting.expand": false,
   "explorer.fileNesting.patterns": {
-    "package.json": "bun.lock, bun.lockb, bunfig.toml, .bun-version, .node-version, tsconfig.json, knip.config.ts, .jscpd.json",
+    "package.json": "bun.lock, bun.lockb, bunfig.toml, .bun-version, .node-version, tsconfig.json, knip.config.ts, vitest.config.ts, .jscpd.json",
     "prettier.config.js": ".prettierignore",
     "cspell.config.js": ".words.txt",
     ".markdownlint.json": ".markdownlintignore",

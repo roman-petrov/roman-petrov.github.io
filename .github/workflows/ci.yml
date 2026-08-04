@@ -44,7 +44,7 @@ jobs:
         run: bunx puppeteer browsers install chrome
 
       - name: ▶️ Run ${{ matrix.task.name }}
-        run: bun run ${{ matrix.task.arg }}
+        run: bun do ${{ matrix.task.arg }}
 
       - name: 🔎 Check generated files are committed
         if: matrix.task.arg == 'build'

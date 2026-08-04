@@ -1,2 +1,2 @@
-@call bun update --interactive
+@call bun update --interactive --recursive
 @call bun i

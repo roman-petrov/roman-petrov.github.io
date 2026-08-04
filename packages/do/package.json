@@ -1,0 +1,47 @@
+{
+  "name": "@cv/do",
+  "version": "0.0.0",
+  "type": "module",
+  "private": true,
+  "bin": {
+    "do": "./src/Cli.ts"
+  },
+  "exports": {
+    "./config/cspell": "./src/config/CspellConfig.js",
+    "./config/eslint": "./src/config/EslintConfig.js",
+    "./config/knip": "./src/config/KnipConfig.ts",
+    "./config/prettier": "./src/config/PrettierConfig.js",
+    "./config/stylelint": "./src/config/StylelintConfig.js"
+  },
+  "dependencies": {
+    "@cspell/dict-ru_ru": "^2.3.2",
+    "@cv/resume": "workspace:*",
+    "@eslint/js": "^9",
+    "@stylistic/eslint-plugin": "^5.10.0",
+    "@types/bun": "^1.3.14",
+    "@vitest/eslint-plugin": "^1.6.26",
+    "cspell": "^9.2.0",
+    "eslint": "^9",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-check-file": "^3.3.2",
+    "eslint-plugin-perfectionist": "^5.10.0",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-unicorn": "^72.0.0",
+    "eslint-plugin-unused-imports": "^4.4.1",
+    "jscpd": "^5.0.14",
+    "knip": "^6.31.0",
+    "markdownlint-cli": "^0.45.0",
+    "prettier": "^3.6.2",
+    "prettier-plugin-pkg": "^0.21.0",
+    "puppeteer": "^24.22.0",
+    "stylelint": "^17",
+    "stylelint-config-recess-order": "^7.7.0",
+    "stylelint-config-standard-scss": "^17.0.0",
+    "stylelint-order": "^8",
+    "typescript": "^6",
+    "typescript-eslint": "^8.65.0",
+    "vite": "^8.2.0",
+    "vitest": "^4.1.10"
+  }
+}
