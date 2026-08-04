@@ -97,7 +97,7 @@
               "from": { "type": "integer", "minimum": -9007199254740991, "maximum": 9007199254740991 },
               "to": { "type": "integer", "minimum": -9007199254740991, "maximum": 9007199254740991 },
               "company": { "type": "string" },
-              "goals": { "type": "array", "items": { "type": "string" } },
+              "duties": { "type": "array", "items": { "type": "string" } },
               "projects": {
                 "type": "array",
                 "items": {

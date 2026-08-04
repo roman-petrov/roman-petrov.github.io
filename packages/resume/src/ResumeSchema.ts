@@ -31,7 +31,7 @@ export const ResumeSchema = z.strictObject({
       z.strictObject({
         ...span,
         company: z.string(),
-        goals: z.array(z.string()).optional(),
+        duties: z.array(z.string()).optional(),
         projects: z.array(
           z.strictObject({
             current: z.boolean().optional(),

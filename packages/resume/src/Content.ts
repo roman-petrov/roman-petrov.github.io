@@ -69,7 +69,9 @@ const profileBlocks = ({ approach, motto, proficiency, wishes }: Resume[`profile
 const jobEntry = (job: Job): Entry => ({
   blocks: [
     ...(job.summary === undefined ? [] : [{ text: job.summary, type: `text` } as const]),
-    ...(job.goals === undefined ? [] : [{ items: job.goals, type: `list` } as const]),
+    ...(job.duties === undefined
+      ? []
+      : [{ text: `Responsibilities`, type: `label` } as const, { items: job.duties, type: `list` } as const]),
     { text: `Projects`, type: `label` },
     { items: job.projects.map(project), type: `list` },
   ],

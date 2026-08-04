@@ -48,16 +48,20 @@ I would like to land a software developer position in a company that:
 
 ## 03 💼 Employment History
 
-### Lead developer and team lead at TravelLine
+### Front-end architect, tech lead and lead developer at TravelLine
 
-`2013 — Present` · [travelline.ru](https://www.travelline.ru/)
+`2013 — 2026` · [travelline.ru](https://www.travelline.ru/)
 
-I'm currently working for TravelLine company as a front-end architect, team lead and developer. My primary goal is to
-move company products from outdated and ineffective development stack to Flutter:
+I combined architecture, technical leadership and development, running the company design systems in a team of 5-7
+engineers.
 
-- make products cross-platform
-- improve user experience and user interface quality
-- design and develop Flutter ecosystem, tools, components, and workflow
+**Responsibilities:**
+
+- designed the whole architecture of the design systems and front-end products
+- built the full development cycle of the internal projects: tooling, workflow, release, documentation
+- led and mentored the team, reviewed the code and kept the quality bar
+- developed the core parts of the libraries hands-on
+- analyzed user experience and owned its quality
 
 **Projects:**
 
