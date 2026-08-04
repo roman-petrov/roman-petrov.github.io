@@ -11,7 +11,7 @@ export type PrintEntryProps = Entry;
 export const PrintEntry = ({ blocks, current, date, link, title }: PrintEntryProps) => (
   <article className={styles.root}>
     <div className={styles.meta}>
-      <p className={_.cn(styles.date, current === true && styles.isNow)}>{date}</p>
+      <p className={_.cn(styles.date, current && styles.isNow)}>{date}</p>
       {link === undefined ? undefined : (
         <a className={styles.link} href={link.href}>
           {link.label}

@@ -1,12 +1,8 @@
 import { slug } from "github-slugger";
 
 import type { Block, Contact, Entry, Fact, Section } from "./Content";
-import type { SiteLink } from "./site/SiteOrder";
 
 import { Content } from "./Content";
-import { SiteIndex, SiteOrder } from "./site/SiteOrder";
-
-type Part = Section & { label: string };
 
 const bullet = (text: string) => `- ${text}`;
 
@@ -28,53 +24,41 @@ const contactLine = ({ href, icon, label, value }: Contact) =>
 
 const factLine = ({ icon, label, text }: Fact) => `${icon} **${label}:** ${text ?? ``}`;
 
-const stackSection = () => {
+const stackBlocks = (): Block[] => {
   const [skills, ...rest] = Content.facts;
 
-  return {
-    blocks: [
-      { text: (skills.chips ?? []).map(chip).join(` · `), type: `text` as const },
-      { items: rest.map(factLine), type: `list` as const },
-    ],
-    icon: Content.stack.icon,
-    id: `stack`,
-    title: Content.stack.title,
-  };
+  return [
+    { text: (skills.chips ?? []).map(chip).join(` · `), type: `text` },
+    { items: rest.map(factLine), type: `list` },
+  ];
 };
 
-const part = ({ id, label }: SiteLink): Part => ({
-  ...(id === `stack` ? stackSection() : Content.section(id)),
-  index: SiteIndex(id),
-  label,
-});
+const blocks = ({ blocks: own, id }: Section) => own ?? (id === `stack` ? stackBlocks() : []);
 
-const headline = ({ icon, index, title }: Part) => `${index} ${icon} ${title}`;
+const headline = ({ icon, id, title }: Section) => `${Content.index(id)} ${icon} ${title}`;
 
-const navLink = (item: Part) => `[${item.icon} ${item.label}](#${slug(headline(item))})`;
+const navLink = (item: Section) => `[${item.icon} ${item.nav}](#${slug(headline(item))})`;
 
-const section = (item: Part) =>
-  [`## ${headline(item)}`, ...(item.entries ?? []).map(entry), ...(item.blocks ?? []).map(block)].join(`\n\n`);
+const section = (item: Section) =>
+  [`## ${headline(item)}`, ...(item.entries ?? []).map(entry), ...blocks(item).map(block)].join(`\n\n`);
 
-const render = () => {
-  const parts = SiteOrder.map(part);
-
-  return `${[
+const render = () =>
+  `${[
     `# ${Content.meta.name}`,
     chip(`// ${Content.meta.role.toUpperCase()}`),
-    parts.map(navLink).join(` · `),
+    Content.sections.map(navLink).join(` · `),
     Content.meta.tagline,
     Content.contacts.map(contactLine).join(`\n`),
     [
-      `[🌐 Web version](${Content.meta.siteUrl})`,
-      `[⬇ Download PDF](${Content.meta.siteUrl}${Content.meta.pdf})`,
+      `[🌐 Web version](${Content.meta.site})`,
+      `[⬇ Download PDF](${Content.meta.site}${Content.meta.pdf})`,
       `[🔗 GitHub](${Content.meta.github})`,
     ].join(` · `),
     `---`,
-    ...parts.map(section),
+    ...Content.sections.map(section),
     `---`,
     chip(`// built with HTML, CSS and Bun`),
     `© ${Content.meta.name}`,
   ].join(`\n\n`)}\n`;
-};
 
 export const Markdown = { render };

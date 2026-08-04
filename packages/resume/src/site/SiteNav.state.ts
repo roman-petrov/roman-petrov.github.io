@@ -1,7 +1,7 @@
 import { Dom } from "@cv/core";
 import { useEffect, useState } from "react";
 
-import { SiteOrder } from "./SiteOrder";
+import { Content } from "../Content";
 
 export const useSiteNavState = () => {
   const [activeId, setActiveId] = useState(``);
@@ -18,7 +18,7 @@ export const useSiteNavState = () => {
       { rootMargin: `-40% 0px -55% 0px` },
     );
 
-    const sections = SiteOrder.map(({ id }) => Dom.one(`#${id}`)).filter(section => section !== undefined);
+    const sections = Content.sections.map(({ id }) => Dom.one(`#${id}`)).filter(section => section !== undefined);
 
     Dom.each(sections, section => {
       observer.observe(section);

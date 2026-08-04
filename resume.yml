@@ -1,0 +1,179 @@
+# yaml-language-server: $schema=./resume.schema.json
+
+meta:
+  name: Roman Petrov
+  role: Software Developer
+  tagline: Front-end architect, team lead and developer. Flutter, TypeScript, clean code.
+  photo: photo.png
+  pdf: Roman_Petrov_CV.pdf
+  site: https://roman-petrov.github.io/
+  github: https://github.com/roman-petrov
+
+contacts:
+  location: Yoshkar-Ola, Russian Federation
+  phone: "+79061370326"
+  email: romanpetrov@list.ru
+  github: github.com/roman-petrov
+
+profile:
+  icon: 👤
+  title: Profile
+  nav: Profile
+  motto: My favorite tool in software development is **Occam's razor**.
+  proficiency:
+    lead: "The areas of my proficiency are:"
+    areas:
+      - area: problem solving
+        detail: analysis, communication, decomposition, MVP
+      - area: programming
+        detail: modular, testable, readable, compact, efficient code
+      - area: code quality
+        detail: automated code analysis, linting, code review
+      - area: project workflow
+        detail: automation, simplification, documentation
+      - area: user experience
+        detail: simplicity, visual perfection, screenshot tests
+      - area: open source
+        detail: use, contribute, learn
+  approach: >-
+    I prefer functional programming to object oriented approach and my favorite code unit is **pure function**.
+  wishes:
+    lead: "I would like to land a software developer position in a company that:"
+    items:
+      - cares about the code quality in projects
+      - cares about the user experience quality in products
+      - provides possibilities to grow as professional
+
+stack:
+  icon: 🛠
+  title: Stack & interests
+  nav: Stack
+  skills:
+    - Programming
+    - User experience
+    - Git
+    - Dart/Flutter
+    - TypeScript/JavaScript
+    - HTML / CSS
+    - React
+    - C#
+    - C/C++
+    - Markdown
+  facts:
+    - icon: 🌍
+      label: Languages
+      items: [English, Russian]
+    - icon: 🎸
+      label: Hobbies
+      items: [Programming, Travel, Camping, Guitar]
+
+experience:
+  icon: 💼
+  title: Employment History
+  nav: Experience
+  jobs:
+    - role: Lead developer and team lead
+      company: TravelLine
+      url: https://www.travelline.ru/
+      from: 2013
+      summary: >-
+        I'm currently working for TravelLine company as a front-end architect, team lead and developer. My primary goal
+        is to move company products from outdated and ineffective development stack to Flutter:
+      goals:
+        - make products cross-platform
+        - improve user experience and user interface quality
+        - design and develop Flutter ecosystem, tools, components, and workflow
+      projects:
+        - name: TLUI3.0
+          current: true
+          note: TravelLine User Interface library and design system based on Flutter
+          role: architect, lead developer and team lead
+        - name: TLF
+          note: TravelLine Flutter tool to automate workflow for company Flutter projects
+          role: single developer
+        - name: TLUI
+          note: TravelLine User Interface library and design system
+          role: lead developer and team lead
+        - name: Payment module front-end for online booking engine
+          role: single developer
+    - role: Developer
+      company: iSpring
+      url: http://www.ispringsolutions.com/
+      from: 2007
+      to: 2013
+      projects:
+        - name: Flash media player & charting library
+          role: developer
+        - name: SilverX
+          url: https://web.archive.org/web/20120506055102/http://www.silverx.net/
+          note: Flash to Silverlight converter
+          role: single developer, website developer
+        - name: PowerMessage
+          url: https://web.archive.org/web/20171020002940/http://www.powermessagepro.com/
+          note: PowerPoint add-on to build presentations from templates
+          role: single developer
+    - role: Lead developer and team lead
+      company: CPS Labs
+      url: https://www.cpslabs.net/
+      from: 2003
+      to: 2007
+      projects:
+        - name: JobWindow
+          url: https://www.cpslabs.net/project/jobwindow-2-3.html
+          note: Job search system in Switzerland
+          role: developer
+        - name: ActiveSWF
+          url: https://www.cpslabs.net/product/activeswf-3-5.html
+          note: SWF file (Flash) generation library
+          role: single developer
+        - name: SlingPlayer
+          note: Streaming media player for
+          link:
+            url: https://en.wikipedia.org/wiki/Sling_Media
+            label: SlingMedia
+          role: lead developer and team lead
+
+education:
+  icon: 🎓
+  title: Education
+  nav: Education
+  studies:
+    - degree: Master
+      school: Volga State University of Technology
+      place: Yoshkar-Ola
+      from: 1999
+      to: 2004
+
+activities:
+  icon: 🚀
+  title: Challenging activities
+  nav: Activities
+  items:
+    - title: Machine learning contest
+      from: 2015
+      to: 2015
+      summary: >-
+        I took part in the Beeline Big Data contest. It was my first experience in machine learning so it's been quite a
+        challenge for me. I was ranked the 236 out of 832 participants.
+      references:
+        label: References (in Russian)
+        links:
+          - note: Contest info and results at
+            url: https://special.habrahabr.ru/beeline/
+            label: beeline.ru
+    - title: ZX-Spectrum
+      from: 1995
+      to: 2000
+      summary: >-
+        During my school years my favorite hobby was assembler programming on ZX-Spectrum. I'm the author of RIP (Real
+        Information Packer) — LZW/Huffman data compression algorithm and application. This was a challenge and I managed
+        to achieve one of the best compression ratios compared to other ZX-Spectrum data compression tools.
+      references:
+        label: References (in Russian)
+        links:
+          - note: About me at
+            url: https://speccy.info/%D0%A0%D0%BE%D0%BC%D0%B0%D0%BD_%D0%9F%D0%B5%D1%82%D1%80%D0%BE%D0%B2
+          - note: RIP at
+            url: https://speccy.info/RIP_%28%D1%83%D0%BF%D0%B0%D0%BA%D0%BE%D0%B2%D1%89%D0%B8%D0%BA%29
+          - note: About RIP at
+            url: https://zxpress.ru/article.php?id=8510

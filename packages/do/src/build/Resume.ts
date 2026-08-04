@@ -1,9 +1,9 @@
-import { Markdown } from "@cv/resume";
-import { cp, mkdir, rm, writeFile } from "node:fs/promises";
+import { cp, mkdir, readFile, rm, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
 import * as prettier from "prettier";
 import { build } from "vite";
+import { z } from "zod";
 
 import { Og } from "./Og";
 import { Paths } from "./Paths";
@@ -85,24 +85,36 @@ const buildClientScript = async () => {
   await cp(path.join(outDir, `site.js`), path.join(Paths.assets, `site.js`));
 };
 
-const writeMarkdown = async () => {
-  const config = (await prettier.resolveConfig(Paths.markdown)) ?? {};
-  const formatted = await prettier.format(Markdown.render(), {
-    ...config,
-    filepath: Paths.markdown,
-    parser: `markdown`,
-  });
-  await writeFile(Paths.markdown, formatted, `utf8`);
+const writeFormatted = async (file: string, text: string) => {
+  const config = (await prettier.resolveConfig(file)) ?? {};
+  await writeFile(file, await prettier.format(text, { ...config, filepath: file }), `utf8`);
+};
+
+const checkContent = async () => {
+  const { ResumeSchema } = await import(`@cv/resume`);
+  const parsed = ResumeSchema.safeParse(Bun.YAML.parse(await readFile(Paths.content, `utf8`)));
+
+  if (!parsed.success) {
+    throw new Error(`Invalid resume.yml\n\n${z.prettifyError(parsed.error)}`);
+  }
+};
+
+const writeContent = async () => {
+  const { Markdown, ResumeSchema } = await import(`@cv/resume`);
+
+  await writeFormatted(Paths.markdown, Markdown.render());
+  await writeFormatted(Paths.schema, JSON.stringify(z.toJSONSchema(ResumeSchema)));
 };
 
 const run = async () => {
+  await checkContent();
   await rm(Paths.dist, { force: true, recursive: true });
   await copyAssets();
   await copyFonts();
   await renderPage(`EntrySite`, Paths.site, `site.css`);
   await renderPage(`EntryPrint`, Paths.print, `print.css`);
   await buildClientScript();
-  await writeMarkdown();
+  await writeContent();
   await Pdf.render();
   await Og.render();
 

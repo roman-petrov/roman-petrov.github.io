@@ -2,7 +2,6 @@ import type { useSiteNavState } from "./SiteNav.state";
 
 import { Content } from "../Content";
 import styles from "./SiteNav.module.scss";
-import { SiteOrder } from "./SiteOrder";
 import { SitePdfAction } from "./SitePdfAction";
 
 export type SiteNavViewProps = ReturnType<typeof useSiteNavState>;
@@ -15,9 +14,9 @@ export const SiteNavView = ({ activeId }: SiteNavViewProps) => (
         <span className={styles.name}>{Content.meta.name}</span>
       </a>
       <nav className={styles.links}>
-        {SiteOrder.map(({ id, label }) => (
+        {Content.sections.map(({ id, nav }) => (
           <a className={id === activeId ? styles.isActive : undefined} href={`#${id}`} key={id}>
-            {label}
+            {nav}
           </a>
         ))}
       </nav>

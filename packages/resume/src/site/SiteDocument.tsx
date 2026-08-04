@@ -23,8 +23,8 @@ export const SiteDocument = () => {
         <meta content="website" property="og:type" />
         <meta content={title} property="og:title" />
         <meta content={Content.meta.tagline} property="og:description" />
-        <meta content={Content.meta.siteUrl} property="og:url" />
-        <meta content={`${Content.meta.siteUrl}assets/og.png`} property="og:image" />
+        <meta content={Content.meta.site} property="og:url" />
+        <meta content={`${Content.meta.site}assets/og.png`} property="og:image" />
         <meta content="summary_large_image" name="twitter:card" />
         <link href="./assets/favicon.svg" rel="icon" type="image/svg+xml" />
         <link href="./assets/fonts.css" rel="stylesheet" />

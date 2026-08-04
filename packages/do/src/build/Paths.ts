@@ -7,6 +7,7 @@ const resume = path.join(Root, `packages`, `resume`);
 export const Paths = {
   assets: path.join(Root, `dist`, `assets`),
   build: path.join(Root, `.build`),
+  content: path.join(Root, `resume.yml`),
   dist: path.join(Root, `dist`),
   markdown: path.join(Root, `README.md`),
   og: path.join(Root, `dist`, `assets`, `og.png`),
@@ -14,6 +15,7 @@ export const Paths = {
   print: path.join(Root, `dist`, `resume.html`),
   resume,
   root: Root,
+  schema: path.join(Root, `resume.schema.json`),
   site: path.join(Root, `dist`, `index.html`),
   srcAssets: path.join(resume, `src`, `assets`),
 };

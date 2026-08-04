@@ -6,7 +6,6 @@ export * from "./SiteFooter";
 export * from "./SiteGithubAction";
 export * from "./SiteHero";
 export * from "./SiteNav";
-export * from "./SiteOrder";
 export * from "./SitePdfAction";
 export * from "./SiteProgress";
 export * from "./SiteProse";

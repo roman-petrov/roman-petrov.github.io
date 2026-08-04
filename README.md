@@ -44,7 +44,7 @@ I would like to land a software developer position in a company that:
 `C/C++` · `Markdown`
 
 - 🌍 **Languages:** English · Russian
-- 🎸 **Hobbies:** Programming, Travel, Camping, Guitar
+- 🎸 **Hobbies:** Programming · Travel · Camping · Guitar
 
 ## 03 💼 Employment History
 
@@ -65,7 +65,7 @@ move company products from outdated and ineffective development stack to Flutter
   and team lead)
 - **TLF** — TravelLine Flutter tool to automate workflow for company Flutter projects (single developer)
 - **TLUI** — TravelLine User Interface library and design system (lead developer and team lead)
-- Payment module front-end for online booking engine (single developer)
+- **Payment module front-end for online booking engine** (single developer)
 
 ### Developer at iSpring
 
@@ -73,7 +73,7 @@ move company products from outdated and ineffective development stack to Flutter
 
 **Projects:**
 
-- Flash media player & charting library (developer)
+- **Flash media player & charting library** (developer)
 - [SilverX](https://web.archive.org/web/20120506055102/http://www.silverx.net/) — Flash to Silverlight converter (single
   developer, website developer)
 - [PowerMessage](https://web.archive.org/web/20171020002940/http://www.powermessagepro.com/) — PowerPoint add-on to
@@ -88,8 +88,8 @@ move company products from outdated and ineffective development stack to Flutter
 - [JobWindow](https://www.cpslabs.net/project/jobwindow-2-3.html) — Job search system in Switzerland (developer)
 - [ActiveSWF](https://www.cpslabs.net/product/activeswf-3-5.html) — SWF file (Flash) generation library (single
   developer)
-- SlingPlayer — Streaming media player for [SlingMedia](https://en.wikipedia.org/wiki/Sling_Media) (lead developer and
-  team lead)
+- **SlingPlayer** — Streaming media player for [SlingMedia](https://en.wikipedia.org/wiki/Sling_Media) (lead developer
+  and team lead)
 
 ## 04 🎓 Education
 

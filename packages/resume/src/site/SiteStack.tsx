@@ -6,9 +6,10 @@ import styles from "./SiteStack.module.scss";
 
 export const SiteStack = () => {
   const [skills, ...rest] = Content.facts;
+  const { icon, id, title } = Content.section(`stack`);
 
   return (
-    <SiteSection icon={Content.stack.icon} id="stack" title={Content.stack.title}>
+    <SiteSection icon={icon} id={id} title={title}>
       <div className={styles.root}>
         <SiteReveal cn={styles.chips} tag="ul">
           {(skills.chips ?? []).map(chip => (
