@@ -33,8 +33,5 @@ export const SiteHero = () => (
         <img alt={Content.meta.name} height={320} src={`./assets/${Content.meta.photo}`} width={320} />
       </figure>
     </div>
-    <a className={styles.cue} href="#profile">
-      <span />
-    </a>
   </section>
 );

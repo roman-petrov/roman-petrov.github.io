@@ -10,6 +10,5 @@ declare const classNames: {
   readonly contacts: "contacts";
   readonly cta: "cta";
   readonly photo: "photo";
-  readonly cue: "cue";
 };
 export default classNames;
