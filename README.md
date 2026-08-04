@@ -52,17 +52,16 @@ I would like to land a software developer position in a company that:
 
 `2013 — 2026` · [travelline.ru](https://www.travelline.ru/)
 
-I ran the company design systems in a team of 5-7 engineers, combining architecture, technical leadership and
-development. In the last years I owned the whole product concept, not only the architecture — Reactor is thought out and
-designed by me from scratch.
+I ran the company design systems in a team of 5-7 engineers, combining all three roles. In the last years I designed not
+only the architecture but the whole product concept — Reactor started as my idea and I planned all of it myself.
 
 **Responsibilities:**
 
-- designed the whole architecture of the design systems and front-end products
-- built the full development cycle of the internal projects: tooling, workflow, release, documentation
-- led and mentored the team, reviewed the code and kept the quality bar
-- developed the core parts of the libraries hands-on
-- analyzed user experience and owned its quality
+- designed the architecture of the design systems and the front-end products
+- built the whole development cycle of the internal projects — tools, workflow, releases and documentation
+- led the team, mentored the engineers, reviewed the code and kept the quality high
+- wrote the core parts of the libraries myself
+- analyzed the user experience and was responsible for its quality
 
 **Projects:**
 
