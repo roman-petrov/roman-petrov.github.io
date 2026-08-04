@@ -14,7 +14,7 @@ export const SiteStack = () => {
     <SiteSection icon={Content.stack.icon} id="stack" title={Content.stack.title}>
       <div className={styles.root}>
         <ul className={_.cn(styles.chips, motion.reveal)}>
-          {(skills?.chips ?? []).map((chip, index) => (
+          {(skills.chips ?? []).map((chip, index) => (
             <li className={styles.chip} key={chip} style={Stagger(index)}>
               {chip}
             </li>

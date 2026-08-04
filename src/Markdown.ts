@@ -1,9 +1,12 @@
 import { slug } from "github-slugger";
 
 import type { Block, Contact, Entry, Fact, Section } from "./Content";
+import type { SiteLink } from "./site/SiteOrder";
 
 import { Content } from "./Content";
 import { SiteIndex, SiteOrder } from "./site/SiteOrder";
+
+type Part = Section & { label: string };
 
 const bullet = (text: string) => `- ${text}`;
 
@@ -25,29 +28,33 @@ const contactLine = ({ href, icon, label, value }: Contact) =>
 
 const factLine = ({ icon, label, text }: Fact) => `${icon} **${label}:** ${text ?? ``}`;
 
-const stackSection = (): Section => {
+const stackSection = () => {
   const [skills, ...rest] = Content.facts;
 
   return {
     blocks: [
-      { text: (skills?.chips ?? []).map(chip).join(` · `), type: `text` },
-      { items: rest.map(factLine), type: `list` },
+      { text: (skills.chips ?? []).map(chip).join(` · `), type: `text` as const },
+      { items: rest.map(factLine), type: `list` as const },
     ],
     icon: Content.stack.icon,
     id: `stack`,
-    index: SiteIndex(`stack`),
     title: Content.stack.title,
   };
 };
 
-const ordered = SiteOrder.map(({ id }) => (id === `stack` ? stackSection() : Content.section(id)));
+const part = ({ id, label }: SiteLink): Part => ({
+  ...(id === `stack` ? stackSection() : Content.section(id)),
+  index: SiteIndex(id),
+  label,
+});
 
-const headline = ({ icon, id, title }: Section) => `${SiteIndex(id)} ${icon} ${title}`;
+const parts = SiteOrder.map(part);
 
-const navLink = (item: Section) =>
-  `[${item.icon} ${SiteOrder.find(link => link.id === item.id)?.label ?? ``}](#${slug(headline(item))})`;
+const headline = ({ icon, index, title }: Part) => `${index} ${icon} ${title}`;
 
-const section = (item: Section) =>
+const navLink = (item: Part) => `[${item.icon} ${item.label}](#${slug(headline(item))})`;
+
+const section = (item: Part) =>
   [`## ${headline(item)}`, ...(item.entries ?? []).map(entry), ...(item.blocks ?? []).map(block)].join(`\n\n`);
 
 const actions = [
@@ -60,12 +67,12 @@ const render = () =>
   `${[
     `# ${Content.meta.name}`,
     chip(`// ${Content.meta.role.toUpperCase()}`),
-    ordered.map(navLink).join(` · `),
+    parts.map(navLink).join(` · `),
     Content.meta.tagline,
     Content.contacts.map(contactLine).join(`\n`),
     actions,
     `---`,
-    ...ordered.map(section),
+    ...parts.map(section),
     `---`,
     chip(`// built with HTML, CSS and Bun`),
     `© ${Content.meta.name}`,

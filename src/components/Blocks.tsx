@@ -2,7 +2,7 @@ import type { Block } from "../Content";
 
 import { Inline } from "./Inline";
 
-export type BlockClasses = { label: string; lead: string; list: string; pull: string; text?: string };
+export type BlockClasses = Partial<Record<Block[`type`], string>>;
 
 export type BlocksProps = { blocks: Block[]; classes: BlockClasses };
 

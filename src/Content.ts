@@ -29,7 +29,7 @@ const contacts: Contact[] = [
   { href: meta.github, icon: `🔗`, label: `GitHub`, value: `github.com/roman-petrov` },
 ];
 
-const facts: Fact[] = [
+const facts: [Fact, ...Fact[]] = [
   {
     chips: [
       `Programming`,

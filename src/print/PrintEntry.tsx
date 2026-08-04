@@ -2,8 +2,8 @@ import type { Entry } from "../Content";
 
 import { Blocks, Inline } from "../components";
 import { _ } from "../core";
-import { PrintBlockClasses } from "./PrintBlockClasses";
 import styles from "./PrintEntry.module.scss";
+import text from "./PrintText.module.scss";
 
 export type PrintEntryProps = Entry;
 
@@ -21,7 +21,7 @@ export const PrintEntry = ({ blocks, current, date, link, title }: PrintEntryPro
       <h3 className={styles.title}>
         <Inline text={title} />
       </h3>
-      <Blocks blocks={blocks} classes={PrintBlockClasses} />
+      <Blocks blocks={blocks} classes={text} />
     </div>
   </article>
 );

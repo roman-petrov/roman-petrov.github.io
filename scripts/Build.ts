@@ -57,10 +57,8 @@ const copyFonts = async () => {
   await writeFile(path.join(Paths.assets, `fonts.css`), `${faces.join(`\n\n`)}\n`, `utf8`);
 };
 
-const outputs = (result: Awaited<ReturnType<typeof build>>) =>
-  (Array.isArray(result) ? result : [result]).flatMap(item => (`output` in item ? item.output : []));
-
-const cssFile = (chunks: { fileName: string }[]) => {
+const cssFile = (result: Awaited<ReturnType<typeof build>>) => {
+  const chunks = (Array.isArray(result) ? result : [result]).flatMap(item => (`output` in item ? item.output : []));
   const asset = chunks.find(chunk => chunk.fileName.endsWith(`.css`));
 
   if (asset === undefined) {
@@ -74,7 +72,7 @@ const renderPage = async (entry: string, page: string, stylesheet: string) => {
   const outDir = path.join(Paths.build, entry);
   const result = await build({ build: { outDir, ssr: `src/${entry}.ts`, ssrEmitAssets: true } });
 
-  await cp(path.join(outDir, cssFile(outputs(result))), path.join(Paths.assets, stylesheet));
+  await cp(path.join(outDir, cssFile(result)), path.join(Paths.assets, stylesheet));
   const module_ = (await import(pathToFileURL(path.join(outDir, `${entry}.js`)).href)) as RenderModule;
   await writeFile(page, module_.render(), `utf8`);
 };

@@ -2,10 +2,10 @@ import type { Section } from "../Content";
 
 import { Blocks, Inline, Stagger } from "../components";
 import { _ } from "../core";
-import { SiteBlockClasses } from "./SiteBlockClasses";
 import motion from "./SiteMotion.module.scss";
 import { SiteSection } from "./SiteSection";
 import surface from "./SiteSurface.module.scss";
+import text from "./SiteText.module.scss";
 import styles from "./SiteTimeline.module.scss";
 
 export type SiteTimelineProps = { section: Section };
@@ -27,7 +27,7 @@ export const SiteTimeline = ({ section }: SiteTimelineProps) => (
             <h3 className={styles.title}>
               <Inline text={entry.title} />
             </h3>
-            <Blocks blocks={entry.blocks} classes={SiteBlockClasses} />
+            <Blocks blocks={entry.blocks} classes={text} />
           </div>
         </li>
       ))}

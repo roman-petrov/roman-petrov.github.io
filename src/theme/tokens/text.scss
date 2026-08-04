@@ -1,3 +1,4 @@
+@use "../r" as *;
 @use "../token";
 
 $-values: (
@@ -52,13 +53,13 @@ $-values: (
 }
 
 @function hero() {
-  @return -text("hero");
+  @return clamp(r(46), 8vw, r(84));
 }
 
 @function title() {
-  @return -text("title");
+  @return clamp(r(24), 3.2vw, r(32));
 }
 
 @function pull() {
-  @return -text("pull");
+  @return clamp(r(18), 2.2vw, r(23));
 }

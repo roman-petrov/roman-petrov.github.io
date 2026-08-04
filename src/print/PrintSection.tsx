@@ -2,10 +2,10 @@ import type { Section } from "../Content";
 
 import { Blocks, Ico } from "../components";
 import { _ } from "../core";
-import { PrintBlockClasses } from "./PrintBlockClasses";
 import card from "./PrintCard.module.scss";
 import { PrintEntry } from "./PrintEntry";
 import styles from "./PrintSection.module.scss";
+import text from "./PrintText.module.scss";
 
 export type PrintSectionProps = { section: Section };
 
@@ -20,7 +20,7 @@ export const PrintSection = ({ section }: PrintSectionProps) => (
     </header>
     <div className={styles.body}>
       {section.entries === undefined ? (
-        <Blocks blocks={section.blocks ?? []} classes={PrintBlockClasses} />
+        <Blocks blocks={section.blocks ?? []} classes={text} />
       ) : (
         section.entries.map(entry => <PrintEntry {...entry} key={entry.title} />)
       )}

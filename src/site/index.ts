@@ -1,5 +1,4 @@
 export * from "./SiteAction";
-export * from "./SiteBlockClasses";
 export * from "./SiteContact";
 export * from "./SiteDocument";
 export * from "./SiteFooter";

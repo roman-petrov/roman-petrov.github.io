@@ -32,9 +32,6 @@
   --color-shadow-soft: rgb(5 8 16 / 35%);
   --color-sky: rgb(56 189 248 / 10%);
   --color-sky-bright: #8fd6ff;
-  --text-hero: clamp(#{r(46)}, 8vw, #{r(84)});
-  --text-pull: clamp(#{r(18)}, 2.2vw, #{r(23)});
-  --text-title: clamp(#{r(24)}, 3.2vw, #{r(32)});
 }
 
 html {
