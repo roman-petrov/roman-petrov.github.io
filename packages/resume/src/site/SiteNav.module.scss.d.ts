@@ -6,5 +6,6 @@ declare const classNames: {
   readonly name: "name";
   readonly links: "links";
   readonly isActive: "isActive";
+  readonly actions: "actions";
 };
 export default classNames;

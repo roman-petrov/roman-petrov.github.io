@@ -1,9 +1,11 @@
 @use "../token";
 
 $-values: (
+  icon: 26,
   marker: 8,
   nav: 64,
   rail: 136,
+  tap: 40,
 );
 $-fixed: (
   ico: 0.9em,
@@ -23,6 +25,10 @@ $-fixed: (
   @return -metrics("ico");
 }
 
+@function icon() {
+  @return -metrics("icon");
+}
+
 @function marker() {
   @return -metrics("marker");
 }
@@ -33,6 +39,10 @@ $-fixed: (
 
 @function rail() {
   @return -metrics("rail");
+}
+
+@function tap() {
+  @return -metrics("tap");
 }
 
 @function wrap() {

@@ -92,7 +92,7 @@
   line-height: leading.tight();
   color: color.ink();
   letter-spacing: tracking.tight();
-  background: linear-gradient(180deg, color.on-accent() 25%, color.ink-fade() 100%);
+  background: linear-gradient(180deg, color.ink() 25%, color.ink-fade() 100%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }

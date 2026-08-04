@@ -102,6 +102,12 @@
   }
 }
 
+.actions {
+  display: flex;
+  gap: space.md();
+  align-items: center;
+}
+
 @include mobile {
   .links,
   .name {

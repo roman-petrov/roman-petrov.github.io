@@ -12,4 +12,5 @@ export * from "./SiteProse";
 export * from "./SiteReveal";
 export * from "./SiteSection";
 export * from "./SiteStack";
+export * from "./SiteThemeToggle";
 export * from "./SiteTimeline";

@@ -1,0 +1,13 @@
+@use "../theme/primitives";
+@use "../theme/tokens/metrics";
+
+.root {
+  @include primitives.grid-center;
+  @include primitives.square(metrics.tap());
+
+  padding: 0;
+  font-size: metrics.icon();
+  cursor: pointer;
+  background: none;
+  border: 0;
+}

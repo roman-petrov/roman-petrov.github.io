@@ -1,0 +1,42 @@
+/**
+* Cool effect from https://theme-toggle.rdsx.dev/
+* GitHub: https://github.com/rudrodip/theme-toggle-effect
+*/
+
+@property --mask-progress {
+  syntax: "<number>";
+  inherits: false;
+  initial-value: 0;
+}
+
+$-x: var(--theme-transition-x, 50%);
+$-y: var(--theme-transition-y, 50%);
+$-blur: 4;
+$-size: 64;
+$-spill: $-blur * 4;
+$-view: $-size + $-spill * 2;
+$-center: $-view * 0.5;
+$-radius: $-size * 0.5 - $-blur;
+$-circle: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 #{$-view} #{$-view}'><defs><filter id='blur' x='-50%' y='-50%' width='200%' height='200%'><feGaussianBlur stdDeviation='#{$-blur}'/></filter></defs><circle cx='#{$-center}' cy='#{$-center}' r='#{$-radius}' fill='white' filter='url(%23blur)'/></svg>");
+$-end: 250vmax;
+$-half: $-end * 0.5;
+
+::view-transition-new(root) {
+  --mask-progress: 0;
+
+  mask: #{$-circle} #{$-x} #{$-y} / 0 no-repeat;
+  mask-position: calc(#{$-x} - var(--mask-progress) * var(--mask-progress) * #{$-half})
+    calc(#{$-y} - var(--mask-progress) * var(--mask-progress) * #{$-half});
+  mask-size: calc(var(--mask-progress) * var(--mask-progress) * #{$-end});
+  animation: mask-progress 300ms linear both;
+}
+
+::view-transition-old(root) {
+  animation: none;
+}
+
+@keyframes mask-progress {
+  to {
+    --mask-progress: 1;
+  }
+}

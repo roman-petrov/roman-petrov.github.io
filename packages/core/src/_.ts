@@ -1,3 +1,5 @@
 const cn = (...parts: readonly (false | string | undefined)[]) => parts.filter(Boolean).join(` `).trim();
 
-export const _ = { cn };
+const px = (value: number) => `${String(value)}px`;
+
+export const _ = { cn, px };

@@ -19,7 +19,8 @@ export const SiteDocument = () => {
         <meta content="width=device-width, initial-scale=1" name="viewport" />
         <title>{title}</title>
         <meta content={Content.meta.tagline} name="description" />
-        <meta content="#0b1020" name="theme-color" />
+        <meta content="#eef1f7" media="(prefers-color-scheme: light)" name="theme-color" />
+        <meta content="#080c16" media="(prefers-color-scheme: dark)" name="theme-color" />
         <meta content="website" property="og:type" />
         <meta content={title} property="og:title" />
         <meta content={Content.meta.tagline} property="og:description" />

@@ -7,6 +7,7 @@ const render = async () => {
 
   try {
     await page.setViewport(size);
+    await page.emulateMediaFeatures([{ name: `prefers-color-scheme`, value: `dark` }]);
     await Browser.show(page, Paths.site);
     await page.screenshot({ clip: { ...size, x: 0, y: 0 }, path: Paths.og });
   } finally {

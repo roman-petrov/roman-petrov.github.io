@@ -7,32 +7,8 @@
 @use "../tokens/tracking";
 @use "../tokens/weight";
 @use "common";
-
-:root {
-  --color-accent: #6f7bff;
-  --color-accent-bright: #9aa3ff;
-  --color-accent-deep: #4a53d6;
-  --color-accent-glow: rgb(74 83 214 / 35%);
-  --color-accent-line: rgb(111 123 255 / 35%);
-  --color-accent-soft: rgb(111 123 255 / 14%);
-  --color-bg: #080c16;
-  --color-chrome: rgb(8 12 22 / 72%);
-  --color-chrome-strong: rgb(8 12 22 / 88%);
-  --color-glass: rgb(255 255 255 / 4%);
-  --color-glass-strong: rgb(255 255 255 / 7%);
-  --color-glow: rgb(111 123 255 / 22%);
-  --color-ink: #eaeef7;
-  --color-ink-fade: #9fb0d4;
-  --color-ink-soft: #b7c0d2;
-  --color-line: rgb(255 255 255 / 10%);
-  --color-line-strong: rgb(255 255 255 / 18%);
-  --color-muted: #7c8798;
-  --color-on-accent: #fff;
-  --color-shadow: rgb(5 8 16 / 60%);
-  --color-shadow-soft: rgb(5 8 16 / 35%);
-  --color-sky: rgb(56 189 248 / 10%);
-  --color-sky-bright: #8fd6ff;
-}
+@use "palettes";
+@use "transition";
 
 html {
   scroll-behavior: smooth;

@@ -6,4 +6,12 @@ const each = <TElement extends HTMLElement>(elements: readonly TElement[], apply
 
 const one = (selector: string) => document.querySelector<HTMLElement>(selector) ?? undefined;
 
-export const Dom = { each, one };
+const subscribe = (target: EventTarget, type: string, listen: () => void) => {
+  target.addEventListener(type, listen);
+
+  return () => {
+    target.removeEventListener(type, listen);
+  };
+};
+
+export const Dom = { each, one, subscribe };

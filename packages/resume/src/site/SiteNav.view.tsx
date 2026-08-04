@@ -3,6 +3,7 @@ import type { useSiteNavState } from "./SiteNav.state";
 import { Content } from "../Content";
 import styles from "./SiteNav.module.scss";
 import { SitePdfAction } from "./SitePdfAction";
+import { SiteThemeToggle } from "./SiteThemeToggle";
 
 export type SiteNavViewProps = ReturnType<typeof useSiteNavState>;
 
@@ -20,7 +21,10 @@ export const SiteNavView = ({ activeId }: SiteNavViewProps) => (
           </a>
         ))}
       </nav>
-      <SitePdfAction />
+      <div className={styles.actions}>
+        <SiteThemeToggle />
+        <SitePdfAction />
+      </div>
     </div>
   </header>
 );
