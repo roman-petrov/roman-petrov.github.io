@@ -20,6 +20,8 @@ const meta = {
   tagline: `Front-end architect, team lead and developer. Flutter, TypeScript, clean code.`,
 };
 
+const stack = { icon: `🛠`, title: `Stack & interests` };
+
 const contacts: Contact[] = [
   { icon: `📍`, label: `Location`, value: `Yoshkar-Ola, Russian Federation` },
   { href: `tel:+79061370326`, icon: `📞`, label: `Phone`, value: `+79061370326` },
@@ -41,7 +43,7 @@ const facts: Fact[] = [
       `C/C++`,
       `Markdown`,
     ],
-    icon: `🛠`,
+    icon: stack.icon,
     label: `Skills`,
   },
   { icon: `🌍`, label: `Languages`, text: `English · Russian` },
@@ -227,4 +229,4 @@ const section = (id: string) => {
   return found;
 };
 
-export const Content = { contacts, facts, meta, section, sections };
+export const Content = { contacts, facts, meta, section, sections, stack };

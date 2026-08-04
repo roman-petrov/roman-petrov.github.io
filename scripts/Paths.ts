@@ -7,7 +7,7 @@ export const Paths = {
   assets: path.join(root, `dist`, `assets`),
   build: path.join(root, `.build`),
   dist: path.join(root, `dist`),
-  markdown: path.join(root, `resume.md`),
+  markdown: path.join(root, `README.md`),
   og: path.join(root, `dist`, `assets`, `og.png`),
   pdf: path.join(root, `dist`, `Roman_Petrov_CV.pdf`),
   print: path.join(root, `dist`, `resume.html`),

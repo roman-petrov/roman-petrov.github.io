@@ -108,7 +108,7 @@ await step(`copy fonts`, copyFonts);
 await step(`render site`, () => renderPage(`EntrySite`, Paths.site, `site.css`));
 await step(`render print sheet`, () => renderPage(`EntryPrint`, Paths.print, `print.css`));
 await step(`build client script`, buildClientScript);
-await step(`write resume.md`, writeMarkdown);
+await step(`write README.md`, writeMarkdown);
 const { ms } = await step(`render pdf`, Pdf.render);
 await step(`render og image`, Og.render);
 

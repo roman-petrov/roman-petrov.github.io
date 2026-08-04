@@ -11,7 +11,7 @@ export const SiteStack = () => {
   const [skills, ...rest] = Content.facts;
 
   return (
-    <SiteSection icon={skills?.icon ?? ``} id="stack" title={`Stack & interests`}>
+    <SiteSection icon={Content.stack.icon} id="stack" title={Content.stack.title}>
       <div className={styles.root}>
         <ul className={_.cn(styles.chips, motion.reveal)}>
           {(skills?.chips ?? []).map((chip, index) => (

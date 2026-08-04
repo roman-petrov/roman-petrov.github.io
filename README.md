@@ -1,42 +1,25 @@
 # Roman Petrov
 
-Software Developer
+`// SOFTWARE DEVELOPER`
 
-[Web version](https://roman-petrov.github.io/) · [PDF](https://roman-petrov.github.io/Roman_Petrov_CV.pdf)
+[👤 Profile](#01--profile) · [🛠 Stack](#02--stack--interests) · [💼 Experience](#03--employment-history) ·
+[🎓 Education](#04--education) · [🚀 Activities](#05--challenging-activities)
 
-## Details
+Front-end architect, team lead and developer. Flutter, TypeScript, clean code.
 
-- **Location:** Yoshkar-Ola, Russian Federation
-- **Phone:** [+79061370326](tel:+79061370326)
-- **Email:** [romanpetrov@list.ru](mailto:romanpetrov@list.ru)
-- **GitHub:** [github.com/roman-petrov](https://github.com/roman-petrov)
+- 📍 **Location:** Yoshkar-Ola, Russian Federation
+- 📞 **Phone:** [+79061370326](tel:+79061370326)
+- ✉️ **Email:** [romanpetrov@list.ru](mailto:romanpetrov@list.ru)
+- 🔗 **GitHub:** [github.com/roman-petrov](https://github.com/roman-petrov)
 
-## Skills
-
-- Programming
-- User experience
-- Git
-- Dart/Flutter
-- TypeScript/JavaScript
-- HTML / CSS
-- React
-- C#
-- C/C++
-- Markdown
-
-## Languages
-
-English · Russian
-
-## Hobbies
-
-Programming, Travel, Camping, Guitar
+[🌐 Web version](https://roman-petrov.github.io/) · [⬇ Download PDF](https://roman-petrov.github.io/Roman_Petrov_CV.pdf)
+· [🔗 GitHub](https://github.com/roman-petrov)
 
 ---
 
-## Profile
+## 01 👤 Profile
 
-My favorite tool in software development is **Occam's razor**.
+> // My favorite tool in software development is **Occam's razor**.
 
 The areas of my proficiency are:
 
@@ -55,17 +38,19 @@ I would like to land a software developer position in a company that:
 - cares about the user experience quality in products
 - provides possibilities to grow as professional
 
-## Education
+## 02 🛠 Stack & interests
 
-### Master, Volga State University of Technology, Yoshkar-Ola
+`Programming` · `User experience` · `Git` · `Dart/Flutter` · `TypeScript/JavaScript` · `HTML / CSS` · `React` · `C#` ·
+`C/C++` · `Markdown`
 
-- **1999 — 2004**
+- 🌍 **Languages:** English · Russian
+- 🎸 **Hobbies:** Programming, Travel, Camping, Guitar
 
-## Employment History
+## 03 💼 Employment History
 
 ### Lead developer and team lead at TravelLine
 
-- **2013 — Present** · [travelline.ru](https://www.travelline.ru/)
+`2013 — Present` · [travelline.ru](https://www.travelline.ru/)
 
 I'm currently working for TravelLine company as a front-end architect, team lead and developer. My primary goal is to
 move company products from outdated and ineffective development stack to Flutter:
@@ -84,7 +69,7 @@ move company products from outdated and ineffective development stack to Flutter
 
 ### Developer at iSpring
 
-- **2007 — 2013** · [ispringsolutions.com](http://www.ispringsolutions.com/)
+`2007 — 2013` · [ispringsolutions.com](http://www.ispringsolutions.com/)
 
 **Projects:**
 
@@ -96,7 +81,7 @@ move company products from outdated and ineffective development stack to Flutter
 
 ### Lead developer and team lead at CPS Labs
 
-- **2003 — 2007** · [cpslabs.net](https://www.cpslabs.net/)
+`2003 — 2007` · [cpslabs.net](https://www.cpslabs.net/)
 
 **Projects:**
 
@@ -106,11 +91,17 @@ move company products from outdated and ineffective development stack to Flutter
 - SlingPlayer — Streaming media player for [SlingMedia](https://en.wikipedia.org/wiki/Sling_Media) (lead developer and
   team lead)
 
-## Challenging activities
+## 04 🎓 Education
+
+### Master, Volga State University of Technology, Yoshkar-Ola
+
+`1999 — 2004`
+
+## 05 🚀 Challenging activities
 
 ### Machine learning contest
 
-- **2015**
+`2015`
 
 I took part in the Beeline Big Data contest. It was my first experience in machine learning so it's been quite a
 challenge for me. I was ranked the 236 out of 832 participants.
@@ -121,7 +112,7 @@ challenge for me. I was ranked the 236 out of 832 participants.
 
 ### ZX-Spectrum
 
-- **1995 — 2000**
+`1995 — 2000`
 
 During my school years my favorite hobby was assembler programming on ZX-Spectrum. I'm the author of RIP (Real
 Information Packer) — LZW/Huffman data compression algorithm and application. This was a challenge and I managed to
@@ -132,3 +123,9 @@ achieve one of the best compression ratios compared to other ZX-Spectrum data co
 - About me at [speccy.info](https://speccy.info/%D0%A0%D0%BE%D0%BC%D0%B0%D0%BD_%D0%9F%D0%B5%D1%82%D1%80%D0%BE%D0%B2)
 - RIP at [speccy.info](https://speccy.info/RIP_%28%D1%83%D0%BF%D0%B0%D0%BA%D0%BE%D0%B2%D1%89%D0%B8%D0%BA%29)
 - About RIP at [zxpress.ru](https://zxpress.ru/article.php?id=8510)
+
+---
+
+`// built with HTML, CSS and Bun`
+
+© Roman Petrov
