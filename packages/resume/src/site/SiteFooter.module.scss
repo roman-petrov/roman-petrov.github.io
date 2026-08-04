@@ -19,13 +19,6 @@
   padding: space.x2xl() 0;
 }
 
-.label {
-  @include primitives.label(text.micro());
-
-  margin: 0;
-  color: color.muted();
-}
-
 .actions {
   display: flex;
   gap: space.md();

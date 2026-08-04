@@ -15,9 +15,9 @@ export const SiteNavView = ({ activeId }: SiteNavViewProps) => (
         <span className={styles.name}>{Content.meta.name}</span>
       </a>
       <nav className={styles.links}>
-        {Content.sections.map(({ id, nav }) => (
+        {Content.sections.map(({ id, title }) => (
           <a className={id === activeId ? styles.isActive : undefined} href={`#${id}`} key={id}>
-            {nav}
+            {title}
           </a>
         ))}
       </nav>

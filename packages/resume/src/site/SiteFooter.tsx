@@ -6,7 +6,6 @@ import { SitePdfAction } from "./SitePdfAction";
 export const SiteFooter = () => (
   <footer className={styles.root}>
     <div className={styles.inner}>
-      <p className={styles.label}>{`// built with HTML, CSS and Bun`}</p>
       <div className={styles.actions}>
         <SitePdfAction />
         <SiteGithubAction />

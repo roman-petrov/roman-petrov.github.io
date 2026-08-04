@@ -4,7 +4,6 @@
 @use "../theme/tokens/metrics";
 @use "../theme/tokens/space";
 @use "../theme/tokens/text";
-@use "../theme/tokens/tracking";
 @use "../theme/tokens/weight";
 
 .root {
@@ -19,13 +18,6 @@
   gap: space.lg();
   align-items: center;
   margin-bottom: space.x2xl();
-}
-
-.index {
-  @include primitives.mono(text.xs());
-
-  color: color.accent();
-  letter-spacing: tracking.mono();
 }
 
 .title {

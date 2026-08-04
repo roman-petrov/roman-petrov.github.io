@@ -6,7 +6,6 @@
       "type": "object",
       "properties": {
         "icon": { "type": "string" },
-        "nav": { "type": "string" },
         "title": { "type": "string" },
         "items": {
           "type": "array",
@@ -44,7 +43,7 @@
           }
         }
       },
-      "required": ["icon", "nav", "title", "items"],
+      "required": ["icon", "title", "items"],
       "additionalProperties": false
     },
     "contacts": {
@@ -62,7 +61,6 @@
       "type": "object",
       "properties": {
         "icon": { "type": "string" },
-        "nav": { "type": "string" },
         "title": { "type": "string" },
         "studies": {
           "type": "array",
@@ -80,14 +78,13 @@
           }
         }
       },
-      "required": ["icon", "nav", "title", "studies"],
+      "required": ["icon", "title", "studies"],
       "additionalProperties": false
     },
     "experience": {
       "type": "object",
       "properties": {
         "icon": { "type": "string" },
-        "nav": { "type": "string" },
         "title": { "type": "string" },
         "jobs": {
           "type": "array",
@@ -128,7 +125,7 @@
           }
         }
       },
-      "required": ["icon", "nav", "title", "jobs"],
+      "required": ["icon", "title", "jobs"],
       "additionalProperties": false
     },
     "meta": {
@@ -149,7 +146,6 @@
       "type": "object",
       "properties": {
         "icon": { "type": "string" },
-        "nav": { "type": "string" },
         "title": { "type": "string" },
         "approach": { "type": "string" },
         "motto": { "type": "string" },
@@ -177,14 +173,13 @@
           "additionalProperties": false
         }
       },
-      "required": ["icon", "nav", "title", "approach", "motto", "proficiency", "wishes"],
+      "required": ["icon", "title", "approach", "motto", "proficiency", "wishes"],
       "additionalProperties": false
     },
     "stack": {
       "type": "object",
       "properties": {
         "icon": { "type": "string" },
-        "nav": { "type": "string" },
         "title": { "type": "string" },
         "facts": {
           "type": "array",
@@ -201,7 +196,7 @@
         },
         "skills": { "type": "array", "items": { "type": "string" } }
       },
-      "required": ["icon", "nav", "title", "facts", "skills"],
+      "required": ["icon", "title", "facts", "skills"],
       "additionalProperties": false
     }
   },

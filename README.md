@@ -2,8 +2,8 @@
 
 `// SOFTWARE DEVELOPER`
 
-[👤 Profile](#01--profile) · [🛠 Stack](#02--stack--interests) · [💼 Experience](#03--employment-history) ·
-[🎓 Education](#04--education) · [🚀 Activities](#05--challenging-activities)
+[👤 Profile](#01--profile) · [🛠 Stack](#02--stack) · [💼 Experience](#03--experience) · [🎓 Education](#04--education) ·
+[🚀 Activities](#05--activities)
 
 Front-end architect, team lead and developer. Flutter, TypeScript, clean code.
 
@@ -38,7 +38,7 @@ I would like to land a software developer position in a company that:
 - cares about the user experience quality in products
 - provides possibilities to grow as professional
 
-## 02 🛠 Stack & interests
+## 02 🛠 Stack
 
 `Programming` · `User experience` · `Git` · `Dart/Flutter` · `TypeScript/JavaScript` · `HTML / CSS` · `React` · `C#` ·
 `C/C++` · `Markdown`
@@ -46,7 +46,7 @@ I would like to land a software developer position in a company that:
 - 🌍 **Languages:** English · Russian
 - 🎸 **Hobbies:** Programming · Travel · Camping · Guitar
 
-## 03 💼 Employment History
+## 03 💼 Experience
 
 ### Front-end architect, tech lead and lead developer at TravelLine
 
@@ -122,7 +122,7 @@ engineers.
 
 `1999 — 2004`
 
-## 05 🚀 Challenging activities
+## 05 🚀 Activities
 
 ### Machine learning contest
 
@@ -133,7 +133,8 @@ challenge for me. I was ranked the 236 out of 832 participants.
 
 **References (in Russian):**
 
-- Contest info and results at [beeline.ru](https://special.habrahabr.ru/beeline/)
+- Contest info and results at
+  [beeline.ru](https://web.archive.org/web/20150920022250/https://special.habrahabr.ru/beeline/)
 
 ### ZX-Spectrum
 
@@ -150,7 +151,5 @@ achieve one of the best compression ratios compared to other ZX-Spectrum data co
 - About RIP at [zxpress.ru](https://zxpress.ru/article.php?id=8510)
 
 ---
-
-`// built with HTML, CSS and Bun`
 
 © Roman Petrov

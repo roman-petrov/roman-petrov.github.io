@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-const titled = { icon: z.string(), nav: z.string(), title: z.string() };
+const titled = { icon: z.string(), title: z.string() };
 
 const span = { from: z.int(), to: z.int() };
 

@@ -49,7 +49,7 @@ const blocks = ({ blocks: own, id }: Section) => own ?? (id === `stack` ? stackB
 
 const headline = ({ icon, id, title }: Section) => `${Content.index(id)} ${icon} ${title}`;
 
-const navLink = (item: Section) => `[${item.icon} ${item.nav}](#${slug(headline(item))})`;
+const navLink = (item: Section) => `[${item.icon} ${item.title}](#${slug(headline(item))})`;
 
 const section = (item: Section) =>
   [`## ${headline(item)}`, ...(item.entries ?? []).map(entry), ...blocks(item).map(block)].join(`\n\n`);
@@ -69,7 +69,6 @@ const render = () =>
     `---`,
     ...Content.sections.map(section),
     `---`,
-    chip(`// built with HTML, CSS and Bun`),
     `© ${Content.meta.name}`,
   ].join(`\n\n`)}\n`;
 

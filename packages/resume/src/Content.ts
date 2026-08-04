@@ -15,7 +15,7 @@ export type Entry = { blocks: Block[]; date: string; link?: Link; title: string 
 
 export type Fact = { chips?: string[]; icon: string; label: string; text?: string };
 
-export type Heading = { icon: string; nav: string; title: string };
+export type Heading = { icon: string; title: string };
 
 export type Link = { href: string; label: string };
 
@@ -56,7 +56,7 @@ const project = ({ link: tail, name, note, roles, stack, url }: Job[`projects`][
   stack,
 });
 
-const heading = ({ icon, nav, title }: Heading): Heading => ({ icon, nav, title });
+const heading = ({ icon, title }: Heading): Heading => ({ icon, title });
 
 const profileBlocks = ({ approach, motto, proficiency, wishes }: Resume[`profile`]): Block[] => [
   { text: motto, type: `pull` },
@@ -109,7 +109,7 @@ const contacts: Contact[] = [
 ];
 
 const facts: [Fact, ...Fact[]] = [
-  { chips: resume.stack.skills, icon: resume.stack.icon, label: `Skills` },
+  { chips: resume.stack.skills, icon: resume.stack.icon, label: resume.stack.title },
   ...resume.stack.facts.map(({ icon, items, label }) => ({ icon, label, text: items.join(` · `) })),
 ];
 
