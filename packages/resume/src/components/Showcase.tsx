@@ -2,6 +2,7 @@ import type { Product } from "../Content";
 
 import { Ico } from "./Ico";
 import { Inline } from "./Inline";
+import { TechChip } from "./TechChip";
 
 export type ShowcaseClasses = Partial<Record<`chip` | `links` | `note` | `showcase` | `stack` | `title`, string>>;
 
@@ -27,8 +28,8 @@ export const Showcase = ({ classes, item: { links, name, note, stack } }: Showca
     </ul>
     <ul className={classes.stack}>
       {stack.map(item => (
-        <li className={classes.chip} key={item}>
-          {item}
+        <li key={item}>
+          <TechChip cn={classes.chip} name={item} />
         </li>
       ))}
     </ul>

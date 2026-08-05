@@ -1,6 +1,7 @@
 import type { Fact } from "../Content";
 
 import { Ico } from "./Ico";
+import { TechChip } from "./TechChip";
 
 export type FactsClasses = Partial<Record<`chip` | `chips` | `facts` | `group` | `label`, string>>;
 
@@ -17,9 +18,9 @@ export const Facts = ({ classes, items }: FactsProps) => (
           {` ${label}`}
         </p>
         <ul className={classes.chips}>
-          {chips.map(chip => (
-            <li className={classes.chip} key={chip}>
-              {chip}
+          {chips.map(name => (
+            <li key={name}>
+              <TechChip cn={classes.chip} name={name} />
             </li>
           ))}
         </ul>

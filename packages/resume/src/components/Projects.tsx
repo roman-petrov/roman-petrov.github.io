@@ -1,6 +1,7 @@
 import type { Project } from "../Content";
 
 import { Inline } from "./Inline";
+import { TechChip } from "./TechChip";
 
 export type ProjectClasses = Partial<
   Record<`chip` | `head` | `name` | `note` | `project` | `projects` | `roles` | `stack`, string>
@@ -29,8 +30,8 @@ export const Projects = ({ classes, items }: ProjectsProps) => (
         ))}
         <ul className={classes.stack}>
           {stack.map(item => (
-            <li className={classes.chip} key={item}>
-              {item}
+            <li key={item}>
+              <TechChip cn={classes.chip} name={item} />
             </li>
           ))}
         </ul>

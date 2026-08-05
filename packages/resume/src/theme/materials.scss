@@ -18,12 +18,14 @@
 }
 
 @mixin chip($ink) {
+  display: inline-block;
   padding: space.x2s() space.sm();
   font-size: text.md();
   font-weight: weight.medium();
   line-height: leading.snug();
   color: $ink;
   background: color.accent-soft();
+  border-bottom: 0;
   border-radius: radius.xs();
 }
 

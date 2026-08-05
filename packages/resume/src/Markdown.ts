@@ -3,10 +3,17 @@ import { slug } from "github-slugger";
 import type { Block, Contact, Entry, Fact, Product, Project, Section } from "./Content";
 
 import { Content } from "./Content";
+import { TechLinks } from "./TechLinks";
 
 const bullet = (text: string) => `- ${text}`;
 
 const chip = (text: string) => `\`${text}\``;
+
+const tech = (name: string) => {
+  const href = TechLinks.href(name);
+
+  return href === undefined ? chip(name) : `[${chip(name)}](${href})`;
+};
 
 const paragraph = ({ text, type }: Extract<Block, { text: string }>) => (type === `label` ? `**${text}:**` : text);
 
@@ -15,7 +22,7 @@ const projectItem = ({ href, name, note: [lead, ...rest], roles, stack }: Projec
     bullet(`${href === undefined ? `**${name}**` : `[${name}](${href})`}${lead === undefined ? `` : ` — ${lead}`}`),
     ...rest.map(item => `\n  ${item}\n`),
     `  - **Roles:** ${roles.join(` · `)}`,
-    `  - **Stack:** ${stack.map(chip).join(` · `)}`,
+    `  - **Stack:** ${stack.map(tech).join(` · `)}`,
   ].join(`\n`);
 
 const productCard = ({ links, name, note, stack }: Product) =>
@@ -23,10 +30,10 @@ const productCard = ({ links, name, note, stack }: Product) =>
     `### ${name}`,
     ...note,
     links.map(({ href, icon, label }) => `${icon} [${label}](${href})`).join(` · `),
-    stack.map(chip).join(` · `),
+    stack.map(tech).join(` · `),
   ].join(`\n\n`);
 
-const factLine = ({ chips, icon, label }: Fact) => `${icon} **${label}:** ${chips.map(chip).join(` · `)}`;
+const factLine = ({ chips, icon, label }: Fact) => `${icon} **${label}:** ${chips.map(tech).join(` · `)}`;
 
 const block = (item: Block) =>
   item.type === `showcase`

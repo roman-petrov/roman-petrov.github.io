@@ -38,11 +38,14 @@ GitHub Actions runs the checks and the deploy on every change.
 🌐 [roman-petrov.github.io](https://roman-petrov.github.io/) · 🔗
 [github.com/roman-petrov/roman-petrov.github.io](https://github.com/roman-petrov/roman-petrov.github.io)
 
-`TypeScript` · `React` · `Vite` · `SCSS` · `Bun` · `Puppeteer` · `GitHub Actions`
+[`TypeScript`](https://www.typescriptlang.org) · [`React`](https://react.dev) · [`Vite`](https://vite.dev) ·
+[`SCSS`](https://sass-lang.com) · [`Bun`](https://bun.sh) · [`Puppeteer`](https://pptr.dev) ·
+[`GitHub Actions`](https://github.com/features/actions)
 
 ## 🧠 Expertise
 
-- 🤖 **AI:** `Agents` · `MCP` · `RAG` · `Cursor`
+- 🤖 **AI:** [`Agents`](https://en.wikipedia.org/wiki/Intelligent_agent) · [`MCP`](https://modelcontextprotocol.io) ·
+  [`RAG`](https://en.wikipedia.org/wiki/Retrieval-augmented_generation) · [`Cursor`](https://cursor.com)
 - 🧩 **Problem solving:** `Analysis` · `Communication` · `Decomposition` · `MVP`
 - 💻 **Programming:** `Modular` · `Testable` · `Readable` · `Compact` · `Efficient`
 - 📐 **Architecture:** `System design` · `API design` · `Design systems` · `Performance`
@@ -53,11 +56,22 @@ GitHub Actions runs the checks and the deploy on every change.
 
 ## 🛠 Stack
 
-- 💬 **Languages:** `TypeScript` · `JavaScript` · `HTML` · `CSS` · `SCSS` · `Dart` · `C#` · `C/C++` · `GLSL`
-- 📦 **Frameworks & libraries:** `React` · `Node.js` · `Flutter` · `.NET` · `CSS Modules` · `Zod` · `tRPC` · `Prisma` ·
-  `WebSockets` · `WebGL`
-- 🧰 **Build & tooling:** `Vite` · `tsx` · `tsdown` · `Git` · `GitHub Actions` · `Docker`
-- ✅ **Testing & quality:** `Vitest` · `Jest` · `Puppeteer` · `ESLint` · `Stylelint` · `Prettier`
+- 💬 **Languages:** [`TypeScript`](https://www.typescriptlang.org) ·
+  [`JavaScript`](https://developer.mozilla.org/docs/Web/JavaScript) ·
+  [`HTML`](https://developer.mozilla.org/docs/Web/HTML) · [`CSS`](https://developer.mozilla.org/docs/Web/CSS) ·
+  [`SCSS`](https://sass-lang.com) · [`Dart`](https://dart.dev) · [`C#`](https://learn.microsoft.com/dotnet/csharp) ·
+  [`C/C++`](https://isocpp.org) · [`GLSL`](<https://www.khronos.org/opengl/wiki/Core_Language_(GLSL)>)
+- 📦 **Frameworks & libraries:** [`React`](https://react.dev) · [`Node.js`](https://nodejs.org) ·
+  [`Flutter`](https://flutter.dev) · [`.NET`](https://dotnet.microsoft.com) ·
+  [`CSS Modules`](https://github.com/css-modules/css-modules) · [`Zod`](https://zod.dev) · [`tRPC`](https://trpc.io) ·
+  [`Prisma`](https://www.prisma.io) · [`WebSockets`](https://developer.mozilla.org/docs/Web/API/WebSockets_API) ·
+  [`WebGL`](https://developer.mozilla.org/docs/Web/API/WebGL_API)
+- 🧰 **Build & tooling:** [`Vite`](https://vite.dev) · [`tsx`](https://tsx.is) · [`tsdown`](https://tsdown.dev) ·
+  [`Git`](https://git-scm.com) · [`GitHub Actions`](https://github.com/features/actions) ·
+  [`Docker`](https://www.docker.com)
+- ✅ **Testing & quality:** [`Vitest`](https://vitest.dev) · [`Jest`](https://jestjs.io) ·
+  [`Puppeteer`](https://pptr.dev) · [`ESLint`](https://eslint.org) · [`Stylelint`](https://stylelint.io) ·
+  [`Prettier`](https://prettier.io)
 
 ## 💼 Experience
 
@@ -88,7 +102,8 @@ only the architecture but the whole product concept — Reactor started as my id
   Already in production, and the technical teams in the company are moving to it.
 
   - **Roles:** architect · tech lead · lead developer
-  - **Stack:** `TypeScript` · `React` · `Vite` · `SCSS`
+  - **Stack:** [`TypeScript`](https://www.typescriptlang.org) · [`React`](https://react.dev) ·
+    [`Vite`](https://vite.dev) · [`SCSS`](https://sass-lang.com)
 
 - **TLUI3.0** — Move of the front-end stack to Flutter Web. In one year the team built the design system components, the
   build and workflow tools and a way to start a new project in minutes.
@@ -96,7 +111,7 @@ only the architecture but the whole product concept — Reactor started as my id
   The company did not adopt Flutter, so only a part of the work went to production.
 
   - **Roles:** architect · tech lead · lead developer
-  - **Stack:** `Dart` · `Flutter`
+  - **Stack:** [`Dart`](https://dart.dev) · [`Flutter`](https://flutter.dev)
 
 - **TLUI** — Design system and component library that made the whole B2B account and intranet look and work the same
   way.
@@ -105,7 +120,9 @@ only the architecture but the whole product concept — Reactor started as my id
   back office and is supported and improved.
 
   - **Roles:** developer · tech lead
-  - **Stack:** `TypeScript` · `JavaScript` · `AngularJS` · `Less`
+  - **Stack:** [`TypeScript`](https://www.typescriptlang.org) ·
+    [`JavaScript`](https://developer.mozilla.org/docs/Web/JavaScript) · [`AngularJS`](https://angularjs.org) ·
+    [`Less`](https://lesscss.org)
 
 ### Developer at iSpring
 
@@ -115,14 +132,18 @@ only the architecture but the whole product concept — Reactor started as my id
 
 - **Flash media player & charting library**
   - **Roles:** developer
-  - **Stack:** `ActionScript 3.0` · `Flash`
+  - **Stack:** [`ActionScript 3.0`](https://en.wikipedia.org/wiki/ActionScript) ·
+    [`Flash`](https://en.wikipedia.org/wiki/Adobe_Flash)
 - [SilverX](https://web.archive.org/web/20120506055102/http://www.silverx.net/) — Flash to Silverlight converter
   - **Roles:** single developer · website developer
-  - **Stack:** `C#` · `C++` · `PHP` · `JavaScript` · `Silverlight` · `HTML` · `CSS`
+  - **Stack:** [`C#`](https://learn.microsoft.com/dotnet/csharp) · [`C++`](https://isocpp.org) ·
+    [`PHP`](https://www.php.net) · [`JavaScript`](https://developer.mozilla.org/docs/Web/JavaScript) ·
+    [`Silverlight`](https://en.wikipedia.org/wiki/Microsoft_Silverlight) ·
+    [`HTML`](https://developer.mozilla.org/docs/Web/HTML) · [`CSS`](https://developer.mozilla.org/docs/Web/CSS)
 - [PowerMessage](https://web.archive.org/web/20171020002940/http://www.powermessagepro.com/) — PowerPoint add-on to
   build presentations from templates
   - **Roles:** single developer
-  - **Stack:** `C#` · `C++`
+  - **Stack:** [`C#`](https://learn.microsoft.com/dotnet/csharp) · [`C++`](https://isocpp.org)
 
 ### Lead developer and team lead at CPS Labs
 
@@ -132,13 +153,18 @@ only the architecture but the whole product concept — Reactor started as my id
 
 - [JobWindow](https://www.cpslabs.net/project/jobwindow-2-3.html) — Job search system in Switzerland
   - **Roles:** developer
-  - **Stack:** `PHP` · `JavaScript` · `HTML` · `CSS`
+  - **Stack:** [`PHP`](https://www.php.net) · [`JavaScript`](https://developer.mozilla.org/docs/Web/JavaScript) ·
+    [`HTML`](https://developer.mozilla.org/docs/Web/HTML) · [`CSS`](https://developer.mozilla.org/docs/Web/CSS)
 - [ActiveSWF](https://www.cpslabs.net/product/activeswf-3-5.html) — SWF file (Flash) generation library
   - **Roles:** single developer
-  - **Stack:** `C/C++` · `COM` · `ActiveX`
+  - **Stack:** [`C/C++`](https://isocpp.org) ·
+    [`COM`](https://learn.microsoft.com/windows/win32/com/component-object-model--com--portal) ·
+    [`ActiveX`](https://en.wikipedia.org/wiki/ActiveX)
 - **SlingPlayer** — Streaming media player for [SlingMedia](https://en.wikipedia.org/wiki/Sling_Media)
   - **Roles:** lead developer · team lead
-  - **Stack:** `C#` · `C/C++` · `WPF` · `Silverlight`
+  - **Stack:** [`C#`](https://learn.microsoft.com/dotnet/csharp) · [`C/C++`](https://isocpp.org) ·
+    [`WPF`](https://learn.microsoft.com/dotnet/desktop/wpf) ·
+    [`Silverlight`](https://en.wikipedia.org/wiki/Microsoft_Silverlight)
 
 ## 🎓 Education
 
