@@ -67,5 +67,5 @@ export const ResumeSchema = z.strictObject({
     summary: z.string(),
     url: z.url(),
   }),
-  stack: z.strictObject({ ...grouped, core: z.array(z.string()) }),
+  stack: z.strictObject(grouped),
 });

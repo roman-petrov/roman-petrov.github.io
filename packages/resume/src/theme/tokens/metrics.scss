@@ -3,7 +3,6 @@
 $-values: (
   icon: 26,
   nav: 64,
-  rail: 136,
   tap: 40,
 );
 $-fixed: (
@@ -30,10 +29,6 @@ $-fixed: (
 
 @function nav() {
   @return -metrics("nav");
-}
-
-@function rail() {
-  @return -metrics("rail");
 }
 
 @function tap() {

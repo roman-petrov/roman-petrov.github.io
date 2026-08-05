@@ -4,9 +4,9 @@ declare const classNames: {
   readonly inner: "inner";
   readonly kicker: "kicker";
   readonly slash: "slash";
+  readonly tagline: "tagline";
   readonly caret: "caret";
   readonly name: "name";
-  readonly tagline: "tagline";
   readonly contacts: "contacts";
   readonly cta: "cta";
   readonly photo: "photo";

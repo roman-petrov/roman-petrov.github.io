@@ -1,11 +1,12 @@
 declare const classNames: {
   readonly root: "root";
-  readonly id: "id";
-  readonly photo: "photo";
+  readonly copy: "copy";
   readonly name: "name";
-  readonly role: "role";
+  readonly kicker: "kicker";
+  readonly slash: "slash";
+  readonly tagline: "tagline";
   readonly contacts: "contacts";
-  readonly label: "label";
-  readonly value: "value";
+  readonly contact: "contact";
+  readonly photo: "photo";
 };
 export default classNames;

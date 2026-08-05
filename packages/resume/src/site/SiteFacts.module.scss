@@ -1,29 +1,7 @@
 @use "../theme/materials";
-@use "../theme/primitives";
-@use "../theme/tokens/color";
+@use "../theme/patterns";
 @use "../theme/tokens/space";
-@use "../theme/tokens/text";
-
-.facts {
-  display: grid;
-  gap: space.xl();
-}
-
-.group {
-  display: grid;
-  gap: space.sm();
-}
-
-.label {
-  @include primitives.label(text.micro());
-
-  margin: 0;
-  color: color.muted();
-}
-
-.chips {
-  @include primitives.row-list(space.sm());
-}
+@include patterns.facts(space.xl(), space.sm(), space.sm());
 
 .chip {
   @include materials.chip-site;

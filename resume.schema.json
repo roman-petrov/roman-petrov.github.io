@@ -187,10 +187,9 @@
             "required": ["icon", "items", "label"],
             "additionalProperties": false
           }
-        },
-        "core": { "type": "array", "items": { "type": "string" } }
+        }
       },
-      "required": ["icon", "title", "groups", "core"],
+      "required": ["icon", "title", "groups"],
       "additionalProperties": false
     }
   },

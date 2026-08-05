@@ -1,4 +1,5 @@
 @use "../theme/core" as *;
+@use "../theme/patterns";
 @use "../theme/primitives";
 @use "../theme/tokens/color";
 @use "../theme/tokens/leading";
@@ -10,32 +11,16 @@
 
 .root {
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: minmax(0, 1fr) auto;
   gap: space.xl();
   align-items: center;
-  padding: space.lg() space.xl();
-  margin-bottom: space.md();
-  color: color.hero-text();
-  background: linear-gradient(135deg, color.hero-from() 0%, color.hero-to() 100%);
-  border-radius: radius.lg();
-  box-shadow: inset 0 1px 0 color.hero-edge();
+  padding: space.lg() 0 space.xl();
+  margin-bottom: space.lg();
+  border-bottom: 1px solid color.rule();
 }
 
-.id {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: space.xl();
-  align-items: center;
+.copy {
   min-width: 0;
-}
-
-.photo {
-  @include primitives.square(#{r(100)});
-
-  display: block;
-  object-fit: cover;
-  border-radius: radius.md();
-  box-shadow: 0 0 0 1px color.hero-line();
 }
 
 .name {
@@ -43,77 +28,40 @@
   font-size: text.display();
   font-weight: weight.bold();
   line-height: leading.tight();
-  color: color.on-accent();
+  color: color.ink();
   letter-spacing: tracking.tight();
 }
 
-.role {
-  @include primitives.label(text.xs());
-
-  display: flex;
-  gap: space.sm();
-  align-items: center;
-  margin: space.md() 0 0;
-  line-height: 1;
-  color: color.accent-light();
-  letter-spacing: tracking.wide();
-
-  &::before {
-    width: space.xl();
-    content: "";
-    border-top: 2px solid color.accent-bright();
-  }
-}
+@include patterns.kicker(space.lg());
 
 .contacts {
-  display: grid;
-  grid-template-columns: auto auto 1fr;
-  gap: space.xs() space.md();
-  padding: space.xs() 0 space.xs() space.xl();
-  margin: 0;
-  list-style: none;
-  border-left: 1px solid color.hero-line();
-
-  li {
-    display: grid;
-    grid-template-columns: subgrid;
-    grid-column: 1 / -1;
-    align-items: baseline;
-    min-width: 0;
-  }
+  @include primitives.row-list(space.xs());
 }
 
-.label {
-  @include primitives.label(text.micro());
+.contact {
+  @include primitives.pill(space.xs());
 
-  font-weight: weight.regular();
-  color: color.hero-muted();
-}
-
-.value {
+  padding: space.x2s() space.sm();
   font-size: text.sm();
   font-weight: weight.medium();
-  line-height: leading.snug();
-  color: color.hero-text();
-  overflow-wrap: anywhere;
+  color: color.ink-soft();
+  background: color.card-head();
+  border-color: color.border();
 }
 
-a.value {
-  @include hover {
-    color: color.accent-light();
-    border-bottom-color: currentcolor;
-  }
-
-  color: color.hero-text();
-  border-bottom-color: color.hero-line();
+a.contact {
+  border-bottom: 0;
 }
 
-@include screen {
-  .root {
-    box-shadow:
-      inset 0 1px 0 color.hero-edge(),
-      0 8px 22px color.shadow();
-  }
+.photo {
+  @include primitives.square(#{r(112)});
+
+  display: block;
+  object-fit: cover;
+  border-radius: radius.lg();
+  box-shadow:
+    0 0 0 1px color.border(),
+    0 #{r(10)} #{r(24)} color.shadow-soft();
 }
 
 @include print {

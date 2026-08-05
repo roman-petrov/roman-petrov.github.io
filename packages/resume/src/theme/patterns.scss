@@ -4,6 +4,50 @@
 @use "tokens/text";
 @use "tokens/weight";
 
+@mixin facts($gap, $group-gap, $chip-gap) {
+  .facts {
+    display: grid;
+    gap: $gap;
+  }
+
+  .group {
+    display: grid;
+    gap: $group-gap;
+  }
+
+  .label {
+    @include primitives.label(text.micro());
+
+    margin: 0;
+    color: color.muted();
+  }
+
+  .chips {
+    @include primitives.row-list($chip-gap);
+  }
+}
+
+@mixin kicker($below) {
+  .kicker {
+    @include primitives.label(text.sm());
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: space.sm();
+    align-items: center;
+    margin: space.sm() 0 $below;
+    color: color.ink-soft();
+  }
+
+  .slash {
+    color: color.muted();
+  }
+
+  .tagline {
+    color: color.accent();
+  }
+}
+
 @mixin meta($gap, $below) {
   .meta {
     display: flex;

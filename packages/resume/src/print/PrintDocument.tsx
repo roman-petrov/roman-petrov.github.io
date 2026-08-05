@@ -1,6 +1,5 @@
 import { Content } from "../Content";
 import styles from "./PrintDocument.module.scss";
-import { PrintFacts } from "./PrintFacts";
 import { PrintHero } from "./PrintHero";
 import { PrintSection } from "./PrintSection";
 
@@ -16,10 +15,9 @@ export const PrintDocument = () => (
     <body>
       <article className={styles.page}>
         <PrintHero />
-        <PrintFacts card items={[Content.core]} />
         <main>
-          {[`about`, `showcase`, `expertise`, `stack`, `education`, `experience`, `activities`].map(id => (
-            <PrintSection key={id} section={Content.section(id)} />
+          {Content.sections.map(section => (
+            <PrintSection key={section.id} section={section} />
           ))}
         </main>
       </article>

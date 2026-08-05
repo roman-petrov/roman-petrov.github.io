@@ -20,10 +20,6 @@
   @return -color("accent-glow");
 }
 
-@function accent-light() {
-  @return -color("accent-light");
-}
-
 @function accent-line() {
   @return -color("accent-line");
 }
@@ -66,30 +62,6 @@
 
 @function glow() {
   @return -color("glow");
-}
-
-@function hero-edge() {
-  @return -color("hero-edge");
-}
-
-@function hero-from() {
-  @return -color("hero-from");
-}
-
-@function hero-line() {
-  @return -color("hero-line");
-}
-
-@function hero-muted() {
-  @return -color("hero-muted");
-}
-
-@function hero-text() {
-  @return -color("hero-text");
-}
-
-@function hero-to() {
-  @return -color("hero-to");
 }
 
 @function ink() {

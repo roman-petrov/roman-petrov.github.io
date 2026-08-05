@@ -116,8 +116,6 @@ const contacts: Contact[] = [
   { href: resume.meta.github, icon: `🔗`, label: `GitHub`, value: resume.contacts.github },
 ];
 
-const core: Fact = { chips: resume.stack.core, icon: resume.stack.icon, label: resume.stack.title, tech: true };
-
 const sections: Section[] = [
   { ...heading(resume.about), blocks: [{ items: resume.about.items, type: `list` }], id: `about` },
   { ...heading(resume.showcase), blocks: [{ item: product(resume.showcase), type: `showcase` }], id: `showcase` },
@@ -138,4 +136,4 @@ const section = (id: string) => {
   return found;
 };
 
-export const Content = { contacts, core, meta: resume.meta, section, sections };
+export const Content = { contacts, meta: resume.meta, section, sections };

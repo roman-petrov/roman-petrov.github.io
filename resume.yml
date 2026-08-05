@@ -71,7 +71,6 @@ expertise:
 stack:
   icon: 🛠
   title: Stack
-  core: [TypeScript, React, Node.js]
   groups:
     - icon: 💬
       label: Languages

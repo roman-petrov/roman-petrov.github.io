@@ -1,16 +1,14 @@
 # Roman Petrov
 
-`// SENIOR SOFTWARE DEVELOPER`
+`// Senior Software Developer: Good is not enough`
 
 [👤 About Me](#-about-me) · [🌐 Showcase](#-showcase) · [🧠 Expertise](#-expertise) · [🛠 Stack](#-stack) ·
 [💼 Experience](#-experience) · [🎓 Education](#-education) · [🚀 Activities](#-activities)
 
-Good is not enough
-
-- 📍 **Location:** Yoshkar-Ola, Russian Federation
-- 📞 **Phone:** [+79061370326](tel:+79061370326)
-- ✉️ **Email:** [romanpetrov@list.ru](mailto:romanpetrov@list.ru)
-- 🔗 **GitHub:** [github.com/roman-petrov](https://github.com/roman-petrov)
+- 📍 Yoshkar-Ola, Russian Federation
+- 📞 [+79061370326](tel:+79061370326)
+- ✉️ [romanpetrov@list.ru](mailto:romanpetrov@list.ru)
+- 🔗 [github.com/roman-petrov](https://github.com/roman-petrov)
 
 [🌐 Web version](https://roman-petrov.github.io/) · [⬇ Download PDF](https://roman-petrov.github.io/Roman_Petrov_CV.pdf)
 · [🔗 GitHub](https://github.com/roman-petrov)
@@ -44,33 +42,64 @@ GitHub Actions runs the checks and the deploy on every change.
 
 ## 🧠 Expertise
 
-- 🤖 **AI:** `Agents` · `MCP` · `RAG` · `Cursor`
-- 🧩 **Problem solving:** `Analysis` · `Communication` · `Decomposition` · `MVP`
-- 💻 **Programming:** `Modular` · `Testable` · `Readable` · `Compact` · `Efficient`
-- 📐 **Architecture:** `System design` · `API design` · `Design systems` · `Performance`
-- 🔍 **Code quality:** `Automated code analysis` · `Linting` · `Code review`
-- ⚙️ **Project workflow:** `Automation` · `Simplification` · `Documentation` · `Developer experience`
-- 🎨 **User experience:** `Simplicity` · `Visual perfection` · `Screenshot tests`
-- 🌱 **Open source:** `Use` · `Contribute` · `Learn`
+### 🤖 AI
+
+`Agents` · `MCP` · `RAG` · `Cursor`
+
+### 🧩 Problem solving
+
+`Analysis` · `Communication` · `Decomposition` · `MVP`
+
+### 💻 Programming
+
+`Modular` · `Testable` · `Readable` · `Compact` · `Efficient`
+
+### 📐 Architecture
+
+`System design` · `API design` · `Design systems` · `Performance`
+
+### 🔍 Code quality
+
+`Automated code analysis` · `Linting` · `Code review`
+
+### ⚙️ Project workflow
+
+`Automation` · `Simplification` · `Documentation` · `Developer experience`
+
+### 🎨 User experience
+
+`Simplicity` · `Visual perfection` · `Screenshot tests`
+
+### 🌱 Open source
+
+`Use` · `Contribute` · `Learn`
 
 ## 🛠 Stack
 
-- 💬 **Languages:** [`TypeScript`](https://www.typescriptlang.org) ·
-  [`JavaScript`](https://developer.mozilla.org/docs/Web/JavaScript) ·
-  [`HTML`](https://developer.mozilla.org/docs/Web/HTML) · [`CSS`](https://developer.mozilla.org/docs/Web/CSS) ·
-  [`SCSS`](https://sass-lang.com) · [`Dart`](https://dart.dev) · [`C#`](https://learn.microsoft.com/dotnet/csharp) ·
-  [`C/C++`](https://isocpp.org) · [`GLSL`](<https://www.khronos.org/opengl/wiki/Core_Language_(GLSL)>)
-- 📦 **Frameworks & libraries:** [`React`](https://react.dev) · [`Node.js`](https://nodejs.org) ·
-  [`Flutter`](https://flutter.dev) · [`.NET`](https://dotnet.microsoft.com) ·
-  [`CSS Modules`](https://github.com/css-modules/css-modules) · [`Zod`](https://zod.dev) · [`tRPC`](https://trpc.io) ·
-  [`Prisma`](https://www.prisma.io) · [`WebSockets`](https://developer.mozilla.org/docs/Web/API/WebSockets_API) ·
-  [`WebGL`](https://developer.mozilla.org/docs/Web/API/WebGL_API)
-- 🧰 **Build & tooling:** [`Vite`](https://vite.dev) · [`tsx`](https://tsx.is) · [`tsdown`](https://tsdown.dev) ·
-  [`Git`](https://git-scm.com) · [`GitHub Actions`](https://github.com/features/actions) ·
-  [`Docker`](https://www.docker.com)
-- ✅ **Testing & quality:** [`Vitest`](https://vitest.dev) · [`Jest`](https://jestjs.io) ·
-  [`Puppeteer`](https://pptr.dev) · [`ESLint`](https://eslint.org) · [`Stylelint`](https://stylelint.io) ·
-  [`Prettier`](https://prettier.io)
+### 💬 Languages
+
+[`TypeScript`](https://www.typescriptlang.org) · [`JavaScript`](https://developer.mozilla.org/docs/Web/JavaScript) ·
+[`HTML`](https://developer.mozilla.org/docs/Web/HTML) · [`CSS`](https://developer.mozilla.org/docs/Web/CSS) ·
+[`SCSS`](https://sass-lang.com) · [`Dart`](https://dart.dev) · [`C#`](https://learn.microsoft.com/dotnet/csharp) ·
+[`C/C++`](https://isocpp.org) · [`GLSL`](<https://www.khronos.org/opengl/wiki/Core_Language_(GLSL)>)
+
+### 📦 Frameworks & libraries
+
+[`React`](https://react.dev) · [`Node.js`](https://nodejs.org) · [`Flutter`](https://flutter.dev) ·
+[`.NET`](https://dotnet.microsoft.com) · [`CSS Modules`](https://github.com/css-modules/css-modules) ·
+[`Zod`](https://zod.dev) · [`tRPC`](https://trpc.io) · [`Prisma`](https://www.prisma.io) ·
+[`WebSockets`](https://developer.mozilla.org/docs/Web/API/WebSockets_API) ·
+[`WebGL`](https://developer.mozilla.org/docs/Web/API/WebGL_API)
+
+### 🧰 Build & tooling
+
+[`Vite`](https://vite.dev) · [`tsx`](https://tsx.is) · [`tsdown`](https://tsdown.dev) · [`Git`](https://git-scm.com) ·
+[`GitHub Actions`](https://github.com/features/actions) · [`Docker`](https://www.docker.com)
+
+### ✅ Testing & quality
+
+[`Vitest`](https://vitest.dev) · [`Jest`](https://jestjs.io) · [`Puppeteer`](https://pptr.dev) ·
+[`ESLint`](https://eslint.org) · [`Stylelint`](https://stylelint.io) · [`Prettier`](https://prettier.io)
 
 ## 💼 Experience
 
@@ -91,8 +120,10 @@ only the architecture but the whole product concept — Reactor started as my id
 
 **Projects:**
 
-- **Reactor** — Internal front-end platform of 25 packages that work as a single product. It unifies the development
-  stack and the design of all TravelLine products, and keeps the API and the tools simple.
+- **Reactor** · architect · tech lead · lead developer
+
+  Internal front-end platform of 25 packages that work as a single product. It unifies the development stack and the
+  design of all TravelLine products, and keeps the API and the tools simple.
 
   A new SPA project needs no setup and no boilerplate and is production ready in about five minutes: design system,
   state management, router, localization, our own storybook, screenshot testing and coding conventions out of the box,
@@ -100,28 +131,27 @@ only the architecture but the whole product concept — Reactor started as my id
 
   Already in production, and the technical teams in the company are moving to it.
 
-  - **Roles:** architect · tech lead · lead developer
-  - **Stack:** [`TypeScript`](https://www.typescriptlang.org) · [`React`](https://react.dev) ·
-    [`Vite`](https://vite.dev) · [`SCSS`](https://sass-lang.com)
+  [`TypeScript`](https://www.typescriptlang.org) · [`React`](https://react.dev) · [`Vite`](https://vite.dev) ·
+  [`SCSS`](https://sass-lang.com)
 
-- **TLUI3.0** — Move of the front-end stack to Flutter Web. In one year the team built the design system components, the
-  build and workflow tools and a way to start a new project in minutes.
+- **TLUI3.0** · architect · tech lead · lead developer
+
+  Move of the front-end stack to Flutter Web. In one year the team built the design system components, the build and
+  workflow tools and a way to start a new project in minutes.
 
   The company did not adopt Flutter, so only a part of the work went to production.
 
-  - **Roles:** architect · tech lead · lead developer
-  - **Stack:** [`Dart`](https://dart.dev) · [`Flutter`](https://flutter.dev)
+  [`Dart`](https://dart.dev) · [`Flutter`](https://flutter.dev)
 
-- **TLUI** — Design system and component library that made the whole B2B account and intranet look and work the same
-  way.
+- **TLUI** · developer · tech lead
+
+  Design system and component library that made the whole B2B account and intranet look and work the same way.
 
   The stack is old and there were almost no tools around it, but the library still runs every screen of the TravelLine
   back office and is supported and improved.
 
-  - **Roles:** developer · tech lead
-  - **Stack:** [`TypeScript`](https://www.typescriptlang.org) ·
-    [`JavaScript`](https://developer.mozilla.org/docs/Web/JavaScript) · [`AngularJS`](https://angularjs.org) ·
-    [`Less`](https://lesscss.org)
+  [`TypeScript`](https://www.typescriptlang.org) · [`JavaScript`](https://developer.mozilla.org/docs/Web/JavaScript) ·
+  [`AngularJS`](https://angularjs.org) · [`Less`](https://lesscss.org)
 
 ### Developer at iSpring
 
@@ -129,20 +159,22 @@ only the architecture but the whole product concept — Reactor started as my id
 
 **Projects:**
 
-- **Flash media player & charting library**
-  - **Roles:** developer
-  - **Stack:** [`ActionScript 3.0`](https://en.wikipedia.org/wiki/ActionScript) ·
-    [`Flash`](https://en.wikipedia.org/wiki/Adobe_Flash)
-- [SilverX](https://web.archive.org/web/20120506055102/http://www.silverx.net/) — Flash to Silverlight converter
-  - **Roles:** single developer · website developer
-  - **Stack:** [`C#`](https://learn.microsoft.com/dotnet/csharp) · [`C++`](https://isocpp.org) ·
-    [`PHP`](https://www.php.net) · [`JavaScript`](https://developer.mozilla.org/docs/Web/JavaScript) ·
-    [`Silverlight`](https://en.wikipedia.org/wiki/Microsoft_Silverlight) ·
-    [`HTML`](https://developer.mozilla.org/docs/Web/HTML) · [`CSS`](https://developer.mozilla.org/docs/Web/CSS)
-- [PowerMessage](https://web.archive.org/web/20171020002940/http://www.powermessagepro.com/) — PowerPoint add-on to
-  build presentations from templates
-  - **Roles:** single developer
-  - **Stack:** [`C#`](https://learn.microsoft.com/dotnet/csharp) · [`C++`](https://isocpp.org)
+- **Flash media player & charting library** · developer [`ActionScript 3.0`](https://en.wikipedia.org/wiki/ActionScript)
+  · [`Flash`](https://en.wikipedia.org/wiki/Adobe_Flash)
+- [SilverX](https://web.archive.org/web/20120506055102/http://www.silverx.net/) · single developer · website developer
+
+  Flash to Silverlight converter
+
+  [`C#`](https://learn.microsoft.com/dotnet/csharp) · [`C++`](https://isocpp.org) · [`PHP`](https://www.php.net) ·
+  [`JavaScript`](https://developer.mozilla.org/docs/Web/JavaScript) ·
+  [`Silverlight`](https://en.wikipedia.org/wiki/Microsoft_Silverlight) ·
+  [`HTML`](https://developer.mozilla.org/docs/Web/HTML) · [`CSS`](https://developer.mozilla.org/docs/Web/CSS)
+
+- [PowerMessage](https://web.archive.org/web/20171020002940/http://www.powermessagepro.com/) · single developer
+
+  PowerPoint add-on to build presentations from templates
+
+  [`C#`](https://learn.microsoft.com/dotnet/csharp) · [`C++`](https://isocpp.org)
 
 ### Lead developer and team lead at CPS Labs
 
@@ -150,20 +182,28 @@ only the architecture but the whole product concept — Reactor started as my id
 
 **Projects:**
 
-- [JobWindow](https://www.cpslabs.net/project/jobwindow-2-3.html) — Job search system in Switzerland
-  - **Roles:** developer
-  - **Stack:** [`PHP`](https://www.php.net) · [`JavaScript`](https://developer.mozilla.org/docs/Web/JavaScript) ·
-    [`HTML`](https://developer.mozilla.org/docs/Web/HTML) · [`CSS`](https://developer.mozilla.org/docs/Web/CSS)
-- [ActiveSWF](https://www.cpslabs.net/product/activeswf-3-5.html) — SWF file (Flash) generation library
-  - **Roles:** single developer
-  - **Stack:** [`C/C++`](https://isocpp.org) ·
-    [`COM`](https://learn.microsoft.com/windows/win32/com/component-object-model--com--portal) ·
-    [`ActiveX`](https://en.wikipedia.org/wiki/ActiveX)
-- **SlingPlayer** — Streaming media player for [SlingMedia](https://en.wikipedia.org/wiki/Sling_Media)
-  - **Roles:** lead developer · team lead
-  - **Stack:** [`C#`](https://learn.microsoft.com/dotnet/csharp) · [`C/C++`](https://isocpp.org) ·
-    [`WPF`](https://learn.microsoft.com/dotnet/desktop/wpf) ·
-    [`Silverlight`](https://en.wikipedia.org/wiki/Microsoft_Silverlight)
+- [JobWindow](https://www.cpslabs.net/project/jobwindow-2-3.html) · developer
+
+  Job search system in Switzerland
+
+  [`PHP`](https://www.php.net) · [`JavaScript`](https://developer.mozilla.org/docs/Web/JavaScript) ·
+  [`HTML`](https://developer.mozilla.org/docs/Web/HTML) · [`CSS`](https://developer.mozilla.org/docs/Web/CSS)
+
+- [ActiveSWF](https://www.cpslabs.net/product/activeswf-3-5.html) · single developer
+
+  SWF file (Flash) generation library
+
+  [`C/C++`](https://isocpp.org) ·
+  [`COM`](https://learn.microsoft.com/windows/win32/com/component-object-model--com--portal) ·
+  [`ActiveX`](https://en.wikipedia.org/wiki/ActiveX)
+
+- **SlingPlayer** · lead developer · team lead
+
+  Streaming media player for [SlingMedia](https://en.wikipedia.org/wiki/Sling_Media)
+
+  [`C#`](https://learn.microsoft.com/dotnet/csharp) · [`C/C++`](https://isocpp.org) ·
+  [`WPF`](https://learn.microsoft.com/dotnet/desktop/wpf) ·
+  [`Silverlight`](https://en.wikipedia.org/wiki/Microsoft_Silverlight)
 
 ## 🎓 Education
 

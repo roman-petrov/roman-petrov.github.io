@@ -1,4 +1,5 @@
 @use "../theme/core" as *;
+@use "../theme/patterns";
 @use "../theme/primitives";
 @use "../theme/tokens/color";
 @use "../theme/tokens/layer";
@@ -61,20 +62,7 @@
   align-items: center;
 }
 
-.kicker {
-  @include primitives.label(text.sm());
-
-  display: flex;
-  flex-wrap: wrap;
-  gap: space.sm();
-  align-items: center;
-  margin: space.sm() 0 space.x2xl();
-  color: color.ink-soft();
-}
-
-.slash {
-  color: color.muted();
-}
+@include patterns.kicker(space.x2xl());
 
 .caret {
   display: inline-block;
@@ -94,10 +82,6 @@
   background: linear-gradient(180deg, color.ink() 25%, color.ink-fade() 100%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-
-.tagline {
-  color: color.accent();
 }
 
 .contacts {

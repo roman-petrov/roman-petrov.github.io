@@ -1,17 +1,13 @@
 @use "../theme/core" as *;
-@use "../theme/materials";
 @use "../theme/tokens/color";
 @use "../theme/tokens/leading";
-@use "../theme/tokens/radius";
 @use "../theme/tokens/space";
 @use "../theme/tokens/text";
 @use "../theme/tokens/tracking";
 @use "../theme/tokens/weight";
 
 .root {
-  @include materials.card;
-
-  margin-bottom: space.md();
+  margin-bottom: space.xl();
 
   &:last-child {
     margin-bottom: 0;
@@ -19,10 +15,12 @@
 }
 
 .head {
-  padding: space.sm() space.xl();
-  background: color.card-head();
+  display: flex;
+  gap: space.md();
+  align-items: center;
+  padding-bottom: space.sm();
+  margin-bottom: space.md();
   border-bottom: 1px solid color.rule();
-  border-radius: radius.lg() radius.lg() 0 0;
 }
 
 .title {
@@ -38,8 +36,6 @@
 }
 
 .body {
-  padding: space.lg() space.xl();
-
   > :last-child {
     margin-bottom: 0;
   }

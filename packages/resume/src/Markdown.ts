@@ -17,13 +17,11 @@ const techChip = (name: string) => {
 
 const paragraph = ({ text, type }: Extract<Block, { text: string }>) => (type === `label` ? `**${text}:**` : text);
 
-const projectItem = ({ href, name, note: [lead, ...rest], roles, stack }: Project) =>
-  [
-    bullet(`${href === undefined ? `**${name}**` : `[${name}](${href})`}${lead === undefined ? `` : ` — ${lead}`}`),
-    ...rest.map(item => `\n  ${item}\n`),
-    `  - **Roles:** ${roles.join(` · `)}`,
-    `  - **Stack:** ${stack.map(techChip).join(` · `)}`,
-  ].join(`\n`);
+const projectItem = ({ href, name, note, roles, stack }: Project) => {
+  const head = `${href === undefined ? `**${name}**` : `[${name}](${href})`} · ${roles.join(` · `)}`;
+
+  return [bullet(head), ...note.map(item => `\n  ${item}\n`), `  ${stack.map(techChip).join(` · `)}`].join(`\n`);
+};
 
 const productCard = ({ links, name, note, stack }: Product) =>
   [
@@ -33,14 +31,14 @@ const productCard = ({ links, name, note, stack }: Product) =>
     stack.map(techChip).join(` · `),
   ].join(`\n\n`);
 
-const factLine = ({ chips, icon, label, tech = false }: Fact) =>
-  `${icon} **${label}:** ${chips.map(tech ? techChip : chip).join(` · `)}`;
+const factGroup = ({ chips, icon, label, tech = false }: Fact) =>
+  [`### ${icon} ${label}`, chips.map(tech ? techChip : chip).join(` · `)].join(`\n\n`);
 
 const block = (item: Block) =>
   item.type === `showcase`
     ? productCard(item.item)
     : item.type === `facts`
-      ? item.items.map(factLine).map(bullet).join(`\n`)
+      ? item.items.map(factGroup).join(`\n\n`)
       : item.type === `projects`
         ? item.items.map(projectItem).join(`\n`)
         : item.type === `list`
@@ -53,8 +51,8 @@ const entry = ({ blocks, date, link, title }: Entry) => {
   return [`### ${title}`, rail, ...blocks.map(block)].join(`\n\n`);
 };
 
-const contactLine = ({ href, icon, label, value }: Contact) =>
-  bullet(`${icon} **${label}:** ${href === undefined ? value : `[${value}](${href})`}`);
+const contactLine = ({ href, icon, value }: Contact) =>
+  bullet(`${icon} ${href === undefined ? value : `[${value}](${href})`}`);
 
 const headline = ({ icon, title }: Section) => `${icon} ${title}`;
 
@@ -66,9 +64,8 @@ const section = (item: Section) =>
 const render = () =>
   `${[
     `# ${Content.meta.name}`,
-    chip(`// ${Content.meta.role.toUpperCase()}`),
+    chip(`// ${Content.meta.role}: ${Content.meta.tagline}`),
     Content.sections.map(navLink).join(` · `),
-    Content.meta.tagline,
     Content.contacts.map(contactLine).join(`\n`),
     [
       `[🌐 Web version](${Content.meta.site})`,
