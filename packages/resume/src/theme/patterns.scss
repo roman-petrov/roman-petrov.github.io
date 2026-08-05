@@ -46,6 +46,6 @@
   }
 
   .stack {
-    @include primitives.row-list(space.x2s() space.xs());
+    @include primitives.row-list(space.xs());
   }
 }

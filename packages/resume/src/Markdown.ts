@@ -9,7 +9,7 @@ const bullet = (text: string) => `- ${text}`;
 
 const chip = (text: string) => `\`${text}\``;
 
-const tech = (name: string) => {
+const techChip = (name: string) => {
   const href = TechLinks.href(name);
 
   return href === undefined ? chip(name) : `[${chip(name)}](${href})`;
@@ -22,7 +22,7 @@ const projectItem = ({ href, name, note: [lead, ...rest], roles, stack }: Projec
     bullet(`${href === undefined ? `**${name}**` : `[${name}](${href})`}${lead === undefined ? `` : ` — ${lead}`}`),
     ...rest.map(item => `\n  ${item}\n`),
     `  - **Roles:** ${roles.join(` · `)}`,
-    `  - **Stack:** ${stack.map(tech).join(` · `)}`,
+    `  - **Stack:** ${stack.map(techChip).join(` · `)}`,
   ].join(`\n`);
 
 const productCard = ({ links, name, note, stack }: Product) =>
@@ -30,10 +30,11 @@ const productCard = ({ links, name, note, stack }: Product) =>
     `### ${name}`,
     ...note,
     links.map(({ href, icon, label }) => `${icon} [${label}](${href})`).join(` · `),
-    stack.map(tech).join(` · `),
+    stack.map(techChip).join(` · `),
   ].join(`\n\n`);
 
-const factLine = ({ chips, icon, label }: Fact) => `${icon} **${label}:** ${chips.map(tech).join(` · `)}`;
+const factLine = ({ chips, icon, label, tech = false }: Fact) =>
+  `${icon} **${label}:** ${chips.map(tech ? techChip : chip).join(` · `)}`;
 
 const block = (item: Block) =>
   item.type === `showcase`

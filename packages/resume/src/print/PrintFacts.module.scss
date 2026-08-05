@@ -36,11 +36,11 @@
 }
 
 .chips {
-  @include primitives.row-list(space.x2s() space.xs());
+  @include primitives.row-list(space.xs());
 }
 
 .chip {
-  @include materials.chip(color.accent-deep());
+  @include materials.chip-print;
 }
 
 @include print {

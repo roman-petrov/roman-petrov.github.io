@@ -1,5 +1,6 @@
 import type { Fact } from "../Content";
 
+import { Chip } from "./Chip";
 import { Ico } from "./Ico";
 import { TechChip } from "./TechChip";
 
@@ -11,7 +12,7 @@ export type FactsProps = FactsItemsProps & { classes: FactsClasses };
 
 export const Facts = ({ classes, items }: FactsProps) => (
   <div className={classes.facts}>
-    {items.map(({ chips, icon, label }) => (
+    {items.map(({ chips, icon, label, tech = false }) => (
       <div className={classes.group} key={label}>
         <p className={classes.label}>
           <Ico>{icon}</Ico>
@@ -20,7 +21,7 @@ export const Facts = ({ classes, items }: FactsProps) => (
         <ul className={classes.chips}>
           {chips.map(name => (
             <li key={name}>
-              <TechChip cn={classes.chip} name={name} />
+              {tech ? <TechChip cn={classes.chip} name={name} /> : <Chip cn={classes.chip} label={name} />}
             </li>
           ))}
         </ul>

@@ -44,8 +44,7 @@ GitHub Actions runs the checks and the deploy on every change.
 
 ## 🧠 Expertise
 
-- 🤖 **AI:** [`Agents`](https://en.wikipedia.org/wiki/Intelligent_agent) · [`MCP`](https://modelcontextprotocol.io) ·
-  [`RAG`](https://en.wikipedia.org/wiki/Retrieval-augmented_generation) · [`Cursor`](https://cursor.com)
+- 🤖 **AI:** `Agents` · `MCP` · `RAG` · `Cursor`
 - 🧩 **Problem solving:** `Analysis` · `Communication` · `Decomposition` · `MVP`
 - 💻 **Programming:** `Modular` · `Testable` · `Readable` · `Compact` · `Efficient`
 - 📐 **Architecture:** `System design` · `API design` · `Design systems` · `Performance`

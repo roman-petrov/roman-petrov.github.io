@@ -15,7 +15,7 @@ export type Contact = { href?: string; icon: string; label: string; value: strin
 
 export type Entry = { blocks: Block[]; date: string; link?: Link; title: string };
 
-export type Fact = { chips: string[]; icon: string; label: string };
+export type Fact = { chips: string[]; icon: string; label: string; tech?: boolean };
 
 export type Heading = { icon: string; title: string };
 
@@ -73,8 +73,8 @@ const product = ({ name, repo, stack, summary, url }: Resume[`showcase`]): Produ
 
 const heading = ({ icon, title }: Heading): Heading => ({ icon, title });
 
-const factBlock = (groups: Resume[`expertise`][`groups`]): Block => ({
-  items: groups.map(({ icon, items, label }) => ({ chips: items, icon, label })),
+const factBlock = (groups: Resume[`expertise`][`groups`], tech = false): Block => ({
+  items: groups.map(({ icon, items, label }) => ({ chips: items, icon, label, tech })),
   type: `facts`,
 });
 
@@ -116,13 +116,13 @@ const contacts: Contact[] = [
   { href: resume.meta.github, icon: `🔗`, label: `GitHub`, value: resume.contacts.github },
 ];
 
-const core: Fact = { chips: resume.stack.core, icon: resume.stack.icon, label: resume.stack.title };
+const core: Fact = { chips: resume.stack.core, icon: resume.stack.icon, label: resume.stack.title, tech: true };
 
 const sections: Section[] = [
   { ...heading(resume.about), blocks: [{ items: resume.about.items, type: `list` }], id: `about` },
   { ...heading(resume.showcase), blocks: [{ item: product(resume.showcase), type: `showcase` }], id: `showcase` },
   { ...heading(resume.expertise), blocks: [factBlock(resume.expertise.groups)], id: `expertise` },
-  { ...heading(resume.stack), blocks: [factBlock(resume.stack.groups)], id: `stack` },
+  { ...heading(resume.stack), blocks: [factBlock(resume.stack.groups, true)], id: `stack` },
   { ...heading(resume.experience), entries: resume.experience.jobs.map(jobEntry), id: `experience` },
   { ...heading(resume.education), entries: resume.education.studies.map(studyEntry), id: `education` },
   { ...heading(resume.activities), entries: resume.activities.items.map(activityEntry), id: `activities` },

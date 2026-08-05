@@ -9,8 +9,8 @@ declare const classNames: {
   readonly stack: "stack";
   readonly note: "note";
   readonly chip: "chip";
+  readonly links: "links";
   readonly showcase: "showcase";
   readonly title: "title";
-  readonly links: "links";
 };
 export default classNames;

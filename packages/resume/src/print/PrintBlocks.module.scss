@@ -57,7 +57,7 @@
 }
 
 .chip {
-  @include materials.chip(color.accent-deep());
+  @include materials.chip-print;
 }
 
 .showcase {
