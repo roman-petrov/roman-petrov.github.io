@@ -6,16 +6,6 @@
 @use "tokens/text";
 @use "tokens/weight";
 
-@mixin glass {
-  background: color.glass();
-  border: 1px solid color.line();
-  border-radius: radius.lg();
-  backdrop-filter: blur(14px);
-  transition:
-    border-color 0.25s ease,
-    box-shadow 0.25s ease;
-}
-
 @mixin -chip {
   display: inline-block;
   padding: space.x2s() space.md();
@@ -73,27 +63,36 @@
   border-radius: radius.xs();
 }
 
-@mixin well {
-  background: color.inlay();
-  border: 1px solid color.line-strong();
+@mixin -well {
+  border: 1px solid color.accent-line();
   border-radius: radius.md();
+}
+
+@mixin well-site {
+  @include -well;
+
+  @include hover {
+    border-color: color.accent();
+    box-shadow: 0 #{r(10)} #{r(26)} color.shadow-soft();
+  }
+
+  background: linear-gradient(150deg, color.accent-soft(), color.glass-strong() 72%);
+  box-shadow: 0 #{r(4)} #{r(14)} color.shadow-soft();
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+@mixin well-print {
+  @include -well;
+
+  background: linear-gradient(150deg, color.accent-soft(), color.paper() 60%);
 }
 
 @mixin callout {
   background: color.accent-soft();
   border: 1px solid color.accent-line();
-  border-radius: radius.md();
-}
-
-@mixin card {
-  @include screen {
-    box-shadow: 0 #{r(1)} #{r(2)} color.shadow-soft();
-  }
-
-  background: color.paper();
-  border: 1px solid color.line();
   border-radius: radius.lg();
-  box-decoration-break: clone;
 }
 
 @mixin focus-ring {

@@ -1,44 +1,31 @@
-@use "../theme/core" as *;
-@use "../theme/materials";
 @use "../theme/patterns";
 @use "../theme/tokens/color";
+@use "../theme/tokens/leading";
 @use "../theme/tokens/space";
 @use "../theme/tokens/text";
 @use "../theme/tokens/weight";
 
 .root {
   display: grid;
-  gap: space.xl();
+  gap: space.x2xl();
   padding: 0;
   margin: 0;
   list-style: none;
 }
 
-.card {
-  @include materials.glass;
-
-  @include hover {
-    border-color: color.accent-line();
-    box-shadow: 0 #{r(10)} #{r(28)} color.shadow-soft();
-  }
-
-  padding: space.xl() space.x2xl();
-
+.entry {
   > :last-child {
     margin-bottom: 0;
   }
 }
 
-@include patterns.meta(space.md(), space.sm());
+@include patterns.meta(space.md(), space.xs());
 
 .title {
-  margin: 0 0 space.md();
+  padding-bottom: space.md();
+  margin: 0 0 space.lg();
   font-size: text.x2xl();
   font-weight: weight.semibold();
-}
-
-@include mobile {
-  .card {
-    padding: space.lg();
-  }
+  line-height: leading.snug();
+  border-bottom: 1px solid color.line-strong();
 }

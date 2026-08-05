@@ -1,15 +1,12 @@
-@use "../theme/core" as *;
-@use "../theme/materials";
+@use "../theme/tokens/color";
 @use "../theme/tokens/space";
 
-.root {
-  @include materials.glass;
+.root > ul > li {
+  padding-bottom: space.sm();
+  border-bottom: 1px solid color.line();
 
-  padding: space.x2xl();
-}
-
-@include mobile {
-  .root {
-    padding: space.xl() space.lg();
+  &:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
   }
 }

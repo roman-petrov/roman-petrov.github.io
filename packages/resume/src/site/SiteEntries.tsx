@@ -12,7 +12,7 @@ export const SiteEntries = ({ section }: SiteEntriesProps) => (
   <SiteSection icon={section.icon} id={section.id} title={section.title}>
     <ol className={styles.root}>
       {(section.entries ?? []).map((entry, index) => (
-        <SiteReveal cn={styles.card} index={index} key={entry.title} tag="li">
+        <SiteReveal cn={styles.entry} index={index} key={entry.title} tag="li">
           <p className={styles.meta}>
             <span className={styles.date}>{entry.date}</span>
             {entry.link === undefined ? undefined : (

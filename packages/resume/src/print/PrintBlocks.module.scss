@@ -37,11 +37,11 @@
 }
 
 .project {
-  @include materials.well;
+  @include materials.well-print;
 
   display: grid;
   gap: space.xs();
-  padding: space.sm() space.md();
+  padding: space.md();
 }
 
 @include patterns.project(space.sm(), space.xs());
@@ -62,7 +62,7 @@
 
   display: grid;
   gap: space.xs();
-  padding: space.md();
+  padding: space.lg();
 }
 
 .title {

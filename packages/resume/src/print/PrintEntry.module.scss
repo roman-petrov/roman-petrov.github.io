@@ -1,5 +1,4 @@
 @use "../theme/core" as *;
-@use "../theme/materials";
 @use "../theme/patterns";
 @use "../theme/tokens/color";
 @use "../theme/tokens/leading";
@@ -8,10 +7,7 @@
 @use "../theme/tokens/weight";
 
 .root {
-  @include materials.card;
-
-  padding: space.lg() space.xl();
-  margin-bottom: space.lg();
+  margin-bottom: space.xl();
 
   > :last-child {
     margin-bottom: 0;
@@ -22,21 +18,19 @@
   }
 }
 
-@include patterns.meta(space.sm(), space.xs());
+@include patterns.meta(space.sm(), space.x2s());
 
 .title {
-  margin: 0 0 space.sm();
-  font-size: text.xl();
+  padding-bottom: space.xs();
+  margin: 0 0 space.md();
+  font-size: text.x2xl();
   font-weight: weight.semibold();
   line-height: leading.snug();
   color: color.ink();
+  border-bottom: 1px solid color.line-strong();
 }
 
 @include print {
-  .root {
-    break-inside: avoid;
-  }
-
   .meta,
   .title {
     break-after: avoid;

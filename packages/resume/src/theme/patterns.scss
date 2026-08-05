@@ -118,13 +118,15 @@
   }
 
   .name {
+    font-size: text.xl();
     font-weight: weight.semibold();
+    letter-spacing: tracking.snug();
   }
 
   .roles {
     @include primitives.label(text.xs());
 
-    color: color.ink-fade();
+    color: color.accent();
   }
 
   .stack {

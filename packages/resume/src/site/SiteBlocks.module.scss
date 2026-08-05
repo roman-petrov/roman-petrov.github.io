@@ -43,7 +43,7 @@
 }
 
 .project {
-  @include materials.well;
+  @include materials.well-site;
 
   display: grid;
   gap: space.sm();
@@ -65,7 +65,7 @@
 
   display: grid;
   gap: space.md();
-  padding: space.lg();
+  padding: space.x2xl();
 }
 
 .title {
@@ -73,6 +73,12 @@
   font-size: text.pull();
   font-weight: weight.semibold();
   color: color.ink();
+}
+
+@include mobile {
+  .showcase {
+    padding: space.xl() space.lg();
+  }
 }
 
 .links {
