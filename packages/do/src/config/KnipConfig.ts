@@ -6,6 +6,7 @@ const config: Config = {
   ignoreIssues: { "**/*.module.scss.d.ts": [`exports`] },
   workspaces: {
     ".": { entry: [`*.config.js`, `vitest.config.ts`], ignoreDependencies: [`actions-up`] },
+    "packages/core": { entry: [`src/index.ts`, `src/browser/index.ts`, `src/node/index.ts`, `src/**/*.test.ts`] },
     "packages/do": {
       cspell: [`src/config/CspellConfig.js`],
       entry: [`src/config/*.{js,ts}`, `src/**/*.test.ts`],

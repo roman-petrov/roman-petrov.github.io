@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "@cspell/dict-ru_ru": "^2.3.2",
+    "@cv/core": "workspace:*",
     "@cv/resume": "workspace:*",
     "@eslint/js": "^9",
     "@stylistic/eslint-plugin": "^5.10.0",

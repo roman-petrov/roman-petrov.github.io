@@ -1,4 +1,4 @@
-import { cp, mkdir, readFile, rm, writeFile } from "node:fs/promises";
+import { Directory, File } from "@cv/core/node";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
 import * as prettier from "prettier";
@@ -14,8 +14,8 @@ type RenderModule = { render: () => string };
 const copyAssets = async () => {
   const assetFiles = [`photo.png`, `favicon.svg`];
 
-  await mkdir(Paths.assets, { recursive: true });
-  await Promise.all(assetFiles.map(file => cp(path.join(Paths.srcAssets, file), path.join(Paths.assets, file))));
+  await Directory.ensure(Paths.assets);
+  await Promise.all(assetFiles.map(file => File.copy(path.join(Paths.srcAssets, file), path.join(Paths.assets, file))));
 };
 
 const copyFonts = async () => {
@@ -24,13 +24,16 @@ const copyFonts = async () => {
     { family: `JetBrains Mono`, pkg: `jetbrains-mono`, weights: [`400`, `500`] },
   ];
   const fontsDir = path.join(Paths.assets, `fonts`);
-  await mkdir(fontsDir, { recursive: true });
+  await Directory.ensure(fontsDir);
   const faces: string[] = [];
 
   for (const { family, pkg, weights } of fonts) {
     for (const weight of weights) {
       const file = `${pkg}-latin-${weight}-normal.woff2`;
-      await cp(path.join(Paths.root, `node_modules`, `@fontsource`, pkg, `files`, file), path.join(fontsDir, file));
+      await File.copy(
+        path.join(Paths.root, `node_modules`, `@fontsource`, pkg, `files`, file),
+        path.join(fontsDir, file),
+      );
       faces.push(
         [
           `@font-face {`,
@@ -45,7 +48,7 @@ const copyFonts = async () => {
     }
   }
 
-  await writeFile(path.join(Paths.assets, `fonts.css`), `${faces.join(`\n\n`)}\n`, `utf8`);
+  await File.write(path.join(Paths.assets, `fonts.css`), `${faces.join(`\n\n`)}\n`);
 };
 
 const cssFile = (result: Awaited<ReturnType<typeof build>>) => {
@@ -66,9 +69,9 @@ const renderPage = async (entry: string, page: string, stylesheet: string) => {
     root: Paths.resume,
   });
 
-  await cp(path.join(outDir, cssFile(result)), path.join(Paths.assets, stylesheet));
+  await File.copy(path.join(outDir, cssFile(result)), path.join(Paths.assets, stylesheet));
   const module_ = (await import(pathToFileURL(path.join(outDir, `${entry}.js`)).href)) as RenderModule;
-  await writeFile(page, module_.render(), `utf8`);
+  await File.write(page, module_.render());
 };
 
 const buildClientScript = async () => {
@@ -82,17 +85,17 @@ const buildClientScript = async () => {
     define: { "process.env.NODE_ENV": `"production"` },
     root: Paths.resume,
   });
-  await cp(path.join(outDir, `site.js`), path.join(Paths.assets, `site.js`));
+  await File.copy(path.join(outDir, `site.js`), path.join(Paths.assets, `site.js`));
 };
 
 const writeFormatted = async (file: string, text: string) => {
   const config = (await prettier.resolveConfig(file)) ?? {};
-  await writeFile(file, await prettier.format(text, { ...config, filepath: file }), `utf8`);
+  await File.write(file, await prettier.format(text, { ...config, filepath: file }));
 };
 
 const checkContent = async () => {
   const { ResumeSchema } = await import(`@cv/resume`);
-  const parsed = ResumeSchema.safeParse(Bun.YAML.parse(await readFile(Paths.content, `utf8`)));
+  const parsed = ResumeSchema.safeParse(Bun.YAML.parse(await File.read(Paths.content)));
 
   if (!parsed.success) {
     throw new Error(`Invalid resume.yml\n\n${z.prettifyError(parsed.error)}`);
@@ -108,7 +111,7 @@ const writeContent = async () => {
 
 const run = async () => {
   await checkContent();
-  await rm(Paths.dist, { force: true, recursive: true });
+  await Directory.remove(Paths.dist);
   await copyAssets();
   await copyFonts();
   await renderPage(`EntrySite`, Paths.site, `site.css`);

@@ -1,6 +1,7 @@
 import type { MouseEvent } from "react";
 
-import { _, Dom } from "@cv/core";
+import { _ } from "@cv/core";
+import { Dom } from "@cv/core/browser";
 import { useEffect, useState } from "react";
 
 export const useSiteThemeToggleState = () => {

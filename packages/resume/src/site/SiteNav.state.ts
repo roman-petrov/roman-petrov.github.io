@@ -1,4 +1,4 @@
-import { Dom } from "@cv/core";
+import { Dom } from "@cv/core/browser";
 import { useEffect, useState } from "react";
 
 import { Content } from "../Content";

@@ -1,7 +1,9 @@
+import { _ } from "@cv/core";
+import { Console, Terminal } from "@cv/core/node";
+
 import type { CommandOutcome, CommandRun } from "./Command";
 
 import { CommandRegistry } from "./CommandRegistry";
-import { Log } from "./Log";
 
 const last = `└─ `;
 
@@ -12,7 +14,7 @@ const find = (name: string) => CommandRegistry.find(command => command.name === 
 const seconds = (started: number) => {
   const second = 1000;
 
-  return `${String(Math.round((performance.now() - started) / second))}s`;
+  return `${String(_.round((performance.now() - started) / second, 0))}s`;
 };
 
 const nest = ({ connector, indent }: Frame) => {
@@ -34,27 +36,27 @@ const execute = async (name: string, frame: Frame): Promise<number> => {
   const command = find(name);
 
   if (command === undefined) {
-    Log.line(Log.red(`Unknown command: ${name}`));
+    Console.logLine(Terminal.red(`Unknown command: ${name}`));
 
     return 1;
   }
 
-  const head = `${frame.indent}${frame.connector}${Log.cyan(command.label)}`;
+  const head = `${frame.indent}${frame.connector}${Terminal.cyan(command.label)}`;
 
   if (!(`run` in command)) {
-    Log.line(head);
+    Console.logLine(head);
 
     return children(command.children, nest(frame));
   }
 
-  Log.write(`${head}… `);
+  Console.log(`${head}… `);
   const started = performance.now();
   const { exitCode, output } = await outcome(command.run);
-  Log.line(`${exitCode === 0 ? `✅` : `❌`} ${Log.dim(seconds(started))}`);
+  Console.logLine(`${exitCode === 0 ? `✅` : `❌`} ${Terminal.dim(seconds(started))}`);
 
   if (exitCode !== 0) {
-    Log.line(`\n${Log.red(`❌ Error running ${command.name}.`)}\n`);
-    Log.line(output === `` ? `` : `${output}\n`);
+    Console.logLine(`\n${Terminal.red(`❌ Error running ${command.name}.`)}\n`);
+    Console.logLine(output === `` ? `` : `${output}\n`);
   }
 
   return exitCode;
@@ -76,7 +78,7 @@ const children = async (names: readonly string[], indent: string) => {
 };
 
 const help = () => {
-  const width = Math.max(...CommandRegistry.map(command => command.name.length));
+  const width = _.max(CommandRegistry.map(command => command.name.length)) ?? 0;
 
   return CommandRegistry.map(command => `  ${command.name.padEnd(width)}  ${command.description}`).join(`\n`);
 };
@@ -86,7 +88,7 @@ const run = async (name: string) => {
   const code = await execute(name, { connector: ``, indent: `` });
 
   if (code === 0) {
-    Log.line(`\n✅ Done in ${Log.green(seconds(started))}\n`);
+    Console.logLine(`\n✅ Done in ${Terminal.green(seconds(started))}\n`);
   }
 
   return code;

@@ -1,11 +1,12 @@
 #!/usr/bin/env bun
-import { Log } from "./Log";
+import { Console } from "@cv/core/node";
+
 import { Runner } from "./Runner";
 
 const [, , name] = process.argv;
 
 if (name === undefined || name === `--help` || name === `-h`) {
-  Log.line(`Usage: do <command>\n\nCommands:\n${Runner.help()}\n`);
+  Console.logLine(`Usage: do <command>\n\nCommands:\n${Runner.help()}\n`);
   process.exit(0);
 }
 

@@ -5,6 +5,8 @@
   "private": true,
   "main": "./src/index.ts",
   "exports": {
-    ".": "./src/index.ts"
+    ".": "./src/index.ts",
+    "./browser": "./src/browser/index.ts",
+    "./node": "./src/node/index.ts"
   }
 }
