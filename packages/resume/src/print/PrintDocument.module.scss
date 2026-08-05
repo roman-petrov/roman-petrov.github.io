@@ -12,7 +12,7 @@ $-page-margin: 13mm;
   padding: $-page-margin;
   margin: space.xl() auto;
   background: color.paper();
-  box-shadow: 0 18px 46px color.shadow();
+  box-shadow: 0 #{r(18)} #{r(46)} color.shadow();
 }
 
 @keyframes settle {

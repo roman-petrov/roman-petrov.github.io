@@ -1,12 +1,13 @@
 @use "../theme/core" as *;
 @use "../theme/primitives";
 @use "../theme/tokens/color";
+@use "../theme/tokens/radius";
 @use "../theme/tokens/space";
 @use "../theme/tokens/text";
 @use "../theme/tokens/weight";
 
 .root {
-  @include primitives.pill(space.sm());
+  @include primitives.control(space.sm());
 
   padding: space.sm() space.lg();
   font-size: text.md();
@@ -14,11 +15,12 @@
   color: color.on-accent();
   white-space: nowrap;
   border-color: transparent;
+  border-radius: radius.md();
   transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease,
     background 0.2s ease,
-    border-color 0.2s ease;
+    box-shadow 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
 }
 
 .lg {
@@ -29,20 +31,20 @@
 .primary {
   @include hover {
     color: color.on-accent();
-    box-shadow: 0 12px 30px color.accent-glow();
-    transform: translateY(-2px);
+    background: color.accent-bright();
+    box-shadow: 0 #{r(8)} #{r(20)} color.accent-glow();
   }
 
-  background: linear-gradient(140deg, color.accent(), color.accent-deep());
-  box-shadow: 0 8px 24px color.accent-glow();
+  background: linear-gradient(140deg, color.accent(), color.accent-bright());
+  box-shadow: 0 #{r(6)} #{r(16)} color.accent-glow();
 }
 
 .ghost {
   @include hover {
     color: color.ink();
     background: color.glass-strong();
-    border-color: color.accent();
-    transform: translateY(-2px);
+    border-color: color.accent-line();
+    box-shadow: inset 0 0 0 1px color.accent-line();
   }
 
   color: color.ink();

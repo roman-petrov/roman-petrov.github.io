@@ -2,7 +2,7 @@
 @use "../theme/materials";
 @use "../theme/patterns";
 @use "../theme/tokens/space";
-@include patterns.facts(space.lg(), space.xs(), space.xs());
+@include patterns.facts(space.md(), space.xs(), space.xs());
 
 .chip {
   @include materials.chip-print;

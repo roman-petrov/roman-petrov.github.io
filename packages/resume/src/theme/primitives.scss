@@ -33,12 +33,12 @@
   letter-spacing: tracking.mono();
 }
 
-@mixin pill($gap) {
+@mixin control($gap) {
   display: inline-flex;
   gap: $gap;
   align-items: center;
   border: 1px solid;
-  border-radius: radius.full();
+  border-radius: radius.sm();
 }
 
 @mixin row-list($gap) {

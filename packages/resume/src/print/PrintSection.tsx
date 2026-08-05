@@ -14,6 +14,7 @@ export const PrintSection = ({ section }: PrintSectionProps) => (
         <Ico>{section.icon}</Ico>
         {` ${section.title}`}
       </h2>
+      <span className={styles.rule} />
     </header>
     <div className={styles.body}>
       {section.entries === undefined ? (

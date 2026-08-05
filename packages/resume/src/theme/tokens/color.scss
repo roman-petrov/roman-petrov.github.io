@@ -32,14 +32,6 @@
   @return -color("bg");
 }
 
-@function border() {
-  @return -color("border");
-}
-
-@function card-head() {
-  @return -color("card-head");
-}
-
 @function chrome() {
   @return -color("chrome");
 }
@@ -62,6 +54,10 @@
 
 @function glow() {
   @return -color("glow");
+}
+
+@function inlay() {
+  @return -color("inlay");
 }
 
 @function ink() {

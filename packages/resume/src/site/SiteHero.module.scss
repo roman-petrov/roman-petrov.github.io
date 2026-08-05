@@ -14,7 +14,7 @@
   position: relative;
   display: grid;
   place-items: center;
-  padding: space.x3xl() 0;
+  padding: space.x3xl() 0 space.x2xl();
   overflow: hidden;
 
   &::after {
@@ -79,7 +79,7 @@
   line-height: leading.tight();
   color: color.ink();
   letter-spacing: tracking.tight();
-  background: linear-gradient(180deg, color.ink() 25%, color.ink-fade() 100%);
+  background: linear-gradient(180deg, color.ink() 40%, color.ink-fade() 100%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -87,7 +87,7 @@
 .contacts {
   @include primitives.row-list(space.sm());
 
-  margin-bottom: space.x2xl();
+  margin-bottom: space.xl();
 }
 
 .cta {
@@ -120,7 +120,7 @@
     border-radius: radius.lg();
     box-shadow:
       0 0 0 1px color.line-strong(),
-      0 30px 60px color.shadow();
+      0 #{r(20)} #{r(48)} color.shadow();
   }
 }
 

@@ -39,14 +39,14 @@
 }
 
 .contact {
-  @include primitives.pill(space.xs());
+  @include primitives.control(space.xs());
 
   padding: space.x2s() space.sm();
   font-size: text.sm();
   font-weight: weight.medium();
   color: color.ink-soft();
-  background: color.card-head();
-  border-color: color.border();
+  background: color.inlay();
+  border-color: color.line();
 }
 
 a.contact {
@@ -60,7 +60,7 @@ a.contact {
   object-fit: cover;
   border-radius: radius.lg();
   box-shadow:
-    0 0 0 1px color.border(),
+    0 0 0 1px color.line(),
     0 #{r(10)} #{r(24)} color.shadow-soft();
 }
 

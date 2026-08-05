@@ -9,10 +9,10 @@
 @use "../theme/tokens/weight";
 
 .label {
-  @include primitives.label(text.micro());
+  @include primitives.label(text.xs());
 
   margin: space.md() 0 space.xs();
-  color: color.muted();
+  color: color.ink-fade();
 }
 
 .list {
@@ -23,37 +23,34 @@
     margin-bottom: space.x2s();
 
     &::marker {
-      color: color.accent-bright();
+      color: color.accent();
     }
   }
 }
 
 .projects {
   display: grid;
-  gap: space.sm();
+  gap: space.md();
   padding: 0;
   margin: 0 0 space.sm();
   list-style: none;
 }
 
 .project {
+  @include materials.well;
+
   display: grid;
-  gap: space.x2s();
-  padding-left: space.md();
-  border-left: #{r(2)} solid color.accent-line();
+  gap: space.xs();
+  padding: space.sm() space.md();
 }
 
-@include patterns.project(space.xs());
+@include patterns.project(space.sm(), space.xs());
 
 .note {
   margin: 0;
   font-size: text.lg();
-  line-height: leading.snug();
+  line-height: leading.normal();
   color: color.ink-soft();
-
-  & + & {
-    margin-top: space.sm();
-  }
 }
 
 .chip {
@@ -61,10 +58,11 @@
 }
 
 .showcase {
+  @include materials.callout;
+
   display: grid;
   gap: space.xs();
-  padding-left: space.md();
-  border-left: #{r(2)} solid color.accent-line();
+  padding: space.md();
 }
 
 .title {

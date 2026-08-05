@@ -6,7 +6,7 @@
 @use "../theme/tokens/weight";
 
 .root {
-  @include primitives.pill(space.xs());
+  @include primitives.control(space.xs());
 
   padding: space.xs() space.md();
   font-size: text.sm();
@@ -15,7 +15,7 @@
   background: color.glass();
   border-color: color.line();
   transition:
-    transform 0.2s ease,
+    background 0.2s ease,
     border-color 0.2s ease,
     color 0.2s ease;
 }
@@ -23,7 +23,7 @@
 a.root {
   @include hover {
     color: color.ink();
-    border-color: color.accent();
-    transform: translateY(-2px);
+    background: color.glass-strong();
+    border-color: color.accent-line();
   }
 }

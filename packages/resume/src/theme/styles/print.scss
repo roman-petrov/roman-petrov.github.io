@@ -10,22 +10,22 @@
 $-page-font-size: 11pt;
 
 :root {
-  --color-accent: #4338ca;
-  --color-accent-bright: #6366f1;
-  --color-accent-deep: #312e81;
-  --color-accent-line: rgb(67 56 202 / 28%);
-  --color-accent-soft: #eef1ff;
-  --color-border: #dbe0ea;
-  --color-card-head: #f7f8fc;
-  --color-desk: #ccd1db;
-  --color-ink: #0e1420;
-  --color-ink-soft: #303a4d;
-  --color-muted: #667085;
+  --color-accent: #1257c4;
+  --color-accent-deep: #0a3f8c;
+  --color-accent-line: rgb(18 87 196 / 26%);
+  --color-accent-soft: #e2ecfd;
+  --color-desk: #c9d0dc;
+  --color-inlay: #eef2f8;
+  --color-ink: #0b1220;
+  --color-ink-soft: #2b3648;
+  --color-line: #d9e1ec;
+  --color-line-strong: #c8d3e3;
+  --color-muted: #55617a;
   --color-on-accent: #fff;
   --color-paper: #fff;
-  --color-rule: #e4e8f0;
-  --color-shadow: rgb(14 20 32 / 18%);
-  --color-shadow-soft: rgb(14 20 32 / 5%);
+  --color-rule: #e2e8f1;
+  --color-shadow: rgb(11 18 32 / 16%);
+  --color-shadow-soft: rgb(11 18 32 / 6%);
 }
 
 html {

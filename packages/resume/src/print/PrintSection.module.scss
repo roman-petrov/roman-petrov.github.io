@@ -1,39 +1,17 @@
 @use "../theme/core" as *;
-@use "../theme/tokens/color";
-@use "../theme/tokens/leading";
+@use "../theme/patterns";
 @use "../theme/tokens/space";
 @use "../theme/tokens/text";
-@use "../theme/tokens/tracking";
-@use "../theme/tokens/weight";
 
 .root {
-  margin-bottom: space.xl();
+  margin-bottom: space.lg();
 
   &:last-child {
     margin-bottom: 0;
   }
 }
 
-.head {
-  display: flex;
-  gap: space.md();
-  align-items: center;
-  padding-bottom: space.sm();
-  margin-bottom: space.md();
-  border-bottom: 1px solid color.rule();
-}
-
-.title {
-  display: flex;
-  gap: space.xs();
-  align-items: baseline;
-  margin: 0;
-  font-size: text.x2xl();
-  font-weight: weight.semibold();
-  line-height: leading.tight();
-  color: color.ink();
-  letter-spacing: tracking.snug();
-}
+@include patterns.section-head(text.x2xl(), space.md(), space.md());
 
 .body {
   > :last-child {

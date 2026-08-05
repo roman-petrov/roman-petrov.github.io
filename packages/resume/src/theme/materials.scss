@@ -12,7 +12,6 @@
   border-radius: radius.lg();
   backdrop-filter: blur(14px);
   transition:
-    transform 0.25s ease,
     border-color 0.25s ease,
     box-shadow 0.25s ease;
 }
@@ -25,7 +24,7 @@
   line-height: leading.snug();
   white-space: nowrap;
   border: 1px solid;
-  border-radius: radius.full();
+  border-radius: radius.sm();
 }
 
 @mixin chip-site {
@@ -37,20 +36,18 @@
 
   &:any-link {
     @include hover {
-      background: color.accent-line();
+      color: color.ink();
       border-color: color.accent();
-      box-shadow: 0 #{r(4)} #{r(10)} color.accent-glow();
-      transform: translateY(-1px);
+      box-shadow: inset 0 0 0 1px color.accent-line();
     }
 
     color: color.accent-bright();
     background: color.accent-soft();
     border-color: color.accent-line();
     transition:
-      background 0.2s ease,
+      color 0.2s ease,
       border-color 0.2s ease,
-      box-shadow 0.2s ease,
-      transform 0.2s ease;
+      box-shadow 0.2s ease;
   }
 }
 
@@ -58,8 +55,8 @@
   @include -chip;
 
   color: color.ink-soft();
-  background: color.card-head();
-  border-color: color.border();
+  background: color.inlay();
+  border-color: color.line();
 
   &:any-link {
     color: color.accent-deep();
@@ -68,13 +65,38 @@
   }
 }
 
+@mixin dot {
+  width: #{r(6)};
+  height: #{r(6)};
+  content: "";
+  background: color.accent();
+  border-radius: radius.xs();
+}
+
+@mixin well {
+  background: color.inlay();
+  border: 1px solid color.line-strong();
+  border-radius: radius.md();
+}
+
+@mixin callout {
+  background: color.accent-soft();
+  border: 1px solid color.accent-line();
+  border-radius: radius.md();
+}
+
 @mixin card {
   @include screen {
-    box-shadow: 0 1px 2px color.shadow-soft();
+    box-shadow: 0 #{r(1)} #{r(2)} color.shadow-soft();
   }
 
   background: color.paper();
-  border: 1px solid color.border();
+  border: 1px solid color.line();
   border-radius: radius.lg();
   box-decoration-break: clone;
+}
+
+@mixin focus-ring {
+  outline: 2px solid color.accent();
+  outline-offset: #{r(2)};
 }

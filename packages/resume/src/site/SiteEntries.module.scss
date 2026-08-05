@@ -18,9 +18,8 @@
   @include materials.glass;
 
   @include hover {
-    border-color: color.line-strong();
-    box-shadow: 0 18px 40px color.shadow-soft();
-    transform: translateY(-2px);
+    border-color: color.accent-line();
+    box-shadow: 0 #{r(10)} #{r(28)} color.shadow-soft();
   }
 
   padding: space.xl() space.x2xl();

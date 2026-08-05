@@ -11,7 +11,7 @@
   @include materials.card;
 
   padding: space.lg() space.xl();
-  margin-bottom: space.md();
+  margin-bottom: space.lg();
 
   > :last-child {
     margin-bottom: 0;

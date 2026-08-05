@@ -1,4 +1,5 @@
 @use "../core" as *;
+@use "../materials";
 @use "../tokens/color";
 @use "../tokens/font";
 @use "../tokens/leading";
@@ -51,6 +52,11 @@ a {
   transition:
     color 0.2s ease,
     border-color 0.2s ease;
+}
+
+a:focus-visible,
+button:focus-visible {
+  @include materials.focus-ring;
 }
 
 strong {

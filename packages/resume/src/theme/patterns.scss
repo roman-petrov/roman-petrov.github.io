@@ -1,8 +1,38 @@
+@use "materials";
 @use "primitives";
 @use "tokens/color";
+@use "tokens/leading";
 @use "tokens/space";
 @use "tokens/text";
+@use "tokens/tracking";
 @use "tokens/weight";
+
+@mixin section-head($size, $gap, $below) {
+  .head {
+    display: flex;
+    gap: $gap;
+    align-items: center;
+    margin-bottom: $below;
+  }
+
+  .title {
+    display: flex;
+    gap: space.sm();
+    align-items: baseline;
+    margin: 0;
+    font-size: $size;
+    font-weight: weight.semibold();
+    line-height: leading.tight();
+    color: color.ink();
+    letter-spacing: tracking.snug();
+  }
+
+  .rule {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, color.line-strong(), transparent);
+  }
+}
 
 @mixin facts($gap, $group-gap, $chip-gap) {
   .facts {
@@ -16,10 +46,10 @@
   }
 
   .label {
-    @include primitives.label(text.micro());
+    @include primitives.label(text.xs());
 
     margin: 0;
-    color: color.muted();
+    color: color.ink-fade();
   }
 
   .chips {
@@ -40,10 +70,11 @@
   }
 
   .slash {
-    color: color.muted();
+    color: color.ink-fade();
   }
 
   .tagline {
+    font-weight: weight.semibold();
     color: color.accent();
   }
 }
@@ -69,7 +100,7 @@
   }
 }
 
-@mixin project($gap) {
+@mixin project($gap, $stack-gap) {
   .head {
     display: flex;
     flex-wrap: wrap;
@@ -77,6 +108,13 @@
     align-items: baseline;
     margin: 0;
     color: color.ink();
+
+    &::before {
+      @include materials.dot;
+
+      flex: none;
+      align-self: center;
+    }
   }
 
   .name {
@@ -86,10 +124,10 @@
   .roles {
     @include primitives.label(text.xs());
 
-    color: color.muted();
+    color: color.ink-fade();
   }
 
   .stack {
-    @include primitives.row-list(space.xs());
+    @include primitives.row-list($stack-gap);
   }
 }

@@ -1,37 +1,14 @@
+@use "../theme/patterns";
 @use "../theme/primitives";
-@use "../theme/tokens/color";
-@use "../theme/tokens/leading";
 @use "../theme/tokens/metrics";
 @use "../theme/tokens/space";
 @use "../theme/tokens/text";
-@use "../theme/tokens/weight";
 
 .root {
   @include primitives.wrap;
 
-  padding: space.x3xl() 0;
+  padding: space.x2xl() 0;
   scroll-margin-top: calc(#{metrics.nav()} + #{space.lg()});
 }
 
-.head {
-  display: flex;
-  gap: space.lg();
-  align-items: center;
-  margin-bottom: space.x2xl();
-}
-
-.title {
-  display: flex;
-  gap: space.sm();
-  align-items: baseline;
-  margin: 0;
-  font-size: text.title();
-  font-weight: weight.semibold();
-  line-height: leading.tight();
-}
-
-.rule {
-  flex: 1;
-  height: 1px;
-  background: linear-gradient(90deg, color.line-strong(), transparent);
-}
+@include patterns.section-head(text.title(), space.lg(), space.xl());
