@@ -16,6 +16,7 @@ export const SiteBlocks = ({ blocks, columns = false }: SiteBlocksProps) => (
       list: _.cn(styles.list, columns && styles.columns),
       project: styles,
       pull: styles.pull,
+      showcase: styles,
     }}
   />
 );

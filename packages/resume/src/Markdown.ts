@@ -1,6 +1,6 @@
 import { slug } from "github-slugger";
 
-import type { Block, Contact, Entry, Fact, Project, Section } from "./Content";
+import type { Block, Contact, Entry, Fact, Product, Project, Section } from "./Content";
 
 import { Content } from "./Content";
 
@@ -19,12 +19,22 @@ const projectItem = ({ href, name, note: [lead, ...rest], roles, stack }: Projec
     `  - **Stack:** ${stack.map(chip).join(` · `)}`,
   ].join(`\n`);
 
+const productCard = ({ links, name, note, stack }: Product) =>
+  [
+    `### ${name}`,
+    ...note,
+    links.map(({ href, icon, label }) => `${icon} [${label}](${href})`).join(` · `),
+    stack.map(chip).join(` · `),
+  ].join(`\n\n`);
+
 const block = (item: Block) =>
-  item.type === `projects`
-    ? item.items.map(projectItem).join(`\n`)
-    : item.type === `list`
-      ? item.items.map(bullet).join(`\n`)
-      : paragraph(item);
+  item.type === `showcase`
+    ? productCard(item.item)
+    : item.type === `projects`
+      ? item.items.map(projectItem).join(`\n`)
+      : item.type === `list`
+        ? item.items.map(bullet).join(`\n`)
+        : paragraph(item);
 
 const entry = ({ blocks, date, link, title }: Entry) => {
   const rail = link === undefined ? chip(date) : `${chip(date)} · [${link.label}](${link.href})`;

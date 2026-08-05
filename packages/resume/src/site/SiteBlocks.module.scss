@@ -6,6 +6,7 @@
 @use "../theme/tokens/radius";
 @use "../theme/tokens/space";
 @use "../theme/tokens/text";
+@use "../theme/tokens/weight";
 
 .pull {
   @include primitives.pull(text.pull());
@@ -91,4 +92,33 @@
 
 .chip {
   @include materials.chip(color.accent-bright());
+}
+
+.showcase {
+  display: grid;
+  gap: space.md();
+  padding-left: space.lg();
+  border-left: #{r(2)} solid color.accent();
+}
+
+.title {
+  margin: 0;
+  font-size: text.pull();
+  font-weight: weight.semibold();
+  color: color.ink();
+}
+
+.links {
+  @include primitives.row-list(space.sm());
+
+  a {
+    @include primitives.pill(space.x2s());
+
+    @include hover {
+      background: color.accent-soft();
+    }
+
+    padding: space.x2s() space.md();
+    border-color: color.accent-line();
+  }
 }

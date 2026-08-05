@@ -6,6 +6,7 @@
 @use "../theme/tokens/leading";
 @use "../theme/tokens/space";
 @use "../theme/tokens/text";
+@use "../theme/tokens/weight";
 
 .pull {
   @include primitives.pull(text.xl());
@@ -77,6 +78,26 @@
   @include materials.chip(color.accent-deep());
 }
 
+.showcase {
+  display: grid;
+  gap: space.xs();
+  padding-left: space.md();
+  border-left: #{r(2)} solid color.accent-line();
+}
+
+.title {
+  margin: 0;
+  font-size: text.xl();
+  font-weight: weight.semibold();
+  color: color.ink();
+}
+
+.links {
+  @include primitives.row-list(space.x2s() space.md());
+
+  font-size: text.md();
+}
+
 @include print {
   .label,
   .lead {
@@ -84,7 +105,8 @@
   }
 
   .list li,
-  .project {
+  .project,
+  .showcase {
     break-inside: avoid;
   }
 }

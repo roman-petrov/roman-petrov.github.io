@@ -18,7 +18,7 @@ export const PrintDocument = () => (
         <PrintHero />
         <PrintFacts />
         <main>
-          {[`profile`, `education`, `experience`, `activities`].map(id => (
+          {[`profile`, `showcase`, `education`, `experience`, `activities`].map(id => (
             <PrintSection key={id} section={Content.section(id)} />
           ))}
         </main>

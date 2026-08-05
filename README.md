@@ -2,8 +2,8 @@
 
 `// SOFTWARE DEVELOPER`
 
-[👤 Profile](#-profile) · [🛠 Stack](#-stack) · [💼 Experience](#-experience) · [🎓 Education](#-education) ·
-[🚀 Activities](#-activities)
+[👤 Profile](#-profile) · [🌐 Showcase](#-showcase) · [🛠 Stack](#-stack) · [💼 Experience](#-experience) ·
+[🎓 Education](#-education) · [🚀 Activities](#-activities)
 
 Front-end architect, team lead and developer. Flutter, TypeScript, clean code.
 
@@ -37,6 +37,21 @@ I would like to land a software developer position in a company that:
 - cares about the code quality in projects
 - cares about the user experience quality in products
 - provides possibilities to grow as professional
+
+## 🌐 Showcase
+
+### CV as code
+
+This resume is a small product of mine. The website, the PDF and the GitHub README are built from one resume.yml file,
+so every version tells the same story and none of them can go stale.
+
+React renders the pages to static HTML, the design system lives in typed SCSS modules, Puppeteer prints the PDF and
+GitHub Actions runs the checks and the deploy on every change.
+
+🌐 [roman-petrov.github.io](https://roman-petrov.github.io/) · 🔗
+[github.com/roman-petrov/roman-petrov.github.io](https://github.com/roman-petrov/roman-petrov.github.io)
+
+`TypeScript` · `React` · `Vite` · `SCSS` · `Bun` · `Puppeteer` · `GitHub Actions`
 
 ## 🛠 Stack
 

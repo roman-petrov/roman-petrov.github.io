@@ -11,6 +11,7 @@ import { SiteStack } from "./SiteStack";
 export const SiteDocument = () => {
   const title = `${Content.meta.name} — ${Content.meta.role}`;
   const profile = Content.section(`profile`);
+  const showcase = Content.section(`showcase`);
 
   return (
     <html lang="en">
@@ -39,6 +40,9 @@ export const SiteDocument = () => {
           <SiteHero />
           <SiteSection icon={profile.icon} id={profile.id} title={profile.title}>
             <SiteProse blocks={profile.blocks ?? []} />
+          </SiteSection>
+          <SiteSection icon={showcase.icon} id={showcase.id} title={showcase.title}>
+            <SiteProse blocks={showcase.blocks ?? []} />
           </SiteSection>
           <SiteStack />
           <SiteEntries section={Content.section(`experience`)} />

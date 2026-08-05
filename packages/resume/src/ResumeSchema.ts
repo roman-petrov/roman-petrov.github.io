@@ -62,6 +62,14 @@ export const ResumeSchema = z.strictObject({
     }),
     wishes: z.strictObject({ items: z.array(z.string()), lead: z.string() }),
   }),
+  showcase: z.strictObject({
+    ...titled,
+    name: z.string(),
+    repo: z.url(),
+    stack: z.array(z.string()),
+    summary: z.string(),
+    url: z.url(),
+  }),
   stack: z.strictObject({
     ...titled,
     facts: z.array(z.strictObject({ icon: z.string(), items: z.array(z.string()), label: z.string() })),

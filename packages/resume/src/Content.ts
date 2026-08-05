@@ -5,6 +5,7 @@ import type { ResumeSchema } from "./ResumeSchema";
 import Yaml from "../../../resume.yml";
 
 export type Block =
+  | { item: Product; type: `showcase` }
   | { items: Project[]; type: `projects` }
   | { items: string[]; type: `list` }
   | { text: string; type: `label` | `lead` | `pull` | `text` };
@@ -19,6 +20,8 @@ export type Heading = { icon: string; title: string };
 
 export type Link = { href: string; label: string };
 
+export type Product = { links: ProductLink[]; name: string; note: string[]; stack: string[] };
+
 export type Project = { href?: string; name: string; note: string[]; roles: string[]; stack: string[] };
 
 export type Section = Heading & { blocks?: Block[]; entries?: Entry[]; id: string };
@@ -26,6 +29,8 @@ export type Section = Heading & { blocks?: Block[]; entries?: Entry[]; id: strin
 type Activity = Resume[`activities`][`items`][number];
 
 type Job = Resume[`experience`][`jobs`][number];
+
+type ProductLink = Link & { icon: string };
 
 type Resume = z.infer<typeof ResumeSchema>;
 
@@ -37,7 +42,11 @@ const resume = Yaml as Resume;
 
 const period = ({ from, to }: Span) => (to === from ? String(from) : `${String(from)} — ${String(to)}`);
 
-const link = (url: string): Link => ({ href: url, label: new URL(url).host.replace(/^www\./u, ``) });
+const link = (url: string): Link => {
+  const { host, pathname } = new URL(url);
+
+  return { href: url, label: `${host.replace(/^www\./u, ``)}${pathname.replace(/\/$/u, ``)}` };
+};
 
 const bold = (text: string) => `**${text}**`;
 
@@ -50,6 +59,16 @@ const project = ({ name, note, roles, stack, url }: Job[`projects`][number]): Pr
   name,
   note: note === undefined ? [] : paragraphs(note),
   roles,
+  stack,
+});
+
+const product = ({ name, repo, stack, summary, url }: Resume[`showcase`]): Product => ({
+  links: [
+    { ...link(url), icon: `🌐` },
+    { ...link(repo), icon: `🔗` },
+  ],
+  name,
+  note: paragraphs(summary),
   stack,
 });
 
@@ -109,6 +128,7 @@ const facts: [Fact, ...Fact[]] = [
 
 const sections: Section[] = [
   { ...heading(resume.profile), blocks: profileBlocks(resume.profile), id: `profile` },
+  { ...heading(resume.showcase), blocks: [{ item: product(resume.showcase), type: `showcase` }], id: `showcase` },
   { ...heading(resume.stack), id: `stack` },
   { ...heading(resume.experience), entries: resume.experience.jobs.map(jobEntry), id: `experience` },
   { ...heading(resume.education), entries: resume.education.studies.map(studyEntry), id: `education` },

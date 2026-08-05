@@ -158,6 +158,20 @@
       "required": ["icon", "title", "approach", "motto", "proficiency", "wishes"],
       "additionalProperties": false
     },
+    "showcase": {
+      "type": "object",
+      "properties": {
+        "icon": { "type": "string" },
+        "title": { "type": "string" },
+        "name": { "type": "string" },
+        "repo": { "type": "string", "format": "uri" },
+        "stack": { "type": "array", "items": { "type": "string" } },
+        "summary": { "type": "string" },
+        "url": { "type": "string", "format": "uri" }
+      },
+      "required": ["icon", "title", "name", "repo", "stack", "summary", "url"],
+      "additionalProperties": false
+    },
     "stack": {
       "type": "object",
       "properties": {
@@ -182,6 +196,6 @@
       "additionalProperties": false
     }
   },
-  "required": ["activities", "contacts", "education", "experience", "meta", "profile", "stack"],
+  "required": ["activities", "contacts", "education", "experience", "meta", "profile", "showcase", "stack"],
   "additionalProperties": false
 }
