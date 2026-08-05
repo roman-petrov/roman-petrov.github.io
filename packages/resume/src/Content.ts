@@ -6,6 +6,7 @@ import Yaml from "../../../resume.yml";
 
 export type Block =
   | { item: Product; type: `showcase` }
+  | { items: Fact[]; type: `facts` }
   | { items: Project[]; type: `projects` }
   | { items: string[]; type: `list` }
   | { text: string; type: `label` | `lead` | `pull` | `text` };
@@ -121,15 +122,16 @@ const contacts: Contact[] = [
   { href: resume.meta.github, icon: `🔗`, label: `GitHub`, value: resume.contacts.github },
 ];
 
-const facts: [Fact, ...Fact[]] = [
-  { chips: resume.stack.skills, icon: resume.stack.icon, label: resume.stack.title },
-  ...resume.stack.facts.map(({ icon, items, label }) => ({ icon, label, text: items.join(` · `) })),
-];
+const core: Fact = { chips: resume.stack.core, icon: resume.stack.icon, label: resume.stack.title };
+
+const facts: Fact[] = resume.stack.facts.map(({ icon, items, label }) => ({ icon, label, text: items.join(` · `) }));
+
+const skills: Fact[] = resume.stack.groups.map(({ icon, items, label }) => ({ chips: items, icon, label }));
 
 const sections: Section[] = [
   { ...heading(resume.profile), blocks: profileBlocks(resume.profile), id: `profile` },
   { ...heading(resume.showcase), blocks: [{ item: product(resume.showcase), type: `showcase` }], id: `showcase` },
-  { ...heading(resume.stack), id: `stack` },
+  { ...heading(resume.stack), blocks: [{ items: skills, type: `facts` }], id: `stack` },
   { ...heading(resume.experience), entries: resume.experience.jobs.map(jobEntry), id: `experience` },
   { ...heading(resume.education), entries: resume.education.studies.map(studyEntry), id: `education` },
   { ...heading(resume.activities), entries: resume.activities.items.map(activityEntry), id: `activities` },
@@ -145,4 +147,4 @@ const section = (id: string) => {
   return found;
 };
 
-export const Content = { contacts, facts, meta: resume.meta, section, sections };
+export const Content = { contacts, core, facts, meta: resume.meta, section, sections };

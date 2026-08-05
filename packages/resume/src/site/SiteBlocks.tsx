@@ -4,6 +4,7 @@ import type { Block } from "../Content";
 
 import { Blocks } from "../components";
 import styles from "./SiteBlocks.module.scss";
+import { SiteFacts } from "./SiteFacts";
 
 export type SiteBlocksProps = { blocks: Block[]; columns?: boolean };
 
@@ -18,5 +19,6 @@ export const SiteBlocks = ({ blocks, columns = false }: SiteBlocksProps) => (
       pull: styles.pull,
       showcase: styles,
     }}
+    facts={SiteFacts}
   />
 );

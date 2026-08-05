@@ -10,13 +10,13 @@ export const SiteHero = () => (
     <div className={styles.glow} />
     <div className={styles.inner}>
       <div>
+        <h1 className={styles.name}>{Content.meta.name}</h1>
         <p className={styles.kicker}>
           <span className={styles.slash}>{`//`}</span>
-          {` ${Content.meta.role}`}
+          {` ${Content.meta.role}:`}
+          <span className={styles.tagline}>{Content.meta.tagline}</span>
           <span className={styles.caret} />
         </p>
-        <h1 className={styles.name}>{Content.meta.name}</h1>
-        <p className={styles.tagline}>{Content.meta.tagline}</p>
         <ul className={styles.contacts}>
           {Content.contacts.map(({ href, icon, label, value }) => (
             <li key={label}>

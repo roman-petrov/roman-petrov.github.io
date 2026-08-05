@@ -1,4 +1,5 @@
 export * from "./Blocks";
+export * from "./Facts";
 export * from "./Ico";
 export * from "./Inline";
 export * from "./Projects";

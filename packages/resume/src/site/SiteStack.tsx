@@ -1,25 +1,21 @@
 import { Ico, Inline } from "../components";
 import { Content } from "../Content";
+import { SiteBlocks } from "./SiteBlocks";
 import { SiteReveal } from "./SiteReveal";
 import { SiteSection } from "./SiteSection";
 import styles from "./SiteStack.module.scss";
 
 export const SiteStack = () => {
-  const [skills, ...rest] = Content.facts;
-  const { icon, id, title } = Content.section(`stack`);
+  const { blocks, icon, id, title } = Content.section(`stack`);
 
   return (
     <SiteSection icon={icon} id={id} title={title}>
       <div className={styles.root}>
-        <SiteReveal cn={styles.chips} tag="ul">
-          {(skills.chips ?? []).map(chip => (
-            <li className={styles.chip} key={chip}>
-              {chip}
-            </li>
-          ))}
+        <SiteReveal>
+          <SiteBlocks blocks={blocks ?? []} />
         </SiteReveal>
         <div className={styles.aside}>
-          {rest.map(({ icon, label, text }, index) => (
+          {Content.facts.map(({ icon, label, text }, index) => (
             <SiteReveal cn={styles.mini} index={index} key={label}>
               <p className={styles.label}>
                 <Ico>{icon}</Ico>

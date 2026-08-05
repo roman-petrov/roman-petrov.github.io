@@ -1,11 +1,11 @@
 # Roman Petrov
 
-`// SOFTWARE DEVELOPER`
+`// SENIOR SOFTWARE DEVELOPER`
 
 [👤 Profile](#-profile) · [🌐 Showcase](#-showcase) · [🛠 Stack](#-stack) · [💼 Experience](#-experience) ·
 [🎓 Education](#-education) · [🚀 Activities](#-activities)
 
-Front-end architect, team lead and developer. Flutter, TypeScript, clean code.
+Good is not enough
 
 - 📍 **Location:** Yoshkar-Ola, Russian Federation
 - 📞 **Phone:** [+79061370326](tel:+79061370326)
@@ -55,10 +55,15 @@ GitHub Actions runs the checks and the deploy on every change.
 
 ## 🛠 Stack
 
-`Programming` · `User experience` · `Git` · `Dart/Flutter` · `TypeScript/JavaScript` · `HTML / CSS` · `React` · `C#` ·
-`C/C++` · `Markdown`
+- 🧠 **Expertise:** `Architecture` · `API design` · `UX` · `DX` · `Performance` · `Code quality` · `Design systems`
+- 💬 **Languages:** `TypeScript` · `JavaScript` · `HTML` · `CSS` · `SCSS` · `Dart` · `C#` · `C/C++` · `GLSL`
+- 📦 **Frameworks & libraries:** `React` · `Node.js` · `Flutter` · `.NET` · `CSS Modules` · `Zod` · `tRPC` · `Prisma` ·
+  `WebSockets` · `WebGL`
+- 🧰 **Build & tooling:** `Vite` · `tsx` · `tsdown` · `Git` · `GitHub Actions` · `Docker`
+- ✅ **Testing & quality:** `Vitest` · `Jest` · `Puppeteer` · `ESLint` · `Stylelint` · `Prettier`
+- 🤖 **AI engineering:** `AI agents` · `MCP` · `RAG` · `Cursor`
 
-- 🌍 **Languages:** English · Russian
+- 🌍 **Spoken languages:** English · Russian
 - 🎸 **Hobbies:** Programming · Travel · Camping · Guitar
 
 ## 💼 Experience

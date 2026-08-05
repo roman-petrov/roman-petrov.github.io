@@ -65,10 +65,11 @@
   @include primitives.label(text.sm());
 
   display: flex;
+  flex-wrap: wrap;
   gap: space.sm();
   align-items: center;
-  margin: 0 0 space.lg();
-  color: color.accent();
+  margin: space.sm() 0 space.x2xl();
+  color: color.ink-soft();
 }
 
 .slash {
@@ -96,11 +97,7 @@
 }
 
 .tagline {
-  max-width: 34ch;
-  margin: space.lg() 0 space.xl();
-  font-size: text.xl();
-  line-height: leading.loose();
-  color: color.ink-soft();
+  color: color.accent();
 }
 
 .contacts {

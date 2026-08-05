@@ -2,6 +2,7 @@ import type { Block } from "../Content";
 
 import { Blocks } from "../components";
 import styles from "./PrintBlocks.module.scss";
+import { PrintFacts } from "./PrintFacts";
 
 export type PrintBlocksProps = { blocks: Block[] };
 
@@ -16,5 +17,6 @@ export const PrintBlocks = ({ blocks }: PrintBlocksProps) => (
       pull: styles.pull,
       showcase: styles,
     }}
+    facts={PrintFacts}
   />
 );

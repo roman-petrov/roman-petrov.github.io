@@ -16,9 +16,9 @@ export const PrintDocument = () => (
     <body>
       <article className={styles.page}>
         <PrintHero />
-        <PrintFacts />
+        <PrintFacts card items={[Content.core, ...Content.facts]} />
         <main>
-          {[`profile`, `showcase`, `education`, `experience`, `activities`].map(id => (
+          {[`profile`, `showcase`, `stack`, `education`, `experience`, `activities`].map(id => (
             <PrintSection key={id} section={Content.section(id)} />
           ))}
         </main>

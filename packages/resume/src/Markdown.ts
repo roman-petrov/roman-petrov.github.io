@@ -27,14 +27,19 @@ const productCard = ({ links, name, note, stack }: Product) =>
     stack.map(chip).join(` · `),
   ].join(`\n\n`);
 
+const factLine = ({ chips, icon, label, text }: Fact) =>
+  `${icon} **${label}:** ${chips === undefined ? (text ?? ``) : chips.map(chip).join(` · `)}`;
+
 const block = (item: Block) =>
   item.type === `showcase`
     ? productCard(item.item)
-    : item.type === `projects`
-      ? item.items.map(projectItem).join(`\n`)
-      : item.type === `list`
-        ? item.items.map(bullet).join(`\n`)
-        : paragraph(item);
+    : item.type === `facts`
+      ? item.items.map(factLine).map(bullet).join(`\n`)
+      : item.type === `projects`
+        ? item.items.map(projectItem).join(`\n`)
+        : item.type === `list`
+          ? item.items.map(bullet).join(`\n`)
+          : paragraph(item);
 
 const entry = ({ blocks, date, link, title }: Entry) => {
   const rail = link === undefined ? chip(date) : `${chip(date)} · [${link.label}](${link.href})`;
@@ -45,25 +50,17 @@ const entry = ({ blocks, date, link, title }: Entry) => {
 const contactLine = ({ href, icon, label, value }: Contact) =>
   bullet(`${icon} **${label}:** ${href === undefined ? value : `[${value}](${href})`}`);
 
-const factLine = ({ icon, label, text }: Fact) => `${icon} **${label}:** ${text ?? ``}`;
-
-const stackBlocks = (): Block[] => {
-  const [skills, ...rest] = Content.facts;
-
-  return [
-    { text: (skills.chips ?? []).map(chip).join(` · `), type: `text` },
-    { items: rest.map(factLine), type: `list` },
-  ];
-};
-
-const blocks = ({ blocks: own, id }: Section) => own ?? (id === `stack` ? stackBlocks() : []);
-
 const headline = ({ icon, title }: Section) => `${icon} ${title}`;
 
 const navLink = (item: Section) => `[${headline(item)}](#${slug(headline(item))})`;
 
 const section = (item: Section) =>
-  [`## ${headline(item)}`, ...(item.entries ?? []).map(entry), ...blocks(item).map(block)].join(`\n\n`);
+  [
+    `## ${headline(item)}`,
+    ...(item.entries ?? []).map(entry),
+    ...(item.blocks ?? []).map(block),
+    ...(item.id === `stack` ? [block({ items: Content.facts, type: `facts` })] : []),
+  ].join(`\n\n`);
 
 const render = () =>
   `${[

@@ -7,16 +7,19 @@
 @use "../theme/tokens/text";
 @use "../theme/tokens/weight";
 
-.root {
-  @include materials.card;
-
+.facts {
   display: grid;
   gap: space.sm();
+}
+
+.card {
+  @include materials.card;
+
   padding: space.lg() space.xl();
   margin-bottom: space.md();
 }
 
-.row {
+.group {
   display: grid;
   grid-template-columns: #{metrics.rail()} 1fr;
   gap: space.xl();
@@ -49,7 +52,8 @@
 }
 
 @include print {
-  .root {
+  .card,
+  .group {
     break-inside: avoid;
   }
 }

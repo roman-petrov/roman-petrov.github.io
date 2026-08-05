@@ -2,6 +2,8 @@ import { z } from "zod";
 
 const titled = { icon: z.string(), title: z.string() };
 
+const group = { icon: z.string(), items: z.array(z.string()), label: z.string() };
+
 const span = { from: z.int(), to: z.int() };
 
 export const ResumeSchema = z.strictObject({
@@ -72,7 +74,8 @@ export const ResumeSchema = z.strictObject({
   }),
   stack: z.strictObject({
     ...titled,
-    facts: z.array(z.strictObject({ icon: z.string(), items: z.array(z.string()), label: z.string() })),
-    skills: z.array(z.string()),
+    core: z.array(z.string()),
+    facts: z.array(z.strictObject(group)),
+    groups: z.array(z.strictObject(group)),
   }),
 });

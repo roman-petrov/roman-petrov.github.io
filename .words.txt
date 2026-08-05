@@ -3,6 +3,7 @@ beeline
 bunx
 cpslabs
 fontsource
+GLSL
 habrahabr
 Huffman
 ispringsolutions

@@ -3,6 +3,7 @@ export * from "./SiteBlocks";
 export * from "./SiteContact";
 export * from "./SiteDocument";
 export * from "./SiteEntries";
+export * from "./SiteFacts";
 export * from "./SiteFooter";
 export * from "./SiteGithubAction";
 export * from "./SiteHero";

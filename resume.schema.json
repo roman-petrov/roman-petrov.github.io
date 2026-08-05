@@ -177,6 +177,7 @@
       "properties": {
         "icon": { "type": "string" },
         "title": { "type": "string" },
+        "core": { "type": "array", "items": { "type": "string" } },
         "facts": {
           "type": "array",
           "items": {
@@ -190,9 +191,21 @@
             "additionalProperties": false
           }
         },
-        "skills": { "type": "array", "items": { "type": "string" } }
+        "groups": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "icon": { "type": "string" },
+              "items": { "type": "array", "items": { "type": "string" } },
+              "label": { "type": "string" }
+            },
+            "required": ["icon", "items", "label"],
+            "additionalProperties": false
+          }
+        }
       },
-      "required": ["icon", "title", "facts", "skills"],
+      "required": ["icon", "title", "core", "facts", "groups"],
       "additionalProperties": false
     }
   },

@@ -2,8 +2,8 @@
 
 meta:
   name: Roman Petrov
-  role: Software Developer
-  tagline: Front-end architect, team lead and developer. Flutter, TypeScript, clean code.
+  role: Senior Software Developer
+  tagline: Good is not enough
   photo: photo.png
   pdf: Roman_Petrov_CV.pdf
   site: https://roman-petrov.github.io/
@@ -60,20 +60,29 @@ showcase:
 stack:
   icon: 🛠
   title: Stack
-  skills:
-    - Programming
-    - User experience
-    - Git
-    - Dart/Flutter
-    - TypeScript/JavaScript
-    - HTML / CSS
-    - React
-    - C#
-    - C/C++
-    - Markdown
+  core: [TypeScript, React, Node.js]
+  groups:
+    - icon: 🧠
+      label: Expertise
+      items: [Architecture, API design, UX, DX, Performance, Code quality, Design systems]
+    - icon: 💬
+      label: Languages
+      items: [TypeScript, JavaScript, HTML, CSS, SCSS, Dart, C#, C/C++, GLSL]
+    - icon: 📦
+      label: Frameworks & libraries
+      items: [React, Node.js, Flutter, .NET, CSS Modules, Zod, tRPC, Prisma, WebSockets, WebGL]
+    - icon: 🧰
+      label: Build & tooling
+      items: [Vite, tsx, tsdown, Git, GitHub Actions, Docker]
+    - icon: ✅
+      label: Testing & quality
+      items: [Vitest, Jest, Puppeteer, ESLint, Stylelint, Prettier]
+    - icon: 🤖
+      label: AI engineering
+      items: [AI agents, MCP, RAG, Cursor]
   facts:
     - icon: 🌍
-      label: Languages
+      label: Spoken languages
       items: [English, Russian]
     - icon: 🎸
       label: Hobbies
