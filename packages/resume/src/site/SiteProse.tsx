@@ -10,7 +10,7 @@ export type SiteProseProps = { section: Section };
 export const SiteProse = ({ section }: SiteProseProps) => (
   <SiteSection icon={section.icon} id={section.id} title={section.title}>
     <SiteReveal cn={styles.root}>
-      <SiteBlocks blocks={section.blocks ?? []} columns />
+      <SiteBlocks blocks={section.blocks ?? []} />
     </SiteReveal>
   </SiteSection>
 );

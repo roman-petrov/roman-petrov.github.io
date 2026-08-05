@@ -38,12 +38,6 @@
   }
 }
 
-.columns {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(#{r(352)}, 100%), 1fr));
-  gap: space.sm() space.x2xl();
-}
-
 .projects {
   display: grid;
   gap: space.md();
