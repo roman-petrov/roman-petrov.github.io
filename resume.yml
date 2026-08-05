@@ -30,8 +30,8 @@ showcase:
   title: Showcase
   name: CV as code
   summary: >-
-    This resume is a small product of mine. The website, the PDF and the GitHub README are built from one resume.yml
-    file, so every version tells the same story and none of them can go stale.
+    This resume is a small product of mine. The website, the PDF and the Markdown CV are built from one resume.yml file,
+    so every version tells the same story and none of them can go stale.
 
     React renders the pages to static HTML, the design system lives in typed SCSS modules, Puppeteer prints the PDF and
     GitHub Actions runs the checks and the deploy on every change.

@@ -1,206 +1,25 @@
-# Roman Petrov
+# Resume
 
-`// SENIOR SOFTWARE DEVELOPER`
+[📄 CV](Roman_Petrov_CV.md) · [🌐 Live](https://roman-petrov.github.io/) ·
+[⬇ PDF](https://roman-petrov.github.io/Roman_Petrov_CV.pdf)
 
-[👤 About Me](#-about-me) · [🌐 Showcase](#-showcase) · [🧠 Expertise](#-expertise) · [🛠 Stack](#-stack) ·
-[💼 Experience](#-experience) · [🎓 Education](#-education) · [🚀 Activities](#-activities)
+CV as code: site, PDF and Markdown from one [`resume.yml`](resume.yml).
 
-Good is not enough
+## 📋 Prerequisites
 
-- 📍 **Location:** Yoshkar-Ola, Russian Federation
-- 📞 **Phone:** [+79061370326](tel:+79061370326)
-- ✉️ **Email:** [romanpetrov@list.ru](mailto:romanpetrov@list.ru)
-- 🔗 **GitHub:** [github.com/roman-petrov](https://github.com/roman-petrov)
+- ⌨️ [Cursor](https://cursor.com/) — install recommended workspace extensions.
+- 📥 [Node.js](https://nodejs.org/) — version from [`.node-version`](.node-version).
+- 📥 [Bun](https://bun.com/).
 
-[🌐 Web version](https://roman-petrov.github.io/) · [⬇ Download PDF](https://roman-petrov.github.io/Roman_Petrov_CV.pdf)
-· [🔗 GitHub](https://github.com/roman-petrov)
+## 🔄 Workflow
 
----
+- ⚙️ `!setup.bat` — git long paths + `bun i`.
+- ✅ `!check.bat` — setup + full CI.
+- 🧹 `!cleanup.bat` — clean repository leftovers.
+- 📦 `!upgrade.bat` — upgrade dependencies interactively.
+- 🔄 `!upgrade-actions.bat` — upgrade GitHub Actions.
 
-## 👤 About Me
+## 🌐 Local
 
-- My favorite tool in software development is **Occam's razor**.
-- I prefer functional programming to object oriented approach and my favorite code unit is **pure function**.
-- I love **AI-assisted development** and have been building software with AI agents for more than a year.
-- I speak **English** and **Russian**.
-- Beyond work I like **travel**, **camping** and playing the **guitar** — and programming, still.
-
-## 🌐 Showcase
-
-### CV as code
-
-This resume is a small product of mine. The website, the PDF and the GitHub README are built from one resume.yml file,
-so every version tells the same story and none of them can go stale.
-
-React renders the pages to static HTML, the design system lives in typed SCSS modules, Puppeteer prints the PDF and
-GitHub Actions runs the checks and the deploy on every change.
-
-🌐 [roman-petrov.github.io](https://roman-petrov.github.io/) · 🔗
-[github.com/roman-petrov/roman-petrov.github.io](https://github.com/roman-petrov/roman-petrov.github.io)
-
-[`TypeScript`](https://www.typescriptlang.org) · [`React`](https://react.dev) · [`Vite`](https://vite.dev) ·
-[`SCSS`](https://sass-lang.com) · [`Bun`](https://bun.sh) · [`Puppeteer`](https://pptr.dev) ·
-[`GitHub Actions`](https://github.com/features/actions)
-
-## 🧠 Expertise
-
-- 🤖 **AI:** `Agents` · `MCP` · `RAG` · `Cursor`
-- 🧩 **Problem solving:** `Analysis` · `Communication` · `Decomposition` · `MVP`
-- 💻 **Programming:** `Modular` · `Testable` · `Readable` · `Compact` · `Efficient`
-- 📐 **Architecture:** `System design` · `API design` · `Design systems` · `Performance`
-- 🔍 **Code quality:** `Automated code analysis` · `Linting` · `Code review`
-- ⚙️ **Project workflow:** `Automation` · `Simplification` · `Documentation` · `Developer experience`
-- 🎨 **User experience:** `Simplicity` · `Visual perfection` · `Screenshot tests`
-- 🌱 **Open source:** `Use` · `Contribute` · `Learn`
-
-## 🛠 Stack
-
-- 💬 **Languages:** [`TypeScript`](https://www.typescriptlang.org) ·
-  [`JavaScript`](https://developer.mozilla.org/docs/Web/JavaScript) ·
-  [`HTML`](https://developer.mozilla.org/docs/Web/HTML) · [`CSS`](https://developer.mozilla.org/docs/Web/CSS) ·
-  [`SCSS`](https://sass-lang.com) · [`Dart`](https://dart.dev) · [`C#`](https://learn.microsoft.com/dotnet/csharp) ·
-  [`C/C++`](https://isocpp.org) · [`GLSL`](<https://www.khronos.org/opengl/wiki/Core_Language_(GLSL)>)
-- 📦 **Frameworks & libraries:** [`React`](https://react.dev) · [`Node.js`](https://nodejs.org) ·
-  [`Flutter`](https://flutter.dev) · [`.NET`](https://dotnet.microsoft.com) ·
-  [`CSS Modules`](https://github.com/css-modules/css-modules) · [`Zod`](https://zod.dev) · [`tRPC`](https://trpc.io) ·
-  [`Prisma`](https://www.prisma.io) · [`WebSockets`](https://developer.mozilla.org/docs/Web/API/WebSockets_API) ·
-  [`WebGL`](https://developer.mozilla.org/docs/Web/API/WebGL_API)
-- 🧰 **Build & tooling:** [`Vite`](https://vite.dev) · [`tsx`](https://tsx.is) · [`tsdown`](https://tsdown.dev) ·
-  [`Git`](https://git-scm.com) · [`GitHub Actions`](https://github.com/features/actions) ·
-  [`Docker`](https://www.docker.com)
-- ✅ **Testing & quality:** [`Vitest`](https://vitest.dev) · [`Jest`](https://jestjs.io) ·
-  [`Puppeteer`](https://pptr.dev) · [`ESLint`](https://eslint.org) · [`Stylelint`](https://stylelint.io) ·
-  [`Prettier`](https://prettier.io)
-
-## 💼 Experience
-
-### Front-end architect, tech lead and lead developer at TravelLine
-
-`2013 — 2026` · [travelline.ru](https://www.travelline.ru/)
-
-I ran the company design systems in a team of 5-7 engineers, combining all three roles. In the last years I designed not
-only the architecture but the whole product concept — Reactor started as my idea and I planned all of it myself.
-
-**Responsibilities:**
-
-- designed the architecture of the design systems and the front-end products
-- built the whole development cycle of the internal projects — tools, workflow, releases and documentation
-- led the team, mentored the engineers, reviewed the code and kept the quality high
-- wrote the core parts of the libraries myself
-- analyzed the user experience and was responsible for its quality
-
-**Projects:**
-
-- **Reactor** — Internal front-end platform of 25 packages that work as a single product. It unifies the development
-  stack and the design of all TravelLine products, and keeps the API and the tools simple.
-
-  A new SPA project needs no setup and no boilerplate and is production ready in about five minutes: design system,
-  state management, router, localization, our own storybook, screenshot testing and coding conventions out of the box,
-  and one CLI tool for the whole workflow from dev server and build to linting, tests, visual regression and release.
-
-  Already in production, and the technical teams in the company are moving to it.
-
-  - **Roles:** architect · tech lead · lead developer
-  - **Stack:** [`TypeScript`](https://www.typescriptlang.org) · [`React`](https://react.dev) ·
-    [`Vite`](https://vite.dev) · [`SCSS`](https://sass-lang.com)
-
-- **TLUI3.0** — Move of the front-end stack to Flutter Web. In one year the team built the design system components, the
-  build and workflow tools and a way to start a new project in minutes.
-
-  The company did not adopt Flutter, so only a part of the work went to production.
-
-  - **Roles:** architect · tech lead · lead developer
-  - **Stack:** [`Dart`](https://dart.dev) · [`Flutter`](https://flutter.dev)
-
-- **TLUI** — Design system and component library that made the whole B2B account and intranet look and work the same
-  way.
-
-  The stack is old and there were almost no tools around it, but the library still runs every screen of the TravelLine
-  back office and is supported and improved.
-
-  - **Roles:** developer · tech lead
-  - **Stack:** [`TypeScript`](https://www.typescriptlang.org) ·
-    [`JavaScript`](https://developer.mozilla.org/docs/Web/JavaScript) · [`AngularJS`](https://angularjs.org) ·
-    [`Less`](https://lesscss.org)
-
-### Developer at iSpring
-
-`2007 — 2013` · [ispringsolutions.com](http://www.ispringsolutions.com/)
-
-**Projects:**
-
-- **Flash media player & charting library**
-  - **Roles:** developer
-  - **Stack:** [`ActionScript 3.0`](https://en.wikipedia.org/wiki/ActionScript) ·
-    [`Flash`](https://en.wikipedia.org/wiki/Adobe_Flash)
-- [SilverX](https://web.archive.org/web/20120506055102/http://www.silverx.net/) — Flash to Silverlight converter
-  - **Roles:** single developer · website developer
-  - **Stack:** [`C#`](https://learn.microsoft.com/dotnet/csharp) · [`C++`](https://isocpp.org) ·
-    [`PHP`](https://www.php.net) · [`JavaScript`](https://developer.mozilla.org/docs/Web/JavaScript) ·
-    [`Silverlight`](https://en.wikipedia.org/wiki/Microsoft_Silverlight) ·
-    [`HTML`](https://developer.mozilla.org/docs/Web/HTML) · [`CSS`](https://developer.mozilla.org/docs/Web/CSS)
-- [PowerMessage](https://web.archive.org/web/20171020002940/http://www.powermessagepro.com/) — PowerPoint add-on to
-  build presentations from templates
-  - **Roles:** single developer
-  - **Stack:** [`C#`](https://learn.microsoft.com/dotnet/csharp) · [`C++`](https://isocpp.org)
-
-### Lead developer and team lead at CPS Labs
-
-`2003 — 2007` · [cpslabs.net](https://www.cpslabs.net/)
-
-**Projects:**
-
-- [JobWindow](https://www.cpslabs.net/project/jobwindow-2-3.html) — Job search system in Switzerland
-  - **Roles:** developer
-  - **Stack:** [`PHP`](https://www.php.net) · [`JavaScript`](https://developer.mozilla.org/docs/Web/JavaScript) ·
-    [`HTML`](https://developer.mozilla.org/docs/Web/HTML) · [`CSS`](https://developer.mozilla.org/docs/Web/CSS)
-- [ActiveSWF](https://www.cpslabs.net/product/activeswf-3-5.html) — SWF file (Flash) generation library
-  - **Roles:** single developer
-  - **Stack:** [`C/C++`](https://isocpp.org) ·
-    [`COM`](https://learn.microsoft.com/windows/win32/com/component-object-model--com--portal) ·
-    [`ActiveX`](https://en.wikipedia.org/wiki/ActiveX)
-- **SlingPlayer** — Streaming media player for [SlingMedia](https://en.wikipedia.org/wiki/Sling_Media)
-  - **Roles:** lead developer · team lead
-  - **Stack:** [`C#`](https://learn.microsoft.com/dotnet/csharp) · [`C/C++`](https://isocpp.org) ·
-    [`WPF`](https://learn.microsoft.com/dotnet/desktop/wpf) ·
-    [`Silverlight`](https://en.wikipedia.org/wiki/Microsoft_Silverlight)
-
-## 🎓 Education
-
-### Master, Volga State University of Technology, Yoshkar-Ola
-
-`1999 — 2004`
-
-## 🚀 Activities
-
-### Machine learning contest
-
-`2015`
-
-I took part in the Beeline Big Data contest. It was my first experience in machine learning so it's been quite a
-challenge for me. I was ranked the 236 out of 832 participants.
-
-**References (in Russian):**
-
-- Contest info and results at
-  [beeline.ru](https://web.archive.org/web/20150920022250/https://special.habrahabr.ru/beeline/)
-
-### ZX-Spectrum
-
-`1995 — 2000`
-
-During my school years my favorite hobby was assembler programming on ZX-Spectrum. I'm the author of RIP (Real
-Information Packer) — LZW/Huffman data compression algorithm and application.
-
-This was a challenge and I managed to achieve one of the best compression ratios compared to other ZX-Spectrum data
-compression tools.
-
-**References (in Russian):**
-
-- About me at [speccy.info](https://speccy.info/%D0%A0%D0%BE%D0%BC%D0%B0%D0%BD_%D0%9F%D0%B5%D1%82%D1%80%D0%BE%D0%B2)
-- RIP at [speccy.info](https://speccy.info/RIP_%28%D1%83%D0%BF%D0%B0%D0%BA%D0%BE%D0%B2%D1%89%D0%B8%D0%BA%29)
-- About RIP at [zxpress.ru](https://zxpress.ru/article.php?id=8510)
-
----
-
-© Roman Petrov
+- 🏗️ `bun run build` — site, print HTML, PDF, OG image, `Roman_Petrov_CV.md`.
+- 👀 `bun run preview` — build and serve `dist` on port `4173`.

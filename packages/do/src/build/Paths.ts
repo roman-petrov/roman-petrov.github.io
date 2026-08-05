@@ -9,7 +9,7 @@ export const Paths = {
   build: path.join(Root, `.build`),
   content: path.join(Root, `resume.yml`),
   dist: path.join(Root, `dist`),
-  markdown: path.join(Root, `README.md`),
+  markdown: path.join(Root, `Roman_Petrov_CV.md`),
   og: path.join(Root, `dist`, `assets`, `og.png`),
   pdf: path.join(Root, `dist`, `Roman_Petrov_CV.pdf`),
   print: path.join(Root, `dist`, `resume.html`),
