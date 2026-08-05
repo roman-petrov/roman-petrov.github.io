@@ -13,10 +13,8 @@ export const SiteBlocks = ({ blocks, columns = false }: SiteBlocksProps) => (
     blocks={blocks}
     classes={{
       label: styles.label,
-      lead: styles.lead,
       list: _.cn(styles.list, columns && styles.columns),
       project: styles,
-      pull: styles.pull,
       showcase: styles,
     }}
     facts={SiteFacts}

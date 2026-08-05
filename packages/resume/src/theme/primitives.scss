@@ -1,5 +1,4 @@
 @use "tokens/font";
-@use "tokens/leading";
 @use "tokens/metrics";
 @use "tokens/radius";
 @use "tokens/space";
@@ -32,18 +31,6 @@
 
   text-transform: uppercase;
   letter-spacing: tracking.mono();
-}
-
-@mixin pull($size) {
-  font-size: $size;
-  font-weight: weight.medium();
-  line-height: leading.snug();
-}
-
-@mixin pull-mark($size) {
-  @include mono($size);
-
-  content: "//";
 }
 
 @mixin pill($gap) {

@@ -8,25 +8,6 @@
 @use "../theme/tokens/text";
 @use "../theme/tokens/weight";
 
-.pull {
-  @include primitives.pull(text.pull());
-
-  margin: 0 0 space.xl();
-  color: color.ink();
-
-  &::before {
-    @include primitives.pull-mark(text.x2xl());
-
-    margin-right: space.sm();
-    color: color.accent();
-  }
-}
-
-.lead {
-  margin: space.lg() 0 space.sm();
-  color: color.ink-soft();
-}
-
 .label {
   @include primitives.label(text.micro());
 

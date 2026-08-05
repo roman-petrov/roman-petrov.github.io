@@ -9,13 +9,13 @@ export type Block =
   | { items: Fact[]; type: `facts` }
   | { items: Project[]; type: `projects` }
   | { items: string[]; type: `list` }
-  | { text: string; type: `label` | `lead` | `pull` | `text` };
+  | { text: string; type: `label` | `text` };
 
 export type Contact = { href?: string; icon: string; label: string; value: string };
 
 export type Entry = { blocks: Block[]; date: string; link?: Link; title: string };
 
-export type Fact = { chips?: string[]; icon: string; label: string; text?: string };
+export type Fact = { chips: string[]; icon: string; label: string };
 
 export type Heading = { icon: string; title: string };
 
@@ -49,8 +49,6 @@ const link = (url: string): Link => {
   return { href: url, label: `${host.replace(/^www\./u, ``)}${pathname.replace(/\/$/u, ``)}` };
 };
 
-const bold = (text: string) => `**${text}**`;
-
 const paragraphs = (text: string) => text.split(`\n`);
 
 const textBlocks = (text: string): Block[] => paragraphs(text).map(item => ({ text: item, type: `text` }));
@@ -75,14 +73,10 @@ const product = ({ name, repo, stack, summary, url }: Resume[`showcase`]): Produ
 
 const heading = ({ icon, title }: Heading): Heading => ({ icon, title });
 
-const profileBlocks = ({ approach, motto, proficiency, wishes }: Resume[`profile`]): Block[] => [
-  { text: motto, type: `pull` },
-  { text: proficiency.lead, type: `lead` },
-  { items: proficiency.areas.map(({ area, detail }) => `${bold(`${area}:`)} ${detail}`), type: `list` },
-  { text: approach, type: `text` },
-  { text: wishes.lead, type: `lead` },
-  { items: wishes.items, type: `list` },
-];
+const factBlock = (groups: Resume[`expertise`][`groups`]): Block => ({
+  items: groups.map(({ icon, items, label }) => ({ chips: items, icon, label })),
+  type: `facts`,
+});
 
 const jobEntry = (job: Job): Entry => ({
   blocks: [
@@ -124,14 +118,11 @@ const contacts: Contact[] = [
 
 const core: Fact = { chips: resume.stack.core, icon: resume.stack.icon, label: resume.stack.title };
 
-const facts: Fact[] = resume.stack.facts.map(({ icon, items, label }) => ({ icon, label, text: items.join(` · `) }));
-
-const skills: Fact[] = resume.stack.groups.map(({ icon, items, label }) => ({ chips: items, icon, label }));
-
 const sections: Section[] = [
-  { ...heading(resume.profile), blocks: profileBlocks(resume.profile), id: `profile` },
+  { ...heading(resume.about), blocks: [{ items: resume.about.items, type: `list` }], id: `about` },
   { ...heading(resume.showcase), blocks: [{ item: product(resume.showcase), type: `showcase` }], id: `showcase` },
-  { ...heading(resume.stack), blocks: [{ items: skills, type: `facts` }], id: `stack` },
+  { ...heading(resume.expertise), blocks: [factBlock(resume.expertise.groups)], id: `expertise` },
+  { ...heading(resume.stack), blocks: [factBlock(resume.stack.groups)], id: `stack` },
   { ...heading(resume.experience), entries: resume.experience.jobs.map(jobEntry), id: `experience` },
   { ...heading(resume.education), entries: resume.education.studies.map(studyEntry), id: `education` },
   { ...heading(resume.activities), entries: resume.activities.items.map(activityEntry), id: `activities` },
@@ -147,4 +138,4 @@ const section = (id: string) => {
   return found;
 };
 
-export const Content = { contacts, core, facts, meta: resume.meta, section, sections };
+export const Content = { contacts, core, meta: resume.meta, section, sections };

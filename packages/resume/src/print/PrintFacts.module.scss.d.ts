@@ -3,7 +3,6 @@ declare const classNames: {
   readonly card: "card";
   readonly group: "group";
   readonly label: "label";
-  readonly text: "text";
   readonly chips: "chips";
   readonly chip: "chip";
 };

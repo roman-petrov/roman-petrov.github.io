@@ -8,24 +8,6 @@
 @use "../theme/tokens/text";
 @use "../theme/tokens/weight";
 
-.pull {
-  @include primitives.pull(text.xl());
-
-  margin-bottom: space.md();
-  color: color.ink();
-
-  &::before {
-    @include primitives.pull-mark(text.lg());
-
-    margin-right: space.xs();
-    color: color.accent-bright();
-  }
-}
-
-.lead {
-  margin-bottom: space.sm();
-}
-
 .label {
   @include primitives.label(text.micro());
 
@@ -99,8 +81,7 @@
 }
 
 @include print {
-  .label,
-  .lead {
+  .label {
     break-after: avoid;
   }
 

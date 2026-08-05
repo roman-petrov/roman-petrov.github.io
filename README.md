@@ -2,8 +2,8 @@
 
 `// SENIOR SOFTWARE DEVELOPER`
 
-[👤 Profile](#-profile) · [🌐 Showcase](#-showcase) · [🛠 Stack](#-stack) · [💼 Experience](#-experience) ·
-[🎓 Education](#-education) · [🚀 Activities](#-activities)
+[👤 About Me](#-about-me) · [🌐 Showcase](#-showcase) · [🧠 Expertise](#-expertise) · [🛠 Stack](#-stack) ·
+[💼 Experience](#-experience) · [🎓 Education](#-education) · [🚀 Activities](#-activities)
 
 Good is not enough
 
@@ -17,26 +17,13 @@ Good is not enough
 
 ---
 
-## 👤 Profile
+## 👤 About Me
 
-> // My favorite tool in software development is **Occam's razor**.
-
-The areas of my proficiency are:
-
-- **problem solving:** analysis, communication, decomposition, MVP
-- **programming:** modular, testable, readable, compact, efficient code
-- **code quality:** automated code analysis, linting, code review
-- **project workflow:** automation, simplification, documentation
-- **user experience:** simplicity, visual perfection, screenshot tests
-- **open source:** use, contribute, learn
-
-I prefer functional programming to object oriented approach and my favorite code unit is **pure function**.
-
-I would like to land a software developer position in a company that:
-
-- cares about the code quality in projects
-- cares about the user experience quality in products
-- provides possibilities to grow as professional
+- My favorite tool in software development is **Occam's razor**.
+- I prefer functional programming to object oriented approach and my favorite code unit is **pure function**.
+- I love **AI-assisted development** and have been building software with AI agents for more than a year.
+- I speak **English** and **Russian**.
+- Beyond work I like **travel**, **camping** and playing the **guitar** — and programming, still.
 
 ## 🌐 Showcase
 
@@ -53,18 +40,24 @@ GitHub Actions runs the checks and the deploy on every change.
 
 `TypeScript` · `React` · `Vite` · `SCSS` · `Bun` · `Puppeteer` · `GitHub Actions`
 
+## 🧠 Expertise
+
+- 🤖 **AI:** `Agents` · `MCP` · `RAG` · `Cursor`
+- 🧩 **Problem solving:** `Analysis` · `Communication` · `Decomposition` · `MVP`
+- 💻 **Programming:** `Modular` · `Testable` · `Readable` · `Compact` · `Efficient`
+- 📐 **Architecture:** `System design` · `API design` · `Design systems` · `Performance`
+- 🔍 **Code quality:** `Automated code analysis` · `Linting` · `Code review`
+- ⚙️ **Project workflow:** `Automation` · `Simplification` · `Documentation` · `Developer experience`
+- 🎨 **User experience:** `Simplicity` · `Visual perfection` · `Screenshot tests`
+- 🌱 **Open source:** `Use` · `Contribute` · `Learn`
+
 ## 🛠 Stack
 
-- 🧠 **Expertise:** `Architecture` · `API design` · `UX` · `DX` · `Performance` · `Code quality` · `Design systems`
 - 💬 **Languages:** `TypeScript` · `JavaScript` · `HTML` · `CSS` · `SCSS` · `Dart` · `C#` · `C/C++` · `GLSL`
 - 📦 **Frameworks & libraries:** `React` · `Node.js` · `Flutter` · `.NET` · `CSS Modules` · `Zod` · `tRPC` · `Prisma` ·
   `WebSockets` · `WebGL`
 - 🧰 **Build & tooling:** `Vite` · `tsx` · `tsdown` · `Git` · `GitHub Actions` · `Docker`
 - ✅ **Testing & quality:** `Vitest` · `Jest` · `Puppeteer` · `ESLint` · `Stylelint` · `Prettier`
-- 🤖 **AI engineering:** `AI agents` · `MCP` · `RAG` · `Cursor`
-
-- 🌍 **Spoken languages:** English · Russian
-- 🎸 **Hobbies:** Programming · Travel · Camping · Guitar
 
 ## 💼 Experience
 

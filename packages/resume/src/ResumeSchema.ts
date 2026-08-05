@@ -2,11 +2,15 @@ import { z } from "zod";
 
 const titled = { icon: z.string(), title: z.string() };
 
-const group = { icon: z.string(), items: z.array(z.string()), label: z.string() };
+const grouped = {
+  ...titled,
+  groups: z.array(z.strictObject({ icon: z.string(), items: z.array(z.string()), label: z.string() })),
+};
 
 const span = { from: z.int(), to: z.int() };
 
 export const ResumeSchema = z.strictObject({
+  about: z.strictObject({ ...titled, items: z.array(z.string()) }),
   activities: z.strictObject({
     ...titled,
     items: z.array(
@@ -45,6 +49,7 @@ export const ResumeSchema = z.strictObject({
       }),
     ),
   }),
+  expertise: z.strictObject(grouped),
   meta: z.strictObject({
     github: z.url(),
     name: z.string(),
@@ -54,16 +59,6 @@ export const ResumeSchema = z.strictObject({
     site: z.url(),
     tagline: z.string(),
   }),
-  profile: z.strictObject({
-    ...titled,
-    approach: z.string(),
-    motto: z.string(),
-    proficiency: z.strictObject({
-      areas: z.array(z.strictObject({ area: z.string(), detail: z.string() })),
-      lead: z.string(),
-    }),
-    wishes: z.strictObject({ items: z.array(z.string()), lead: z.string() }),
-  }),
   showcase: z.strictObject({
     ...titled,
     name: z.string(),
@@ -72,10 +67,5 @@ export const ResumeSchema = z.strictObject({
     summary: z.string(),
     url: z.url(),
   }),
-  stack: z.strictObject({
-    ...titled,
-    core: z.array(z.string()),
-    facts: z.array(z.strictObject(group)),
-    groups: z.array(z.strictObject(group)),
-  }),
+  stack: z.strictObject({ ...grouped, core: z.array(z.string()) }),
 });

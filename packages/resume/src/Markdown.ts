@@ -8,8 +8,7 @@ const bullet = (text: string) => `- ${text}`;
 
 const chip = (text: string) => `\`${text}\``;
 
-const paragraph = ({ text, type }: Extract<Block, { text: string }>) =>
-  type === `pull` ? `> // ${text}` : type === `label` ? `**${text}:**` : text;
+const paragraph = ({ text, type }: Extract<Block, { text: string }>) => (type === `label` ? `**${text}:**` : text);
 
 const projectItem = ({ href, name, note: [lead, ...rest], roles, stack }: Project) =>
   [
@@ -27,8 +26,7 @@ const productCard = ({ links, name, note, stack }: Product) =>
     stack.map(chip).join(` · `),
   ].join(`\n\n`);
 
-const factLine = ({ chips, icon, label, text }: Fact) =>
-  `${icon} **${label}:** ${chips === undefined ? (text ?? ``) : chips.map(chip).join(` · `)}`;
+const factLine = ({ chips, icon, label }: Fact) => `${icon} **${label}:** ${chips.map(chip).join(` · `)}`;
 
 const block = (item: Block) =>
   item.type === `showcase`
@@ -55,12 +53,7 @@ const headline = ({ icon, title }: Section) => `${icon} ${title}`;
 const navLink = (item: Section) => `[${headline(item)}](#${slug(headline(item))})`;
 
 const section = (item: Section) =>
-  [
-    `## ${headline(item)}`,
-    ...(item.entries ?? []).map(entry),
-    ...(item.blocks ?? []).map(block),
-    ...(item.id === `stack` ? [block({ items: Content.facts, type: `facts` })] : []),
-  ].join(`\n\n`);
+  [`## ${headline(item)}`, ...(item.entries ?? []).map(entry), ...(item.blocks ?? []).map(block)].join(`\n\n`);
 
 const render = () =>
   `${[

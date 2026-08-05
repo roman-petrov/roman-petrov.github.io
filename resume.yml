@@ -15,33 +15,15 @@ contacts:
   email: romanpetrov@list.ru
   github: github.com/roman-petrov
 
-profile:
+about:
   icon: 👤
-  title: Profile
-  motto: My favorite tool in software development is **Occam's razor**.
-  proficiency:
-    lead: "The areas of my proficiency are:"
-    areas:
-      - area: problem solving
-        detail: analysis, communication, decomposition, MVP
-      - area: programming
-        detail: modular, testable, readable, compact, efficient code
-      - area: code quality
-        detail: automated code analysis, linting, code review
-      - area: project workflow
-        detail: automation, simplification, documentation
-      - area: user experience
-        detail: simplicity, visual perfection, screenshot tests
-      - area: open source
-        detail: use, contribute, learn
-  approach: >-
-    I prefer functional programming to object oriented approach and my favorite code unit is **pure function**.
-  wishes:
-    lead: "I would like to land a software developer position in a company that:"
-    items:
-      - cares about the code quality in projects
-      - cares about the user experience quality in products
-      - provides possibilities to grow as professional
+  title: About Me
+  items:
+    - My favorite tool in software development is **Occam's razor**.
+    - I prefer functional programming to object oriented approach and my favorite code unit is **pure function**.
+    - I love **AI-assisted development** and have been building software with AI agents for more than a year.
+    - I speak **English** and **Russian**.
+    - Beyond work I like **travel**, **camping** and playing the **guitar** — and programming, still.
 
 showcase:
   icon: 🌐
@@ -57,14 +39,40 @@ showcase:
   repo: https://github.com/roman-petrov/roman-petrov.github.io
   stack: [TypeScript, React, Vite, SCSS, Bun, Puppeteer, GitHub Actions]
 
+expertise:
+  icon: 🧠
+  title: Expertise
+  groups:
+    - icon: 🤖
+      label: AI
+      items: [Agents, MCP, RAG, Cursor]
+    - icon: 🧩
+      label: Problem solving
+      items: [Analysis, Communication, Decomposition, MVP]
+    - icon: 💻
+      label: Programming
+      items: [Modular, Testable, Readable, Compact, Efficient]
+    - icon: 📐
+      label: Architecture
+      items: [System design, API design, Design systems, Performance]
+    - icon: 🔍
+      label: Code quality
+      items: [Automated code analysis, Linting, Code review]
+    - icon: ⚙️
+      label: Project workflow
+      items: [Automation, Simplification, Documentation, Developer experience]
+    - icon: 🎨
+      label: User experience
+      items: [Simplicity, Visual perfection, Screenshot tests]
+    - icon: 🌱
+      label: Open source
+      items: [Use, Contribute, Learn]
+
 stack:
   icon: 🛠
   title: Stack
   core: [TypeScript, React, Node.js]
   groups:
-    - icon: 🧠
-      label: Expertise
-      items: [Architecture, API design, UX, DX, Performance, Code quality, Design systems]
     - icon: 💬
       label: Languages
       items: [TypeScript, JavaScript, HTML, CSS, SCSS, Dart, C#, C/C++, GLSL]
@@ -77,16 +85,6 @@ stack:
     - icon: ✅
       label: Testing & quality
       items: [Vitest, Jest, Puppeteer, ESLint, Stylelint, Prettier]
-    - icon: 🤖
-      label: AI engineering
-      items: [AI agents, MCP, RAG, Cursor]
-  facts:
-    - icon: 🌍
-      label: Spoken languages
-      items: [English, Russian]
-    - icon: 🎸
-      label: Hobbies
-      items: [Programming, Travel, Camping, Guitar]
 
 experience:
   icon: 💼

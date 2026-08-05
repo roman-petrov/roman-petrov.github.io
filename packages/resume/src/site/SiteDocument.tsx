@@ -1,17 +1,14 @@
 import { Content } from "../Content";
 import { SiteEntries } from "./SiteEntries";
 import { SiteFooter } from "./SiteFooter";
+import { SiteGroups } from "./SiteGroups";
 import { SiteHero } from "./SiteHero";
 import { SiteNav } from "./SiteNav";
 import { SiteProgress } from "./SiteProgress";
 import { SiteProse } from "./SiteProse";
-import { SiteSection } from "./SiteSection";
-import { SiteStack } from "./SiteStack";
 
 export const SiteDocument = () => {
   const title = `${Content.meta.name} — ${Content.meta.role}`;
-  const profile = Content.section(`profile`);
-  const showcase = Content.section(`showcase`);
 
   return (
     <html lang="en">
@@ -38,13 +35,10 @@ export const SiteDocument = () => {
         <SiteNav />
         <main>
           <SiteHero />
-          <SiteSection icon={profile.icon} id={profile.id} title={profile.title}>
-            <SiteProse blocks={profile.blocks ?? []} />
-          </SiteSection>
-          <SiteSection icon={showcase.icon} id={showcase.id} title={showcase.title}>
-            <SiteProse blocks={showcase.blocks ?? []} />
-          </SiteSection>
-          <SiteStack />
+          <SiteProse section={Content.section(`about`)} />
+          <SiteProse section={Content.section(`showcase`)} />
+          <SiteGroups section={Content.section(`expertise`)} />
+          <SiteGroups section={Content.section(`stack`)} />
           <SiteEntries section={Content.section(`experience`)} />
           <SiteEntries section={Content.section(`education`)} />
           <SiteEntries section={Content.section(`activities`)} />

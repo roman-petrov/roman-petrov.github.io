@@ -2,6 +2,16 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "properties": {
+    "about": {
+      "type": "object",
+      "properties": {
+        "icon": { "type": "string" },
+        "title": { "type": "string" },
+        "items": { "type": "array", "items": { "type": "string" } }
+      },
+      "required": ["icon", "title", "items"],
+      "additionalProperties": false
+    },
     "activities": {
       "type": "object",
       "properties": {
@@ -110,6 +120,28 @@
       "required": ["icon", "title", "jobs"],
       "additionalProperties": false
     },
+    "expertise": {
+      "type": "object",
+      "properties": {
+        "icon": { "type": "string" },
+        "title": { "type": "string" },
+        "groups": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "icon": { "type": "string" },
+              "items": { "type": "array", "items": { "type": "string" } },
+              "label": { "type": "string" }
+            },
+            "required": ["icon", "items", "label"],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": ["icon", "title", "groups"],
+      "additionalProperties": false
+    },
     "meta": {
       "type": "object",
       "properties": {
@@ -122,40 +154,6 @@
         "tagline": { "type": "string" }
       },
       "required": ["github", "name", "pdf", "photo", "role", "site", "tagline"],
-      "additionalProperties": false
-    },
-    "profile": {
-      "type": "object",
-      "properties": {
-        "icon": { "type": "string" },
-        "title": { "type": "string" },
-        "approach": { "type": "string" },
-        "motto": { "type": "string" },
-        "proficiency": {
-          "type": "object",
-          "properties": {
-            "areas": {
-              "type": "array",
-              "items": {
-                "type": "object",
-                "properties": { "area": { "type": "string" }, "detail": { "type": "string" } },
-                "required": ["area", "detail"],
-                "additionalProperties": false
-              }
-            },
-            "lead": { "type": "string" }
-          },
-          "required": ["areas", "lead"],
-          "additionalProperties": false
-        },
-        "wishes": {
-          "type": "object",
-          "properties": { "items": { "type": "array", "items": { "type": "string" } }, "lead": { "type": "string" } },
-          "required": ["items", "lead"],
-          "additionalProperties": false
-        }
-      },
-      "required": ["icon", "title", "approach", "motto", "proficiency", "wishes"],
       "additionalProperties": false
     },
     "showcase": {
@@ -177,20 +175,6 @@
       "properties": {
         "icon": { "type": "string" },
         "title": { "type": "string" },
-        "core": { "type": "array", "items": { "type": "string" } },
-        "facts": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "icon": { "type": "string" },
-              "items": { "type": "array", "items": { "type": "string" } },
-              "label": { "type": "string" }
-            },
-            "required": ["icon", "items", "label"],
-            "additionalProperties": false
-          }
-        },
         "groups": {
           "type": "array",
           "items": {
@@ -203,12 +187,13 @@
             "required": ["icon", "items", "label"],
             "additionalProperties": false
           }
-        }
+        },
+        "core": { "type": "array", "items": { "type": "string" } }
       },
-      "required": ["icon", "title", "core", "facts", "groups"],
+      "required": ["icon", "title", "groups", "core"],
       "additionalProperties": false
     }
   },
-  "required": ["activities", "contacts", "education", "experience", "meta", "profile", "showcase", "stack"],
+  "required": ["about", "activities", "contacts", "education", "experience", "expertise", "meta", "showcase", "stack"],
   "additionalProperties": false
 }
