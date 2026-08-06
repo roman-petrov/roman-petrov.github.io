@@ -103,9 +103,9 @@ inside and less than a kilobyte of JavaScript — 100 out of 100 in PageSpeed In
 
 ## 💼 Experience
 
-### TravelLine
+### [TravelLine](https://www.travelline.ru/)
 
-`2013 — 2026` ([travelline.ru](https://www.travelline.ru/))
+`2013 — 2026`
 
 `front-end architect` ◆ `tech lead` ◆ `lead developer`
 
@@ -161,9 +161,9 @@ only the architecture but the whole product concept — Reactor started as my id
   [`TypeScript`](https://www.typescriptlang.org) · [`JavaScript`](https://developer.mozilla.org/docs/Web/JavaScript) ·
   [`AngularJS`](https://angularjs.org) · [`Less`](https://lesscss.org)
 
-### iSpring
+### [iSpring](http://www.ispringsolutions.com/)
 
-`2007 — 2013` ([ispringsolutions.com](http://www.ispringsolutions.com/))
+`2007 — 2013`
 
 `developer`
 
@@ -195,9 +195,9 @@ only the architecture but the whole product concept — Reactor started as my id
 
   [`C#`](https://learn.microsoft.com/dotnet/csharp) · [`C++`](https://isocpp.org)
 
-### CPS Labs
+### [CPS Labs](https://www.cpslabs.net/)
 
-`2003 — 2007` ([cpslabs.net](https://www.cpslabs.net/))
+`2003 — 2007`
 
 `lead developer` ◆ `team lead`
 
