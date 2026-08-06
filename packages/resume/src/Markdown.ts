@@ -52,11 +52,10 @@ const block = (item: Block) =>
           ? item.items.map(bullet).join(`\n`)
           : paragraph(item);
 
-const entry = ({ blocks, date, link, roles, title }: Entry) => {
-  const site = link === undefined ? [] : [`([${link.label}](${link.href}))`];
-  const rail = [chip(date), ...site].join(` `);
+const entry = ({ blocks, date, href, roles, title }: Entry) => {
+  const head = href === undefined ? `### ${title}` : `### [${title}](${href})`;
 
-  return [`### ${title}`, rail, ...(roles === undefined ? [] : [roleLine(roles)]), ...blocks.map(block)].join(`\n\n`);
+  return [head, chip(date), ...(roles === undefined ? [] : [roleLine(roles)]), ...blocks.map(block)].join(`\n\n`);
 };
 
 const contactLine = ({ href, icon, value }: Contact) =>

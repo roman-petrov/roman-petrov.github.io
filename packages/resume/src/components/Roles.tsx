@@ -5,9 +5,9 @@ import styles from "./Roles.module.scss";
 export type RolesProps = { items: string[]; size: `sm` | `xs` };
 
 export const Roles = ({ items, size }: RolesProps) => (
-  <p className={styles.root}>
+  <p className={_.cn(styles.root, styles[size])}>
     {items.map(item => (
-      <span className={_.cn(styles.role, styles[size])} key={item}>
+      <span className={styles.role} key={item}>
         {item}
       </span>
     ))}

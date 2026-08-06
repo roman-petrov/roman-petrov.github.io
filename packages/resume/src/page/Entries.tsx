@@ -1,6 +1,6 @@
 import type { Section as SectionData } from "../Content";
 
-import { Blocks, Inline, Roles } from "../components";
+import { Blocks, Lead } from "../components";
 import styles from "./Entries.module.scss";
 import { Reveal } from "./Reveal";
 import { Section } from "./Section";
@@ -13,20 +13,7 @@ export const Entries = ({ section }: EntriesProps) => (
       {(section.entries ?? []).map((entry, index) => (
         <Reveal cn={styles.entry} index={index} key={entry.title} tag="li">
           <header className={styles.head}>
-            <div className={styles.line}>
-              <span className={styles.date}>{entry.date}</span>
-              <h3 className={styles.title}>
-                <Inline text={entry.title} />
-              </h3>
-              {entry.link === undefined ? undefined : (
-                <span className={styles.source}>
-                  <a className={styles.link} href={entry.link.href}>
-                    {entry.link.label}
-                  </a>
-                </span>
-              )}
-            </div>
-            {entry.roles === undefined ? undefined : <Roles items={entry.roles} size="sm" />}
+            <Lead date={entry.date} href={entry.href} roles={entry.roles} size="lg" title={entry.title} titleAs="h3" />
           </header>
           <Blocks blocks={entry.blocks} />
         </Reveal>

@@ -1,8 +1,6 @@
 @use "../theme/core" as *;
 @use "../theme/materials";
-@use "../theme/primitives";
 @use "../theme/tokens/space";
-@use "../theme/tokens/text";
 
 .root {
   display: grid;
@@ -22,18 +20,6 @@
   display: grid;
   gap: space.sm();
   padding: space.lg();
-}
-
-.head {
-  display: grid;
-  gap: space.x2s();
-  margin: 0;
-}
-
-.name {
-  @include primitives.heading(text.xl());
-
-  justify-self: start;
 }
 
 .note {

@@ -13,7 +13,7 @@ export type Block =
 
 export type Contact = { href?: string; icon: string; label: string; value: string };
 
-export type Entry = { blocks: Block[]; date: string; link?: Link; roles?: string[]; title: string };
+export type Entry = { blocks: Block[]; date: string; href?: string; roles?: string[]; title: string };
 
 export type Fact = { chips: string[]; icon: string; label: string; tech?: boolean };
 
@@ -42,12 +42,6 @@ type Study = Resume[`education`][`studies`][number];
 const resume = Yaml as Resume;
 
 const period = ({ from, to }: Span) => (to === from ? String(from) : `${String(from)} — ${String(to)}`);
-
-const link = (url: string): Link => {
-  const { host, pathname } = new URL(url);
-
-  return { href: url, label: `${host.replace(/^www\./u, ``)}${pathname.replace(/\/$/u, ``)}` };
-};
 
 const paragraphs = (text: string) => text.split(`\n`);
 
@@ -88,7 +82,7 @@ const jobEntry = (job: Job): Entry => ({
     { items: job.projects.map(project), type: `projects` },
   ],
   date: period(job),
-  link: job.url === undefined ? undefined : link(job.url),
+  href: job.url,
   roles: job.roles,
   title: job.company,
 });

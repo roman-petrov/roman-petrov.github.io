@@ -1,8 +1,6 @@
 @use "../theme/core" as *;
-@use "../theme/primitives";
 @use "../theme/tokens/color";
 @use "../theme/tokens/space";
-@use "../theme/tokens/text";
 
 .root {
   display: grid;
@@ -24,44 +22,7 @@
     break-inside: avoid;
   }
 
-  display: grid;
-  gap: space.xs();
   padding-bottom: space.md();
   margin-bottom: space.lg();
   border-bottom: 1px solid color.line-strong();
-}
-
-.line {
-  display: flex;
-  flex-wrap: wrap;
-  gap: space.sm();
-  align-items: baseline;
-  margin: 0;
-}
-
-.date {
-  @include primitives.label(text.xs());
-
-  color: color.ink-fade();
-}
-
-.title {
-  @include primitives.heading(text.pull());
-}
-
-.source {
-  font-size: text.sm();
-  color: color.ink-fade();
-
-  &::before {
-    content: "(";
-  }
-
-  &::after {
-    content: ")";
-  }
-}
-
-.link {
-  overflow-wrap: anywhere;
 }

@@ -7,13 +7,11 @@
 .root {
   display: flex;
   flex-wrap: wrap;
-  gap: space.sm();
   margin: 0;
 }
 
 .role {
   display: inline-flex;
-  gap: space.sm();
   align-items: center;
   color: color.accent();
 
@@ -25,9 +23,21 @@
 }
 
 .sm {
-  @include primitives.label(text.sm());
+  gap: space.sm();
+
+  .role {
+    @include primitives.label(text.sm());
+
+    gap: space.sm();
+  }
 }
 
 .xs {
-  @include primitives.label(text.xs());
+  gap: space.xs();
+
+  .role {
+    @include primitives.label(text.xs());
+
+    gap: space.xs();
+  }
 }

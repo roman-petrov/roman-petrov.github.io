@@ -2,8 +2,8 @@ import type { Project } from "../Content";
 
 import { Chips } from "./Chips";
 import { Inline } from "./Inline";
+import { Lead } from "./Lead";
 import styles from "./Projects.module.scss";
-import { Roles } from "./Roles";
 
 export type ProjectsProps = { items: Project[] };
 
@@ -11,16 +11,7 @@ export const Projects = ({ items }: ProjectsProps) => (
   <ul className={styles.root}>
     {items.map(({ href, name, note, roles, stack }) => (
       <li className={styles.project} key={name}>
-        <div className={styles.head}>
-          {href === undefined ? (
-            <span className={styles.name}>{name}</span>
-          ) : (
-            <a className={styles.name} href={href}>
-              {name}
-            </a>
-          )}
-          <Roles items={roles} size="xs" />
-        </div>
+        <Lead href={href} roles={roles} size="md" title={name} />
         {note.map((item, index) => (
           <p className={styles.note} key={index}>
             <Inline text={item} />

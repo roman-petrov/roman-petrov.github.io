@@ -1,11 +1,13 @@
-import type { ViteDevServer } from "vite";
-
 import type { CommandOutcome } from "./Command";
 
-const hold = async (server: ViteDevServer): Promise<CommandOutcome> => {
+type Closable = { close: () => Promise<unknown> };
+
+const hold = async (server: Closable): Promise<CommandOutcome> => {
   await new Promise<void>(resolve => {
     const stop = () => {
-      void server.close().finally(() => resolve());
+      void server.close().finally(() => {
+        resolve();
+      });
     };
 
     process.once(`SIGINT`, stop);
