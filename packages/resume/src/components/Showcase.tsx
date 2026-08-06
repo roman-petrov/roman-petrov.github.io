@@ -1,22 +1,21 @@
 import type { Product } from "../Content";
 
+import styles from "./Blocks.module.scss";
 import { Ico } from "./Ico";
 import { Inline } from "./Inline";
 import { TechChip } from "./TechChip";
 
-export type ShowcaseClasses = Partial<Record<`chip` | `links` | `note` | `showcase` | `stack` | `title`, string>>;
+export type ShowcaseProps = { item: Product };
 
-export type ShowcaseProps = { classes: ShowcaseClasses; item: Product };
-
-export const Showcase = ({ classes, item: { links, name, note, stack } }: ShowcaseProps) => (
-  <div className={classes.showcase}>
-    <h3 className={classes.title}>{name}</h3>
+export const Showcase = ({ item: { links, name, note, stack } }: ShowcaseProps) => (
+  <div className={styles.showcase}>
+    <h3 className={styles.title}>{name}</h3>
     {note.map((item, index) => (
-      <p className={classes.note} key={index}>
+      <p className={styles.note} key={index}>
         <Inline text={item} />
       </p>
     ))}
-    <ul className={classes.links}>
+    <ul className={styles.links}>
       {links.map(({ href, icon, label }) => (
         <li key={href}>
           <a href={href}>
@@ -26,10 +25,10 @@ export const Showcase = ({ classes, item: { links, name, note, stack } }: Showca
         </li>
       ))}
     </ul>
-    <ul className={classes.stack}>
+    <ul className={styles.stack}>
       {stack.map(item => (
         <li key={item}>
-          <TechChip cn={classes.chip} name={item} />
+          <TechChip cn={styles.chip} name={item} />
         </li>
       ))}
     </ul>

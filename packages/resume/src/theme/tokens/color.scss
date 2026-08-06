@@ -40,10 +40,6 @@
   @return -color("chrome-strong");
 }
 
-@function desk() {
-  @return -color("desk");
-}
-
 @function glass() {
   @return -color("glass");
 }
@@ -54,10 +50,6 @@
 
 @function glow() {
   @return -color("glow");
-}
-
-@function inlay() {
-  @return -color("inlay");
 }
 
 @function ink() {
@@ -86,14 +78,6 @@
 
 @function on-accent() {
   @return -color("on-accent");
-}
-
-@function paper() {
-  @return -color("paper");
-}
-
-@function rule() {
-  @return -color("rule");
 }
 
 @function shadow() {

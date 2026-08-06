@@ -31,8 +31,8 @@ A resume built like real software. One YAML file holds all the text, and the bui
 website, a PDF and a Markdown CV. Nothing is written twice.
 
 React renders static HTML, a micro design system in typed SCSS holds the light and dark themes, Puppeteer prints the PDF
-and GitHub Actions checks and deploys it on every push. The site is one HTML file with the styles inside and less than a
-kilobyte of JavaScript — 100 out of 100 in PageSpeed Insights.
+from the same page and GitHub Actions checks and deploys it on every push. The site is one HTML file with the styles
+inside and less than a kilobyte of JavaScript — 100 out of 100 in PageSpeed Insights.
 
 🌐 [See it live](https://roman-petrov.github.io/) · 🔗 [GitHub](https://github.com/roman-petrov/roman-petrov.github.io)
 

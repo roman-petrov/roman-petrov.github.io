@@ -1,27 +1,24 @@
 import type { Fact } from "../Content";
 
 import { Chip } from "./Chip";
+import styles from "./Facts.module.scss";
 import { Ico } from "./Ico";
 import { TechChip } from "./TechChip";
 
-export type FactsClasses = Partial<Record<`chip` | `chips` | `facts` | `group` | `label`, string>>;
+export type FactsProps = { items: Fact[] };
 
-export type FactsItemsProps = { items: Fact[] };
-
-export type FactsProps = FactsItemsProps & { classes: FactsClasses };
-
-export const Facts = ({ classes, items }: FactsProps) => (
-  <div className={classes.facts}>
+export const Facts = ({ items }: FactsProps) => (
+  <div className={styles.facts}>
     {items.map(({ chips, icon, label, tech = false }) => (
-      <div className={classes.group} key={label}>
-        <p className={classes.label}>
+      <div className={styles.group} key={label}>
+        <p className={styles.label}>
           <Ico>{icon}</Ico>
           {` ${label}`}
         </p>
-        <ul className={classes.chips}>
+        <ul className={styles.chips}>
           {chips.map(name => (
             <li key={name}>
-              {tech ? <TechChip cn={classes.chip} name={name} /> : <Chip cn={classes.chip} label={name} />}
+              {tech ? <TechChip cn={styles.chip} name={name} /> : <Chip cn={styles.chip} label={name} />}
             </li>
           ))}
         </ul>

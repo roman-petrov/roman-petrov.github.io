@@ -1,0 +1,38 @@
+@use "../theme/core" as *;
+@use "../theme/primitives";
+@use "../theme/tokens/color";
+@use "../theme/tokens/space";
+@use "../theme/tokens/text";
+
+.root {
+  margin-top: space.x2xl();
+  border-top: 1px solid color.line();
+}
+
+.inner {
+  @include primitives.wrap;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: space.lg();
+  align-items: center;
+  justify-content: space-between;
+  padding: space.x2xl() 0;
+}
+
+.actions {
+  display: flex;
+  gap: space.md();
+}
+
+.note {
+  margin: 0;
+  font-size: text.sm();
+  color: color.muted();
+}
+
+@include print {
+  .root {
+    display: none;
+  }
+}

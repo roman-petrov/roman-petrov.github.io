@@ -1,0 +1,35 @@
+@use "../theme/core" as *;
+@use "../theme/materials";
+@use "../theme/primitives";
+@use "../theme/tokens/color";
+@use "../theme/tokens/space";
+@use "../theme/tokens/text";
+
+.facts {
+  display: grid;
+  gap: space.lg();
+}
+
+.group {
+  @include print {
+    break-inside: avoid;
+  }
+
+  display: grid;
+  gap: space.xs();
+}
+
+.label {
+  @include primitives.label(text.xs());
+
+  margin: 0;
+  color: color.ink-fade();
+}
+
+.chips {
+  @include primitives.row-list(space.sm());
+}
+
+.chip {
+  @include materials.chip;
+}

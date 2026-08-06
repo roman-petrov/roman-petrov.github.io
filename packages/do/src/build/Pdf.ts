@@ -6,7 +6,7 @@ const render = async () => {
 
   try {
     await page.emulateMediaType(`print`);
-    await Browser.show(page, Paths.print);
+    await Browser.show(page, Paths.site);
     await page.pdf({ path: Paths.pdf, preferCSSPageSize: true, printBackground: true });
   } finally {
     await browser.close();

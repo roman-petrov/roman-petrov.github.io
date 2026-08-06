@@ -21,9 +21,3 @@ $breakpoint-mobile: 768px;
     @content;
   }
 }
-
-@mixin screen {
-  @media screen {
-    @content;
-  }
-}

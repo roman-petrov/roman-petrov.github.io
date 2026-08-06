@@ -22,7 +22,7 @@ CV as code: site, PDF and Markdown from one [`resume.yml`](resume.yml).
 ### ⌨️ Commands
 
 - ✅ `bun run ci` — tests, all checks, production build.
-- 🏗️ `bun run build` — site, print HTML, PDF, OG image, `Roman_Petrov_CV.md`.
+- 🏗️ `bun run build` — site, PDF, OG image, `Roman_Petrov_CV.md`.
 - 👀 `bun run preview` — build and serve `dist` on port `4173`.
 - 🛡️ `bun run lint` — every checker without the build.
 - 🧪 `bun run test` — unit tests.

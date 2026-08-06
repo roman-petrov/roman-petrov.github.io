@@ -1,3 +1,4 @@
+@use "core" as *;
 @use "tokens/font";
 @use "tokens/metrics";
 @use "tokens/radius";
@@ -6,6 +7,11 @@
 @use "tokens/weight";
 
 @mixin wrap {
+  @include print {
+    width: auto;
+    margin: 0;
+  }
+
   width: min(100% - #{space.x2xl()}, #{metrics.wrap()});
   margin: 0 auto;
 }

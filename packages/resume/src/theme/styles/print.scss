@@ -1,85 +1,19 @@
 @use "../core" as *;
-@use "../tokens/color";
-@use "../tokens/font";
-@use "../tokens/leading";
-@use "../tokens/space";
-@use "../tokens/text";
-@use "../tokens/weight";
-@use "common";
-
-$-page-font-size: 11pt;
-
-:root {
-  --color-accent: #1257c4;
-  --color-accent-deep: #0a3f8c;
-  --color-accent-line: rgb(18 87 196 / 26%);
-  --color-accent-soft: #e2ecfd;
-  --color-desk: #c9d0dc;
-  --color-inlay: #eef2f8;
-  --color-ink: #0b1220;
-  --color-ink-soft: #2b3648;
-  --color-line: #d9e1ec;
-  --color-line-strong: #c8d3e3;
-  --color-muted: #55617a;
-  --color-on-accent: #fff;
-  --color-paper: #fff;
-  --color-rule: #e2e8f1;
-  --color-shadow: rgb(11 18 32 / 16%);
-  --color-shadow-soft: rgb(11 18 32 / 6%);
-  --color-sky-bright: #0891b2;
-}
-
-html {
-  font-size: $-page-font-size;
-  -webkit-print-color-adjust: exact;
-  print-color-adjust: exact;
-}
-
-body {
-  margin: 0;
-  font-family: font.sans();
-  font-size: text.lg();
-  font-weight: weight.regular();
-  line-height: leading.normal();
-  color: color.ink-soft();
-  background: color.desk();
-}
-
-p {
-  margin: 0 0 space.sm();
-}
-
-a {
-  color: color.accent();
-  text-decoration: none;
-  border-bottom: 1px solid color.accent-line();
-}
-
-strong {
-  font-weight: weight.semibold();
-  color: color.ink();
-}
 
 @page {
   size: a4;
   margin: 13mm;
 }
 
-@include screen {
-  body {
-    padding: space.xl();
-  }
-}
-
 @include print {
-  html,
+  html {
+    scroll-behavior: auto;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
   body {
-    width: auto;
-    min-height: 0;
-    padding: 0;
-    margin: 0;
-    font-size: $-page-font-size;
-    background: color.paper();
+    background: none;
   }
 
   p,

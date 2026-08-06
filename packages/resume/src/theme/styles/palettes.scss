@@ -1,3 +1,4 @@
+@use "sass:map";
 @use "../token";
 
 $-dark: (
@@ -51,6 +52,19 @@ $-light: (
   sky-bright: #0891b2,
 );
 
+// Paper has no layers to blend with, and translucent fills force the PDF renderer to rasterize whole blocks.
+$-paper: map.merge(
+  $-light,
+  (
+    accent-line: #b8d1f3,
+    accent-soft: #e7f0fb,
+    glass: #fff,
+    glass-strong: #fff,
+    line: #e2e3e4,
+    line-strong: #ced0d2,
+  )
+);
+
 :root {
   @include token.root("color", $-dark);
 
@@ -75,4 +89,13 @@ $-light: (
   @include token.root("color", $-light);
 
   color-scheme: light;
+}
+
+@media print {
+  :root,
+  :root[data-theme] {
+    @include token.root("color", $-paper);
+
+    color-scheme: light;
+  }
 }

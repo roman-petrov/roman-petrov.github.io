@@ -1,0 +1,40 @@
+@use "../theme/core" as *;
+@use "../theme/patterns";
+@use "../theme/primitives";
+@use "../theme/tokens/color";
+@use "../theme/tokens/metrics";
+@use "../theme/tokens/space";
+@use "../theme/tokens/text";
+
+.root {
+  @include primitives.wrap;
+
+  padding: space.x2xl() 0;
+  scroll-margin-top: calc(#{metrics.nav()} + #{space.lg()});
+}
+
+.head {
+  @include print {
+    break-after: avoid;
+    break-inside: avoid;
+  }
+
+  display: flex;
+  gap: space.lg();
+  align-items: center;
+  margin-bottom: space.xl();
+}
+
+.title {
+  @include patterns.heading(text.title());
+
+  display: flex;
+  gap: space.sm();
+  align-items: baseline;
+}
+
+.rule {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, color.line-strong(), transparent);
+}

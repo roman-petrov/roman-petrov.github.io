@@ -3,11 +3,10 @@
 @use "tokens/color";
 @use "tokens/leading";
 @use "tokens/space";
-@use "tokens/text";
 @use "tokens/tracking";
 @use "tokens/weight";
 
-@mixin -heading($size) {
+@mixin heading($size) {
   margin: 0;
   font-size: $size;
   font-weight: weight.semibold();
@@ -16,75 +15,7 @@
   letter-spacing: tracking.snug();
 }
 
-@mixin section-head($size, $gap, $below) {
-  .head {
-    display: flex;
-    gap: $gap;
-    align-items: center;
-    margin-bottom: $below;
-  }
-
-  .title {
-    @include -heading($size);
-
-    display: flex;
-    gap: space.sm();
-    align-items: baseline;
-  }
-
-  .rule {
-    flex: 1;
-    height: 1px;
-    background: linear-gradient(90deg, color.line-strong(), transparent);
-  }
-}
-
-@mixin facts($gap, $group-gap, $chip-gap) {
-  .facts {
-    display: grid;
-    gap: $gap;
-  }
-
-  .group {
-    display: grid;
-    gap: $group-gap;
-  }
-
-  .label {
-    @include primitives.label(text.xs());
-
-    margin: 0;
-    color: color.ink-fade();
-  }
-
-  .chips {
-    @include primitives.row-list($chip-gap);
-  }
-}
-
-@mixin kicker($below) {
-  .kicker {
-    @include primitives.label(text.sm());
-
-    display: flex;
-    flex-wrap: wrap;
-    gap: space.sm();
-    align-items: center;
-    margin: space.sm() 0 $below;
-    color: color.ink-soft();
-  }
-
-  .slash {
-    color: color.ink-fade();
-  }
-
-  .tagline {
-    font-weight: weight.semibold();
-    color: color.accent();
-  }
-}
-
-@mixin -roles($size) {
+@mixin roles($size) {
   .roles {
     display: flex;
     flex-wrap: wrap;
@@ -105,72 +36,5 @@
 
       flex: none;
     }
-  }
-}
-
-@mixin entry-head($size, $gap, $pad, $below) {
-  @include -roles(text.sm());
-
-  .line {
-    display: flex;
-    flex-wrap: wrap;
-    gap: space.sm();
-    align-items: baseline;
-    margin: 0;
-  }
-
-  .head {
-    display: grid;
-    gap: $gap;
-    padding-bottom: $pad;
-    margin-bottom: $below;
-    border-bottom: 1px solid color.line-strong();
-  }
-
-  .date {
-    @include primitives.label(text.xs());
-
-    color: color.ink-fade();
-  }
-
-  .source {
-    font-size: text.sm();
-    color: color.ink-fade();
-
-    &::before {
-      content: "(";
-    }
-
-    &::after {
-      content: ")";
-    }
-  }
-
-  .link {
-    overflow-wrap: anywhere;
-  }
-
-  .title {
-    @include -heading($size);
-  }
-}
-
-@mixin project($stack-gap) {
-  @include -roles(text.xs());
-
-  .head {
-    display: grid;
-    gap: space.x2s();
-    margin: 0;
-  }
-
-  .name {
-    @include -heading(text.xl());
-
-    justify-self: start;
-  }
-
-  .stack {
-    @include primitives.row-list($stack-gap);
   }
 }

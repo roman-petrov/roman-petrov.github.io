@@ -103,8 +103,7 @@ const run = async () => {
 
   const assets = { css: await copyFonts(), script: await buildScript() };
 
-  await renderPage(`EntrySite`, Paths.site, assets);
-  await renderPage(`EntryPrint`, Paths.print, assets);
+  await renderPage(`EntryPage`, Paths.site, assets);
   await writeContent();
   await Pdf.render();
   await Og.render();

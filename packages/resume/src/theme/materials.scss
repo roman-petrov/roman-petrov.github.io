@@ -17,7 +17,7 @@
   border-radius: radius.sm();
 }
 
-@mixin chip-site {
+@mixin chip {
   @include -chip;
 
   color: color.ink-soft();
@@ -41,20 +41,6 @@
   }
 }
 
-@mixin chip-print {
-  @include -chip;
-
-  color: color.ink-soft();
-  background: color.inlay();
-  border-color: color.line();
-
-  &:any-link {
-    color: color.accent-deep();
-    background: color.accent-soft();
-    border-color: color.accent-line();
-  }
-}
-
 @mixin dot {
   width: #{r(6)};
   height: #{r(6)};
@@ -71,30 +57,23 @@
   rotate: 45deg;
 }
 
-@mixin -well {
-  border: 1px solid color.accent-line();
-  border-radius: radius.md();
-}
-
-@mixin well-site {
-  @include -well;
-
+@mixin well {
   @include hover {
     border-color: color.accent();
     box-shadow: 0 #{r(10)} #{r(26)} color.shadow-soft();
   }
 
+  @include print {
+    box-shadow: none;
+  }
+
   background: linear-gradient(150deg, color.accent-soft(), color.glass-strong() 72%);
+  border: 1px solid color.accent-line();
+  border-radius: radius.md();
   box-shadow: 0 #{r(4)} #{r(14)} color.shadow-soft();
   transition:
     border-color 0.25s ease,
     box-shadow 0.25s ease;
-}
-
-@mixin well-print {
-  @include -well;
-
-  background: linear-gradient(150deg, color.accent-soft(), color.paper() 60%);
 }
 
 @mixin callout {
