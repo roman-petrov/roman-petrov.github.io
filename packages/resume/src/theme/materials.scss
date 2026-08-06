@@ -1,43 +1,114 @@
 @use "core" as *;
 @use "tokens/color";
-@use "tokens/leading";
 @use "tokens/radius";
 @use "tokens/space";
 @use "tokens/text";
 @use "tokens/weight";
 
-@mixin -chip {
-  display: inline-block;
-  padding: space.x2s() space.md();
-  font-size: text.md();
-  font-weight: weight.medium();
-  line-height: leading.snug();
-  white-space: nowrap;
-  border: 1px solid;
+@function rim($fill) {
+  @return color-mix(in srgb, #{color.highlight()} var(--rim-weight), #{$fill});
+}
+
+@function rim-accent($fill) {
+  @return color-mix(in srgb, #{color.accent()} 32%, #{rim($fill)});
+}
+
+@mixin face {
+  text-decoration: none;
+  border: 1px solid transparent;
   border-radius: radius.sm();
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+// Quiet resting surface — ghost buttons, contacts, plain chips.
+@mixin face-soft {
+  @include face;
+
+  color: color.ink();
+  background: color.glass();
+  border-color: rim(color.glass());
+}
+
+// Tinted resting surface — tech chips and other accent badges.
+@mixin face-accent {
+  @include face;
+
+  color: color.accent-bright();
+  background: color.accent-soft();
+  border-color: rim-accent(color.accent-soft());
+}
+
+// Shared hover for soft + accent: solid accent rim + clear blue wash + ink text.
+@mixin face-lift {
+  color: color.ink();
+  background: color-mix(in srgb, #{color.accent()} 18%, #{color.glass-strong()});
+  border-color: color.accent();
+  box-shadow: none;
+}
+
+@mixin face-primary {
+  @include face;
+
+  color: color.on-accent();
+  background: color.accent();
+  border-color: rim(color.accent());
+  box-shadow: 0 #{r(6)} #{r(14)} color.accent-glow();
+}
+
+// Primary hover: same idea as lift — one clear step darker, rim follows fill.
+@mixin face-primary-lift {
+  color: color.on-accent();
+  background: color.accent-deep();
+  border-color: color.accent-deep();
+  box-shadow: 0 #{r(8)} #{r(18)} color.accent-glow();
+}
+
+@mixin interactive-soft {
+  @include face-soft;
+
+  @include hover {
+    @include face-lift;
+  }
+}
+
+@mixin interactive-accent {
+  @include face-accent;
+
+  @include hover {
+    @include face-lift;
+  }
+}
+
+@mixin interactive-primary {
+  @include face-primary;
+
+  @include hover {
+    @include face-primary-lift;
+  }
+}
+
+@mixin pill {
+  display: inline-flex;
+  gap: space.xs();
+  align-items: center;
+  height: r(28);
+  padding: 0 space.sm();
+  font-size: text.sm();
+  font-weight: weight.medium();
+  line-height: 1;
+  white-space: nowrap;
 }
 
 @mixin chip {
-  @include -chip;
-
-  color: color.ink-soft();
-  background: color.glass();
-  border-color: color.line();
+  @include pill;
+  @include face-soft;
 
   &:any-link {
-    @include hover {
-      color: color.ink();
-      border-color: color.accent();
-      box-shadow: inset 0 0 0 1px color.accent-line();
-    }
-
-    color: color.accent-bright();
-    background: color.accent-soft();
-    border-color: color.accent-line();
-    transition:
-      color 0.2s ease,
-      border-color 0.2s ease,
-      box-shadow 0.2s ease;
+    @include interactive-accent;
   }
 }
 
@@ -68,7 +139,7 @@
   }
 
   background: linear-gradient(150deg, color.accent-soft(), color.glass-strong() 72%);
-  border: 1px solid color.accent-line();
+  border: 1px solid rim-accent(color.accent-soft());
   border-radius: radius.md();
   box-shadow: 0 #{r(4)} #{r(14)} color.shadow-soft();
   transition:
@@ -78,7 +149,7 @@
 
 @mixin callout {
   background: color.accent-soft();
-  border: 1px solid color.accent-line();
+  border: 1px solid rim-accent(color.accent-soft());
   border-radius: radius.lg();
 }
 

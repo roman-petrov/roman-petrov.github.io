@@ -52,6 +52,10 @@
   @return -color("glow");
 }
 
+@function highlight() {
+  @return -color("highlight");
+}
+
 @function ink() {
   @return -color("ink");
 }

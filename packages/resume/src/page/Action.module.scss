@@ -1,7 +1,6 @@
 @use "../theme/core" as *;
+@use "../theme/materials";
 @use "../theme/primitives";
-@use "../theme/tokens/color";
-@use "../theme/tokens/radius";
 @use "../theme/tokens/space";
 @use "../theme/tokens/text";
 @use "../theme/tokens/weight";
@@ -10,50 +9,27 @@
   @include primitives.control(space.xs());
 
   font-weight: weight.semibold();
-  text-decoration: none;
+  line-height: 1;
   white-space: nowrap;
-  border-color: transparent;
-  border-radius: radius.sm();
-  transition:
-    background 0.2s ease,
-    box-shadow 0.2s ease,
-    border-color 0.2s ease,
-    color 0.2s ease;
 }
 
 .md {
-  padding: space.xs() space.md() space.xs() space.xs();
+  height: r(32);
+  padding: 0 space.md() 0 space.sm();
   font-size: text.md();
 }
 
 .lg {
   gap: space.sm();
-  padding: space.sm() space.lg() space.sm() space.sm();
+  height: r(40);
+  padding: 0 space.lg() 0 space.md();
   font-size: text.lg();
 }
 
 .primary {
-  @include hover {
-    color: color.on-accent();
-    background: color.accent-deep();
-    border-color: color.accent-deep();
-    box-shadow: 0 #{r(10)} #{r(22)} color.accent-glow();
-  }
-
-  color: color.on-accent();
-  background: color.accent();
-  box-shadow: 0 #{r(6)} #{r(16)} color.accent-glow();
+  @include materials.interactive-primary;
 }
 
 .ghost {
-  @include hover {
-    color: color.ink();
-    background: color.glass-strong();
-    border-color: color.accent();
-    box-shadow: inset 0 0 0 1px color.accent-line();
-  }
-
-  color: color.ink();
-  background: color.glass();
-  border-color: color.line-strong();
+  @include materials.interactive-soft;
 }

@@ -14,6 +14,7 @@ $-dark: (
   glass: rgb(255 255 255 / 5%),
   glass-strong: rgb(255 255 255 / 9%),
   glow: rgb(77 155 255 / 22%),
+  highlight: #fff,
   ink: #e9eff9,
   ink-fade: #93a3bd,
   ink-soft: #bcc7d8,
@@ -39,6 +40,7 @@ $-light: (
   glass: rgb(255 255 255 / 76%),
   glass-strong: rgb(255 255 255 / 94%),
   glow: rgb(19 100 216 / 16%),
+  highlight: #fff,
   ink: #0b1220,
   ink-fade: #4c5a70,
   ink-soft: #2b3648,
@@ -67,6 +69,8 @@ $-paper: map.merge(
   @include token.root("color", $-dark);
 
   color-scheme: dark;
+
+  --rim-weight: 16%;
 }
 
 @media (prefers-color-scheme: light) {
@@ -74,6 +78,8 @@ $-paper: map.merge(
     @include token.root("color", $-light);
 
     color-scheme: light;
+
+    --rim-weight: 48%;
   }
 }
 
@@ -81,12 +87,16 @@ $-paper: map.merge(
   @include token.root("color", $-dark);
 
   color-scheme: dark;
+
+  --rim-weight: 16%;
 }
 
 :root[data-theme="light"] {
   @include token.root("color", $-light);
 
   color-scheme: light;
+
+  --rim-weight: 48%;
 }
 
 @media print {
@@ -95,5 +105,7 @@ $-paper: map.merge(
     @include token.root("color", $-paper);
 
     color-scheme: light;
+
+    --rim-weight: 36%;
   }
 }

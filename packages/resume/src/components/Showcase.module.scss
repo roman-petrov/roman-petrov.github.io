@@ -1,8 +1,6 @@
 @use "../theme/core" as *;
 @use "../theme/materials";
 @use "../theme/primitives";
-@use "../theme/tokens/color";
-@use "../theme/tokens/radius";
 @use "../theme/tokens/space";
 @use "../theme/tokens/text";
 @use "../theme/tokens/weight";
@@ -32,36 +30,17 @@
 
   a {
     @include primitives.control(space.xs());
+    @include materials.interactive-soft;
 
-    @include hover {
-      color: color.ink();
-      background: color.glass-strong();
-      border-color: color.accent();
-    }
-
-    padding: space.xs() space.sm() space.xs() space.x2s();
+    height: r(32);
+    padding: 0 space.md() 0 space.sm();
+    font-size: text.md();
     font-weight: weight.medium();
-    color: color.ink();
-    text-decoration: none;
-    background: color.glass();
-    border-color: color.line-strong();
-    border-radius: radius.sm();
-    transition:
-      background 0.2s ease,
-      border-color 0.2s ease,
-      color 0.2s ease;
+    line-height: 1;
   }
 
   li:first-child a {
-    @include hover {
-      color: color.on-accent();
-      background: color.accent-deep();
-      border-color: color.accent-deep();
-    }
-
-    color: color.on-accent();
-    background: color.accent();
-    border-color: transparent;
+    @include materials.interactive-primary;
   }
 }
 

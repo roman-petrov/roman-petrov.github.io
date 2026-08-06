@@ -54,8 +54,6 @@
   display: inline-flex;
   gap: $gap;
   align-items: center;
-  border: 1px solid;
-  border-radius: radius.sm();
 }
 
 @mixin row-list($gap) {

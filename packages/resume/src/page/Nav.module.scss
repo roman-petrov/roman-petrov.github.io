@@ -63,8 +63,8 @@
 .links {
   display: flex;
   gap: space.xl();
-  margin-left: auto;
   margin-right: space.md();
+  margin-left: auto;
 
   a {
     @include hover {

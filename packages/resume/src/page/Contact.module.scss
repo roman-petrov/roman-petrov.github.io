@@ -1,29 +1,14 @@
 @use "../theme/core" as *;
-@use "../theme/primitives";
+@use "../theme/materials";
 @use "../theme/tokens/color";
-@use "../theme/tokens/space";
-@use "../theme/tokens/text";
-@use "../theme/tokens/weight";
 
 .root {
-  @include primitives.control(space.xs());
+  @include materials.pill;
+  @include materials.face-soft;
 
-  padding: space.xs() space.md();
-  font-size: text.sm();
-  font-weight: weight.medium();
   color: color.ink-soft();
-  background: color.glass();
-  border-color: color.line();
-  transition:
-    background 0.2s ease,
-    border-color 0.2s ease,
-    color 0.2s ease;
 }
 
 a.root {
-  @include hover {
-    color: color.ink();
-    background: color.glass-strong();
-    border-color: color.accent-line();
-  }
+  @include materials.interactive-soft;
 }
