@@ -1,4 +1,7 @@
 # yaml-language-server: $schema=./resume.schema.json
+# cspell:words ActiveSWF Batumi beeline cpslabs habrahabr Huffman ispringsolutions JobWindow
+# cspell:words powermessagepro PowerMessage romanpetrov SilverX SlingMedia SlingPlayer
+# cspell:words speccy travelline TLUI Yoshkar zxpress
 
 meta:
   name: Roman Petrov

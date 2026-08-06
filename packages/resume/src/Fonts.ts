@@ -1,3 +1,5 @@
+// cspell:word wght
+
 type Face = { family: string; file: string; pkg: string; weight: string };
 
 const faces: Face[] = [

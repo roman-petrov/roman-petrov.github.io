@@ -15,6 +15,7 @@ export default {
     `bun.lockb`,
     `*.pdf`,
     `*.png`,
+    `Roman_Petrov_CV.md`,
   ],
   import: `@cspell/dict-ru_ru/cspell-ext.json`,
   language: `en_US`,

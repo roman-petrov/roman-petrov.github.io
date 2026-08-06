@@ -1,11 +1,7 @@
 # Dot files/folders
-.logs
+.build
+.jscpd
 # Others
 **/node_modules
 bun.lockb
 dist
-.build
-.jscpd
-*.log
-.DS_Store
-Thumbs.db
