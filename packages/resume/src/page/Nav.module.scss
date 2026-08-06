@@ -14,8 +14,9 @@
   position: sticky;
   top: 0;
   background-color: color.chrome();
-  border-bottom: 1px solid transparent;
-  backdrop-filter: blur(20px) saturate(1.2);
+  border-bottom: 1px solid color.line();
+  box-shadow: 0 #{r(8)} #{r(24)} color.shadow-soft();
+  backdrop-filter: blur(22px) saturate(1.45);
   animation: chrome 1ms linear both;
   animation-timeline: scroll();
   animation-range: #{r(8)} #{r(24)};
@@ -24,7 +25,8 @@
 @keyframes chrome {
   to {
     background-color: color.chrome-strong();
-    border-bottom-color: color.line();
+    border-bottom-color: color.line-strong();
+    box-shadow: 0 #{r(10)} #{r(28)} color.shadow();
   }
 }
 
