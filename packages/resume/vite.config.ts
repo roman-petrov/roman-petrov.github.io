@@ -1,4 +1,4 @@
-import type { Plugin, ViteDevServer } from "vite";
+import type { Plugin } from "vite";
 
 import { createHash } from "node:crypto";
 import { readFile } from "node:fs/promises";
@@ -25,25 +25,6 @@ const generateScopedName = (name: string, fileName: string) => {
   return `${name}_${hash}`;
 };
 
-const isSource = (file: string) => {
-  if (path.resolve(file).toLowerCase() === content.toLowerCase()) {
-    return true;
-  }
-
-  const fromSrc = path.relative(src, file);
-
-  return fromSrc !== `` && !fromSrc.startsWith(`..`) && !path.isAbsolute(fromSrc) && /\.(?:ts|tsx|scss|css)$/i.test(file);
-};
-
-const watchReload = (server: ViteDevServer) => {
-  server.watcher.add([content, src]);
-  server.watcher.on(`all`, (event, file) => {
-    if ((event === `add` || event === `change` || event === `unlink`) && isSource(file)) {
-      server.hot.send({ type: `full-reload` });
-    }
-  });
-};
-
 const pluginYaml = (): Plugin => ({
   enforce: `pre`,
   load: async id =>
@@ -55,7 +36,23 @@ const pluginPage = (): Plugin => ({
   apply: `serve`,
   configureServer: server => {
     server.middlewares.use(`/assets`, sirv(path.join(dist, `assets`), { dev: true }));
-    watchReload(server);
+    server.watcher.add([content, src]);
+    server.watcher.on(`all`, (event, file) => {
+      if (event !== `add` && event !== `change` && event !== `unlink`) {
+        return;
+      }
+
+      const fromSrc = path.relative(src, file);
+      const inSrc =
+        fromSrc !== `` &&
+        !fromSrc.startsWith(`..`) &&
+        !path.isAbsolute(fromSrc) &&
+        /\.(?:ts|tsx|scss|css)$/i.test(file);
+
+      if (path.resolve(file).toLowerCase() === content.toLowerCase() || inSrc) {
+        server.hot.send({ type: `full-reload` });
+      }
+    });
   },
   name: `page`,
   transformIndexHtml: {
