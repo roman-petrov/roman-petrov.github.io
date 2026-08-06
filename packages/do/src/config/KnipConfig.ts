@@ -16,7 +16,7 @@ const config: Config = {
     },
     "packages/resume": {
       entry: [`src/Entry*.{ts,tsx}`, `src/**/*.test.ts`],
-      ignoreDependencies: [`@fontsource-variable/inter-tight`, `@fontsource/jetbrains-mono`],
+      ignoreDependencies: [`@fontsource-variable/inter`, `@fontsource/jetbrains-mono`],
     },
   },
 };

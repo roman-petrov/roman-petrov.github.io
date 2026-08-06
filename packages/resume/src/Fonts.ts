@@ -4,9 +4,9 @@ type Face = { family: string; file: string; pkg: string; weight: string };
 
 const faces: Face[] = [
   {
-    family: `Inter Tight`,
-    file: `inter-tight-latin-wght-normal.woff2`,
-    pkg: `@fontsource-variable/inter-tight`,
+    family: `Inter`,
+    file: `inter-latin-wght-normal.woff2`,
+    pkg: `@fontsource-variable/inter`,
     weight: `100 900`,
   },
   {

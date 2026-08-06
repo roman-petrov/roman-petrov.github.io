@@ -4,7 +4,6 @@
 @use "../theme/tokens/metrics";
 @use "../theme/tokens/space";
 @use "../theme/tokens/text";
-@use "../theme/tokens/tracking";
 
 .root {
   @include primitives.wrap;
@@ -37,7 +36,6 @@
   display: flex;
   gap: space.sm();
   align-items: center;
-  letter-spacing: tracking.tight();
 }
 
 .icon {
