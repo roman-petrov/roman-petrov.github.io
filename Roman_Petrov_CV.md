@@ -42,48 +42,48 @@ inside and less than a kilobyte of JavaScript — 100 out of 100 in PageSpeed In
 
 ## 🧠 Expertise
 
-### 🤖 AI
+### 🤖 AI
 
 `Agents` · `MCP` · `RAG` · `Cursor`
 
-### 🧩 Problem solving
+### 🧩 Problem solving
 
 `Analysis` · `Communication` · `Decomposition` · `MVP`
 
-### 💻 Programming
+### 💻 Programming
 
 `Modular` · `Testable` · `Readable` · `Compact` · `Efficient`
 
-### 📐 Architecture
+### 📐 Architecture
 
 `System design` · `API design` · `Design systems` · `Performance`
 
-### 🔍 Code quality
+### 🔍 Code quality
 
 `Automated code analysis` · `Linting` · `Code review`
 
-### ⚙️ Project workflow
+### ⚙️ Project workflow
 
 `Automation` · `Simplification` · `Documentation` · `Developer experience`
 
-### 🎨 User experience
+### 🎨 User experience
 
 `Simplicity` · `Visual perfection` · `Screenshot tests`
 
-### 🌱 Open source
+### 🌱 Open source
 
 `Use` · `Contribute` · `Learn`
 
 ## 🛠 Stack
 
-### 💬 Languages
+### 💬 Languages
 
 [`TypeScript`](https://www.typescriptlang.org) · [`JavaScript`](https://developer.mozilla.org/docs/Web/JavaScript) ·
 [`HTML`](https://developer.mozilla.org/docs/Web/HTML) · [`CSS`](https://developer.mozilla.org/docs/Web/CSS) ·
 [`SCSS`](https://sass-lang.com) · [`Dart`](https://dart.dev) · [`C#`](https://learn.microsoft.com/dotnet/csharp) ·
 [`C/C++`](https://isocpp.org) · [`GLSL`](<https://www.khronos.org/opengl/wiki/Core_Language_(GLSL)>)
 
-### 📦 Frameworks & libraries
+### 📦 Frameworks & libraries
 
 [`React`](https://react.dev) · [`Node.js`](https://nodejs.org) · [`Flutter`](https://flutter.dev) ·
 [`.NET`](https://dotnet.microsoft.com) · [`CSS Modules`](https://github.com/css-modules/css-modules) ·
@@ -91,12 +91,12 @@ inside and less than a kilobyte of JavaScript — 100 out of 100 in PageSpeed In
 [`WebSockets`](https://developer.mozilla.org/docs/Web/API/WebSockets_API) ·
 [`WebGL`](https://developer.mozilla.org/docs/Web/API/WebGL_API)
 
-### 🧰 Build & tooling
+### 🧰 Build & tooling
 
 [`Vite`](https://vite.dev) · [`tsx`](https://tsx.is) · [`tsdown`](https://tsdown.dev) · [`Git`](https://git-scm.com) ·
 [`GitHub Actions`](https://github.com/features/actions) · [`Docker`](https://www.docker.com)
 
-### ✅ Testing & quality
+### ✅ Testing & quality
 
 [`Vitest`](https://vitest.dev) · [`Jest`](https://jestjs.io) · [`Puppeteer`](https://pptr.dev) ·
 [`ESLint`](https://eslint.org) · [`Stylelint`](https://stylelint.io) · [`Prettier`](https://prettier.io)

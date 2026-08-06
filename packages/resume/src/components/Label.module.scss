@@ -1,0 +1,17 @@
+@use "../theme/core" as *;
+@use "../theme/tokens/color";
+@use "../theme/tokens/font";
+@use "../theme/tokens/text";
+@use "../theme/tokens/tracking";
+@use "../theme/tokens/weight";
+
+.root {
+  margin: 0;
+  font-family: font.sans();
+  font-size: text.sm();
+  font-weight: weight.medium();
+  line-height: 1;
+  color: color.mark();
+  letter-spacing: tracking.wide();
+  text-transform: uppercase;
+}

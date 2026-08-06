@@ -1,19 +1,13 @@
 @use "../theme/core" as *;
 @use "../theme/materials";
-@use "../theme/primitives";
-@use "../theme/tokens/color";
 @use "../theme/tokens/space";
-@use "../theme/tokens/text";
 
-.label {
-  @include primitives.label(text.xs());
-
+p.label {
   @include print {
     break-after: avoid;
   }
 
-  margin: space.lg() 0 space.sm();
-  color: color.ink-fade();
+  margin: space.lg() 0 space.md();
 }
 
 .list {

@@ -38,8 +38,8 @@ const productCard = ({ links, name, note, stack }: Product) =>
     stack.map(techChip).join(` · `),
   ].join(`\n\n`);
 
-const factGroup = ({ chips, icon, label, tech = false }: Fact) =>
-  [`### ${icon} ${label}`, chips.map(tech ? techChip : chip).join(` · `)].join(`\n\n`);
+const factGroup = ({ chips, label, tech = false }: Fact) =>
+  [`### ${label}`, chips.map(tech ? techChip : chip).join(` · `)].join(`\n\n`);
 
 const block = (item: Block) =>
   item.type === `showcase`

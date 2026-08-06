@@ -76,6 +76,10 @@
   @return -color("line-strong");
 }
 
+@function mark() {
+  @return -color("mark");
+}
+
 @function muted() {
   @return -color("muted");
 }

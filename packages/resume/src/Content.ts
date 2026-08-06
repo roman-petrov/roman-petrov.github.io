@@ -15,7 +15,7 @@ export type Contact = { href?: string; icon: string; label: string; value: strin
 
 export type Entry = { blocks: Block[]; date: string; href?: string; roles?: string[]; title: string };
 
-export type Fact = { chips: string[]; icon: string; label: string; tech?: boolean };
+export type Fact = { chips: string[]; label: string; tech?: boolean };
 
 export type Heading = { icon: string; title: string };
 
@@ -68,7 +68,7 @@ const product = ({ name, repo, stack, summary, url }: Resume[`showcase`]): Produ
 const heading = ({ icon, title }: Heading): Heading => ({ icon, title });
 
 const factBlock = (groups: Resume[`expertise`][`groups`], tech = false): Block => ({
-  items: groups.map(({ icon, items, label }) => ({ chips: items, icon, label, tech })),
+  items: groups.map(({ icon, items, label }) => ({ chips: items, label: `${icon}\u2009${label}`, tech })),
   type: `facts`,
 });
 

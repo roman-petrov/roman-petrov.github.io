@@ -1,8 +1,5 @@
 @use "../theme/core" as *;
-@use "../theme/primitives";
-@use "../theme/tokens/color";
 @use "../theme/tokens/space";
-@use "../theme/tokens/text";
 
 .root {
   display: grid;
@@ -16,11 +13,4 @@
 
   display: grid;
   gap: space.xs();
-}
-
-.label {
-  @include primitives.label(text.xs());
-
-  margin: 0;
-  color: color.ink-fade();
 }

@@ -4,6 +4,7 @@ export * from "./Chips";
 export * from "./Facts";
 export * from "./Ico";
 export * from "./Inline";
+export * from "./Label";
 export * from "./Lead";
 export * from "./Projects";
 export * from "./Roles";
