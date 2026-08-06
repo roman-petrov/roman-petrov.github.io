@@ -3,7 +3,6 @@ declare const classNames: {
   readonly list: "list";
   readonly projects: "projects";
   readonly project: "project";
-  readonly line: "line";
   readonly roles: "roles";
   readonly role: "role";
   readonly head: "head";

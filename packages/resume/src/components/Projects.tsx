@@ -6,7 +6,7 @@ import { Roles } from "./Roles";
 import { TechChip } from "./TechChip";
 
 export type ProjectClasses = Partial<
-  Record<`chip` | `head` | `line` | `name` | `note` | `project` | `projects` | `stack`, string>
+  Record<`chip` | `head` | `name` | `note` | `project` | `projects` | `stack`, string>
 > &
   RolesClasses;
 
@@ -17,15 +17,13 @@ export const Projects = ({ classes, items }: ProjectsProps) => (
     {items.map(({ href, name, note, roles, stack }) => (
       <li className={classes.project} key={name}>
         <div className={classes.head}>
-          <p className={classes.line}>
-            {href === undefined ? (
-              <span className={classes.name}>{name}</span>
-            ) : (
-              <a className={classes.name} href={href}>
-                {name}
-              </a>
-            )}
-          </p>
+          {href === undefined ? (
+            <span className={classes.name}>{name}</span>
+          ) : (
+            <a className={classes.name} href={href}>
+              {name}
+            </a>
+          )}
           <Roles classes={classes} items={roles} />
         </div>
         {note.map((item, index) => (

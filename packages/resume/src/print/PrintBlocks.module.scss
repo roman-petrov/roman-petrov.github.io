@@ -44,7 +44,7 @@
   padding: space.md();
 }
 
-@include patterns.project(space.sm(), space.xs());
+@include patterns.project(space.xs());
 
 .note {
   margin: 0;

@@ -1,9 +1,9 @@
 declare const classNames: {
   readonly root: "root";
   readonly entry: "entry";
-  readonly line: "line";
   readonly roles: "roles";
   readonly role: "role";
+  readonly line: "line";
   readonly head: "head";
   readonly date: "date";
   readonly source: "source";

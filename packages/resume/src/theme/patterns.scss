@@ -84,16 +84,6 @@
   }
 }
 
-@mixin -line($gap) {
-  .line {
-    display: flex;
-    flex-wrap: wrap;
-    gap: $gap;
-    align-items: baseline;
-    margin: 0;
-  }
-}
-
 @mixin -roles($size) {
   .roles {
     display: flex;
@@ -119,8 +109,15 @@
 }
 
 @mixin entry-head($size, $gap, $pad, $below) {
-  @include -line(space.sm());
   @include -roles(text.sm());
+
+  .line {
+    display: flex;
+    flex-wrap: wrap;
+    gap: space.sm();
+    align-items: baseline;
+    margin: 0;
+  }
 
   .head {
     display: grid;
@@ -158,8 +155,7 @@
   }
 }
 
-@mixin project($gap, $stack-gap) {
-  @include -line($gap);
+@mixin project($stack-gap) {
   @include -roles(text.xs());
 
   .head {
@@ -168,15 +164,10 @@
     margin: 0;
   }
 
-  .line::before {
-    @include materials.dot;
-
-    flex: none;
-    align-self: center;
-  }
-
   .name {
     @include -heading(text.xl());
+
+    justify-self: start;
   }
 
   .stack {

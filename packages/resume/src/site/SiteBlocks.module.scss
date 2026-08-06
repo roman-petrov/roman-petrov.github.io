@@ -50,7 +50,7 @@
   padding: space.lg();
 }
 
-@include patterns.project(space.sm(), space.sm());
+@include patterns.project(space.sm());
 
 .note {
   margin: 0;
