@@ -4,7 +4,7 @@ import { Directory, File } from "@cv/core/node";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
 import * as prettier from "prettier";
-import { build } from "vite";
+import { build as viteBuild } from "vite";
 import { z } from "zod";
 
 import { Og } from "./Og";
@@ -12,7 +12,7 @@ import { Paths } from "./Paths";
 import { Pdf } from "./Pdf";
 import { Photo } from "./Photo";
 
-type RenderModule = { render: (assets: PageAssets) => string };
+type RenderModule = { Render: (assets: PageAssets) => string };
 
 const copyAssets = async () => {
   const assetFiles = [`favicon.svg`];
@@ -35,7 +35,7 @@ const copyFonts = async () => {
   return Fonts.css;
 };
 
-const cssFile = (result: Awaited<ReturnType<typeof build>>) => {
+const cssFile = (result: Awaited<ReturnType<typeof viteBuild>>) => {
   const chunks = (Array.isArray(result) ? result : [result]).flatMap(item => (`output` in item ? item.output : []));
   const asset = chunks.find(chunk => chunk.fileName.endsWith(`.css`));
 
@@ -48,21 +48,21 @@ const cssFile = (result: Awaited<ReturnType<typeof build>>) => {
 
 const renderPage = async (entry: string, page: string, assets: PageAssets) => {
   const outDir = path.join(Paths.build, entry);
-  const result = await build({
+  const result = await viteBuild({
     build: { emptyOutDir: true, outDir, ssr: `src/${entry}.ts`, ssrEmitAssets: true },
     root: Paths.resume,
   });
 
   const css = await File.read(path.join(outDir, cssFile(result)));
-  const module_ = (await import(pathToFileURL(path.join(outDir, `${entry}.js`)).href)) as RenderModule;
+  const pageModule = (await import(pathToFileURL(path.join(outDir, `${entry}.js`)).href)) as RenderModule;
 
-  await File.write(page, module_.render({ css: `${assets.css}\n\n${css}`, script: assets.script }));
+  await File.write(page, pageModule.Render({ css: `${assets.css}\n\n${css}`, script: assets.script }));
 };
 
 const buildScript = async () => {
   const outDir = path.join(Paths.build, `EntryTheme`);
 
-  await build({
+  await viteBuild({
     build: {
       emptyOutDir: true,
       lib: { entry: `src/EntryTheme.ts`, fileName: () => `theme.js`, formats: [`iife`], name: `ResumeTheme` },
@@ -103,7 +103,7 @@ const prepare = async () => {
   return copyFonts();
 };
 
-const run = async () => {
+const build = async () => {
   await Directory.remove(Paths.dist);
 
   const assets = { css: await prepare(), script: await buildScript() };
@@ -116,4 +116,4 @@ const run = async () => {
   return { exitCode: 0, output: `` };
 };
 
-export const Resume = { build: run, prepare };
+export const Resume = { build, prepare };

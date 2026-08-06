@@ -8,8 +8,6 @@ $-values: (
   md: 14,
   lg: 16,
   xl: 17,
-  "2xl": 19,
-  display: 37,
 );
 
 @mixin root {
@@ -42,14 +40,6 @@ $-values: (
 
 @function xl() {
   @return -text("xl");
-}
-
-@function x2xl() {
-  @return -text("2xl");
-}
-
-@function display() {
-  @return -text("display");
 }
 
 @function hero() {

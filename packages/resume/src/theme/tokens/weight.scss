@@ -1,7 +1,6 @@
 @use "../token";
 
 $-values: (
-  regular: 400,
   medium: 500,
   semibold: 600,
   bold: 700,
@@ -13,10 +12,6 @@ $-values: (
 
 @function -weight($name) {
   @return token.ref("weight", $name);
-}
-
-@function regular() {
-  @return -weight("regular");
 }
 
 @function medium() {

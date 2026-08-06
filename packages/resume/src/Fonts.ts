@@ -19,18 +19,20 @@ const faces: Face[] = [
 
 const href = (file: string) => `./assets/fonts/${file}`;
 
-const rule = ({ family, file, weight }: Face) =>
-  [
-    `@font-face {`,
-    `  font-family: "${family}";`,
-    `  font-style: normal;`,
-    `  font-weight: ${weight};`,
-    `  font-display: swap;`,
-    `  src: url("${href(file)}") format("woff2");`,
-    `}`,
-  ].join(`\n`);
-
-const css = faces.map(rule).join(`\n\n`);
+const css = faces
+  .map(
+    ({ family, file, weight }) =>
+      [
+        `@font-face {`,
+        `  font-family: "${family}";`,
+        `  font-style: normal;`,
+        `  font-weight: ${weight};`,
+        `  font-display: swap;`,
+        `  src: url("${href(file)}") format("woff2");`,
+        `}`,
+      ].join(`\n`),
+  )
+  .join(`\n\n`);
 
 const files = faces.map(({ file }) => file);
 

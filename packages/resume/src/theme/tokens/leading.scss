@@ -3,7 +3,6 @@
 $-values: (
   tight: 1.1,
   snug: 1.32,
-  normal: 1.46,
   loose: 1.6,
 );
 
@@ -21,10 +20,6 @@ $-values: (
 
 @function snug() {
   @return -leading("snug");
-}
-
-@function normal() {
-  @return -leading("normal");
 }
 
 @function loose() {

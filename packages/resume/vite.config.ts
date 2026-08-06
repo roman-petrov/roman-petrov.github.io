@@ -11,7 +11,7 @@ import type { PageAssets } from "./src/PageAssets.ts";
 
 import { Fonts } from "./src/Fonts.ts";
 
-type PageModule = { render: (assets: PageAssets) => string };
+type PageModule = { Render: (assets: PageAssets) => string };
 
 const root = path.resolve(import.meta.dirname, `..`, `..`);
 const content = path.join(root, `resume.yml`);
@@ -61,10 +61,10 @@ const pluginPage = (): Plugin => ({
         return html;
       }
 
-      const { render } = (await server.ssrLoadModule(`/src/EntryPage.ts`)) as PageModule;
+      const { Render } = (await server.ssrLoadModule(`/src/EntryPage.ts`)) as PageModule;
 
       return {
-        html: render({ css: Fonts.css, script: `` }),
+        html: Render({ css: Fonts.css, script: `` }),
         tags: [{ attrs: { src: `/src/EntryDev.ts`, type: `module` }, injectTo: `head`, tag: `script` }],
       };
     },

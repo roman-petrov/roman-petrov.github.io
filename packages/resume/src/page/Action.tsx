@@ -12,7 +12,7 @@ export type ActionProps = {
   tone: `ghost` | `primary`;
 };
 
-export const Action = ({ download, href, icon, label, size = `md`, tone }: ActionProps) => (
+export const Action = ({ download = false, href, icon, label, size = `md`, tone }: ActionProps) => (
   <a className={_.cn(styles.root, styles[size], styles[tone])} download={download} href={href}>
     <Ico>{icon}</Ico>
     <span>{label}</span>

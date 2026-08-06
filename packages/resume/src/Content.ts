@@ -17,10 +17,6 @@ export type Entry = { blocks: Block[]; date: string; href?: string; roles?: stri
 
 export type Fact = { chips: string[]; label: string; tech?: boolean };
 
-export type Heading = { icon: string; title: string };
-
-export type Link = { href: string; label: string };
-
 export type Product = { links: ProductLink[]; name: string; note: string[]; stack: string[] };
 
 export type Project = { href?: string; name: string; note: string[]; roles: string[]; stack: string[] };
@@ -29,7 +25,11 @@ export type Section = Heading & { blocks?: Block[]; entries?: Entry[]; id: strin
 
 type Activity = Resume[`activities`][`items`][number];
 
+type Heading = { icon: string; title: string };
+
 type Job = Resume[`experience`][`jobs`][number];
+
+type Link = { href: string; label: string };
 
 type ProductLink = Link & { icon: string };
 
@@ -131,4 +131,6 @@ const section = (id: string) => {
   return found;
 };
 
-export const Content = { contacts, meta: resume.meta, section, sections };
+const meta = resume.meta;
+
+export const Content = { contacts, meta, section, sections };

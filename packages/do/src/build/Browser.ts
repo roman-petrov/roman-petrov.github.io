@@ -10,7 +10,9 @@ const open = async () => {
     headless: true,
   });
 
-  return { browser, page: await browser.newPage() };
+  const page = await browser.newPage();
+
+  return { browser, page };
 };
 
 const show = async (page: Page, file: string) => {

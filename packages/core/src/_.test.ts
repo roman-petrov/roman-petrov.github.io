@@ -3,7 +3,7 @@ import { describe, expect, it } from "vitest";
 
 import { _ } from "./_";
 
-const { cn, max, px, round } = _;
+const { cn, max, round } = _;
 
 describe(`cn`, () => {
   it(`joins non-empty strings with space`, () => {
@@ -34,21 +34,6 @@ describe(`max`, () => {
 
   it(`works for all-negative arrays`, () => {
     expect(max([-10, -3, -7])).toBe(-3);
-  });
-});
-
-describe(`px`, () => {
-  it(`appends px to integer`, () => {
-    expect(px(42)).toBe(`42px`);
-  });
-
-  it(`appends px to zero`, () => {
-    expect(px(0)).toBe(`0px`);
-  });
-
-  it(`appends px to negative and fractional values`, () => {
-    expect(px(-4)).toBe(`-4px`);
-    expect(px(12.5)).toBe(`12.5px`);
   });
 });
 

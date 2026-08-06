@@ -1,15 +1,15 @@
 import type { KnipConfig as Config } from "knip";
 
-const config: Config = {
+export const KnipConfig: Config = {
   ignoreDependencies: [`vitest`],
   ignoreExportsUsedInFile: true,
   ignoreIssues: { "**/*.module.scss.d.ts": [`exports`] },
   workspaces: {
     ".": { entry: [`*.config.js`, `vitest.config.ts`], ignoreDependencies: [`actions-up`] },
-    "packages/core": { entry: [`src/index.ts`, `src/node/index.ts`, `src/**/*.test.ts`] },
+    "packages/core": { entry: [`src/**/*.test.ts`] },
     "packages/do": {
       cspell: [`src/config/CspellConfig.js`],
-      entry: [`src/config/*.{js,ts}`, `src/**/*.test.ts`],
+      entry: [`src/config/*.{js,ts}`],
       ignoreDependencies: [`jscpd`, `markdownlint-cli`],
       prettier: [`src/config/PrettierConfig.js`],
       stylelint: [`src/config/StylelintConfig.js`],
@@ -20,5 +20,3 @@ const config: Config = {
     },
   },
 };
-
-export { config as KnipConfig };

@@ -9,13 +9,12 @@ const captured = async (cwd: string, command: string[]): Promise<ProcessResult> 
     child.exited,
   ]);
 
-  return {
-    exitCode,
-    output: [stderr, stdout]
-      .filter(text => text !== ``)
-      .join(`\n`)
-      .trim(),
-  };
+  const output = [stderr, stdout]
+    .filter(text => text !== ``)
+    .join(`\n`)
+    .trim();
+
+  return { exitCode, output };
 };
 
 export const Process = { captured };

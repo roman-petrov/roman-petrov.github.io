@@ -3,16 +3,11 @@ import sharp from "sharp";
 
 import { Paths } from "./Paths";
 
-const size = 480;
-const quality = 82;
-const pcb = `pcb.svg`;
-const channels = 4;
-const alpha = 3;
-const opaque = 255;
-const crop = { sideOfWidth: 0.78, topOfHeight: 0.05 };
-const cutout = { softness: 18, threshold: 242 };
-
 const removeBackground = async (input: Buffer) => {
+  const channels = 4;
+  const alpha = 3;
+  const opaque = 255;
+  const cutout = { softness: 18, threshold: 242 };
   const { data, info } = await sharp(input).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
   const { softness, threshold } = cutout;
   const pixels = new Uint8ClampedArray(data.buffer, data.byteOffset, data.byteLength);
@@ -36,6 +31,10 @@ const removeBackground = async (input: Buffer) => {
 };
 
 const render = async () => {
+  const size = 480;
+  const quality = 82;
+  const pcb = `pcb.svg`;
+  const crop = { sideOfWidth: 0.78, topOfHeight: 0.05 };
   const { Assets } = await import(`@cv/resume`);
   const source = path.join(Paths.root, Assets.photo);
   const { height, width } = await sharp(source).metadata();
