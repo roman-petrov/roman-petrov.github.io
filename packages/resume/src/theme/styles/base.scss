@@ -11,6 +11,7 @@
 @use "transition";
 
 html {
+  overflow-x: clip;
   scroll-behavior: smooth;
 }
 
