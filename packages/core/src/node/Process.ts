@@ -18,9 +18,4 @@ const captured = async (cwd: string, command: string[]): Promise<ProcessResult> 
   };
 };
 
-const interactive = async (cwd: string, command: string[]): Promise<ProcessResult> => ({
-  exitCode: await Bun.spawn(command, { cwd, stdio: [`inherit`, `inherit`, `inherit`] }).exited,
-  output: ``,
-});
-
-export const Process = { captured, interactive };
+export const Process = { captured };

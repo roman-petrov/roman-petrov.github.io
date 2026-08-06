@@ -1,6 +1,7 @@
 export * from "./Build";
 export * from "./Ci";
 export * from "./Cspell";
+export * from "./Dev";
 export * from "./Eslint";
 export * from "./EslintFix";
 export * from "./Jscpd";
@@ -9,7 +10,7 @@ export * from "./Lint";
 export * from "./Markdownlint";
 export * from "./Prettier";
 export * from "./PrettierFix";
-export * from "./Preview";
+export * from "./Run";
 export * from "./Stylelint";
 export * from "./StylelintFix";
 export * from "./Test";

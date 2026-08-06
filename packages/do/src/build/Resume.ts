@@ -95,13 +95,18 @@ const writeContent = async () => {
   await writeFormatted(Paths.schema, JSON.stringify(z.toJSONSchema(ResumeSchema)));
 };
 
-const run = async () => {
+const prepare = async () => {
   await checkContent();
-  await Directory.remove(Paths.dist);
   await copyAssets();
   await Photo.render();
 
-  const assets = { css: await copyFonts(), script: await buildScript() };
+  return copyFonts();
+};
+
+const run = async () => {
+  await Directory.remove(Paths.dist);
+
+  const assets = { css: await prepare(), script: await buildScript() };
 
   await renderPage(`EntryPage`, Paths.site, assets);
   await writeContent();
@@ -111,4 +116,4 @@ const run = async () => {
   return { exitCode: 0, output: `` };
 };
 
-export const Resume = { build: run };
+export const Resume = { build: run, prepare };

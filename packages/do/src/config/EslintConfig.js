@@ -40,7 +40,7 @@ export default defineConfig(
     settings: { react: { version: `detect` } },
   },
   {
-    files: [`**/index.*`, `**/*.config.*`, `**/*.yml.d.ts`],
+    files: [`**/index.{js,ts,tsx}`, `**/*.config.{js,ts}`, `**/*.yml.d.ts`],
     rules: { "unicorn/filename-case": [`error`, { case: `camelCase`, checkDirectories: false }] },
   },
   {
