@@ -38,16 +38,6 @@
     radial-gradient(#{r(480)} #{r(320)} at 70% 40%, color.glow(), transparent 65%),
     radial-gradient(#{r(384)} #{r(288)} at 20% 10%, color.sky(), transparent 65%);
   filter: blur(8px);
-  animation: parallax 1ms linear both;
-  will-change: transform;
-  animation-timeline: scroll();
-  animation-range: 0 100vh;
-}
-
-@keyframes parallax {
-  to {
-    transform: translate3d(0, 12vh, 0);
-  }
 }
 
 .inner {

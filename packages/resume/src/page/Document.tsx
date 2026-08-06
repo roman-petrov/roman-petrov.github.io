@@ -7,9 +7,7 @@ import { Footer } from "./Footer";
 import { Groups } from "./Groups";
 import { Hero } from "./Hero";
 import { Nav } from "./Nav";
-import { Progress } from "./Progress";
 import { Prose } from "./Prose";
-import { Timelines } from "./Timelines";
 
 export type DocumentProps = PageAssets;
 
@@ -17,7 +15,7 @@ export const Document = ({ css, script }: DocumentProps) => {
   const title = `${Content.meta.name} — ${Content.meta.role}`;
 
   return (
-    <html lang="en" style={{ timelineScope: Timelines.scope }}>
+    <html lang="en">
       <head>
         <meta charSet="utf-8" />
         <meta content="width=device-width, initial-scale=1" name="viewport" />
@@ -38,7 +36,6 @@ export const Document = ({ css, script }: DocumentProps) => {
         <style dangerouslySetInnerHTML={{ __html: css }} />
       </head>
       <body>
-        <Progress />
         <Nav />
         <main>
           <Hero />

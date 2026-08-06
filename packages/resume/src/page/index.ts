@@ -8,8 +8,6 @@ export * from "./Groups";
 export * from "./Hero";
 export * from "./Nav";
 export * from "./PdfAction";
-export * from "./Progress";
 export * from "./Prose";
-export * from "./Reveal";
 export * from "./Section";
 export * from "./ThemeToggle";

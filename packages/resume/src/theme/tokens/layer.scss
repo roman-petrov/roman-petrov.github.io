@@ -3,7 +3,6 @@
 $-levels: (
   raised: 1,
   nav: 10,
-  progress: 12,
 );
 
 @function -level($name) {
@@ -16,8 +15,4 @@ $-levels: (
 
 @mixin nav {
   z-index: -level(nav);
-}
-
-@mixin progress {
-  z-index: -level(progress);
 }

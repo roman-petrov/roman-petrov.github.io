@@ -1,9 +1,6 @@
-import type { CSSProperties } from "react";
-
 import { Content } from "../Content";
 import styles from "./Nav.module.scss";
 import { ThemeToggle } from "./ThemeToggle";
-import { Timelines } from "./Timelines";
 
 export const Nav = () => (
   <header className={styles.root}>
@@ -14,7 +11,7 @@ export const Nav = () => (
       </a>
       <nav className={styles.links}>
         {Content.sections.map(({ id, title }) => (
-          <a href={`#${id}`} key={id} style={{ "--section-timeline": Timelines.name(id) } as CSSProperties}>
+          <a href={`#${id}`} key={id}>
             {title}
           </a>
         ))}
