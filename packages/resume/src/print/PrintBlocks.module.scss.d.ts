@@ -3,9 +3,11 @@ declare const classNames: {
   readonly list: "list";
   readonly projects: "projects";
   readonly project: "project";
+  readonly line: "line";
+  readonly roles: "roles";
+  readonly role: "role";
   readonly head: "head";
   readonly name: "name";
-  readonly roles: "roles";
   readonly stack: "stack";
   readonly note: "note";
   readonly chip: "chip";

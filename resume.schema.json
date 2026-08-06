@@ -108,11 +108,11 @@
                   "additionalProperties": false
                 }
               },
-              "role": { "type": "string" },
+              "roles": { "type": "array", "items": { "type": "string" } },
               "summary": { "type": "string" },
               "url": { "type": "string", "format": "uri" }
             },
-            "required": ["from", "to", "company", "projects", "role"],
+            "required": ["from", "to", "company", "projects", "roles"],
             "additionalProperties": false
           }
         }

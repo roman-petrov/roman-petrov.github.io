@@ -1,6 +1,6 @@
 import type { Section } from "../Content";
 
-import { Inline } from "../components";
+import { Inline, Roles } from "../components";
 import { SiteBlocks } from "./SiteBlocks";
 import styles from "./SiteEntries.module.scss";
 import { SiteReveal } from "./SiteReveal";
@@ -13,17 +13,22 @@ export const SiteEntries = ({ section }: SiteEntriesProps) => (
     <ol className={styles.root}>
       {(section.entries ?? []).map((entry, index) => (
         <SiteReveal cn={styles.entry} index={index} key={entry.title} tag="li">
-          <p className={styles.meta}>
-            <span className={styles.date}>{entry.date}</span>
-            {entry.link === undefined ? undefined : (
-              <a className={styles.link} href={entry.link.href}>
-                {entry.link.label}
-              </a>
-            )}
-          </p>
-          <h3 className={styles.title}>
-            <Inline text={entry.title} />
-          </h3>
+          <header className={styles.head}>
+            <div className={styles.line}>
+              <span className={styles.date}>{entry.date}</span>
+              <h3 className={styles.title}>
+                <Inline text={entry.title} />
+              </h3>
+              {entry.link === undefined ? undefined : (
+                <span className={styles.source}>
+                  <a className={styles.link} href={entry.link.href}>
+                    {entry.link.label}
+                  </a>
+                </span>
+              )}
+            </div>
+            {entry.roles === undefined ? undefined : <Roles classes={styles} items={entry.roles} />}
+          </header>
           <SiteBlocks blocks={entry.blocks} />
         </SiteReveal>
       ))}

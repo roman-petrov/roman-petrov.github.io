@@ -103,9 +103,11 @@ kilobyte of JavaScript — 100 out of 100 in PageSpeed Insights.
 
 ## 💼 Experience
 
-### Front-end architect, tech lead and lead developer at TravelLine
+### TravelLine
 
-`2013 — 2026` · [travelline.ru](https://www.travelline.ru/)
+`2013 — 2026` ([travelline.ru](https://www.travelline.ru/))
+
+`front-end architect` ◆ `tech lead` ◆ `lead developer`
 
 I ran the company design systems in a team of 5-7 engineers, combining all three roles. In the last years I designed not
 only the architecture but the whole product concept — Reactor started as my idea and I planned all of it myself.
@@ -120,7 +122,9 @@ only the architecture but the whole product concept — Reactor started as my id
 
 **Projects:**
 
-- **Reactor** · architect · tech lead · lead developer
+- **Reactor**
+
+  `architect` ◆ `tech lead` ◆ `lead developer`
 
   Internal front-end platform of 25 packages that work as a single product. It unifies the development stack and the
   design of all TravelLine products, and keeps the API and the tools simple.
@@ -134,7 +138,9 @@ only the architecture but the whole product concept — Reactor started as my id
   [`TypeScript`](https://www.typescriptlang.org) · [`React`](https://react.dev) · [`Vite`](https://vite.dev) ·
   [`SCSS`](https://sass-lang.com)
 
-- **TLUI3.0** · architect · tech lead · lead developer
+- **TLUI3.0**
+
+  `architect` ◆ `tech lead` ◆ `lead developer`
 
   Move of the front-end stack to Flutter Web. In one year the team built the design system components, the build and
   workflow tools and a way to start a new project in minutes.
@@ -143,7 +149,9 @@ only the architecture but the whole product concept — Reactor started as my id
 
   [`Dart`](https://dart.dev) · [`Flutter`](https://flutter.dev)
 
-- **TLUI** · developer · tech lead
+- **TLUI**
+
+  `developer` ◆ `tech lead`
 
   Design system and component library that made the whole B2B account and intranet look and work the same way.
 
@@ -153,15 +161,24 @@ only the architecture but the whole product concept — Reactor started as my id
   [`TypeScript`](https://www.typescriptlang.org) · [`JavaScript`](https://developer.mozilla.org/docs/Web/JavaScript) ·
   [`AngularJS`](https://angularjs.org) · [`Less`](https://lesscss.org)
 
-### Developer at iSpring
+### iSpring
 
-`2007 — 2013` · [ispringsolutions.com](http://www.ispringsolutions.com/)
+`2007 — 2013` ([ispringsolutions.com](http://www.ispringsolutions.com/))
+
+`developer`
 
 **Projects:**
 
-- **Flash media player & charting library** · developer [`ActionScript 3.0`](https://en.wikipedia.org/wiki/ActionScript)
-  · [`Flash`](https://en.wikipedia.org/wiki/Adobe_Flash)
-- [SilverX](https://web.archive.org/web/20120506055102/http://www.silverx.net/) · single developer · website developer
+- **Flash media player & charting library**
+
+  `developer`
+
+  [`ActionScript 3.0`](https://en.wikipedia.org/wiki/ActionScript) ·
+  [`Flash`](https://en.wikipedia.org/wiki/Adobe_Flash)
+
+- [SilverX](https://web.archive.org/web/20120506055102/http://www.silverx.net/)
+
+  `single developer` ◆ `website developer`
 
   Flash to Silverlight converter
 
@@ -170,26 +187,34 @@ only the architecture but the whole product concept — Reactor started as my id
   [`Silverlight`](https://en.wikipedia.org/wiki/Microsoft_Silverlight) ·
   [`HTML`](https://developer.mozilla.org/docs/Web/HTML) · [`CSS`](https://developer.mozilla.org/docs/Web/CSS)
 
-- [PowerMessage](https://web.archive.org/web/20171020002940/http://www.powermessagepro.com/) · single developer
+- [PowerMessage](https://web.archive.org/web/20171020002940/http://www.powermessagepro.com/)
+
+  `single developer`
 
   PowerPoint add-on to build presentations from templates
 
   [`C#`](https://learn.microsoft.com/dotnet/csharp) · [`C++`](https://isocpp.org)
 
-### Lead developer and team lead at CPS Labs
+### CPS Labs
 
-`2003 — 2007` · [cpslabs.net](https://www.cpslabs.net/)
+`2003 — 2007` ([cpslabs.net](https://www.cpslabs.net/))
+
+`lead developer` ◆ `team lead`
 
 **Projects:**
 
-- [JobWindow](https://www.cpslabs.net/project/jobwindow-2-3.html) · developer
+- [JobWindow](https://www.cpslabs.net/project/jobwindow-2-3.html)
+
+  `developer`
 
   Job search system in Switzerland
 
   [`PHP`](https://www.php.net) · [`JavaScript`](https://developer.mozilla.org/docs/Web/JavaScript) ·
   [`HTML`](https://developer.mozilla.org/docs/Web/HTML) · [`CSS`](https://developer.mozilla.org/docs/Web/CSS)
 
-- [ActiveSWF](https://www.cpslabs.net/product/activeswf-3-5.html) · single developer
+- [ActiveSWF](https://www.cpslabs.net/product/activeswf-3-5.html)
+
+  `single developer`
 
   SWF file (Flash) generation library
 
@@ -197,7 +222,9 @@ only the architecture but the whole product concept — Reactor started as my id
   [`COM`](https://learn.microsoft.com/windows/win32/com/component-object-model--com--portal) ·
   [`ActiveX`](https://en.wikipedia.org/wiki/ActiveX)
 
-- **SlingPlayer** · lead developer · team lead
+- **SlingPlayer**
+
+  `lead developer` ◆ `team lead`
 
   Streaming media player for [SlingMedia](https://en.wikipedia.org/wiki/Sling_Media)
 

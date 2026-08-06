@@ -1,7 +1,11 @@
 declare const classNames: {
   readonly root: "root";
-  readonly meta: "meta";
+  readonly line: "line";
+  readonly roles: "roles";
+  readonly role: "role";
+  readonly head: "head";
   readonly date: "date";
+  readonly source: "source";
   readonly link: "link";
   readonly title: "title";
 };

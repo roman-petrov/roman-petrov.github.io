@@ -4,5 +4,6 @@ export * from "./Facts";
 export * from "./Ico";
 export * from "./Inline";
 export * from "./Projects";
+export * from "./Roles";
 export * from "./Showcase";
 export * from "./TechChip";

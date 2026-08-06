@@ -13,7 +13,7 @@ export type Block =
 
 export type Contact = { href?: string; icon: string; label: string; value: string };
 
-export type Entry = { blocks: Block[]; date: string; link?: Link; title: string };
+export type Entry = { blocks: Block[]; date: string; link?: Link; roles?: string[]; title: string };
 
 export type Fact = { chips: string[]; icon: string; label: string; tech?: boolean };
 
@@ -89,7 +89,8 @@ const jobEntry = (job: Job): Entry => ({
   ],
   date: period(job),
   link: job.url === undefined ? undefined : link(job.url),
-  title: `${job.role} at ${job.company}`,
+  roles: job.roles,
+  title: job.company,
 });
 
 const studyEntry = (study: Study): Entry => ({

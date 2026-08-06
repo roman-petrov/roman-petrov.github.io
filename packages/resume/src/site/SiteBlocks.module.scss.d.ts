@@ -5,9 +5,11 @@ declare const classNames: {
   readonly project: "project";
   readonly chip: "chip";
   readonly links: "links";
+  readonly line: "line";
+  readonly roles: "roles";
+  readonly role: "role";
   readonly head: "head";
   readonly name: "name";
-  readonly roles: "roles";
   readonly stack: "stack";
   readonly note: "note";
   readonly showcase: "showcase";

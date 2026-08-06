@@ -43,7 +43,7 @@ export const ResumeSchema = z.strictObject({
             url: z.url().optional(),
           }),
         ),
-        role: z.string(),
+        roles: z.array(z.string()),
         summary: z.string().optional(),
         url: z.url().optional(),
       }),

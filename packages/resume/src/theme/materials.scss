@@ -63,6 +63,14 @@
   border-radius: radius.xs();
 }
 
+@mixin diamond {
+  width: 0.36em;
+  height: 0.36em;
+  content: "";
+  background: color.sky-bright();
+  rotate: 45deg;
+}
+
 @mixin -well {
   border: 1px solid color.accent-line();
   border-radius: radius.md();

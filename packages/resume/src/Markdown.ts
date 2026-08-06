@@ -17,10 +17,17 @@ const techChip = (name: string) => {
 
 const paragraph = ({ text, type }: Extract<Block, { text: string }>) => (type === `label` ? `**${text}:**` : text);
 
-const projectItem = ({ href, name, note, roles, stack }: Project) => {
-  const head = `${href === undefined ? `**${name}**` : `[${name}](${href})`} · ${roles.join(` · `)}`;
+const roleLine = (roles: string[]) => roles.map(chip).join(` ◆ `);
 
-  return [bullet(head), ...note.map(item => `\n  ${item}\n`), `  ${stack.map(techChip).join(` · `)}`].join(`\n`);
+const projectItem = ({ href, name, note, roles, stack }: Project) => {
+  const head = href === undefined ? `**${name}**` : `[${name}](${href})`;
+
+  return [
+    bullet(head),
+    `\n  ${roleLine(roles)}\n`,
+    ...note.map(item => `\n  ${item}\n`),
+    `  ${stack.map(techChip).join(` · `)}`,
+  ].join(`\n`);
 };
 
 const productCard = ({ links, name, note, stack }: Product) =>
@@ -45,10 +52,11 @@ const block = (item: Block) =>
           ? item.items.map(bullet).join(`\n`)
           : paragraph(item);
 
-const entry = ({ blocks, date, link, title }: Entry) => {
-  const rail = link === undefined ? chip(date) : `${chip(date)} · [${link.label}](${link.href})`;
+const entry = ({ blocks, date, link, roles, title }: Entry) => {
+  const site = link === undefined ? [] : [`([${link.label}](${link.href}))`];
+  const rail = [chip(date), ...site].join(` `);
 
-  return [`### ${title}`, rail, ...blocks.map(block)].join(`\n\n`);
+  return [`### ${title}`, rail, ...(roles === undefined ? [] : [roleLine(roles)]), ...blocks.map(block)].join(`\n\n`);
 };
 
 const contactLine = ({ href, icon, value }: Contact) =>

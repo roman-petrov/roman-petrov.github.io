@@ -90,9 +90,9 @@ experience:
   icon: 💼
   title: Experience
   jobs:
-    - role: Front-end architect, tech lead and lead developer
-      company: TravelLine
+    - company: TravelLine
       url: https://www.travelline.ru/
+      roles: [front-end architect, tech lead, lead developer]
       from: 2013
       to: 2026
       summary: >-
@@ -135,9 +135,9 @@ experience:
             TravelLine back office and is supported and improved.
           roles: [developer, tech lead]
           stack: [TypeScript, JavaScript, AngularJS, Less]
-    - role: Developer
-      company: iSpring
+    - company: iSpring
       url: http://www.ispringsolutions.com/
+      roles: [developer]
       from: 2007
       to: 2013
       projects:
@@ -154,9 +154,9 @@ experience:
           note: PowerPoint add-on to build presentations from templates
           roles: [single developer]
           stack: [C#, C++]
-    - role: Lead developer and team lead
-      company: CPS Labs
+    - company: CPS Labs
       url: https://www.cpslabs.net/
+      roles: [lead developer, team lead]
       from: 2003
       to: 2007
       projects:

@@ -1,10 +1,7 @@
 @use "../theme/core" as *;
 @use "../theme/patterns";
-@use "../theme/tokens/color";
-@use "../theme/tokens/leading";
 @use "../theme/tokens/space";
 @use "../theme/tokens/text";
-@use "../theme/tokens/weight";
 
 .root {
   margin-bottom: space.xl();
@@ -18,21 +15,11 @@
   }
 }
 
-@include patterns.meta(space.sm(), space.x2s());
-
-.title {
-  padding-bottom: space.xs();
-  margin: 0 0 space.md();
-  font-size: text.x2xl();
-  font-weight: weight.semibold();
-  line-height: leading.snug();
-  color: color.ink();
-  border-bottom: 1px solid color.line-strong();
-}
+@include patterns.entry-head(text.x2xl(), space.x2s(), space.xs(), space.md());
 
 @include print {
-  .meta,
-  .title {
+  .head {
     break-after: avoid;
+    break-inside: avoid;
   }
 }
