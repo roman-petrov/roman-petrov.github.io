@@ -1,0 +1,24 @@
+@use "../theme/core" as *;
+@use "../theme/materials";
+@use "../theme/tokens/color";
+@use "../theme/tokens/layer";
+@use "../theme/tokens/metrics";
+
+.root {
+  @include layer.progress;
+  @include materials.scroll-progress;
+
+  position: fixed;
+  top: metrics.nav();
+  right: 0;
+  left: 0;
+  height: #{r(2)};
+  pointer-events: none;
+  background: color.accent();
+}
+
+@include print {
+  .root {
+    display: none;
+  }
+}

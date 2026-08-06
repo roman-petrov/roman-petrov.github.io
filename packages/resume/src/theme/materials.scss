@@ -168,6 +168,65 @@ $-chrome-saturate: 1.45;
   animation: blink $-caret-duration steps(1) infinite;
 }
 
+@mixin -scroll-run($name) {
+  @media not print {
+    animation-name: $name;
+    animation-duration: auto;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+  }
+}
+
+@mixin scroll-wash {
+  @keyframes scroll-wash {
+    0%,
+    100% {
+      opacity: 0;
+    }
+
+    50% {
+      opacity: 1;
+    }
+  }
+
+  @include -scroll-run(scroll-wash);
+
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  content: "";
+
+  @media not print {
+    animation-timeline: view();
+    animation-range: entry 0% exit 100%;
+  }
+}
+
+@mixin scroll-progress {
+  @keyframes scroll-read-progress {
+    from {
+      transform: scaleX(0);
+    }
+
+    to {
+      transform: scaleX(1);
+    }
+  }
+
+  @include -scroll-run(scroll-read-progress);
+
+  transform-origin: left center;
+
+  @media not print {
+    animation-timeline: scroll();
+  }
+}
+
 @mixin well {
   @include panel;
 

@@ -99,3 +99,7 @@
 @function sky-bright() {
   @return -color("sky-bright");
 }
+
+@function tint($name) {
+  @return -color("tint-#{$name}");
+}

@@ -26,6 +26,13 @@ $-dark: (
   shadow-soft: rgb(0 0 0 / 32%),
   sky: rgb(148 163 184 / 12%),
   sky-bright: #7dd3e8,
+  tint-amber: #f0b429,
+  tint-azure: #6b9dff,
+  tint-coral: #fb7185,
+  tint-mint: #34d399,
+  tint-rose: #f472b6,
+  tint-teal: #2dd4bf,
+  tint-violet: #a78bfa,
 );
 $-light: (
   accent: #2f5fbf,
@@ -52,6 +59,13 @@ $-light: (
   shadow-soft: rgb(17 24 39 / 8%),
   sky: rgb(100 116 139 / 9%),
   sky-bright: #0e7490,
+  tint-amber: #b45309,
+  tint-azure: #2f5fbf,
+  tint-coral: #e11d48,
+  tint-mint: #047857,
+  tint-rose: #be185d,
+  tint-teal: #0f766e,
+  tint-violet: #6d28d9,
 );
 $-paper: map.merge(
   $-light,

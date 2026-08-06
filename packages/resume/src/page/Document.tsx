@@ -7,6 +7,7 @@ import { Footer } from "./Footer";
 import { Groups } from "./Groups";
 import { Hero } from "./Hero";
 import { Nav } from "./Nav";
+import { Progress } from "./Progress";
 import { Prose } from "./Prose";
 
 export type DocumentProps = PageAssets;
@@ -37,6 +38,7 @@ export const Document = ({ css, script }: DocumentProps) => {
       </head>
       <body>
         <Nav />
+        <Progress />
         <main>
           <Hero />
           <Prose section={Content.section(`about`)} />

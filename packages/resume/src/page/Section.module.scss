@@ -1,15 +1,65 @@
 @use "../theme/core" as *;
+@use "../theme/materials";
 @use "../theme/primitives";
 @use "../theme/tokens/color";
 @use "../theme/tokens/metrics";
 @use "../theme/tokens/space";
 @use "../theme/tokens/text";
 
-.root {
-  @include primitives.wrap;
+@mixin -tone($name) {
+  $-tint: color.tint($name);
 
+  &::before {
+    background: color-mix(in srgb, #{$-tint} 16%, transparent);
+  }
+
+  .head::after {
+    background: $-tint;
+  }
+}
+
+.root {
+  position: relative;
   padding: space.x2xl() 0;
+  overflow: clip;
   scroll-margin-top: calc(#{metrics.nav()} + #{space.lg()});
+  isolation: isolate;
+
+  &::before {
+    @include materials.scroll-wash;
+  }
+
+  &[id="about"] {
+    @include -tone("azure");
+  }
+
+  &[id="showcase"] {
+    @include -tone("violet");
+  }
+
+  &[id="expertise"] {
+    @include -tone("teal");
+  }
+
+  &[id="stack"] {
+    @include -tone("amber");
+  }
+
+  &[id="experience"] {
+    @include -tone("rose");
+  }
+
+  &[id="education"] {
+    @include -tone("mint");
+  }
+
+  &[id="activities"] {
+    @include -tone("coral");
+  }
+}
+
+.inner {
+  @include primitives.wrap;
 }
 
 .head {
@@ -26,7 +76,7 @@
     height: #{r(2)};
     margin-top: space.md();
     content: "";
-    background: linear-gradient(90deg, color.accent(), transparent);
+    background: color.accent();
   }
 }
 
@@ -45,5 +95,15 @@
 
   > * {
     translate: 0 0.04em;
+  }
+}
+
+@include print {
+  .root::before {
+    content: none;
+  }
+
+  .root[id] .head::after {
+    background: color.accent();
   }
 }
