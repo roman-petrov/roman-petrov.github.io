@@ -1,21 +1,20 @@
-@use "../theme/core" as *;
-@use "../theme/materials";
 @use "../theme/tokens/color";
+@use "../theme/tokens/space";
+@use "../theme/tokens/text";
+@use "../theme/tokens/weight";
 
 .root {
-  @include materials.pill;
-  @include materials.face-soft;
-
-  box-sizing: border-box;
-  color: color.ink();
-  background: color.glass-strong();
-  border-color: color.line-strong();
+  display: inline-flex;
+  gap: space.xs();
+  align-items: center;
+  font-size: text.md();
+  font-weight: weight.medium();
+  line-height: 1;
+  color: color.ink-soft();
+  text-decoration: none;
+  border: 0;
 }
 
-a.root {
-  @include materials.interactive-soft;
-
-  color: color.ink();
-  background: color.glass-strong();
-  border-color: color.line-strong();
+a.root .value {
+  border-bottom: 1px solid currentcolor;
 }

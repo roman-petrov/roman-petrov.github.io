@@ -7,7 +7,7 @@ export const Contact = ({ href, icon, value }: ContactProps) => {
   const body = (
     <>
       <Ico>{icon}</Ico>
-      <span>{value}</span>
+      <span className={styles.value}>{value}</span>
     </>
   );
 
