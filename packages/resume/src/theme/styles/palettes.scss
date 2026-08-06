@@ -6,26 +6,26 @@ $-dark: (
   accent-bright: #8eb4f5,
   accent-deep: #3a6fd4,
   accent-glow: rgb(58 111 212 / 28%),
-  accent-line: rgb(91 143 239 / 32%),
-  accent-soft: rgb(91 143 239 / 16%),
-  bg: #0b0d12,
-  chrome: rgb(255 255 255 / 6%),
-  chrome-strong: rgb(255 255 255 / 10%),
-  glass: rgb(255 255 255 / 9%),
-  glass-strong: rgb(255 255 255 / 14%),
-  glow: rgb(91 143 239 / 16%),
+  accent-line: rgb(91 143 239 / 36%),
+  accent-soft: rgb(91 143 239 / 18%),
+  bg: #222836,
+  chrome: rgb(16 19 28 / 72%),
+  chrome-strong: rgb(16 19 28 / 90%),
+  glass: #151a26,
+  glass-strong: #10141f,
+  glow: rgb(91 143 239 / 14%),
   highlight: #fff,
   ink: #f1f3f7,
   ink-fade: #a8b0bf,
   ink-soft: #d4d9e4,
-  line: rgb(255 255 255 / 14%),
-  line-strong: rgb(255 255 255 / 22%),
+  line: rgb(255 255 255 / 10%),
+  line-strong: rgb(255 255 255 / 16%),
   mark: #e0b06a,
   muted: #9aa3b5,
   on-accent: #071018,
-  shadow: rgb(0 0 0 / 55%),
-  shadow-soft: rgb(0 0 0 / 40%),
-  sky: rgb(148 163 184 / 10%),
+  shadow: rgb(0 0 0 / 48%),
+  shadow-soft: rgb(0 0 0 / 32%),
+  sky: rgb(148 163 184 / 12%),
   sky-bright: #7dd3e8,
 );
 $-light: (
@@ -72,7 +72,7 @@ $-paper: map.merge(
 
   color-scheme: dark;
 
-  --rim-weight: 16%;
+  --rim-weight: 22%;
 }
 
 @media (prefers-color-scheme: light) {
@@ -90,7 +90,7 @@ $-paper: map.merge(
 
   color-scheme: dark;
 
-  --rim-weight: 16%;
+  --rim-weight: 22%;
 }
 
 :root[data-theme="light"] {
