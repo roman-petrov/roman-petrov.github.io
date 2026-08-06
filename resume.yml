@@ -70,7 +70,7 @@ expertise:
       items: [Automation, Simplification, Documentation, Developer experience]
     - icon: 🎨
       label: User experience
-      items: [Simplicity, Visual perfection, Screenshot tests]
+      items: [Mobile first, Simplicity, Visual perfection, Screenshot tests]
     - icon: 🌱
       label: Open source
       items: [Use, Contribute, Learn]
