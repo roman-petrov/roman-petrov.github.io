@@ -58,7 +58,13 @@
   display: grid;
   grid-template-columns: auto minmax(0, 1fr);
   gap: space.x3xl();
-  align-items: center;
+  align-items: stretch;
+}
+
+.copy {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
 }
 
 .name {
@@ -74,7 +80,7 @@
 }
 
 .role {
-  margin: space.x2s() 0 0;
+  margin: 0;
   font-size: text.xl();
   font-weight: weight.medium();
   line-height: leading.snug();
@@ -89,7 +95,7 @@
   flex-wrap: wrap;
   gap: space.sm();
   align-items: center;
-  margin: space.lg() 0 space.x2xl();
+  margin: space.md() 0 0;
   font-weight: weight.semibold();
   color: color.accent();
 }
@@ -108,7 +114,8 @@
 
 .meta {
   display: grid;
-  gap: space.lg();
+  gap: space.md();
+  margin-top: auto;
 }
 
 .contacts {

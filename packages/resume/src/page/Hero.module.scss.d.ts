@@ -4,6 +4,7 @@ declare const classNames: {
   readonly inner: "inner";
   readonly caret: "caret";
   readonly cta: "cta";
+  readonly copy: "copy";
   readonly name: "name";
   readonly role: "role";
   readonly tagline: "tagline";

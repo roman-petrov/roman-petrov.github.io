@@ -12,7 +12,7 @@ export const Hero = () => (
       <figure className={styles.photo}>
         <img alt={Content.meta.name} fetchPriority="high" height={240} src={Assets.href(Assets.webp)} width={240} />
       </figure>
-      <div>
+      <div className={styles.copy}>
         <h1 className={styles.name}>{Content.meta.name}</h1>
         <p className={styles.role}>{Content.meta.role}</p>
         <p className={styles.tagline}>
