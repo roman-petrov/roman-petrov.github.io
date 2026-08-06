@@ -8,7 +8,6 @@
 - 📍 Batumi, Georgia
 - 📞 [+79061370326](tel:+79061370326)
 - ✉️ [romanpetrov@list.ru](mailto:romanpetrov@list.ru)
-- 🔗 [github.com/roman-petrov](https://github.com/roman-petrov)
 
 [🌐 Web version](https://roman-petrov.github.io/) · [⬇ Download PDF](https://roman-petrov.github.io/Roman_Petrov_CV.pdf)
 · [🔗 GitHub](https://github.com/roman-petrov)
@@ -17,22 +16,23 @@
 
 ## 👤 About Me
 
-- My favorite tool in software development is **Occam's razor**.
-- I prefer functional programming to object oriented approach and my favorite code unit is **pure function**.
+- My favorite tool in software development is 🔥 **Occam's razor**.
+- I prefer **functional programming**, and my favorite code unit is the **pure function**.
 - I love **AI-assisted development** and have been building software with AI agents for more than a year.
-- I speak **English** and **Russian**.
-- Beyond work I like **travel**, **camping** and playing the **guitar** — and programming, still.
+- I speak **English** (intermediate) and **Russian** (native).
+- My wife **Olga** works as an IT product manager. Our cat **Byte** is happily unemployed. 😎
+- Beyond work, my wife and I love movies, TV series, travel, and concerts. I also enjoy poker and programming.
 
 ## 🌐 Showcase
 
 ### CV as code
 
-A resume built like real software. One YAML file holds all the text, and the build turns it into three things: a
-website, a PDF and a Markdown CV. Nothing is written twice.
+A resume built like real software. **One YAML file** holds all the text, and the build turns it into a website, a PDF,
+and a Markdown CV. **Nothing is written twice.**
 
 React renders static HTML, a micro design system in typed SCSS holds the light and dark themes, Puppeteer prints the PDF
-from the same page and GitHub Actions checks and deploys it on every push. The site is one HTML file with the styles
-inside and less than a kilobyte of JavaScript — 100 out of 100 in PageSpeed Insights.
+from the same page, and GitHub Actions checks and deploys it on every push. The site is one HTML file with the styles
+inside and less than a kilobyte of JavaScript — **100 out of 100** in PageSpeed Insights.
 
 🌐 [See it live](https://roman-petrov.github.io/) · 🔗 [GitHub](https://github.com/roman-petrov/roman-petrov.github.io)
 
@@ -68,7 +68,7 @@ inside and less than a kilobyte of JavaScript — 100 out of 100 in PageSpeed In
 
 ### 🎨 User experience
 
-`Simplicity` · `Visual perfection` · `Screenshot tests`
+`Mobile first` · `Simplicity` · `Visual perfection` · `Screenshot tests`
 
 ### 🌱 Open source
 
@@ -109,16 +109,16 @@ inside and less than a kilobyte of JavaScript — 100 out of 100 in PageSpeed In
 
 `front-end architect` ◆ `tech lead` ◆ `lead developer`
 
-I ran the company design systems in a team of 5-7 engineers, combining all three roles. In the last years I designed not
-only the architecture but the whole product concept — Reactor started as my idea and I planned all of it myself.
+I ran the company **design systems** in a team of 5-7 engineers, combining all three roles. In recent years I shaped not
+only the architecture but the whole **product concept** — **Reactor** started as my idea, and I planned it end to end.
 
 **Responsibilities:**
 
 - designed the architecture of the design systems and the front-end products
-- built the whole development cycle of the internal projects — tools, workflow, releases and documentation
-- led the team, mentored the engineers, reviewed the code and kept the quality high
-- wrote the core parts of the libraries myself
-- analyzed the user experience and was responsible for its quality
+- built the **full development cycle** for internal projects — tools, workflow, releases, and documentation
+- led the team, mentored engineers, reviewed code, and kept quality high
+- wrote the **core parts** of the libraries myself
+- owned **user experience** quality for the products we shipped
 
 **Projects:**
 
@@ -126,14 +126,14 @@ only the architecture but the whole product concept — Reactor started as my id
 
   `architect` ◆ `tech lead` ◆ `lead developer`
 
-  Internal front-end platform of 25 packages that work as a single product. It unifies the development stack and the
-  design of all TravelLine products, and keeps the API and the tools simple.
+  Internal front-end platform of **25 packages** that work as a single product. It unifies the development stack and the
+  design of all TravelLine products, and keeps the API and tools simple.
 
-  A new SPA project needs no setup and no boilerplate and is production ready in about five minutes: design system,
-  state management, router, localization, our own storybook, screenshot testing and coding conventions out of the box,
-  and one CLI tool for the whole workflow from dev server and build to linting, tests, visual regression and release.
+  A new SPA needs no setup and no boilerplate — **production-ready in about five minutes**: design system, state
+  management, router, localization, our own storybook, screenshot testing, and coding conventions out of the box, plus
+  one CLI for the whole workflow from dev server and build to linting, tests, visual regression, and release.
 
-  Already in production, and the technical teams in the company are moving to it.
+  Already **in production**, and technical teams across the company are moving to it.
 
   [`TypeScript`](https://www.typescriptlang.org) · [`React`](https://react.dev) · [`Vite`](https://vite.dev) ·
   [`SCSS`](https://sass-lang.com)
@@ -142,10 +142,10 @@ only the architecture but the whole product concept — Reactor started as my id
 
   `architect` ◆ `tech lead` ◆ `lead developer`
 
-  Move of the front-end stack to Flutter Web. In one year the team built the design system components, the build and
-  workflow tools and a way to start a new project in minutes.
+  Migration of the front-end stack to **Flutter Web**. In one year the team built the design system components, the
+  build and workflow tools, and a way to start a new project in minutes.
 
-  The company did not adopt Flutter, so only a part of the work went to production.
+  The company did not adopt Flutter, so only part of the work reached production.
 
   [`Dart`](https://dart.dev) · [`Flutter`](https://flutter.dev)
 
@@ -153,10 +153,10 @@ only the architecture but the whole product concept — Reactor started as my id
 
   `developer` ◆ `tech lead`
 
-  Design system and component library that made the whole B2B account and intranet look and work the same way.
+  **Design system** and component library that made the whole B2B account and intranet look and work the same way.
 
-  The stack is old and there were almost no tools around it, but the library still runs every screen of the TravelLine
-  back office and is supported and improved.
+  The stack is old and there were almost no tools around it, but the library still runs **every screen** of the
+  TravelLine back office — and is still supported and improved.
 
   [`TypeScript`](https://www.typescriptlang.org) · [`JavaScript`](https://developer.mozilla.org/docs/Web/JavaScript) ·
   [`AngularJS`](https://angularjs.org) · [`Less`](https://lesscss.org)
@@ -238,14 +238,16 @@ only the architecture but the whole product concept — Reactor started as my id
 
 `1999 — 2004`
 
+`information security specialist`
+
 ## 🚀 Activities
 
 ### Machine learning contest
 
 `2015`
 
-I took part in the Beeline Big Data contest. It was my first experience in machine learning so it's been quite a
-challenge for me. I was ranked the 236 out of 832 participants.
+I took part in the **Beeline Big Data** contest — my first real experience in machine learning, and quite a challenge. I
+ranked **236 out of 832** participants.
 
 **References (in Russian):**
 
@@ -256,11 +258,11 @@ challenge for me. I was ranked the 236 out of 832 participants.
 
 `1995 — 2000`
 
-During my school years my favorite hobby was assembler programming on ZX-Spectrum. I'm the author of RIP (Real
-Information Packer) — LZW/Huffman data compression algorithm and application.
+During my school years my favorite hobby was **assembler** programming on ZX-Spectrum. I'm the author of **RIP** (Real
+Information Packer) — an LZW/Huffman data compression algorithm and application.
 
-This was a challenge and I managed to achieve one of the best compression ratios compared to other ZX-Spectrum data
-compression tools.
+It was a real challenge, and I managed to reach **one of the best compression ratios** among ZX-Spectrum packers of that
+time.
 
 **References (in Russian):**
 
