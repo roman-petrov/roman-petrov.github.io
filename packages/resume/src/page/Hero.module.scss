@@ -13,8 +13,7 @@
   position: relative;
   display: grid;
   place-items: center;
-  padding: space.x3xl() 0 space.x2xl();
-  overflow: hidden;
+  padding: space.x3xl() 0;
 
   &::after {
     position: absolute;
@@ -121,16 +120,15 @@
 
 .photo {
   margin: 0;
+  border-radius: radius.lg();
+  box-shadow: 0 #{r(12)} #{r(28)} color.shadow();
 
   img {
     display: block;
     width: #{r(240)};
     height: #{r(240)};
     object-fit: cover;
-    border-radius: radius.lg();
-    box-shadow:
-      0 #{r(20)} #{r(48)} color.shadow(),
-      0 #{r(4)} #{r(24)} color.accent-glow();
+    border-radius: inherit;
   }
 }
 
