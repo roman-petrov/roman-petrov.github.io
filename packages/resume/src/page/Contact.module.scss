@@ -6,6 +6,7 @@
   @include materials.pill;
   @include materials.face-soft;
 
+  box-sizing: border-box;
   color: color.ink();
   background: color.glass-strong();
   border-color: color.line-strong();

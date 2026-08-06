@@ -8,6 +8,7 @@ declare const classNames: {
   readonly slash: "slash";
   readonly tagline: "tagline";
   readonly name: "name";
+  readonly meta: "meta";
   readonly contacts: "contacts";
   readonly photo: "photo";
 };

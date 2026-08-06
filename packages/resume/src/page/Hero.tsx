@@ -17,16 +17,18 @@ export const Hero = () => (
           <span className={styles.tagline}>{Content.meta.tagline}</span>
           <span className={styles.caret} />
         </p>
-        <ul className={styles.contacts}>
-          {Content.contacts.map(({ href, icon, label, value }) => (
-            <li key={label}>
-              <Contact href={href} icon={icon} value={value} />
-            </li>
-          ))}
-        </ul>
-        <div className={styles.cta}>
-          <PdfAction size="lg" />
-          <GithubAction size="lg" />
+        <div className={styles.meta}>
+          <ul className={styles.contacts}>
+            {Content.contacts.map(({ href, icon, label, value }) => (
+              <li key={label}>
+                <Contact href={href} icon={icon} value={value} />
+              </li>
+            ))}
+          </ul>
+          <div className={styles.cta}>
+            <PdfAction size="lg" />
+            <GithubAction size="lg" />
+          </div>
         </div>
       </div>
       <figure className={styles.photo}>

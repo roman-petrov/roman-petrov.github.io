@@ -102,10 +102,15 @@
   -webkit-text-fill-color: transparent;
 }
 
+.meta {
+  display: grid;
+  gap: space.lg();
+}
+
 .contacts {
   @include primitives.row-list(space.sm());
 
-  margin-bottom: space.x2xl();
+  margin: 0;
 }
 
 .cta {
@@ -162,5 +167,25 @@
 
   .photo {
     order: -1;
+  }
+
+  .contacts {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: space.sm();
+
+    li > * {
+      width: 100%;
+    }
+  }
+
+  .cta {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+
+    > * {
+      justify-content: center;
+    }
   }
 }
