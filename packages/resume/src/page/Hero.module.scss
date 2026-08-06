@@ -61,34 +61,6 @@
   align-items: center;
 }
 
-.kicker {
-  @include primitives.label(text.sm());
-
-  display: flex;
-  flex-wrap: wrap;
-  gap: space.sm();
-  align-items: center;
-  margin: space.sm() 0 space.x2xl();
-  color: color.ink-soft();
-}
-
-.slash {
-  color: color.ink-fade();
-}
-
-.tagline {
-  font-weight: weight.semibold();
-  color: color.accent();
-}
-
-.caret {
-  display: inline-block;
-  width: #{r(8)};
-  height: #{r(16)};
-  background: color.accent();
-  animation: blink 1.1s steps(1) infinite;
-}
-
 .name {
   margin: 0;
   font-size: text.hero();
@@ -99,6 +71,39 @@
   background: linear-gradient(180deg, color.ink() 40%, color.ink-fade() 100%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.role {
+  margin: space.x2s() 0 0;
+  font-size: text.xl();
+  font-weight: weight.medium();
+  line-height: leading.snug();
+  color: color.ink-soft();
+  letter-spacing: tracking.snug();
+}
+
+.tagline {
+  @include primitives.label(text.sm());
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: space.sm();
+  align-items: center;
+  margin: space.lg() 0 space.x2xl();
+  font-weight: weight.semibold();
+  color: color.accent();
+}
+
+.slash {
+  color: inherit;
+}
+
+.caret {
+  display: inline-block;
+  width: #{r(8)};
+  height: #{r(16)};
+  background: color.accent();
+  animation: blink 1.1s steps(1) infinite;
 }
 
 .meta {

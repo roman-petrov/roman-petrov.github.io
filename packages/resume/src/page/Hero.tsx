@@ -14,10 +14,10 @@ export const Hero = () => (
       </figure>
       <div>
         <h1 className={styles.name}>{Content.meta.name}</h1>
-        <p className={styles.kicker}>
+        <p className={styles.role}>{Content.meta.role}</p>
+        <p className={styles.tagline}>
           <span className={styles.slash}>{`//`}</span>
-          {` ${Content.meta.role}:`}
-          <span className={styles.tagline}>{Content.meta.tagline}</span>
+          {` ${Content.meta.tagline}`}
           <span className={styles.caret} />
         </p>
         <div className={styles.meta}>
