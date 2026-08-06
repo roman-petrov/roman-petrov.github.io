@@ -2,7 +2,6 @@ import type { CSSProperties } from "react";
 
 import { Content } from "../Content";
 import styles from "./Nav.module.scss";
-import { PdfAction } from "./PdfAction";
 import { ThemeToggle } from "./ThemeToggle";
 import { Timelines } from "./Timelines";
 
@@ -22,7 +21,6 @@ export const Nav = () => (
       </nav>
       <div className={styles.actions}>
         <ThemeToggle />
-        <PdfAction />
       </div>
     </div>
   </header>

@@ -129,9 +129,12 @@
 }
 
 @include mobile {
-  .links,
-  .name {
+  .links {
     display: none;
+  }
+
+  .actions {
+    margin-left: auto;
   }
 }
 
