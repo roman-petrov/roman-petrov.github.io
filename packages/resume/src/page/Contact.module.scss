@@ -6,9 +6,15 @@
   @include materials.pill;
   @include materials.face-soft;
 
-  color: color.ink-soft();
+  color: color.ink();
+  background: color.glass-strong();
+  border-color: color.line-strong();
 }
 
 a.root {
   @include materials.interactive-soft;
+
+  color: color.ink();
+  background: color.glass-strong();
+  border-color: color.line-strong();
 }

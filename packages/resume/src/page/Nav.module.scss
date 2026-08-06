@@ -15,7 +15,7 @@
   top: 0;
   background-color: color.chrome();
   border-bottom: 1px solid transparent;
-  backdrop-filter: blur(14px);
+  backdrop-filter: blur(20px) saturate(1.2);
   animation: chrome 1ms linear both;
   animation-timeline: scroll();
   animation-range: #{r(8)} #{r(24)};

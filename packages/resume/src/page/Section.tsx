@@ -11,10 +11,11 @@ export const Section = ({ children, icon, id, title }: SectionProps) => (
   <section className={styles.root} id={id} style={{ viewTimelineName: Timelines.name(id) }}>
     <Reveal cn={styles.head} tag="header">
       <h2 className={styles.title}>
-        <Ico>{icon}</Ico>
-        {` ${title}`}
+        <span className={styles.icon}>
+          <Ico>{icon}</Ico>
+        </span>
+        {title}
       </h2>
-      <span className={styles.rule} />
     </Reveal>
     {children}
   </section>

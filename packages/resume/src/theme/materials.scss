@@ -10,7 +10,7 @@
 }
 
 @function rim-accent($fill) {
-  @return color-mix(in srgb, #{color.accent()} 32%, #{rim($fill)});
+  @return color-mix(in srgb, #{color.accent()} 28%, #{rim($fill)});
 }
 
 @mixin face {
@@ -24,7 +24,6 @@
     box-shadow 0.2s ease;
 }
 
-// Quiet resting surface — ghost buttons, contacts, plain chips.
 @mixin face-soft {
   @include face;
 
@@ -33,7 +32,6 @@
   border-color: rim(color.glass());
 }
 
-// Tinted resting surface — tech chips and other accent badges.
 @mixin face-accent {
   @include face;
 
@@ -42,10 +40,9 @@
   border-color: rim-accent(color.accent-soft());
 }
 
-// Shared hover for soft + accent: solid accent rim + clear blue wash + ink text.
 @mixin face-lift {
   color: color.ink();
-  background: color-mix(in srgb, #{color.accent()} 18%, #{color.glass-strong()});
+  background: color-mix(in srgb, #{color.accent()} 10%, #{color.glass-strong()});
   border-color: color.accent();
   box-shadow: none;
 }
@@ -56,15 +53,14 @@
   color: color.on-accent();
   background: color.accent();
   border-color: rim(color.accent());
-  box-shadow: 0 #{r(6)} #{r(14)} color.accent-glow();
+  box-shadow: 0 #{r(4)} #{r(12)} color.accent-glow();
 }
 
-// Primary hover: same idea as lift — one clear step darker, rim follows fill.
 @mixin face-primary-lift {
   color: color.on-accent();
   background: color.accent-deep();
   border-color: color.accent-deep();
-  box-shadow: 0 #{r(8)} #{r(18)} color.accent-glow();
+  box-shadow: 0 #{r(6)} #{r(14)} color.accent-glow();
 }
 
 @mixin interactive-soft {
@@ -128,28 +124,30 @@
   rotate: 45deg;
 }
 
-@mixin well {
-  @include hover {
-    border-color: color.accent();
-    box-shadow: 0 #{r(10)} #{r(26)} color.shadow-soft();
-  }
-
+@mixin panel {
   @include print {
+    background: color.highlight();
     box-shadow: none;
+    backdrop-filter: none;
   }
 
-  background: linear-gradient(150deg, color.accent-soft(), color.glass-strong() 72%);
-  border: 1px solid rim-accent(color.accent-soft());
+  background: color.glass-strong();
+  border: 1px solid color.line();
+  box-shadow:
+    inset #{r(3)} 0 0 color.accent(),
+    0 #{r(10)} #{r(28)} color.shadow-soft();
+  backdrop-filter: blur(14px) saturate(1.15);
+}
+
+@mixin well {
+  @include panel;
+
   border-radius: radius.md();
-  box-shadow: 0 #{r(4)} #{r(14)} color.shadow-soft();
-  transition:
-    border-color 0.25s ease,
-    box-shadow 0.25s ease;
 }
 
 @mixin callout {
-  background: color.accent-soft();
-  border: 1px solid rim-accent(color.accent-soft());
+  @include panel;
+
   border-radius: radius.lg();
 }
 
