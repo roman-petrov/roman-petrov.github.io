@@ -1,9 +1,7 @@
 @use "../theme/core" as *;
-@use "../theme/materials";
 @use "../theme/primitives";
 @use "../theme/tokens/color";
 @use "../theme/tokens/metrics";
-@use "../theme/tokens/radius";
 @use "../theme/tokens/space";
 @use "../theme/tokens/text";
 @use "../theme/tokens/tracking";
@@ -25,12 +23,11 @@
 
   &::after {
     display: block;
-    width: #{r(56)};
-    height: #{r(3)};
+    width: 100%;
+    height: #{r(2)};
     margin-top: space.md();
     content: "";
     background: linear-gradient(90deg, color.accent(), transparent);
-    border-radius: radius.xs();
   }
 }
 
@@ -38,26 +35,17 @@
   @include primitives.heading(text.title());
 
   display: flex;
-  gap: space.md();
+  gap: space.sm();
   align-items: center;
   letter-spacing: tracking.tight();
 }
 
 .icon {
-  @include primitives.square(#{r(40)});
-
-  display: flex;
   flex-shrink: 0;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  font-size: metrics.icon();
+  font-size: text.pull();
   line-height: 1;
-  background: color.accent-soft();
-  border: 1px solid materials.rim-accent(color.accent-soft());
-  border-radius: radius.sm();
 
   > * {
-    translate: 0 0.06em;
+    translate: 0 0.04em;
   }
 }

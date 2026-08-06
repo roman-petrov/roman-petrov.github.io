@@ -182,6 +182,7 @@ education:
     - degree: Master
       school: Volga State University of Technology
       place: Yoshkar-Ola
+      roles: [information security specialist]
       from: 1999
       to: 2004
 

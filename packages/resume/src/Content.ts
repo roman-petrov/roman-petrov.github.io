@@ -87,10 +87,11 @@ const jobEntry = (job: Job): Entry => ({
   title: job.company,
 });
 
-const studyEntry = (study: Study): Entry => ({
+const studyEntry = ({ degree, from, place, roles, school, to }: Study): Entry => ({
   blocks: [],
-  date: period(study),
-  title: `${study.degree}, ${study.school}, ${study.place}`,
+  date: period({ from, to }),
+  roles,
+  title: `${degree}, ${school}, ${place}`,
 });
 
 const activityEntry = ({ from, references, summary, title, to }: Activity): Entry => ({

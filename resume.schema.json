@@ -69,9 +69,10 @@
               "to": { "type": "integer", "minimum": -9007199254740991, "maximum": 9007199254740991 },
               "degree": { "type": "string" },
               "place": { "type": "string" },
+              "roles": { "type": "array", "items": { "type": "string" } },
               "school": { "type": "string" }
             },
-            "required": ["from", "to", "degree", "place", "school"],
+            "required": ["from", "to", "degree", "place", "roles", "school"],
             "additionalProperties": false
           }
         }
