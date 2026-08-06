@@ -9,6 +9,9 @@ export const Hero = () => (
   <section className={styles.root} id="top">
     <div className={styles.glow} />
     <div className={styles.inner}>
+      <figure className={styles.photo}>
+        <img alt={Content.meta.name} fetchPriority="high" height={240} src={Assets.href(Assets.webp)} width={240} />
+      </figure>
       <div>
         <h1 className={styles.name}>{Content.meta.name}</h1>
         <p className={styles.kicker}>
@@ -31,9 +34,6 @@ export const Hero = () => (
           </div>
         </div>
       </div>
-      <figure className={styles.photo}>
-        <img alt={Content.meta.name} fetchPriority="high" height={240} src={Assets.href(Assets.webp)} width={240} />
-      </figure>
     </div>
   </section>
 );

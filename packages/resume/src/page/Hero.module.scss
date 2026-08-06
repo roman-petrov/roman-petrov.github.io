@@ -57,7 +57,7 @@
 
   position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-columns: auto minmax(0, 1fr);
   gap: space.x3xl();
   align-items: center;
 }
@@ -163,10 +163,6 @@
   .inner {
     grid-template-columns: minmax(0, 1fr);
     gap: space.x2xl();
-  }
-
-  .photo {
-    order: -1;
   }
 
   .contacts {
