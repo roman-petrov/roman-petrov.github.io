@@ -26,7 +26,13 @@ export const ResumeSchema = z.strictObject({
   education: z.strictObject({
     ...titled,
     studies: z.array(
-      z.strictObject({ ...span, degree: z.string(), place: z.string(), roles: z.array(z.string()), school: z.string() }),
+      z.strictObject({
+        ...span,
+        degree: z.string(),
+        place: z.string(),
+        roles: z.array(z.string()),
+        school: z.string(),
+      }),
     ),
   }),
   experience: z.strictObject({

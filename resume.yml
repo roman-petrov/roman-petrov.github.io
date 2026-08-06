@@ -28,8 +28,7 @@ about:
     - I speak **English** (intermediate) and **Russian** (native).
     - My wife **Olga** works as an IT product manager. Our cat **Byte** is happily unemployed. 😎
     - >-
-      Beyond work, my wife and I love movies, TV series, travel, and concerts. I also enjoy poker and
-      programming.
+      Beyond work, my wife and I love movies, TV series, travel, and concerts. I also enjoy poker and programming.
 
 showcase:
   icon: 🌐
@@ -213,11 +212,11 @@ activities:
       from: 1995
       to: 2000
       summary: >-
-        During my school years my favorite hobby was **assembler** programming on ZX-Spectrum. I'm the author of
-        **RIP** (Real Information Packer) — an LZW/Huffman data compression algorithm and application.
+        During my school years my favorite hobby was **assembler** programming on ZX-Spectrum. I'm the author of **RIP**
+        (Real Information Packer) — an LZW/Huffman data compression algorithm and application.
 
-        It was a real challenge, and I managed to reach **one of the best compression ratios** among ZX-Spectrum
-        packers of that time.
+        It was a real challenge, and I managed to reach **one of the best compression ratios** among ZX-Spectrum packers
+        of that time.
       references:
         label: References (in Russian)
         items:

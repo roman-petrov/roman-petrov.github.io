@@ -15,17 +15,4 @@ const schema = path.join(Root, `resume.schema.json`);
 const site = path.join(Root, `dist`, `index.html`);
 const srcAssets = path.join(resume, `src`, `assets`);
 
-export const Paths = {
-  assets,
-  build,
-  content,
-  dist,
-  markdown,
-  og,
-  pdf,
-  resume,
-  root,
-  schema,
-  site,
-  srcAssets,
-};
+export const Paths = { assets, build, content, dist, markdown, og, pdf, resume, root, schema, site, srcAssets };
