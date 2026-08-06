@@ -1,11 +1,13 @@
-export type RolesClasses = Partial<Record<`role` | `roles`, string>>;
+import { _ } from "@cv/core";
 
-export type RolesProps = { classes: RolesClasses; items: string[] };
+import styles from "./Roles.module.scss";
 
-export const Roles = ({ classes, items }: RolesProps) => (
-  <p className={classes.roles}>
+export type RolesProps = { items: string[]; size: `sm` | `xs` };
+
+export const Roles = ({ items, size }: RolesProps) => (
+  <p className={styles.root}>
     {items.map(item => (
-      <span className={classes.role} key={item}>
+      <span className={_.cn(styles.role, styles[size])} key={item}>
         {item}
       </span>
     ))}

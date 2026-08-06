@@ -1,15 +1,16 @@
 @use "../theme/core" as *;
 @use "../theme/materials";
-@use "../theme/patterns";
 @use "../theme/primitives";
 @use "../theme/tokens/color";
 @use "../theme/tokens/space";
 @use "../theme/tokens/text";
-@use "../theme/tokens/weight";
-@include patterns.roles(text.xs());
 
 .label {
   @include primitives.label(text.xs());
+
+  @include print {
+    break-after: avoid;
+  }
 
   margin: space.lg() 0 space.sm();
   color: color.ink-fade();
@@ -21,6 +22,10 @@
   list-style: none;
 
   li {
+    @include print {
+      break-inside: avoid;
+    }
+
     position: relative;
     padding-left: space.xl();
     margin-bottom: space.sm();
@@ -32,110 +37,5 @@
       top: 0.62em;
       left: space.xs();
     }
-  }
-}
-
-.projects {
-  display: grid;
-  gap: space.lg();
-  padding: 0;
-  margin: 0 0 space.lg();
-  list-style: none;
-}
-
-.project {
-  @include materials.well;
-
-  display: grid;
-  gap: space.sm();
-  padding: space.lg();
-}
-
-.head {
-  display: grid;
-  gap: space.x2s();
-  margin: 0;
-}
-
-.name {
-  @include patterns.heading(text.xl());
-
-  justify-self: start;
-}
-
-.stack {
-  @include primitives.row-list(space.sm());
-}
-
-.note {
-  margin: 0;
-}
-
-.chip {
-  @include materials.chip;
-}
-
-.showcase {
-  @include materials.callout;
-
-  display: grid;
-  gap: space.md();
-  padding: space.x2xl();
-}
-
-.title {
-  margin: 0;
-  font-size: text.pull();
-  font-weight: weight.semibold();
-  color: color.ink();
-}
-
-@include mobile {
-  .showcase {
-    padding: space.xl() space.lg();
-  }
-}
-
-.links {
-  @include primitives.row-list(space.sm());
-
-  a {
-    @include primitives.control(space.x2s());
-
-    @include hover {
-      color: color.ink();
-      background: color.glass-strong();
-    }
-
-    padding: space.x2s() space.md();
-    font-weight: weight.medium();
-    background: color.glass();
-    border-color: color.accent-line();
-    transition:
-      background 0.2s ease,
-      color 0.2s ease;
-  }
-
-  li:first-child a {
-    @include hover {
-      color: color.on-accent();
-      background: color.accent-bright();
-    }
-
-    color: color.on-accent();
-    background: linear-gradient(140deg, color.accent(), color.accent-bright());
-    border-color: transparent;
-  }
-}
-
-@include print {
-  .label {
-    break-after: avoid;
-  }
-
-  .list li,
-  .project,
-  .showcase {
-    break-inside: avoid;
   }
 }

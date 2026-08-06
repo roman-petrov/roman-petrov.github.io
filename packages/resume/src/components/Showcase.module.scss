@@ -1,0 +1,65 @@
+@use "../theme/core" as *;
+@use "../theme/materials";
+@use "../theme/primitives";
+@use "../theme/tokens/color";
+@use "../theme/tokens/space";
+@use "../theme/tokens/text";
+@use "../theme/tokens/weight";
+
+.root {
+  @include materials.callout;
+
+  @include print {
+    break-inside: avoid;
+  }
+
+  display: grid;
+  gap: space.md();
+  padding: space.x2xl();
+}
+
+.title {
+  @include primitives.heading(text.pull());
+}
+
+.note {
+  margin: 0;
+}
+
+.links {
+  @include primitives.row-list(space.sm());
+
+  a {
+    @include primitives.control(space.x2s());
+
+    @include hover {
+      color: color.ink();
+      background: color.glass-strong();
+    }
+
+    padding: space.x2s() space.md();
+    font-weight: weight.medium();
+    background: color.glass();
+    border-color: color.accent-line();
+    transition:
+      background 0.2s ease,
+      color 0.2s ease;
+  }
+
+  li:first-child a {
+    @include hover {
+      color: color.on-accent();
+      background: color.accent-bright();
+    }
+
+    color: color.on-accent();
+    background: linear-gradient(140deg, color.accent(), color.accent-bright());
+    border-color: transparent;
+  }
+}
+
+@include mobile {
+  .root {
+    padding: space.xl() space.lg();
+  }
+}

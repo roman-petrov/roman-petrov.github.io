@@ -1,0 +1,33 @@
+@use "../theme/materials";
+@use "../theme/primitives";
+@use "../theme/tokens/color";
+@use "../theme/tokens/space";
+@use "../theme/tokens/text";
+
+.root {
+  display: flex;
+  flex-wrap: wrap;
+  gap: space.sm();
+  margin: 0;
+}
+
+.role {
+  display: inline-flex;
+  gap: space.sm();
+  align-items: center;
+  color: color.accent();
+
+  &:not(:first-child)::before {
+    @include materials.diamond;
+
+    flex: none;
+  }
+}
+
+.sm {
+  @include primitives.label(text.sm());
+}
+
+.xs {
+  @include primitives.label(text.xs());
+}

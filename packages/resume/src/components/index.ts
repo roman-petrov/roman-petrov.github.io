@@ -1,5 +1,6 @@
 export * from "./Blocks";
 export * from "./Chip";
+export * from "./Chips";
 export * from "./Facts";
 export * from "./Ico";
 export * from "./Inline";

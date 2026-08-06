@@ -1,14 +1,14 @@
 import type { Product } from "../Content";
 
-import styles from "./Blocks.module.scss";
+import { Chips } from "./Chips";
 import { Ico } from "./Ico";
 import { Inline } from "./Inline";
-import { TechChip } from "./TechChip";
+import styles from "./Showcase.module.scss";
 
 export type ShowcaseProps = { item: Product };
 
 export const Showcase = ({ item: { links, name, note, stack } }: ShowcaseProps) => (
-  <div className={styles.showcase}>
+  <div className={styles.root}>
     <h3 className={styles.title}>{name}</h3>
     {note.map((item, index) => (
       <p className={styles.note} key={index}>
@@ -25,12 +25,6 @@ export const Showcase = ({ item: { links, name, note, stack } }: ShowcaseProps) 
         </li>
       ))}
     </ul>
-    <ul className={styles.stack}>
-      {stack.map(item => (
-        <li key={item}>
-          <TechChip cn={styles.chip} name={item} />
-        </li>
-      ))}
-    </ul>
+    <Chips items={stack} tech />
   </div>
 );

@@ -1,5 +1,7 @@
 @use "core" as *;
+@use "tokens/color";
 @use "tokens/font";
+@use "tokens/leading";
 @use "tokens/metrics";
 @use "tokens/radius";
 @use "tokens/space";
@@ -37,6 +39,15 @@
 
   text-transform: uppercase;
   letter-spacing: tracking.mono();
+}
+
+@mixin heading($size) {
+  margin: 0;
+  font-size: $size;
+  font-weight: weight.semibold();
+  line-height: leading.tight();
+  color: color.ink();
+  letter-spacing: tracking.snug();
 }
 
 @mixin control($gap) {

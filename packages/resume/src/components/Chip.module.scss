@@ -1,0 +1,5 @@
+@use "../theme/materials";
+
+.root {
+  @include materials.chip;
+}

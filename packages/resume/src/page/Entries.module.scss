@@ -1,10 +1,8 @@
 @use "../theme/core" as *;
-@use "../theme/patterns";
 @use "../theme/primitives";
 @use "../theme/tokens/color";
 @use "../theme/tokens/space";
 @use "../theme/tokens/text";
-@include patterns.roles(text.sm());
 
 .root {
   display: grid;
@@ -48,7 +46,7 @@
 }
 
 .title {
-  @include patterns.heading(text.pull());
+  @include primitives.heading(text.pull());
 }
 
 .source {

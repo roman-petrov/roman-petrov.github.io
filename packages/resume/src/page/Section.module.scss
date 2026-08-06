@@ -1,5 +1,4 @@
 @use "../theme/core" as *;
-@use "../theme/patterns";
 @use "../theme/primitives";
 @use "../theme/tokens/color";
 @use "../theme/tokens/metrics";
@@ -26,7 +25,7 @@
 }
 
 .title {
-  @include patterns.heading(text.title());
+  @include primitives.heading(text.title());
 
   display: flex;
   gap: space.sm();

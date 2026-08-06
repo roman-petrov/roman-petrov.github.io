@@ -1,0 +1,41 @@
+@use "../theme/core" as *;
+@use "../theme/materials";
+@use "../theme/primitives";
+@use "../theme/tokens/space";
+@use "../theme/tokens/text";
+
+.root {
+  display: grid;
+  gap: space.lg();
+  padding: 0;
+  margin: 0 0 space.lg();
+  list-style: none;
+}
+
+.project {
+  @include materials.well;
+
+  @include print {
+    break-inside: avoid;
+  }
+
+  display: grid;
+  gap: space.sm();
+  padding: space.lg();
+}
+
+.head {
+  display: grid;
+  gap: space.x2s();
+  margin: 0;
+}
+
+.name {
+  @include primitives.heading(text.xl());
+
+  justify-self: start;
+}
+
+.note {
+  margin: 0;
+}

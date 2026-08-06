@@ -1,10 +1,12 @@
-export type ChipProps = { cn?: string; href?: string; label: string };
+import styles from "./Chip.module.scss";
 
-export const Chip = ({ cn, href, label }: ChipProps) =>
+export type ChipProps = { href?: string; label: string };
+
+export const Chip = ({ href, label }: ChipProps) =>
   href === undefined ? (
-    <span className={cn}>{label}</span>
+    <span className={styles.root}>{label}</span>
   ) : (
-    <a className={cn} href={href}>
+    <a className={styles.root} href={href}>
       {label}
     </a>
   );

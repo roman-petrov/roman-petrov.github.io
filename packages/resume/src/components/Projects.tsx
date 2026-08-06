@@ -1,14 +1,14 @@
 import type { Project } from "../Content";
 
-import styles from "./Blocks.module.scss";
+import { Chips } from "./Chips";
 import { Inline } from "./Inline";
+import styles from "./Projects.module.scss";
 import { Roles } from "./Roles";
-import { TechChip } from "./TechChip";
 
 export type ProjectsProps = { items: Project[] };
 
 export const Projects = ({ items }: ProjectsProps) => (
-  <ul className={styles.projects}>
+  <ul className={styles.root}>
     {items.map(({ href, name, note, roles, stack }) => (
       <li className={styles.project} key={name}>
         <div className={styles.head}>
@@ -19,20 +19,14 @@ export const Projects = ({ items }: ProjectsProps) => (
               {name}
             </a>
           )}
-          <Roles classes={styles} items={roles} />
+          <Roles items={roles} size="xs" />
         </div>
         {note.map((item, index) => (
           <p className={styles.note} key={index}>
             <Inline text={item} />
           </p>
         ))}
-        <ul className={styles.stack}>
-          {stack.map(item => (
-            <li key={item}>
-              <TechChip cn={styles.chip} name={item} />
-            </li>
-          ))}
-        </ul>
+        <Chips items={stack} tech />
       </li>
     ))}
   </ul>

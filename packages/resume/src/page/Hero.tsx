@@ -1,6 +1,5 @@
 import { Assets } from "../Assets";
 import { Content } from "../Content";
-import actions from "./Action.module.scss";
 import { Contact } from "./Contact";
 import { GithubAction } from "./GithubAction";
 import styles from "./Hero.module.scss";
@@ -26,8 +25,8 @@ export const Hero = () => (
           ))}
         </ul>
         <div className={styles.cta}>
-          <PdfAction cn={actions.lg} />
-          <GithubAction cn={actions.lg} />
+          <PdfAction size="lg" />
+          <GithubAction size="lg" />
         </div>
       </div>
       <figure className={styles.photo}>

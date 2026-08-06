@@ -1,0 +1,6 @@
+@use "../theme/primitives";
+@use "../theme/tokens/space";
+
+.root {
+  @include primitives.row-list(space.sm());
+}

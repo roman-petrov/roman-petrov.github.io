@@ -26,7 +26,7 @@ export const Entries = ({ section }: EntriesProps) => (
                 </span>
               )}
             </div>
-            {entry.roles === undefined ? undefined : <Roles classes={styles} items={entry.roles} />}
+            {entry.roles === undefined ? undefined : <Roles items={entry.roles} size="sm" />}
           </header>
           <Blocks blocks={entry.blocks} />
         </Reveal>
