@@ -15,6 +15,6 @@ export type ActionProps = {
 export const Action = ({ download, href, icon, label, size = `md`, tone }: ActionProps) => (
   <a className={_.cn(styles.root, styles[size], styles[tone])} download={download} href={href}>
     <Ico>{icon}</Ico>
-    {` ${label}`}
+    <span>{label}</span>
   </a>
 );
