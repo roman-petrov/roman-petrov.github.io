@@ -132,11 +132,9 @@
   }
 
   background: color.glass-strong();
-  border: 1px solid color.line();
-  box-shadow:
-    inset #{r(3)} 0 0 color.accent(),
-    0 #{r(10)} #{r(28)} color.shadow-soft();
-  backdrop-filter: blur(14px) saturate(1.15);
+  border: 1px solid rim(color.glass());
+  box-shadow: 0 #{r(8)} #{r(24)} color.shadow-soft();
+  backdrop-filter: blur(16px) saturate(1.2);
 }
 
 @mixin well {
