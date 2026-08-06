@@ -93,10 +93,22 @@
     }
 
     padding: space.x2s() space.md();
+    font-weight: weight.medium();
     background: color.glass();
     border-color: color.accent-line();
     transition:
       background 0.2s ease,
       color 0.2s ease;
+  }
+
+  li:first-child a {
+    @include hover {
+      color: color.on-accent();
+      background: color.accent-bright();
+    }
+
+    color: color.on-accent();
+    background: linear-gradient(140deg, color.accent(), color.accent-bright());
+    border-color: transparent;
   }
 }

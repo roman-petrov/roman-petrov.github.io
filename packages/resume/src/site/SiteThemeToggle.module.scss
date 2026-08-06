@@ -11,3 +11,37 @@
   background: none;
   border: 0;
 }
+
+.light {
+  display: none;
+}
+
+@media (prefers-color-scheme: light) {
+  .dark {
+    display: none;
+  }
+
+  .light {
+    display: block;
+  }
+}
+
+:root[data-theme="dark"] {
+  .dark {
+    display: block;
+  }
+
+  .light {
+    display: none;
+  }
+}
+
+:root[data-theme="light"] {
+  .dark {
+    display: none;
+  }
+
+  .light {
+    display: block;
+  }
+}

@@ -5,7 +5,7 @@
 [👤 About Me](#-about-me) · [🌐 Showcase](#-showcase) · [🧠 Expertise](#-expertise) · [🛠 Stack](#-stack) ·
 [💼 Experience](#-experience) · [🎓 Education](#-education) · [🚀 Activities](#-activities)
 
-- 📍 Yoshkar-Ola, Russian Federation
+- 📍 Batumi, Georgia
 - 📞 [+79061370326](tel:+79061370326)
 - ✉️ [romanpetrov@list.ru](mailto:romanpetrov@list.ru)
 - 🔗 [github.com/roman-petrov](https://github.com/roman-petrov)
@@ -27,14 +27,15 @@
 
 ### CV as code
 
-This resume is a small product of mine. The website, the PDF and the Markdown CV are built from one resume.yml file, so
-every version tells the same story and none of them can go stale.
+A resume built like real software. One YAML file holds all the text, and the build turns it into three things: a
+website, a PDF and a Markdown CV. Nothing is written twice.
 
-React renders the pages to static HTML, the design system lives in typed SCSS modules, Puppeteer prints the PDF and
-GitHub Actions runs the checks and the deploy on every change.
+React renders static HTML, a micro design system in typed SCSS holds the light and dark themes, Puppeteer prints the PDF
+and GitHub Actions checks and deploys it on every push. The site is one HTML file with the styles inside and less than a
+kilobyte of JavaScript — 100 out of 100 in PageSpeed Insights.
 
-🌐 [roman-petrov.github.io](https://roman-petrov.github.io/) · 🔗
-[github.com/roman-petrov/roman-petrov.github.io](https://github.com/roman-petrov/roman-petrov.github.io)
+🌐 [See it live](https://roman-petrov.github.io/) · 🔗
+[Read the source](https://github.com/roman-petrov/roman-petrov.github.io)
 
 [`TypeScript`](https://www.typescriptlang.org) · [`React`](https://react.dev) · [`Vite`](https://vite.dev) ·
 [`SCSS`](https://sass-lang.com) · [`Bun`](https://bun.sh) · [`Puppeteer`](https://pptr.dev) ·

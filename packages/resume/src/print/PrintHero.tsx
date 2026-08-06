@@ -1,3 +1,4 @@
+import { Assets } from "../Assets";
 import { Ico } from "../components";
 import { Content } from "../Content";
 import styles from "./PrintHero.module.scss";
@@ -29,12 +30,6 @@ export const PrintHero = () => (
         ))}
       </ul>
     </div>
-    <img
-      alt={Content.meta.name}
-      className={styles.photo}
-      height={160}
-      src={`./assets/${Content.meta.photo}`}
-      width={160}
-    />
+    <img alt={Content.meta.name} className={styles.photo} height={160} src={Assets.href(Assets.photo)} width={160} />
   </header>
 );

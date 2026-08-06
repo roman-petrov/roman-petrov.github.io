@@ -1,3 +1,4 @@
+import { Assets } from "../Assets";
 import { Content } from "../Content";
 import actions from "./SiteAction.module.scss";
 import { SiteContact } from "./SiteContact";
@@ -30,7 +31,7 @@ export const SiteHero = () => (
         </div>
       </div>
       <figure className={styles.photo}>
-        <img alt={Content.meta.name} height={320} src={`./assets/${Content.meta.photo}`} width={320} />
+        <img alt={Content.meta.name} fetchPriority="high" height={320} src={Assets.href(Assets.webp)} width={320} />
       </figure>
     </div>
   </section>

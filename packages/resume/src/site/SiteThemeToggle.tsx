@@ -1,4 +1,9 @@
-import { useSiteThemeToggleState } from "./SiteThemeToggle.state";
-import { SiteThemeToggleView } from "./SiteThemeToggle.view";
+import { Ico } from "../components";
+import styles from "./SiteThemeToggle.module.scss";
 
-export const SiteThemeToggle = () => <SiteThemeToggleView {...useSiteThemeToggleState()} />;
+export const SiteThemeToggle = () => (
+  <button className={styles.root} data-theme-toggle="" title="Switch theme" type="button">
+    <Ico cn={styles.dark}>🌙</Ico>
+    <Ico cn={styles.light}>☀️</Ico>
+  </button>
+);

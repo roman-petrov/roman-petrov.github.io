@@ -1,4 +1,5 @@
 ActiveSWF
+Batumi
 beeline
 bunx
 cpslabs
@@ -24,5 +25,6 @@ speccy
 travelline
 TLF
 TLUI
+wght
 Yoshkar
 zxpress
