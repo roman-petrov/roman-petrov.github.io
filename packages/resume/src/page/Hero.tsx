@@ -30,7 +30,7 @@ export const Hero = () => (
         </div>
       </div>
       <figure className={styles.photo}>
-        <img alt={Content.meta.name} fetchPriority="high" height={320} src={Assets.href(Assets.webp)} width={320} />
+        <img alt={Content.meta.name} fetchPriority="high" height={240} src={Assets.href(Assets.webp)} width={240} />
       </figure>
     </div>
   </section>

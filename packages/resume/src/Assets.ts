@@ -2,7 +2,7 @@ import { Content } from "./Content";
 
 const photo = Content.meta.photo;
 
-const webp = photo.replace(/\.[^.]+$/u, `.webp`);
+const webp = `photo.webp`;
 
 const href = (file: string) => `./assets/${file}`;
 

@@ -15,7 +15,7 @@ import { Photo } from "./Photo";
 type RenderModule = { render: (assets: PageAssets) => string };
 
 const copyAssets = async () => {
-  const assetFiles = [`photo.png`, `favicon.svg`];
+  const assetFiles = [`favicon.svg`];
 
   await Directory.ensure(Paths.assets);
   await Promise.all(assetFiles.map(file => File.copy(path.join(Paths.srcAssets, file), path.join(Paths.assets, file))));

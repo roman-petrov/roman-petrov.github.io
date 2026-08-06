@@ -130,9 +130,8 @@
   img {
     position: relative;
     display: block;
-    width: clamp(#{r(176)}, 22vw, #{r(240)});
-    height: auto;
-    aspect-ratio: 1;
+    width: #{r(240)};
+    height: #{r(240)};
     object-fit: cover;
     border-radius: radius.lg();
     box-shadow:
