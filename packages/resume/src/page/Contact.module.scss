@@ -25,3 +25,9 @@
 a.root .value {
   border-bottom: 1px solid transparent;
 }
+
+@include print {
+  a.root .value {
+    border-bottom-color: currentcolor;
+  }
+}
