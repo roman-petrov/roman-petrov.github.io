@@ -101,6 +101,10 @@
 }
 
 @include print {
+  .root[id] {
+    border-top: none;
+  }
+
   .root::before {
     content: none;
   }
