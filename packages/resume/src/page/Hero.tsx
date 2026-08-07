@@ -14,14 +14,14 @@ export const Hero = ({ photo }: HeroProps) => (
         <img alt={Content.meta.name} fetchPriority="high" height={240} src={photo} width={240} />
       </figure>
       <div className={styles.copy}>
-        <h1 className={styles.name}>{Content.meta.name}</h1>
-        <p className={styles.role}>{Content.meta.role}</p>
-        <p className={styles.tagline}>
-          <span className={styles.slash}>{`//`}</span>
-          {` ${Content.meta.tagline}`}
-          <span className={styles.caret} />
-        </p>
-        <div className={styles.meta}>
+        <div className={styles.stack}>
+          <h1 className={styles.name}>{Content.meta.name}</h1>
+          <p className={styles.role}>{Content.meta.role}</p>
+          <p className={styles.tagline}>
+            <span className={styles.slash}>{`//`}</span>
+            {` ${Content.meta.tagline}`}
+            <span className={styles.caret} />
+          </p>
           <ul className={styles.contacts}>
             {Content.contacts.map(({ href, icon, label, value }) => (
               <li key={label}>
@@ -29,10 +29,10 @@ export const Hero = ({ photo }: HeroProps) => (
               </li>
             ))}
           </ul>
-          <div className={styles.cta}>
-            <PdfAction size="lg" />
-            <GithubAction size="lg" />
-          </div>
+        </div>
+        <div className={styles.cta}>
+          <PdfAction size="lg" />
+          <GithubAction size="lg" />
         </div>
       </div>
     </div>

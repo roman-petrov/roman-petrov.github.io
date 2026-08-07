@@ -57,7 +57,17 @@
 .copy {
   display: flex;
   flex-direction: column;
+  gap: space.md();
+  align-items: flex-start;
   min-height: 100%;
+}
+
+.stack {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  width: fit-content;
+  max-width: 100%;
 }
 
 .name {
@@ -70,6 +80,13 @@
   background: linear-gradient(180deg, color.ink() 40%, color.ink-fade() 100%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.role,
+.tagline,
+.contacts {
+  width: 0;
+  min-width: 100%;
 }
 
 .role {
@@ -106,21 +123,28 @@
   background: color.accent();
 }
 
-.meta {
-  display: grid;
-  gap: space.md();
-  margin-top: auto;
-}
-
 .contacts {
+  @include materials.well;
   @include primitives.row-list(0);
 
-  margin: 0;
+  align-items: center;
+  justify-content: center;
+  padding: space.xs() space.md();
+  margin-top: auto;
+  border-radius: radius.xs();
+  box-shadow: none;
 
-  > li:not(:first-child) {
-    padding-left: space.lg();
-    margin-left: space.lg();
-    border-left: 1px solid color.line-strong();
+  > li {
+    display: flex;
+    align-items: center;
+  }
+
+  > li:not(:first-child)::before {
+    @include materials.diamond;
+
+    flex-shrink: 0;
+    margin-right: space.md();
+    margin-left: space.md();
   }
 }
 
@@ -128,6 +152,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: space.md();
+  align-self: stretch;
 }
 
 .photo {
@@ -181,30 +206,46 @@
   }
 
   .copy {
-    align-items: center;
+    gap: space.md();
+    align-items: stretch;
+    margin-top: 0;
     text-align: center;
+  }
+
+  .stack {
+    width: 100%;
+    max-width: none;
+  }
+
+  .role,
+  .tagline,
+  .contacts {
+    width: auto;
+    min-width: 0;
   }
 
   .tagline {
     justify-content: center;
   }
 
-  .meta {
-    gap: space.md();
-    align-items: stretch;
-    width: 100%;
-    margin-top: space.lg();
-  }
-
   .contacts {
     display: grid;
-    gap: space.xs();
-    justify-items: center;
+    justify-items: stretch;
+    width: 100%;
+    padding: space.xs();
+    margin-top: space.lg();
+    border-radius: radius.sm();
+
+    > li {
+      padding: space.xs() space.sm();
+    }
 
     > li:not(:first-child) {
-      padding-left: 0;
-      margin-left: 0;
-      border-left: 0;
+      border-top: 1px solid color.line();
+
+      &::before {
+        content: none;
+      }
     }
   }
 
