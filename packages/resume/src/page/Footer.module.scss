@@ -28,7 +28,7 @@
 .note {
   margin: 0;
   font-size: text.sm();
-  color: color.muted();
+  color: color.ink-fade();
 }
 
 @include print {

@@ -76,10 +76,6 @@
   @return -color("mark");
 }
 
-@function muted() {
-  @return -color("muted");
-}
-
 @function on-accent() {
   @return -color("on-accent");
 }
