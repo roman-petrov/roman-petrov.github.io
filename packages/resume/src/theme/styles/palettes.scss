@@ -125,6 +125,7 @@ $-paper: map.merge(
     color-scheme: light;
 
     --panel-sheer: 100%;
+    --rim-ink: var(--color-line);
     --rim-weight: 100%;
   }
 }

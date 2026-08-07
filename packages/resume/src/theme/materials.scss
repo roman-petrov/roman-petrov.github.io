@@ -27,7 +27,7 @@ $-material-tone-rim: 22%;
 }
 
 @function rim($fill) {
-  @return color-mix(in srgb, #{color.highlight()} var(--rim-weight), #{$fill});
+  @return color-mix(in srgb, var(--rim-ink, #{color.highlight()}) var(--rim-weight), #{$fill});
 }
 
 @function rim-accent($fill) {
@@ -155,13 +155,16 @@ $-material-tone-rim: 22%;
   $-fill: panel-bg();
 
   @include print {
-    background: color.surface();
+    background: $-fill;
     box-shadow: none;
   }
 
-  background: $-fill;
   border: 1px solid rim($-fill);
-  box-shadow: 0 #{r(8)} #{r(24)} color.shadow-soft();
+
+  @media not print {
+    background: $-fill;
+    box-shadow: 0 #{r(8)} #{r(24)} color.shadow-soft();
+  }
 }
 
 @mixin chrome-frost {
@@ -253,10 +256,10 @@ $-material-tone-rim: 22%;
   @include well;
 
   border-color: rim($-fill);
-  box-shadow: 0 #{r(4)} #{r(14)} color.shadow-soft();
 
   @media not print {
     background: panel-card();
+    box-shadow: 0 #{r(4)} #{r(14)} color.shadow-soft();
   }
 }
 
