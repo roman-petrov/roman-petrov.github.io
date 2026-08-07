@@ -57,17 +57,11 @@
 .copy {
   display: flex;
   flex-direction: column;
-  gap: space.md();
-  align-items: flex-start;
-  min-height: 100%;
-}
-
-.stack {
-  display: flex;
-  flex: 1 1 auto;
-  flex-direction: column;
+  gap: space.lg();
+  align-items: stretch;
   width: fit-content;
   max-width: 100%;
+  min-height: 100%;
 }
 
 .name {
@@ -82,10 +76,22 @@
   -webkit-text-fill-color: transparent;
 }
 
-.role,
-.tagline {
+.grid {
+  display: grid;
+  flex: 1 1 auto;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: space.xl();
+  align-items: stretch;
   width: 0;
   min-width: 100%;
+}
+
+.lead {
+  display: flex;
+  flex-direction: column;
+  gap: space.md();
+  align-items: flex-start;
+  min-width: 0;
 }
 
 .role {
@@ -104,7 +110,7 @@
   flex-wrap: wrap;
   gap: space.sm();
   align-items: center;
-  margin: space.md() 0 0;
+  margin: 0;
   font-weight: weight.semibold();
   color: color.accent();
 }
@@ -124,29 +130,26 @@
 
 .contacts {
   @include materials.well;
-  @include primitives.row-list(0);
 
-  flex-wrap: nowrap;
-  align-items: center;
-  justify-content: center;
-  width: max-content;
-  max-width: 100%;
-  padding: space.xs() space.md();
-  margin-top: auto;
-  border-radius: radius.xs();
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  align-self: stretch;
+  min-width: 0;
+  padding: space.xs();
+  margin: 0;
+  list-style: none;
+  border-radius: radius.sm();
   box-shadow: none;
 
   > li {
     display: flex;
     align-items: center;
+    padding: space.xs() space.sm();
   }
 
-  > li:not(:first-child)::before {
-    @include materials.diamond;
-
-    flex-shrink: 0;
-    margin-right: space.md();
-    margin-left: space.md();
+  > li:not(:first-child) {
+    border-top: 1px solid color.line();
   }
 }
 
@@ -154,7 +157,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: space.md();
-  align-self: stretch;
+  margin-top: auto;
 }
 
 .photo {
@@ -209,20 +212,19 @@
 
   .copy {
     gap: space.md();
-    align-items: stretch;
-    margin-top: 0;
+    width: auto;
     text-align: center;
   }
 
-  .stack {
-    width: 100%;
-    max-width: none;
-  }
-
-  .role,
-  .tagline {
+  .grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: space.lg();
     width: auto;
     min-width: 0;
+  }
+
+  .lead {
+    align-items: stretch;
   }
 
   .tagline {
@@ -230,33 +232,16 @@
   }
 
   .contacts {
-    display: grid;
-    justify-items: stretch;
+    justify-self: stretch;
     width: 100%;
-    padding: space.xs();
-    margin-top: space.lg();
-    border-radius: radius.sm();
-
-    > li {
-      padding: space.xs() space.sm();
-    }
-
-    > li:not(:first-child) {
-      border-top: 1px solid color.line();
-
-      &::before {
-        content: none;
-      }
-    }
   }
 
   .cta {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    width: 100%;
+    margin-top: space.md();
 
     > * {
       justify-content: center;
+      width: 100%;
     }
   }
 }

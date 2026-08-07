@@ -1,6 +1,5 @@
 import { Content } from "../Content";
 import { Contact } from "./Contact";
-import { GithubAction } from "./GithubAction";
 import styles from "./Hero.module.scss";
 import { PdfAction } from "./PdfAction";
 
@@ -14,14 +13,19 @@ export const Hero = ({ photo }: HeroProps) => (
         <img alt={Content.meta.name} fetchPriority="high" height={240} src={photo} width={240} />
       </figure>
       <div className={styles.copy}>
-        <div className={styles.stack}>
-          <h1 className={styles.name}>{Content.meta.name}</h1>
-          <p className={styles.role}>{Content.meta.role}</p>
-          <p className={styles.tagline}>
-            <span className={styles.slash}>{`//`}</span>
-            {` ${Content.meta.tagline}`}
-            <span className={styles.caret} />
-          </p>
+        <h1 className={styles.name}>{Content.meta.name}</h1>
+        <div className={styles.grid}>
+          <div className={styles.lead}>
+            <p className={styles.role}>{Content.meta.role}</p>
+            <p className={styles.tagline}>
+              <span className={styles.slash}>{`//`}</span>
+              {` ${Content.meta.tagline}`}
+              <span className={styles.caret} />
+            </p>
+            <div className={styles.cta}>
+              <PdfAction size="lg" />
+            </div>
+          </div>
           <ul className={styles.contacts}>
             {Content.contacts.map(({ href, icon, label, value }) => (
               <li key={label}>
@@ -29,10 +33,6 @@ export const Hero = ({ photo }: HeroProps) => (
               </li>
             ))}
           </ul>
-        </div>
-        <div className={styles.cta}>
-          <PdfAction size="lg" />
-          <GithubAction size="lg" />
         </div>
       </div>
     </div>

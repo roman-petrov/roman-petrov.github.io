@@ -8,10 +8,10 @@
 - 📍 Batumi, Georgia
 - 📞 [+79061370326](tel:+79061370326)
 - ✉️ [rpetrov.tech@gmail.com](mailto:rpetrov.tech@gmail.com)
-- 💬 [@R0manPetrov](https://t.me/R0manPetrov)
+- 🔗 [GitHub](https://github.com/roman-petrov)
+- 💬 [Telegram](https://t.me/R0manPetrov)
 
 [🌐 Web version](https://roman-petrov.github.io/) · [⬇ Download PDF](https://roman-petrov.github.io/Roman_Petrov_CV.pdf)
-· [🔗 GitHub](https://github.com/roman-petrov)
 
 ---
 

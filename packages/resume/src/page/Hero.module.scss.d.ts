@@ -6,8 +6,9 @@ declare const classNames: {
   readonly caret: "caret";
   readonly cta: "cta";
   readonly copy: "copy";
-  readonly stack: "stack";
   readonly name: "name";
+  readonly grid: "grid";
+  readonly lead: "lead";
   readonly role: "role";
   readonly tagline: "tagline";
   readonly slash: "slash";

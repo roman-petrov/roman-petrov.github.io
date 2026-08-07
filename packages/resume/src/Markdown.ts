@@ -74,11 +74,9 @@ const render = () =>
     chip(`// ${Content.meta.role}: ${Content.meta.tagline}`),
     Content.sections.map(navLink).join(` · `),
     Content.contacts.map(contactLine).join(`\n`),
-    [
-      `[🌐 Web version](${Content.meta.site})`,
-      `[⬇ Download PDF](${Content.meta.site}${Content.meta.pdf})`,
-      `[🔗 GitHub](${Content.meta.github})`,
-    ].join(` · `),
+    [`[🌐 Web version](${Content.meta.site})`, `[⬇ Download PDF](${Content.meta.site}${Content.meta.pdf})`].join(
+      ` · `,
+    ),
     `---`,
     ...Content.sections.map(section),
     `---`,

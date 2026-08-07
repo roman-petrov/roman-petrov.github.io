@@ -109,11 +109,12 @@ const contacts: Contact[] = [
   { icon: `📍`, label: `Location`, value: resume.contacts.location },
   { href: `tel:${resume.contacts.phone}`, icon: `📞`, label: `Phone`, value: resume.contacts.phone },
   { href: `mailto:${resume.contacts.email}`, icon: `✉️`, label: `Email`, value: resume.contacts.email },
+  { href: resume.meta.github, icon: `🔗`, label: `GitHub`, value: `GitHub` },
   {
     href: `https://t.me/${resume.contacts.telegram}`,
     icon: `💬`,
     label: `Telegram`,
-    value: `@${resume.contacts.telegram}`,
+    value: `Telegram`,
   },
 ];
 
