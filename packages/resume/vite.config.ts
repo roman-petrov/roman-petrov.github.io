@@ -81,5 +81,7 @@ export default defineConfig({
     pluginPage(),
     sassDts({ enabledMode: [`production`], esmExport: true, legacyFileFormat: true }),
   ],
+  preview: { host: true },
+  server: { host: true },
   ssr: { noExternal: [`@cv/core`] },
 });

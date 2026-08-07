@@ -266,34 +266,43 @@
 
 @include mobile {
   .root {
-    padding: space.x2xl() 0;
+    padding: space.lg() 0;
   }
 
   .inner {
     grid-template-columns: minmax(0, 1fr);
-    gap: space.xl();
+    gap: space.md();
     justify-items: stretch;
   }
 
   .photo {
-    justify-self: center;
+    place-self: center;
   }
 
   .copy {
-    gap: space.md();
+    gap: space.sm();
     width: auto;
     text-align: center;
+  }
+
+  .name {
+    font-size: #{r(36)};
+  }
+
+  .role {
+    font-size: text.lg();
   }
 
   .grid {
     flex: none;
     grid-template-columns: minmax(0, 1fr);
-    gap: space.lg();
+    gap: space.md();
     width: auto;
     min-width: 0;
   }
 
   .lead {
+    gap: space.sm();
     align-items: stretch;
   }
 
@@ -307,15 +316,15 @@
   }
 
   .cta {
-    margin-top: space.md();
+    margin-top: space.sm();
 
     > * {
+      gap: space.xs();
       justify-content: center;
       width: 100%;
+      height: #{r(36)};
+      padding: 0 space.md() 0 space.sm();
+      font-size: text.md();
     }
-  }
-
-  .photo {
-    align-self: center;
   }
 }
