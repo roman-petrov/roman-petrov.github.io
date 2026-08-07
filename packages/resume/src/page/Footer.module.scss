@@ -9,7 +9,7 @@
   @include materials.chrome-frost;
 
   background-color: color.chrome-strong();
-  box-shadow: 0 #{-r(8)} #{r(24)} color.shadow-soft();
+  box-shadow: 0 #{-1 * r(8)} #{r(24)} color.shadow-soft();
 }
 
 .inner {
