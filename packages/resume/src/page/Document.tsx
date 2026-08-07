@@ -18,10 +18,10 @@ export const Document = ({ css, favicon, fonts, photo, script }: DocumentProps) 
   const person = JSON.stringify({
     "@context": `https://schema.org`,
     "@type": `Person`,
-    jobTitle: Content.meta.role,
-    name: Content.meta.name,
-    sameAs: [Content.meta.github],
-    url: Content.meta.site,
+    "jobTitle": Content.meta.role,
+    "name": Content.meta.name,
+    "sameAs": [Content.meta.github],
+    "url": Content.meta.site,
   });
 
   return (
