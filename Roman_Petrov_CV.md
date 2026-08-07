@@ -35,7 +35,8 @@ from the same page, and GitHub Actions checks and deploys it on every push. The 
 inside and less than a kilobyte of JavaScript —
 [100 out of 100 in PageSpeed Insights](https://pagespeed.web.dev/analysis/https-roman-petrov-github-io/hajq8mq1cs?form_factor=mobile).
 
-🌐 [See it live](https://roman-petrov.github.io/) · 🔗 [GitHub](https://github.com/roman-petrov/roman-petrov.github.io)
+🌐 [See it live](https://roman-petrov.github.io/) · 🔗
+[View the code](https://github.com/roman-petrov/roman-petrov.github.io)
 
 [`TypeScript`](https://www.typescriptlang.org) · [`React`](https://react.dev) · [`Vite`](https://vite.dev) ·
 [`SCSS`](https://sass-lang.com) · [`Bun`](https://bun.sh) · [`Puppeteer`](https://pptr.dev) ·
