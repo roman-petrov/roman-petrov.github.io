@@ -9,6 +9,8 @@
 @mixin -tone($name) {
   $-tint: color.tint($name);
 
+  border-top: 1px dotted $-tint;
+
   &::before {
     background: color-mix(in srgb, #{$-tint} 16%, transparent);
   }
