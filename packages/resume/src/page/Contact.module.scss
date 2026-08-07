@@ -22,6 +22,10 @@
   border: 0;
 }
 
+a.root {
+  color: color.accent();
+}
+
 a.root .value {
   border-bottom: 1px solid transparent;
 }
