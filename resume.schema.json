@@ -50,9 +50,10 @@
         "email": { "type": "string" },
         "github": { "type": "string" },
         "location": { "type": "string" },
-        "phone": { "type": "string" }
+        "phone": { "type": "string" },
+        "telegram": { "type": "string" }
       },
-      "required": ["email", "github", "location", "phone"],
+      "required": ["email", "github", "location", "phone", "telegram"],
       "additionalProperties": false
     },
     "education": {

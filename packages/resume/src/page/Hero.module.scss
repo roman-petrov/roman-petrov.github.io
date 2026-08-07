@@ -83,8 +83,7 @@
 }
 
 .role,
-.tagline,
-.contacts {
+.tagline {
   width: 0;
   min-width: 100%;
 }
@@ -127,8 +126,11 @@
   @include materials.well;
   @include primitives.row-list(0);
 
+  flex-wrap: nowrap;
   align-items: center;
   justify-content: center;
+  width: max-content;
+  max-width: 100%;
   padding: space.xs() space.md();
   margin-top: auto;
   border-radius: radius.xs();
@@ -218,8 +220,7 @@
   }
 
   .role,
-  .tagline,
-  .contacts {
+  .tagline {
     width: auto;
     min-width: 0;
   }

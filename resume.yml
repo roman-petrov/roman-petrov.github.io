@@ -1,6 +1,6 @@
 # yaml-language-server: $schema=./resume.schema.json
 # cspell:words ActiveSWF Batumi beeline cpslabs habrahabr Huffman ispringsolutions JobWindow
-# cspell:words powermessagepro PowerMessage romanpetrov SilverX SlingMedia SlingPlayer
+# cspell:words powermessagepro PowerMessage R0manPetrov romanpetrov SilverX SlingMedia SlingPlayer
 # cspell:words speccy travelline TLUI Yoshkar zxpress
 
 meta:
@@ -15,7 +15,8 @@ meta:
 contacts:
   location: Batumi, Georgia
   phone: "+79061370326"
-  email: romanpetrov@list.ru
+  email: rpetrov.tech@gmail.com
+  telegram: R0manPetrov
   github: github.com/roman-petrov
 
 about:
