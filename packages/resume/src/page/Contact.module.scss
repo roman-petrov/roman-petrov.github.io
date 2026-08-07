@@ -1,9 +1,16 @@
+@use "../theme/core" as *;
 @use "../theme/tokens/color";
 @use "../theme/tokens/space";
 @use "../theme/tokens/text";
 @use "../theme/tokens/weight";
 
 .root {
+  @include hover {
+    &:hover .value {
+      border-bottom-color: currentcolor;
+    }
+  }
+
   display: inline-flex;
   gap: space.xs();
   align-items: center;
@@ -16,5 +23,5 @@
 }
 
 a.root .value {
-  border-bottom: 1px solid currentcolor;
+  border-bottom: 1px solid transparent;
 }
