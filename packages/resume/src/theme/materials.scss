@@ -8,11 +8,19 @@
 $-face-duration: 0.2s;
 $-link-duration: 0.25s;
 $-caret-duration: 1.1s;
-$-panel-blur: 16px;
 $-chrome-blur: 22px;
 $-glow-blur: 8px;
-$-panel-saturate: 1.2;
 $-chrome-saturate: 1.45;
+$-material-fill: 50%;
+$-material-tone-rim: 22%;
+
+@function -tone() {
+  @return color-mix(in srgb, #{color.highlight()} #{$-material-tone-rim}, #{color.surface()});
+}
+
+@function panel-bg() {
+  @return color-mix(in srgb, #{-tone()} #{$-material-fill}, #{color.bg()});
+}
 
 @function rim($fill) {
   @return color-mix(in srgb, #{color.highlight()} var(--rim-weight), #{$fill});
@@ -40,9 +48,11 @@ $-chrome-saturate: 1.45;
 @mixin face-soft {
   @include face;
 
+  $-fill: panel-bg();
+
   color: color.ink();
-  background: color.glass();
-  border-color: rim(color.glass());
+  background: $-fill;
+  border-color: rim($-fill);
 }
 
 @mixin face-accent {
@@ -55,7 +65,7 @@ $-chrome-saturate: 1.45;
 
 @mixin face-lift {
   color: color.ink();
-  background: color-mix(in srgb, #{color.accent()} 10%, #{color.glass-strong()});
+  background: color-mix(in srgb, #{color.accent()} 10%, #{panel-bg()});
   border-color: color.accent();
   box-shadow: none;
 }
@@ -138,16 +148,16 @@ $-chrome-saturate: 1.45;
 }
 
 @mixin panel {
+  $-fill: panel-bg();
+
   @include print {
-    background: color.highlight();
+    background: color.surface();
     box-shadow: none;
-    backdrop-filter: none;
   }
 
-  background: color.glass-strong();
-  border: 1px solid rim(color.glass());
+  background: $-fill;
+  border: 1px solid rim($-fill);
   box-shadow: 0 #{r(8)} #{r(24)} color.shadow-soft();
-  backdrop-filter: blur($-panel-blur) saturate($-panel-saturate);
 }
 
 @mixin chrome-frost {

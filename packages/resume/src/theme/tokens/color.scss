@@ -36,20 +36,16 @@
   @return -color("chrome-strong");
 }
 
-@function glass() {
-  @return -color("glass");
-}
-
-@function glass-strong() {
-  @return -color("glass-strong");
-}
-
 @function glow() {
   @return -color("glow");
 }
 
 @function highlight() {
   @return -color("highlight");
+}
+
+@function surface() {
+  @return -color("surface");
 }
 
 @function ink() {

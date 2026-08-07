@@ -1,6 +1,7 @@
 @use "sass:map";
 @use "../token";
 
+// Page `bg` / `surface` / dark `highlight` adapted from Snappy material (oklch → rgb).
 $-dark: (
   accent: #5b8fef,
   accent-bright: #8eb4f5,
@@ -8,23 +9,22 @@ $-dark: (
   accent-glow: rgb(58 111 212 / 28%),
   accent-line: rgb(91 143 239 / 36%),
   accent-soft: rgb(91 143 239 / 18%),
-  bg: #222836,
-  chrome-strong: rgb(255 255 255 / 14%),
-  glass: #1e2534,
-  glass-strong: #1b2231,
-  glow: rgb(91 143 239 / 14%),
-  highlight: #fff,
+  bg: #172839,
+  chrome-strong: rgb(255 255 255 / 16%),
+  glow: rgb(91 143 239 / 18%),
+  highlight: #7a8897,
   ink: #f1f3f7,
   ink-fade: #a8b0bf,
   ink-soft: #d4d9e4,
-  line: rgb(255 255 255 / 10%),
-  line-strong: rgb(255 255 255 / 16%),
+  line: rgb(157 189 230 / 14%),
+  line-strong: rgb(157 189 230 / 22%),
   mark: #e0b06a,
   on-accent: #071018,
   shadow: rgb(0 0 0 / 48%),
   shadow-soft: rgb(0 0 0 / 32%),
-  sky: rgb(148 163 184 / 12%),
+  sky: rgb(91 143 239 / 12%),
   sky-bright: #7dd3e8,
+  surface: #354d65,
   tint-amber: #f0b429,
   tint-azure: #6b9dff,
   tint-coral: #fb7185,
@@ -40,10 +40,8 @@ $-light: (
   accent-glow: rgb(47 95 191 / 16%),
   accent-line: rgb(47 95 191 / 24%),
   accent-soft: rgb(47 95 191 / 10%),
-  bg: #e6e8ed,
+  bg: #dce2eb,
   chrome-strong: rgb(255 255 255 / 72%),
-  glass: #e9ebf0,
-  glass-strong: #eceef2,
   glow: rgb(47 95 191 / 10%),
   highlight: #fff,
   ink: #111827,
@@ -57,6 +55,7 @@ $-light: (
   shadow-soft: rgb(17 24 39 / 8%),
   sky: rgb(100 116 139 / 9%),
   sky-bright: #0e7490,
+  surface: #f5f9fe,
   tint-amber: #b45309,
   tint-azure: #2f5fbf,
   tint-coral: #e11d48,
@@ -70,10 +69,10 @@ $-paper: map.merge(
   (
     accent-line: #c5d0e0,
     accent-soft: #e8eef8,
-    glass: #fff,
-    glass-strong: #fff,
+    highlight: #fff,
     line: #e5e7eb,
     line-strong: #d1d5db,
+    surface: #fff,
   )
 );
 
@@ -82,7 +81,7 @@ $-paper: map.merge(
 
   color-scheme: dark;
 
-  --rim-weight: 22%;
+  --rim-weight: 72%;
 }
 
 @media (prefers-color-scheme: light) {
@@ -91,7 +90,7 @@ $-paper: map.merge(
 
     color-scheme: light;
 
-    --rim-weight: 48%;
+    --rim-weight: 100%;
   }
 }
 
@@ -100,7 +99,7 @@ $-paper: map.merge(
 
   color-scheme: dark;
 
-  --rim-weight: 22%;
+  --rim-weight: 72%;
 }
 
 :root[data-theme="light"] {
@@ -108,7 +107,7 @@ $-paper: map.merge(
 
   color-scheme: light;
 
-  --rim-weight: 48%;
+  --rim-weight: 100%;
 }
 
 @media print {
@@ -118,6 +117,6 @@ $-paper: map.merge(
 
     color-scheme: light;
 
-    --rim-weight: 36%;
+    --rim-weight: 100%;
   }
 }
