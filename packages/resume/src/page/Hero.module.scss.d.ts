@@ -11,7 +11,7 @@ declare const classNames: {
   readonly lead: "lead";
   readonly role: "role";
   readonly tagline: "tagline";
-  readonly slash: "slash";
   readonly photo: "photo";
+  readonly slash: "slash";
 };
 export default classNames;
