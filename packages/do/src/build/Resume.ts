@@ -1,24 +1,35 @@
 import type { PageAssets } from "@cv/resume";
 
 import { Directory, File } from "@cv/core/node";
+import { readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
 import * as prettier from "prettier";
 import { build as viteBuild } from "vite";
 import { z } from "zod";
 
+import { Hash } from "./Hash";
 import { Og } from "./Og";
 import { Paths } from "./Paths";
 import { Pdf } from "./Pdf";
 import { Photo } from "./Photo";
 
+type PreparedAssets = Omit<PageAssets, `script`>;
 type RenderModule = { Render: (assets: PageAssets) => string };
 
-const copyAssets = async () => {
-  const assetFiles = [`favicon.svg`];
+const copyHashed = async (from: string, toDir: string, file: string) => {
+  const data = await readFile(from);
+  const hashed = Hash.file(file, data);
 
-  await Directory.ensure(Paths.assets);
-  await Promise.all(assetFiles.map(file => File.copy(path.join(Paths.srcAssets, file), path.join(Paths.assets, file))));
+  await writeFile(path.join(toDir, hashed), data);
+
+  return hashed;
+};
+
+const copyFavicon = async () => {
+  const { Assets } = await import(`@cv/resume`);
+
+  return copyHashed(path.join(Paths.srcAssets, Assets.favicon), Paths.assets, Assets.favicon);
 };
 
 const copyFonts = async () => {
@@ -26,13 +37,18 @@ const copyFonts = async () => {
   const fontsDir = path.join(Paths.assets, `fonts`);
 
   await Directory.ensure(fontsDir);
-  await Promise.all(
+
+  const fonts = await Promise.all(
     Fonts.faces.map(({ file, pkg }) =>
-      File.copy(path.join(Paths.root, `node_modules`, pkg, `files`, file), path.join(fontsDir, file)),
+      copyHashed(path.join(Paths.root, `node_modules`, pkg, `files`, file), fontsDir, file),
     ),
   );
 
-  return Fonts.css;
+  return { css: Fonts.css(fonts), fonts };
+};
+
+const writePrepared = async (assets: PreparedAssets) => {
+  await File.write(Paths.pageAssets, `${JSON.stringify(assets, undefined, 2)}\n`);
 };
 
 const cssFile = (result: Awaited<ReturnType<typeof viteBuild>>) => {
@@ -56,7 +72,7 @@ const renderPage = async (entry: string, page: string, assets: PageAssets) => {
   const css = await File.read(path.join(outDir, cssFile(result)));
   const pageModule = (await import(pathToFileURL(path.join(outDir, `${entry}.js`)).href)) as RenderModule;
 
-  await File.write(page, pageModule.Render({ css: `${assets.css}\n\n${css}`, script: assets.script }));
+  await File.write(page, pageModule.Render({ ...assets, css: `${assets.css}\n\n${css}` }));
 };
 
 const buildScript = async () => {
@@ -97,16 +113,21 @@ const writeContent = async () => {
 
 const prepare = async () => {
   await checkContent();
-  await copyAssets();
-  await Photo.render();
+  await Directory.ensure(Paths.assets);
 
-  return copyFonts();
+  const [favicon, photo, { css, fonts }] = await Promise.all([copyFavicon(), Photo.render(), copyFonts()]);
+  const assets = { css, favicon, fonts, photo };
+
+  await writePrepared(assets);
+
+  return assets;
 };
 
 const build = async () => {
   await Directory.remove(Paths.dist);
 
-  const assets = { css: await prepare(), script: await buildScript() };
+  const prepared = await prepare();
+  const assets = { ...prepared, script: await buildScript() };
 
   await renderPage(`EntryPage`, Paths.site, assets);
   await writeContent();

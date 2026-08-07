@@ -1,5 +1,6 @@
 import type { PageAssets } from "../PageAssets";
 
+import { Assets } from "../Assets";
 import { Content } from "../Content";
 import { Fonts } from "../Fonts";
 import { Entries } from "./Entries";
@@ -12,7 +13,7 @@ import { Prose } from "./Prose";
 
 export type DocumentProps = PageAssets;
 
-export const Document = ({ css, script }: DocumentProps) => {
+export const Document = ({ css, favicon, fonts, photo, script }: DocumentProps) => {
   const title = `${Content.meta.name} — ${Content.meta.role}`;
 
   return (
@@ -30,17 +31,17 @@ export const Document = ({ css, script }: DocumentProps) => {
         <meta content={Content.meta.site} property="og:url" />
         <meta content={`${Content.meta.site}assets/og.png`} property="og:image" />
         <meta content="summary_large_image" name="twitter:card" />
-        {Fonts.files.map(file => (
+        {fonts.map(file => (
           <link as="font" crossOrigin="anonymous" href={Fonts.href(file)} key={file} rel="preload" type="font/woff2" />
         ))}
-        <link href="./assets/favicon.svg" rel="icon" type="image/svg+xml" />
+        <link href={Assets.href(favicon)} rel="icon" type="image/svg+xml" />
         <style dangerouslySetInnerHTML={{ __html: css }} />
       </head>
       <body>
         <Nav />
         <Progress />
         <main>
-          <Hero />
+          <Hero photo={Assets.href(photo)} />
           <Prose section={Content.section(`about`)} />
           <Prose section={Content.section(`showcase`)} />
           <Groups section={Content.section(`expertise`)} />

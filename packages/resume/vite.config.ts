@@ -9,9 +9,8 @@ import sassDts from "vite-plugin-sass-dts";
 
 import type { PageAssets } from "./src/PageAssets.ts";
 
-import { Fonts } from "./src/Fonts.ts";
-
 type PageModule = { Render: (assets: PageAssets) => string };
+type PreparedAssets = Omit<PageAssets, `script`>;
 
 const root = path.resolve(import.meta.dirname, `..`, `..`);
 const content = path.join(root, `resume.yml`);
@@ -62,9 +61,10 @@ const pluginPage = (): Plugin => ({
       }
 
       const { Render } = (await server.ssrLoadModule(`/src/EntryPage.ts`)) as PageModule;
+      const prepared = JSON.parse(await readFile(path.join(dist, `page-assets.json`), `utf8`)) as PreparedAssets;
 
       return {
-        html: Render({ css: Fonts.css, script: `` }),
+        html: Render({ ...prepared, script: `` }),
         tags: [{ attrs: { src: `/src/EntryDev.ts`, type: `module` }, injectTo: `head`, tag: `script` }],
       };
     },

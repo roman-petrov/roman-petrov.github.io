@@ -1,16 +1,17 @@
-import { Assets } from "../Assets";
 import { Content } from "../Content";
 import { Contact } from "./Contact";
 import { GithubAction } from "./GithubAction";
 import styles from "./Hero.module.scss";
 import { PdfAction } from "./PdfAction";
 
-export const Hero = () => (
+export type HeroProps = { photo: string };
+
+export const Hero = ({ photo }: HeroProps) => (
   <section className={styles.root} id="top">
     <div className={styles.glow} />
     <div className={styles.inner}>
       <figure className={styles.photo}>
-        <img alt={Content.meta.name} fetchPriority="high" height={240} src={Assets.href(Assets.webp)} width={240} />
+        <img alt={Content.meta.name} fetchPriority="high" height={240} src={photo} width={240} />
       </figure>
       <div className={styles.copy}>
         <h1 className={styles.name}>{Content.meta.name}</h1>

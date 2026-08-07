@@ -32,7 +32,8 @@ and a Markdown CV. **Nothing is written twice.**
 
 React renders static HTML, a micro design system in typed SCSS holds the light and dark themes, Puppeteer prints the PDF
 from the same page, and GitHub Actions checks and deploys it on every push. The site is one HTML file with the styles
-inside and less than a kilobyte of JavaScript — **100 out of 100** in PageSpeed Insights.
+inside and less than a kilobyte of JavaScript —
+[100 out of 100 in PageSpeed Insights](https://pagespeed.web.dev/analysis/https-roman-petrov-github-io/hajq8mq1cs?form_factor=mobile).
 
 🌐 [See it live](https://roman-petrov.github.io/) · 🔗 [GitHub](https://github.com/roman-petrov/roman-petrov.github.io)
 

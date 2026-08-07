@@ -1,6 +1,8 @@
+import { writeFile } from "node:fs/promises";
 import path from "node:path";
 import sharp from "sharp";
 
+import { Hash } from "./Hash";
 import { Paths } from "./Paths";
 
 const removeBackground = async (input: Buffer) => {
@@ -46,10 +48,16 @@ const render = async () => {
 
   const board = await sharp(path.join(Paths.srcAssets, pcb)).resize(size, size).png().toBuffer();
 
-  await sharp(board)
+  const data = await sharp(board)
     .composite([{ input: await removeBackground(portrait) }])
     .webp({ quality })
-    .toFile(path.join(Paths.assets, Assets.webp));
+    .toBuffer();
+
+  const file = Hash.file(Assets.webp, data);
+
+  await writeFile(path.join(Paths.assets, file), data);
+
+  return file;
 };
 
 export const Photo = { render };
