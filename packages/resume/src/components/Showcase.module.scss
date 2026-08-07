@@ -6,15 +6,12 @@
 @use "../theme/tokens/weight";
 
 .root {
-  @include materials.callout;
-
   @include print {
     break-inside: avoid;
   }
 
   display: grid;
   gap: space.md();
-  padding: space.x2xl();
 }
 
 .title {
@@ -41,11 +38,5 @@
 
   li:first-child a {
     @include materials.interactive-primary;
-  }
-}
-
-@include mobile {
-  .root {
-    padding: space.xl() space.lg();
   }
 }

@@ -233,12 +233,6 @@ $-chrome-saturate: 1.45;
   border-radius: radius.md();
 }
 
-@mixin callout {
-  @include panel;
-
-  border-radius: radius.lg();
-}
-
 @mixin focus-ring {
   outline: 2px solid color.accent();
   outline-offset: #{r(2)};
