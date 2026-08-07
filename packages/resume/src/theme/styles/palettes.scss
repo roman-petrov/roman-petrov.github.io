@@ -10,6 +10,7 @@ $-dark: (
   accent-line: rgb(91 143 239 / 36%),
   accent-soft: rgb(91 143 239 / 18%),
   bg: #172839,
+  card: #0a101c,
   chrome-strong: rgb(255 255 255 / 16%),
   glow: rgb(91 143 239 / 18%),
   highlight: #7a8897,
@@ -41,6 +42,7 @@ $-light: (
   accent-line: rgb(47 95 191 / 24%),
   accent-soft: rgb(47 95 191 / 10%),
   bg: #dce2eb,
+  card: #f3f6fc,
   chrome-strong: rgb(255 255 255 / 72%),
   glow: rgb(47 95 191 / 10%),
   highlight: #fff,
@@ -69,6 +71,7 @@ $-paper: map.merge(
   (
     accent-line: #c5d0e0,
     accent-soft: #e8eef8,
+    card: #fff,
     highlight: #fff,
     line: #e5e7eb,
     line-strong: #d1d5db,
@@ -81,6 +84,7 @@ $-paper: map.merge(
 
   color-scheme: dark;
 
+  --panel-sheer: 90%;
   --rim-weight: 72%;
 }
 
@@ -90,6 +94,7 @@ $-paper: map.merge(
 
     color-scheme: light;
 
+    --panel-sheer: 78%;
     --rim-weight: 100%;
   }
 }
@@ -99,6 +104,7 @@ $-paper: map.merge(
 
   color-scheme: dark;
 
+  --panel-sheer: 90%;
   --rim-weight: 72%;
 }
 
@@ -107,6 +113,7 @@ $-paper: map.merge(
 
   color-scheme: light;
 
+  --panel-sheer: 78%;
   --rim-weight: 100%;
 }
 
@@ -117,6 +124,7 @@ $-paper: map.merge(
 
     color-scheme: light;
 
+    --panel-sheer: 100%;
     --rim-weight: 100%;
   }
 }

@@ -13,7 +13,6 @@ $-glow-blur: 8px;
 $-chrome-saturate: 1.45;
 $-material-fill: 50%;
 $-material-tone-rim: 22%;
-$-panel-sheer: 78%;
 
 @function -tone() {
   @return color-mix(in srgb, #{color.highlight()} #{$-material-tone-rim}, #{color.surface()});
@@ -23,8 +22,8 @@ $-panel-sheer: 78%;
   @return color-mix(in srgb, #{-tone()} #{$-material-fill}, #{color.bg()});
 }
 
-@function panel-bg-sheer() {
-  @return color-mix(in srgb, #{panel-bg()} #{$-panel-sheer}, transparent);
+@function panel-card() {
+  @return color-mix(in srgb, #{color.card()} var(--panel-sheer), transparent);
 }
 
 @function rim($fill) {
@@ -249,12 +248,15 @@ $-panel-sheer: 78%;
 }
 
 @mixin well-sheer {
+  $-fill: color.card();
+
   @include well;
 
+  border-color: rim($-fill);
   box-shadow: 0 #{r(4)} #{r(14)} color.shadow-soft();
 
   @media not print {
-    background: panel-bg-sheer();
+    background: panel-card();
   }
 }
 

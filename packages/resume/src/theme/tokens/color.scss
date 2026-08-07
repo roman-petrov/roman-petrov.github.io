@@ -32,6 +32,10 @@
   @return -color("bg");
 }
 
+@function card() {
+  @return -color("card");
+}
+
 @function chrome-strong() {
   @return -color("chrome-strong");
 }
