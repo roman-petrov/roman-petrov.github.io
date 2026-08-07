@@ -58,7 +58,7 @@ const project = ({ name, note, roles, stack, url }: Job[`projects`][number]): Pr
 const product = ({ name, repo, stack, summary, url }: Resume[`showcase`]): Product => ({
   links: [
     { href: url, icon: `🌐`, label: `See it live` },
-    { href: repo, icon: `🔗`, label: `GitHub` },
+    { href: repo, icon: `🔗`, label: `View the code` },
   ],
   name,
   note: paragraphs(summary),
