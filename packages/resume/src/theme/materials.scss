@@ -13,6 +13,7 @@ $-glow-blur: 8px;
 $-chrome-saturate: 1.45;
 $-material-fill: 50%;
 $-material-tone-rim: 22%;
+$-panel-sheer: 78%;
 
 @function -tone() {
   @return color-mix(in srgb, #{color.highlight()} #{$-material-tone-rim}, #{color.surface()});
@@ -20,6 +21,10 @@ $-material-tone-rim: 22%;
 
 @function panel-bg() {
   @return color-mix(in srgb, #{-tone()} #{$-material-fill}, #{color.bg()});
+}
+
+@function panel-bg-sheer() {
+  @return color-mix(in srgb, #{panel-bg()} #{$-panel-sheer}, transparent);
 }
 
 @function rim($fill) {
@@ -75,7 +80,7 @@ $-material-tone-rim: 22%;
 
   color: color.on-accent();
   background: color.accent();
-  border-color: rim(color.accent());
+  border-color: color.accent();
   box-shadow: 0 #{r(4)} #{r(12)} color.accent-glow();
 }
 
@@ -241,6 +246,16 @@ $-material-tone-rim: 22%;
   @include panel;
 
   border-radius: radius.md();
+}
+
+@mixin well-sheer {
+  @include well;
+
+  box-shadow: 0 #{r(4)} #{r(14)} color.shadow-soft();
+
+  @media not print {
+    background: panel-bg-sheer();
+  }
 }
 
 @mixin focus-ring {

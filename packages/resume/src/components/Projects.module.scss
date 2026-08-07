@@ -1,5 +1,6 @@
 @use "../theme/core" as *;
 @use "../theme/materials";
+@use "../theme/tokens/color";
 @use "../theme/tokens/space";
 
 .root {
@@ -11,9 +12,10 @@
 }
 
 .project {
-  @include materials.well;
+  @include materials.well-sheer;
 
   @include print {
+    background: color.surface();
     break-inside: avoid;
   }
 

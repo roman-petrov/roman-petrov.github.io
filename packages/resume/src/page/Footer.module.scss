@@ -1,28 +1,23 @@
 @use "../theme/core" as *;
+@use "../theme/materials";
 @use "../theme/primitives";
 @use "../theme/tokens/color";
 @use "../theme/tokens/space";
 @use "../theme/tokens/text";
 
 .root {
-  margin-top: space.x2xl();
-  border-top: 1px solid color.line();
+  @include materials.chrome-frost;
+
+  background-color: color.chrome-strong();
+  box-shadow: 0 #{-r(8)} #{r(24)} color.shadow-soft();
 }
 
 .inner {
   @include primitives.wrap;
 
   display: flex;
-  flex-wrap: wrap;
-  gap: space.lg();
-  align-items: center;
-  justify-content: space-between;
-  padding: space.x2xl() 0;
-}
-
-.actions {
-  display: flex;
-  gap: space.md();
+  justify-content: center;
+  padding: space.lg() 0;
 }
 
 .note {
