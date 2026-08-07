@@ -11,6 +11,7 @@ const markdown = path.join(Root, `Roman_Petrov_CV.md`);
 const og = path.join(Root, `dist`, `assets`, `og.png`);
 const pageAssets = path.join(Root, `dist`, `page-assets.json`);
 const pdf = path.join(Root, `dist`, `Roman_Petrov_CV.pdf`);
+const robots = path.join(Root, `dist`, `robots.txt`);
 const root = Root;
 const schema = path.join(Root, `resume.schema.json`);
 const site = path.join(Root, `dist`, `index.html`);
@@ -26,6 +27,7 @@ export const Paths = {
   pageAssets,
   pdf,
   resume,
+  robots,
   root,
   schema,
   site,

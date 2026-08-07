@@ -131,6 +131,7 @@ const build = async () => {
 
   await renderPage(`EntryPage`, Paths.site, assets);
   await writeContent();
+  await File.write(Paths.robots, `User-agent: *\nAllow: /\n`);
   await Pdf.render();
   await Og.render();
 
