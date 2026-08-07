@@ -13,12 +13,6 @@
   white-space: nowrap;
 }
 
-.md {
-  height: r(32);
-  padding: 0 space.md() 0 space.sm();
-  font-size: text.md();
-}
-
 .lg {
   gap: space.sm();
   height: r(40);
@@ -28,8 +22,4 @@
 
 .primary {
   @include materials.interactive-primary;
-}
-
-.ghost {
-  @include materials.interactive-soft;
 }

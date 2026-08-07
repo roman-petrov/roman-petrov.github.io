@@ -155,14 +155,13 @@ $-material-tone-rim: 22%;
   $-fill: panel-bg();
 
   @include print {
-    background: $-fill;
     box-shadow: none;
   }
 
+  background: $-fill;
   border: 1px solid rim($-fill);
 
   @media not print {
-    background: $-fill;
     box-shadow: 0 #{r(8)} #{r(24)} color.shadow-soft();
   }
 }
@@ -179,6 +178,18 @@ $-material-tone-rim: 22%;
   transition:
     transform $-link-duration ease,
     opacity $-link-duration ease;
+}
+
+@keyframes blink {
+  0%,
+  49% {
+    opacity: 1;
+  }
+
+  50%,
+  100% {
+    opacity: 0;
+  }
 }
 
 @mixin caret-blink {

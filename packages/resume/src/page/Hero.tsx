@@ -18,12 +18,12 @@ export const Hero = ({ photo }: HeroProps) => (
           <div className={styles.lead}>
             <p className={styles.role}>{Content.meta.role}</p>
             <p className={styles.tagline}>
-              <span className={styles.slash}>{`//`}</span>
+              <span>{`//`}</span>
               {` ${Content.meta.tagline}`}
               <span className={styles.caret} />
             </p>
             <div className={styles.cta}>
-              <PdfAction size="lg" />
+              <PdfAction />
             </div>
           </div>
           <ul className={styles.contacts}>

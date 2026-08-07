@@ -8,12 +8,10 @@ export type ActionProps = {
   href: string;
   icon: string;
   label: string;
-  size?: `lg` | `md`;
-  tone: `ghost` | `primary`;
 };
 
-export const Action = ({ download = false, href, icon, label, size = `md`, tone }: ActionProps) => (
-  <a className={_.cn(styles.root, styles[size], styles[tone])} download={download} href={href}>
+export const Action = ({ download = false, href, icon, label }: ActionProps) => (
+  <a className={_.cn(styles.root, styles.lg, styles.primary)} download={download} href={href}>
     <Ico>{icon}</Ico>
     <span>{label}</span>
   </a>

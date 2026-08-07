@@ -3,7 +3,6 @@ export * from "./Contact";
 export * from "./Document";
 export * from "./Entries";
 export * from "./Footer";
-export * from "./Groups";
 export * from "./Hero";
 export * from "./Nav";
 export * from "./PdfAction";

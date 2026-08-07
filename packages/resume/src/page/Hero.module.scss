@@ -116,10 +116,6 @@
   color: color.accent();
 }
 
-.slash {
-  color: inherit;
-}
-
 .caret {
   @include materials.caret-blink;
 
@@ -178,18 +174,6 @@
     height: #{r(240)};
     object-fit: cover;
     border-radius: inherit;
-  }
-}
-
-@keyframes blink {
-  0%,
-  49% {
-    opacity: 1;
-  }
-
-  50%,
-  100% {
-    opacity: 0;
   }
 }
 

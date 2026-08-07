@@ -5,7 +5,6 @@ import { Content } from "../Content";
 import { Fonts } from "../Fonts";
 import { Entries } from "./Entries";
 import { Footer } from "./Footer";
-import { Groups } from "./Groups";
 import { Hero } from "./Hero";
 import { Nav } from "./Nav";
 import { Progress } from "./Progress";
@@ -60,8 +59,8 @@ export const Document = ({ css, favicon, fonts, photo, script }: DocumentProps) 
           <Hero photo={Assets.href(photo)} />
           <Prose section={Content.section(`about`)} />
           <Prose section={Content.section(`showcase`)} />
-          <Groups section={Content.section(`expertise`)} />
-          <Groups section={Content.section(`stack`)} />
+          <Prose section={Content.section(`expertise`)} />
+          <Prose section={Content.section(`stack`)} />
           <Entries section={Content.section(`experience`)} />
           <Entries section={Content.section(`education`)} />
           <Entries section={Content.section(`activities`)} />

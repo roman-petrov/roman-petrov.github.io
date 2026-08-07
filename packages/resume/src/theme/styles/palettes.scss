@@ -18,7 +18,6 @@ $-dark: (
   ink-fade: #a8b0bf,
   ink-soft: #d4d9e4,
   line: rgb(255 255 255 / 12%),
-  line-strong: rgb(255 255 255 / 18%),
   mark: #e0b06a,
   on-accent: #071018,
   shadow: rgb(0 0 0 / 48%),
@@ -50,7 +49,6 @@ $-light: (
   ink-fade: #5b6472,
   ink-soft: #2f3747,
   line: rgb(17 24 39 / 12%),
-  line-strong: rgb(17 24 39 / 18%),
   mark: #9a6b2f,
   on-accent: #fff,
   shadow: rgb(17 24 39 / 14%),
@@ -74,7 +72,6 @@ $-paper: map.merge(
     card: #fff,
     highlight: #fff,
     line: #e5e7eb,
-    line-strong: #d1d5db,
     surface: #fff,
   )
 );
