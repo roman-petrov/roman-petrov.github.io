@@ -55,10 +55,9 @@
         "email": { "type": "string" },
         "github": { "type": "string" },
         "location": { "type": "string" },
-        "phone": { "type": "string" },
-        "telegram": { "type": "string" }
+        "phone": { "type": "string" }
       },
-      "required": ["email", "github", "location", "phone", "telegram"],
+      "required": ["email", "github", "location", "phone"],
       "additionalProperties": false
     },
     "education": {

@@ -7,9 +7,9 @@
 
 - 📍 Batumi, Georgia
 - 📞 [+995511266190](tel:+995511266190)
+- 💬 [WhatsApp](https://wa.me/995511266190)
 - ✉️ [rpetrov.tech@gmail.com](mailto:rpetrov.tech@gmail.com)
 - 🔗 [github.com/roman-petrov](https://github.com/roman-petrov)
-- 💬 [Telegram](https://t.me/R0manPetrov)
 
 [🌐 Web version](https://roman-petrov.github.io/) · [⬇ Download PDF](https://roman-petrov.github.io/Roman_Petrov_CV.pdf)
 

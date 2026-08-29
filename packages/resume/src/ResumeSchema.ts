@@ -23,13 +23,7 @@ export const ResumeSchema = z.strictObject({
       }),
     ),
   }),
-  contacts: z.strictObject({
-    email: z.string(),
-    github: z.string(),
-    location: z.string(),
-    phone: z.string(),
-    telegram: z.string(),
-  }),
+  contacts: z.strictObject({ email: z.string(), github: z.string(), location: z.string(), phone: z.string() }),
   education: z.strictObject({
     ...titled,
     studies: z.array(

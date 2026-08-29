@@ -109,9 +109,9 @@ const activityEntry = ({ from, references, summary, title, to }: Activity): Entr
 const contacts: Contact[] = [
   { icon: `📍`, label: `Location`, value: resume.contacts.location },
   { href: `tel:${resume.contacts.phone}`, icon: `📞`, label: `Phone`, value: resume.contacts.phone },
+  { href: `https://wa.me/${resume.contacts.phone.replace(`+`, ``)}`, icon: `💬`, label: `WhatsApp`, value: `WhatsApp` },
   { href: `mailto:${resume.contacts.email}`, icon: `✉️`, label: `Email`, value: resume.contacts.email },
   { href: resume.meta.github, icon: `🔗`, label: `GitHub`, value: resume.contacts.github },
-  { href: `https://t.me/${resume.contacts.telegram}`, icon: `💬`, label: `Telegram`, value: `Telegram` },
 ];
 
 const sections: Section[] = [
