@@ -7,7 +7,8 @@ const grouped = {
   groups: z.array(z.strictObject({ icon: z.string(), items: z.array(z.string()), label: z.string() })),
 };
 
-const span = { from: z.int(), to: z.int() };
+const year = z.int();
+const span = { from: year, to: z.union([year, z.literal(`current`)]) };
 
 export const ResumeSchema = z.strictObject({
   about: z.strictObject({ ...titled, items: z.array(z.string()) }),

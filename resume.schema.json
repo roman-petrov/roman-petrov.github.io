@@ -23,7 +23,12 @@
             "type": "object",
             "properties": {
               "from": { "type": "integer", "minimum": -9007199254740991, "maximum": 9007199254740991 },
-              "to": { "type": "integer", "minimum": -9007199254740991, "maximum": 9007199254740991 },
+              "to": {
+                "anyOf": [
+                  { "type": "integer", "minimum": -9007199254740991, "maximum": 9007199254740991 },
+                  { "type": "string", "const": "current" }
+                ]
+              },
               "references": {
                 "type": "object",
                 "properties": {
@@ -67,7 +72,12 @@
             "type": "object",
             "properties": {
               "from": { "type": "integer", "minimum": -9007199254740991, "maximum": 9007199254740991 },
-              "to": { "type": "integer", "minimum": -9007199254740991, "maximum": 9007199254740991 },
+              "to": {
+                "anyOf": [
+                  { "type": "integer", "minimum": -9007199254740991, "maximum": 9007199254740991 },
+                  { "type": "string", "const": "current" }
+                ]
+              },
               "degree": { "type": "string" },
               "place": { "type": "string" },
               "roles": { "type": "array", "items": { "type": "string" } },
@@ -92,7 +102,12 @@
             "type": "object",
             "properties": {
               "from": { "type": "integer", "minimum": -9007199254740991, "maximum": 9007199254740991 },
-              "to": { "type": "integer", "minimum": -9007199254740991, "maximum": 9007199254740991 },
+              "to": {
+                "anyOf": [
+                  { "type": "integer", "minimum": -9007199254740991, "maximum": 9007199254740991 },
+                  { "type": "string", "const": "current" }
+                ]
+              },
               "company": { "type": "string" },
               "duties": { "type": "array", "items": { "type": "string" } },
               "projects": {

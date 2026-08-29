@@ -1,7 +1,7 @@
 # yaml-language-server: $schema=./resume.schema.json
 # cspell:words ActiveSWF Batumi beeline cpslabs habrahabr Huffman ispringsolutions JobWindow
 # cspell:words powermessagepro PowerMessage R0manPetrov romanpetrov SilverX SlingMedia SlingPlayer
-# cspell:words speccy travelline TLUI Yoshkar zxpress
+# cspell:words Snappy speccy travelline TLUI Yoshkar zxpress
 
 meta:
   name: Roman Petrov
@@ -97,6 +97,40 @@ experience:
   icon: 💼
   title: Experience
   jobs:
+    - company: Snappy
+      url: https://snappy-ai.ru/
+      roles: [founder, sole engineer]
+      from: 2026
+      to: current
+      summary: >-
+        I founded and shipped **Snappy** as the sole author — product vision, UX, visual design, **typed real-time
+        RPC**, agentic architecture, backend, Android, and the monorepo — building the product with **Cursor** agents
+        rather than writing code by hand. The focus was a real **agentic AI system** with live sync and tool
+        orchestration, not wrapping a chatbot.
+      duties:
+        - >-
+          designed **typed WebSocket RPC** with a shared client/server contract and **real-time data synchronization**
+        - >-
+          designed the **agentic runtime**: multi-round tool-calling, skills catalog, structured clarification, and dual
+          free-chat and guided-form flows
+        - owned the full product end to end — site, web app, Android bridge, design system, and monorepo boundaries
+      projects:
+        - name: Snappy
+          url: https://snappy-ai.ru/
+          note: >-
+            Production **agentic AI assistant** (web + Android) that turns plain-language goals into finished results —
+            images, photo editing, vision, text, audio, and plans — instead of raw chatbot drafts.
+
+            Custom **strictly typed WebSocket RPC** with one shared client/server contract and **real-time sync** for
+            live docs and lists — mutations push sequenced updates, reconnects reseed stores, and the UI stays
+            consistent without hand-written sync glue. **Multi-round tool-calling agent** streams chat and reasoning,
+            runs tools in parallel, loads domain **skills** from a markdown registry, and clarifies through structured
+            forms. Fifty-plus presets compose open agent dialogue and guided static pipelines for the same tasks.
+
+            Built **solo** from zero to production with Cursor — architecture, UX, design system, backend, mobile
+            bridge, and an AI-first monorepo of about 50 packages.
+          roles: [founder, sole engineer, architect]
+          stack: [TypeScript, React, Vite, Fastify, Prisma, Bun, Android]
     - company: TravelLine
       url: https://www.travelline.ru/
       roles: [front-end architect, tech lead, lead developer]

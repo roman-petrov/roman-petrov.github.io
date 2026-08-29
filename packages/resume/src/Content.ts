@@ -35,13 +35,14 @@ type ProductLink = Link & { icon: string };
 
 type Resume = z.infer<typeof ResumeSchema>;
 
-type Span = { from: number; to: number };
+type Span = { from: number; to: `current` | number };
 
 type Study = Resume[`education`][`studies`][number];
 
 const resume = Yaml as Resume;
 
-const period = ({ from, to }: Span) => (to === from ? String(from) : `${String(from)} — ${String(to)}`);
+const period = ({ from, to }: Span) =>
+  to === from ? String(from) : `${String(from)} — ${to === `current` ? `present` : String(to)}`;
 
 const paragraphs = (text: string) => text.split(`\n`);
 

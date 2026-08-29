@@ -6,7 +6,7 @@
 [💼 Experience](#-experience) · [🎓 Education](#-education) · [🚀 Activities](#-activities)
 
 - 📍 Batumi, Georgia
-- 📞 [+79061370326](tel:+79061370326)
+- 📞 [+995511266190](tel:+995511266190)
 - ✉️ [rpetrov.tech@gmail.com](mailto:rpetrov.tech@gmail.com)
 - 🔗 [github.com/roman-petrov](https://github.com/roman-petrov)
 - 💬 [Telegram](https://t.me/R0manPetrov)
@@ -105,6 +105,46 @@ inside and less than a kilobyte of JavaScript —
 [`ESLint`](https://eslint.org) · [`Stylelint`](https://stylelint.io) · [`Prettier`](https://prettier.io)
 
 ## 💼 Experience
+
+### [Snappy](https://snappy-ai.ru/)
+
+`2026 — present`
+
+`founder` ◆ `sole engineer`
+
+I founded and shipped **Snappy** as the sole author — product vision, UX, visual design, **typed real-time RPC**,
+agentic architecture, backend, Android, and the monorepo — building the product with **Cursor** agents rather than
+writing code by hand. The focus was a real **agentic AI system** with live sync and tool orchestration, not wrapping a
+chatbot.
+
+**Responsibilities:**
+
+- designed **typed WebSocket RPC** with a shared client/server contract and **real-time data synchronization**
+- designed the **agentic runtime**: multi-round tool-calling, skills catalog, structured clarification, and dual
+  free-chat and guided-form flows
+- owned the full product end to end — site, web app, Android bridge, design system, and monorepo boundaries
+
+**Projects:**
+
+- [Snappy](https://snappy-ai.ru/)
+
+  `founder` ◆ `sole engineer` ◆ `architect`
+
+  Production **agentic AI assistant** (web + Android) that turns plain-language goals into finished results — images,
+  photo editing, vision, text, audio, and plans — instead of raw chatbot drafts.
+
+  Custom **strictly typed WebSocket RPC** with one shared client/server contract and **real-time sync** for live docs
+  and lists — mutations push sequenced updates, reconnects reseed stores, and the UI stays consistent without
+  hand-written sync glue. **Multi-round tool-calling agent** streams chat and reasoning, runs tools in parallel, loads
+  domain **skills** from a markdown registry, and clarifies through structured forms. Fifty-plus presets compose open
+  agent dialogue and guided static pipelines for the same tasks.
+
+  Built **solo** from zero to production with Cursor — architecture, UX, design system, backend, mobile bridge, and an
+  AI-first monorepo of about 50 packages.
+
+  [`TypeScript`](https://www.typescriptlang.org) · [`React`](https://react.dev) · [`Vite`](https://vite.dev) ·
+  [`Fastify`](https://fastify.dev) · [`Prisma`](https://www.prisma.io) · [`Bun`](https://bun.sh) ·
+  [`Android`](https://developer.android.com)
 
 ### [TravelLine](https://www.travelline.ru/)
 
