@@ -17,6 +17,7 @@ const links: Record<string, string> = {
   "Docker": `https://www.docker.com`,
   "ESLint": `https://eslint.org`,
   "Fastify": `https://fastify.dev`,
+  "Figma": `https://www.figma.com`,
   "Flash": `https://en.wikipedia.org/wiki/Adobe_Flash`,
   "Flutter": `https://flutter.dev`,
   "Git": `https://git-scm.com`,

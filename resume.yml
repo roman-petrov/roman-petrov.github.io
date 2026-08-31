@@ -88,6 +88,9 @@ stack:
     - icon: 🧰
       label: Build & tooling
       items: [Vite, tsx, tsdown, Git, GitHub Actions, Docker]
+    - icon: 🎨
+      label: Design
+      items: [Figma, Cursor]
     - icon: ✅
       label: Testing & quality
       items: [Vitest, Jest, Puppeteer, ESLint, Stylelint, Prettier]
@@ -141,6 +144,8 @@ experience:
         planned it end to end.
       duties:
         - designed the architecture of the design systems and the front-end products
+        - implemented the design systems from **Figma** — specs into components, libraries kept in sync with the source
+          of truth
         - built the **full development cycle** for internal projects — tools, workflow, releases, and documentation
         - led the team, mentored engineers, reviewed code, and kept quality high
         - wrote the **core parts** of the libraries myself
@@ -158,7 +163,7 @@ experience:
 
             Already **in production**, and technical teams across the company are moving to it.
           roles: [architect, tech lead, lead developer]
-          stack: [TypeScript, React, Vite, SCSS]
+          stack: [TypeScript, React, Vite, SCSS, Figma]
         - name: TLUI3.0
           note: >-
             Migration of the front-end stack to **Flutter Web**. In one year the team built the design system
@@ -166,7 +171,7 @@ experience:
 
             The company did not adopt Flutter, so only part of the work reached production.
           roles: [architect, tech lead, lead developer]
-          stack: [Dart, Flutter]
+          stack: [Dart, Flutter, Figma]
         - name: TLUI
           note: >-
             **Design system** and component library that made the whole B2B account and intranet look and work the same

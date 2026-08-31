@@ -99,6 +99,10 @@ inside and less than a kilobyte of JavaScript —
 [`Vite`](https://vite.dev) · [`tsx`](https://tsx.is) · [`tsdown`](https://tsdown.dev) · [`Git`](https://git-scm.com) ·
 [`GitHub Actions`](https://github.com/features/actions) · [`Docker`](https://www.docker.com)
 
+### 🎨 Design
+
+[`Figma`](https://www.figma.com) · [`Cursor`](https://cursor.com)
+
 ### ✅ Testing & quality
 
 [`Vitest`](https://vitest.dev) · [`Jest`](https://jestjs.io) · [`Puppeteer`](https://pptr.dev) ·
@@ -158,6 +162,7 @@ only the architecture but the whole **product concept** — **Reactor** started 
 **Responsibilities:**
 
 - designed the architecture of the design systems and the front-end products
+- implemented the design systems from **Figma** — specs into components, libraries kept in sync with the source of truth
 - built the **full development cycle** for internal projects — tools, workflow, releases, and documentation
 - led the team, mentored engineers, reviewed code, and kept quality high
 - wrote the **core parts** of the libraries myself
@@ -179,7 +184,7 @@ only the architecture but the whole **product concept** — **Reactor** started 
   Already **in production**, and technical teams across the company are moving to it.
 
   [`TypeScript`](https://www.typescriptlang.org) · [`React`](https://react.dev) · [`Vite`](https://vite.dev) ·
-  [`SCSS`](https://sass-lang.com)
+  [`SCSS`](https://sass-lang.com) · [`Figma`](https://www.figma.com)
 
 - **TLUI3.0**
 
@@ -190,7 +195,7 @@ only the architecture but the whole **product concept** — **Reactor** started 
 
   The company did not adopt Flutter, so only part of the work reached production.
 
-  [`Dart`](https://dart.dev) · [`Flutter`](https://flutter.dev)
+  [`Dart`](https://dart.dev) · [`Flutter`](https://flutter.dev) · [`Figma`](https://www.figma.com)
 
 - **TLUI**
 
