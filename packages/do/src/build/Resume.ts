@@ -105,10 +105,13 @@ const checkContent = async () => {
 };
 
 const writeContent = async () => {
-  const { Markdown, ResumeSchema } = await import(`@cv/resume`);
+  const { Markdown, ResumeSchema, Seo } = await import(`@cv/resume`);
 
   await writeFormatted(Paths.markdown, Markdown.render());
   await writeFormatted(Paths.schema, JSON.stringify(z.toJSONSchema(ResumeSchema)));
+  await File.write(Paths.llms, Seo.llms);
+  await File.write(Paths.robots, Seo.robots);
+  await File.write(Paths.sitemap, Seo.sitemap);
 };
 
 const prepare = async () => {
@@ -131,7 +134,6 @@ const build = async () => {
 
   await renderPage(`EntryPage`, Paths.site, assets);
   await writeContent();
-  await File.write(Paths.robots, `User-agent: *\nAllow: /\n`);
   await Pdf.render();
   await Og.render();
 

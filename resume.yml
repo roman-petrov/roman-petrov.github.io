@@ -7,6 +7,9 @@ meta:
   name: Roman Petrov
   role: Senior Software Developer
   tagline: Good is not enough
+  description: >-
+    Roman Petrov is a senior software developer specializing in AI agent development, TypeScript, React, design systems,
+    and front-end architecture.
   photo: resume-photo.jpg
   pdf: Roman_Petrov_CV.pdf
   site: https://roman-petrov.github.io/
@@ -52,7 +55,7 @@ expertise:
   groups:
     - icon: 🤖
       label: AI
-      items: [Agents, MCP, RAG, Cursor]
+      items: [AI agents, MCP, RAG, Cursor]
     - icon: 🧩
       label: Problem solving
       items: [Analysis, Communication, Decomposition, MVP]

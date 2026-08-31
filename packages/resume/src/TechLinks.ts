@@ -2,7 +2,7 @@ const links: Record<string, string> = {
   ".NET": `https://dotnet.microsoft.com`,
   "ActionScript 3.0": `https://en.wikipedia.org/wiki/ActionScript`,
   "ActiveX": `https://en.wikipedia.org/wiki/ActiveX`,
-  "Agents": `https://en.wikipedia.org/wiki/Intelligent_agent`,
+  "AI agents": `https://en.wikipedia.org/wiki/Intelligent_agent`,
   "Android": `https://developer.android.com`,
   "AngularJS": `https://angularjs.org`,
   "Bun": `https://bun.sh`,

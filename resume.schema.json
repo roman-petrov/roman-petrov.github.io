@@ -161,6 +161,7 @@
     "meta": {
       "type": "object",
       "properties": {
+        "description": { "type": "string" },
         "github": { "type": "string", "format": "uri" },
         "name": { "type": "string" },
         "pdf": { "type": "string" },
@@ -169,7 +170,7 @@
         "site": { "type": "string", "format": "uri" },
         "tagline": { "type": "string" }
       },
-      "required": ["github", "name", "pdf", "photo", "role", "site", "tagline"],
+      "required": ["description", "github", "name", "pdf", "photo", "role", "site", "tagline"],
       "additionalProperties": false
     },
     "showcase": {

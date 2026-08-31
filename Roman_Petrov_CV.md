@@ -47,7 +47,7 @@ inside and less than a kilobyte of JavaScript —
 
 ### 🤖 AI
 
-`Agents` · `MCP` · `RAG` · `Cursor`
+`AI agents` · `MCP` · `RAG` · `Cursor`
 
 ### 🧩 Problem solving
 

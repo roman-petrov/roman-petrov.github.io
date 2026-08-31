@@ -10,7 +10,13 @@ export const Hero = ({ photo }: HeroProps) => (
     <div className={styles.glow} />
     <div className={styles.inner}>
       <figure className={styles.photo}>
-        <img alt={Content.meta.name} fetchPriority="high" height={240} src={photo} width={240} />
+        <img
+          alt={`${Content.meta.name}, ${Content.meta.role}`}
+          fetchPriority="high"
+          height={240}
+          src={photo}
+          width={240}
+        />
       </figure>
       <div className={styles.copy}>
         <h1 className={styles.name}>{Content.meta.name}</h1>

@@ -15,6 +15,8 @@ const robots = path.join(Root, `dist`, `robots.txt`);
 const root = Root;
 const schema = path.join(Root, `resume.schema.json`);
 const site = path.join(Root, `dist`, `index.html`);
+const sitemap = path.join(Root, `dist`, `sitemap.xml`);
+const llms = path.join(Root, `dist`, `llms.txt`);
 const srcAssets = path.join(resume, `src`, `assets`);
 
 export const Paths = {
@@ -22,6 +24,7 @@ export const Paths = {
   build,
   content,
   dist,
+  llms,
   markdown,
   og,
   pageAssets,
@@ -31,5 +34,6 @@ export const Paths = {
   root,
   schema,
   site,
+  sitemap,
   srcAssets,
 };

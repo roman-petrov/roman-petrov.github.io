@@ -60,6 +60,7 @@ export const ResumeSchema = z.strictObject({
   }),
   expertise: z.strictObject(grouped),
   meta: z.strictObject({
+    description: z.string(),
     github: z.url(),
     name: z.string(),
     pdf: z.string(),

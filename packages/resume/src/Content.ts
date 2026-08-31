@@ -136,4 +136,16 @@ const section = (id: string) => {
 
 const meta = resume.meta;
 
-export const Content = { contacts, meta, section, sections };
+const { email } = resume.contacts;
+
+const knowsAbout = [
+  ...new Set([
+    `AI agent development`,
+    ...resume.stack.groups.flatMap(({ items }) => items),
+    ...resume.expertise.groups
+      .filter(({ label }) => label === `AI` || label === `Architecture`)
+      .flatMap(({ items }) => items),
+  ]),
+];
+
+export const Content = { contacts, email, knowsAbout, meta, section, sections };
