@@ -23,6 +23,7 @@ export const Document = ({ css, favicon, fonts, photo, script }: DocumentProps) 
         <meta content="width=device-width, initial-scale=1" name="viewport" />
         <title>{title}</title>
         <meta content={description} name="description" />
+        <meta content="cPn9f6v-ZFjBMI2x034f3MBqYl9IK-CZ56QrPZv9PmI" name="google-site-verification" />
         <meta content={Content.meta.name} name="author" />
         <link href={Content.meta.site} rel="canonical" />
         <link href={Content.meta.github} rel="me" />
