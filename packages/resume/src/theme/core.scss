@@ -1,6 +1,6 @@
 @forward "r" show r;
 
-$-breakpoint-mobile: 768px;
+$-breakpoint-mobile: 960px;
 
 @mixin hover {
   @media (hover: hover) and (pointer: fine) {

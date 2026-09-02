@@ -49,7 +49,7 @@
 
   position: relative;
   display: grid;
-  grid-template-columns: auto minmax(0, 1fr);
+  grid-template-columns: auto minmax(min-content, 1fr);
   gap: space.x3xl();
   align-items: start;
 }
@@ -72,6 +72,7 @@
   line-height: leading.tight();
   color: color.ink();
   letter-spacing: tracking.tight();
+  white-space: nowrap;
   background: linear-gradient(180deg, color.ink() 40%, color.ink-fade() 100%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -83,11 +84,11 @@
   grid-template:
     "lead contacts" minmax(0, 1fr)
     "cta contacts" auto
-    / minmax(0, 1fr) auto;
+    / max-content max-content;
   gap: space.xl();
   align-items: stretch;
-  width: 0;
-  min-width: 100%;
+  justify-content: space-between;
+  width: 100%;
   min-height: 0;
 }
 
@@ -97,7 +98,7 @@
   grid-area: lead;
   gap: space.md();
   align-items: flex-start;
-  min-width: 0;
+  min-width: min-content;
 }
 
 .role {
@@ -107,18 +108,20 @@
   line-height: leading.snug();
   color: color.ink-soft();
   letter-spacing: tracking.snug();
+  white-space: nowrap;
 }
 
 .tagline {
   @include primitives.label(text.sm());
 
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: space.sm();
   align-items: center;
   margin: 0;
   font-weight: weight.semibold();
   color: color.accent();
+  white-space: nowrap;
 }
 
 .caret {
