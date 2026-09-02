@@ -55,17 +55,23 @@ $-rim: color-mix(in srgb, #{color.highlight()} 42%, #{color.accent()});
 
 @include print {
   .root {
-    height: r(28);
-    padding: 0 space.sm() 0 space.xs();
-    font-size: text.sm();
-    background: color.accent-soft();
-    border-color: color.accent();
+    height: auto;
+    padding: 0;
+    font-size: text.md();
+    font-weight: weight.medium();
+    color: color.accent();
+    background: none;
+    border-color: transparent;
     box-shadow: none;
     backdrop-filter: none;
   }
 
   .root[download] {
     display: none;
+  }
+
+  .root span {
+    border-bottom: 1px solid currentcolor;
   }
 
   .root svg {

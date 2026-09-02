@@ -21,6 +21,8 @@
 - My favorite tool in software development is 🔥 **Occam's razor**.
 - I prefer **functional programming**, and my favorite code unit is the **pure function**.
 - I love **AI-assisted development** and have been building software with AI agents for more than a year.
+- I love building great apps: **pixel-perfect** design, excellent UX, and fluid animations. Personally, I enjoy
+  glassmorphism and skeuomorphism.
 - I speak **English** (upper intermediate) and **Russian** (native).
 - My wife **Olga** works as an IT product manager. Our cat **Byte** is happily unemployed. 😎
 - Beyond work, my wife and I love movies, TV series, travel, and concerts. I also enjoy poker and programming.

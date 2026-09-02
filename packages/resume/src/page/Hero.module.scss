@@ -200,18 +200,16 @@
 
   .inner {
     gap: space.xl();
-    align-items: stretch;
     width: 100%;
     max-width: none;
   }
 
   .copy {
     gap: 0;
+    align-items: start;
     justify-content: space-between;
-    width: fit-content;
+    width: max-content;
     max-width: 100%;
-    height: auto;
-    min-height: #{r(240)};
   }
 
   .name {
@@ -230,13 +228,20 @@
   }
 
   .contacts {
-    width: 100%;
+    align-self: start;
+    padding: space.x2s() 0;
     white-space: nowrap;
+
+    > li {
+      padding: space.x2s() space.sm();
+    }
+  }
+
+  .cta {
+    align-self: start;
   }
 
   .photo {
-    align-self: stretch;
-    height: auto;
     box-shadow: none;
   }
 }
