@@ -1,4 +1,5 @@
 bunx
+CLDR
 fontsource
 GLSL
 jetbrains

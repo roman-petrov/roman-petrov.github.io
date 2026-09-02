@@ -91,7 +91,7 @@ stack:
       items: [TypeScript, JavaScript, HTML, CSS, SCSS, Dart, C#, C/C++, GLSL]
     - icon: 📦
       label: Frameworks & libraries
-      items: [React, Node.js, Flutter, .NET, CSS Modules, Zod, tRPC, Prisma, WebSockets, WebGL]
+      items: [React, Node.js, Flutter, .NET, CSS Modules, core-js, CLDR, Zod, tRPC, Prisma, WebSockets, WebGL]
     - icon: 🧰
       label: Build & tooling
       items: [Vite, tsx, tsdown, Git, GitHub Actions, Docker]
@@ -170,7 +170,7 @@ experience:
 
             Already **in production**, and technical teams across the company are moving to it.
           roles: [architect, tech lead, lead developer]
-          stack: [TypeScript, React, Vite, SCSS, Figma]
+          stack: [TypeScript, React, Vite, SCSS, core-js, CLDR, Figma]
         - name: TLUI3.0
           note: >-
             Migration of the front-end stack to **Flutter Web**. In one year the team built the design system
