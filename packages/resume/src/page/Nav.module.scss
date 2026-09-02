@@ -9,6 +9,33 @@
 @use "../theme/tokens/text";
 @use "../theme/tokens/weight";
 
+@keyframes dock-mark {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes dock-face {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes dock-name {
+  0%,
+  35% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 .root {
   @include layer.nav;
   @include materials.chrome-frost;
@@ -38,18 +65,40 @@
   border: 0;
 }
 
-.mark {
+.badge {
   @include primitives.square(metrics.tap());
-  @include primitives.mono(text.micro());
 
-  display: inline-grid;
-  place-items: center;
-  color: color.on-accent();
-  background: linear-gradient(140deg, color.accent(), color.accent-bright());
+  display: grid;
+  overflow: hidden;
   border-radius: radius.sm();
 }
 
+.mark {
+  @include primitives.mono(text.micro());
+  @include materials.scroll-hero(dock-mark);
+
+  display: grid;
+  grid-area: 1 / 1;
+  place-items: center;
+  color: color.on-accent();
+  background: linear-gradient(140deg, color.accent(), color.accent-bright());
+}
+
+.face {
+  @include materials.scroll-hero(dock-face);
+
+  display: block;
+  grid-area: 1 / 1;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  object-fit: cover;
+  opacity: 0;
+}
+
 .name {
+  @include materials.scroll-hero(dock-name);
+
   font-size: text.lg();
   font-weight: weight.semibold();
   white-space: nowrap;

@@ -1,8 +1,9 @@
 declare const classNames: {
   readonly root: "root";
+  readonly photo: "photo";
+  readonly contacts: "contacts";
   readonly glow: "glow";
   readonly inner: "inner";
-  readonly contacts: "contacts";
   readonly caret: "caret";
   readonly copy: "copy";
   readonly name: "name";
@@ -11,6 +12,5 @@ declare const classNames: {
   readonly role: "role";
   readonly tagline: "tagline";
   readonly cta: "cta";
-  readonly photo: "photo";
 };
 export default classNames;

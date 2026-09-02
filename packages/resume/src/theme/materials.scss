@@ -232,6 +232,15 @@ $-material-tone-rim: 22%;
   }
 }
 
+@mixin scroll-hero($name) {
+  @include -scroll-run($name);
+
+  @media not print {
+    animation-timeline: --hero;
+    animation-range: exit 0% exit 75%;
+  }
+}
+
 @mixin well-sheer {
   $-fill: color-mix(in srgb, #{color.surface()} 28%, #{color.bg()});
   $-glint: color-mix(in srgb, #{color.highlight()} 42%, #{$-fill});

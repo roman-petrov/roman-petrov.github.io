@@ -10,14 +10,46 @@
 @use "../theme/tokens/tracking";
 @use "../theme/tokens/weight";
 
+@keyframes hero-fade {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes hero-sink {
+  to {
+    opacity: 0;
+    transform: translateY(calc(#{space.md()} * -1));
+  }
+}
+
+@keyframes hero-photo {
+  to {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+}
+
+@keyframes hero-name {
+  to {
+    background: none;
+    opacity: 0;
+    transform: translateY(calc(#{space.sm()} * -1)) scale(0.3);
+    -webkit-text-fill-color: color.ink();
+  }
+}
+
 .root {
   position: relative;
   display: grid;
   place-items: center;
   padding: space.x3xl() 0;
   overflow-x: clip;
+  view-timeline-name: --hero;
 
   &::after {
+    @include materials.scroll-hero(hero-fade);
+
     position: absolute;
     inset: 0;
     pointer-events: none;
@@ -33,6 +65,7 @@
 
 .glow {
   @include materials.glow-blur;
+  @include materials.scroll-hero(hero-fade);
 
   position: absolute;
   inset: -20% 0 auto;
@@ -65,6 +98,8 @@
 }
 
 .name {
+  @include materials.scroll-hero(hero-name);
+
   margin: 0;
   font-size: text.hero();
   font-weight: weight.bold();
@@ -74,10 +109,13 @@
   white-space: nowrap;
   background: linear-gradient(180deg, color.ink() 40%, color.ink-fade() 100%);
   background-clip: text;
+  transform-origin: left center;
   -webkit-text-fill-color: transparent;
 }
 
 .grid {
+  @include materials.scroll-hero(hero-sink);
+
   display: grid;
   flex: 1 1 auto;
   grid-template:
@@ -167,6 +205,8 @@
 }
 
 .photo {
+  @include materials.scroll-hero(hero-photo);
+
   align-self: start;
   width: #{r(240)};
   height: #{r(240)};
@@ -175,6 +215,7 @@
   border: 1px solid color.rim();
   border-radius: radius.lg();
   box-shadow: 0 #{r(12)} #{r(28)} color.shadow();
+  transform-origin: center top;
 
   img {
     display: block;
@@ -216,12 +257,19 @@
     font-size: #{r(56)};
     line-height: 1;
     background: none;
+    opacity: 1;
+    transform: none;
     -webkit-text-fill-color: color.ink();
   }
 
   .grid,
   .lead {
     display: contents;
+  }
+
+  .grid {
+    opacity: 1;
+    transform: none;
   }
 
   .role,
@@ -245,6 +293,8 @@
 
   .photo {
     box-shadow: none;
+    opacity: 1;
+    transform: none;
   }
 }
 
@@ -273,6 +323,7 @@
 
   .name {
     font-size: #{r(36)};
+    transform-origin: center;
   }
 
   .role {

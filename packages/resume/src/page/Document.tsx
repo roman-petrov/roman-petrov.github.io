@@ -53,7 +53,7 @@ export const Document = ({ css, favicon, fonts, photo, script }: DocumentProps) 
         <style dangerouslySetInnerHTML={{ __html: css }} />
       </head>
       <body>
-        <Nav />
+        <Nav photo={Assets.href(photo)} />
         <Progress />
         <main>
           <Hero photo={Assets.href(photo)} />
