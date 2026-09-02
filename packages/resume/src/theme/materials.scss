@@ -233,29 +233,24 @@ $-material-tone-rim: 22%;
 }
 
 @mixin well-sheer {
-  $-fill: color-mix(in srgb, #{color.surface()} 20%, #{color.bg()});
-  $-glint: color-mix(in srgb, #{color.highlight()} 22%, transparent);
-  $-shade: color-mix(in srgb, #{color.shadow()} 18%, transparent);
+  $-fill: color-mix(in srgb, #{color.surface()} 28%, #{color.bg()});
+  $-glint: color-mix(in srgb, #{color.highlight()} 42%, #{$-fill});
+  $-shade: color-mix(in srgb, #{color.shadow()} 34%, transparent);
 
   @include print {
     box-shadow: none;
   }
 
   background: panel-bg();
-  border: 1px solid color-mix(in srgb, #{color.highlight()} 24%, #{$-fill});
+  border: 1px solid color-mix(in srgb, #{color.highlight()} 36%, #{$-fill});
   border-radius: radius.md();
 
   @media not print {
-    background: linear-gradient(
-      145deg,
-      color-mix(in srgb, #{color.highlight()} 16%, #{$-fill}),
-      $-fill 48%,
-      color-mix(in srgb, #{color.card()} 18%, #{$-fill})
-    );
+    background: $-fill;
     box-shadow:
       inset #{r(1)} #{r(1)} 0 $-glint,
-      inset #{r(-1)} #{r(-1)} 0 $-shade,
-      0 #{r(8)} #{r(20)} color.shadow-soft();
+      inset #{r(-1)} #{r(-2)} #{r(3)} $-shade,
+      0 #{r(6)} #{r(16)} color.shadow-soft();
   }
 }
 
