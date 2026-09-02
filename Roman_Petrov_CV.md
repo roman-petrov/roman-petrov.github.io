@@ -1,6 +1,6 @@
 # Roman Petrov
 
-`// Senior Software Developer: Good is not enough`
+`// Senior Software Engineer: Good is not enough`
 
 [👤 About Me](#-about-me) · [🌐 Showcase](#-showcase) · [🧠 Expertise](#-expertise) · [🛠 Stack](#-stack) ·
 [💼 Experience](#-experience) · [🎓 Education](#-education) · [🚀 Activities](#-activities)
