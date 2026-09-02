@@ -251,18 +251,13 @@ $-material-tone-rim: 22%;
   }
 }
 
-@mixin well {
-  @include panel;
-
-  border-radius: radius.md();
-}
-
 @mixin well-sheer {
   $-fill: color.card();
 
-  @include well;
+  @include panel;
 
   border-color: rim($-fill);
+  border-radius: radius.md();
 
   @media not print {
     background: panel-card();

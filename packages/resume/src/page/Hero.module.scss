@@ -134,7 +134,7 @@
 }
 
 .contacts {
-  @include materials.well;
+  @include materials.well-sheer;
 
   display: flex;
   flex-direction: column;
@@ -146,8 +146,6 @@
   padding: space.xs();
   margin: 0;
   list-style: none;
-  border-radius: radius.sm();
-  box-shadow: none;
 
   > li {
     display: flex;
