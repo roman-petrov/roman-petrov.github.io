@@ -203,10 +203,6 @@ $-material-tone-rim: 22%;
     animation-timing-function: linear;
     animation-fill-mode: both;
   }
-
-  @media (prefers-reduced-motion: reduce) {
-    animation: none;
-  }
 }
 
 @mixin scroll-wash {
