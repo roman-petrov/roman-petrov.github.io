@@ -215,6 +215,8 @@
   .name {
     font-size: #{r(56)};
     line-height: 1;
+    background: none;
+    -webkit-text-fill-color: color.ink();
   }
 
   .grid,
