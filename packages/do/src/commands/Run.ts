@@ -3,8 +3,7 @@ import { preview } from "vite";
 
 import type { Command } from "../Command";
 
-import { Paths } from "../build/Paths";
-import { Resume } from "../build/Resume";
+import { Paths, Resume } from "../build";
 import { Server } from "../Server";
 
 const run = async () => {

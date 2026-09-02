@@ -10,7 +10,7 @@ declare const classNames: {
   readonly lead: "lead";
   readonly role: "role";
   readonly tagline: "tagline";
-  readonly cta: "cta";
   readonly photo: "photo";
+  readonly cta: "cta";
 };
 export default classNames;

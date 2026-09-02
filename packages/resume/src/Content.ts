@@ -66,7 +66,7 @@ const product = ({ name, repo, stack, summary, url }: Resume[`showcase`]): Produ
   stack,
 });
 
-const heading = ({ icon, title }: Heading): Heading => ({ icon, title });
+const heading = ({ icon, title }: Heading) => ({ icon, title });
 
 const factBlock = (groups: Resume[`expertise`][`groups`], tech = false): Block => ({
   items: groups.map(({ icon, items, label }) => ({ chips: items, label: `${icon}\u2009${label}`, tech })),

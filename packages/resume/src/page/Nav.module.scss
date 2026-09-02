@@ -24,8 +24,8 @@
   @include primitives.wrap;
 
   display: flex;
-  align-items: center;
   gap: space.lg();
+  align-items: center;
   height: metrics.nav();
 }
 
@@ -39,7 +39,7 @@
 }
 
 .mark {
-  @include primitives.square(#{r(32)});
+  @include primitives.square(metrics.tap());
   @include primitives.mono(text.micro());
 
   display: inline-grid;

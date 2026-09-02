@@ -147,21 +147,6 @@ $-material-tone-rim: 22%;
   rotate: 45deg;
 }
 
-@mixin panel {
-  $-fill: panel-bg();
-
-  @include print {
-    box-shadow: none;
-  }
-
-  background: $-fill;
-  border: 1px solid rim($-fill);
-
-  @media not print {
-    box-shadow: 0 #{r(8)} #{r(24)} color.shadow-soft();
-  }
-}
-
 @mixin chrome-frost {
   backdrop-filter: blur($-chrome-blur) saturate($-chrome-saturate);
 }

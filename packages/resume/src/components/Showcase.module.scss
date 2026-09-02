@@ -1,6 +1,7 @@
 @use "../theme/core" as *;
 @use "../theme/materials";
 @use "../theme/primitives";
+@use "../theme/tokens/metrics";
 @use "../theme/tokens/space";
 @use "../theme/tokens/text";
 @use "../theme/tokens/weight";
@@ -29,7 +30,7 @@
     @include primitives.control(space.xs());
     @include materials.interactive-soft;
 
-    height: r(32);
+    height: metrics.tap();
     padding: 0 space.md() 0 space.sm();
     font-size: text.md();
     font-weight: weight.medium();

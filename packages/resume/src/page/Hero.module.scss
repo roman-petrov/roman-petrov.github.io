@@ -58,7 +58,6 @@
   display: flex;
   flex-direction: column;
   gap: space.lg();
-  align-items: stretch;
   width: 100%;
   max-width: 100%;
   height: #{r(240)};
@@ -86,7 +85,6 @@
     "cta contacts" auto
     / max-content max-content;
   gap: space.xl();
-  align-items: stretch;
   justify-content: space-between;
   width: 100%;
   min-height: 0;
@@ -115,7 +113,6 @@
   @include primitives.label(text.sm());
 
   display: flex;
-  flex-wrap: nowrap;
   gap: space.sm();
   align-items: center;
   margin: 0;
@@ -139,7 +136,6 @@
   display: flex;
   flex-direction: column;
   grid-area: contacts;
-  gap: 0;
   place-self: end;
   width: max-content;
   max-width: 100%;
@@ -160,7 +156,6 @@
 
 .cta {
   display: flex;
-  flex-wrap: nowrap;
   grid-area: cta;
   gap: space.md();
   align-self: end;
@@ -222,7 +217,6 @@
   .name {
     font-size: #{r(56)};
     line-height: 1;
-    white-space: nowrap;
   }
 
   .grid,
@@ -235,34 +229,15 @@
     line-height: 1;
   }
 
-  .role,
-  .tagline,
-  .contacts {
-    white-space: nowrap;
-  }
-
-  .tagline {
-    flex-wrap: nowrap;
-  }
-
   .contacts {
     width: 100%;
-  }
-
-  .cta {
-    margin-top: 0;
+    white-space: nowrap;
   }
 
   .photo {
     align-self: stretch;
     height: auto;
     box-shadow: none;
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
   }
 }
 
