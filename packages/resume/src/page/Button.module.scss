@@ -1,20 +1,50 @@
 @use "../theme/core" as *;
 @use "../theme/materials";
 @use "../theme/primitives";
+@use "../theme/tokens/color";
 @use "../theme/tokens/space";
 @use "../theme/tokens/text";
 @use "../theme/tokens/weight";
 
+$-fill: color-mix(in srgb, #{color.accent()} 16%, transparent);
+$-fill-hover: color-mix(in srgb, #{color.accent()} 40%, transparent);
+$-shine: color-mix(in srgb, #{color.highlight()} 38%, transparent);
+$-shine-hover: color-mix(in srgb, #{color.highlight()} 70%, transparent);
+$-rim: color-mix(in srgb, #{color.highlight()} 42%, #{color.accent()});
+
+@mixin -lit {
+  background: linear-gradient(180deg, $-shine-hover, $-fill-hover);
+  border-color: color.accent();
+  box-shadow:
+    inset 0 #{r(1)} 0 $-shine-hover,
+    0 #{r(10)} #{r(24)} color.accent-glow();
+}
+
 .root {
   @include primitives.control(space.sm());
-  @include materials.interactive-soft;
+  @include materials.face;
+  @include materials.chrome-frost;
+
+  @include hover {
+    @include -lit;
+  }
+
+  &:focus-visible {
+    @include -lit;
+  }
 
   height: r(40);
   padding: 0 space.lg() 0 space.md();
   font-size: text.lg();
   font-weight: weight.semibold();
   line-height: 1;
+  color: color.ink();
   white-space: nowrap;
+  background: linear-gradient(180deg, $-shine, $-fill);
+  border-color: $-rim;
+  box-shadow:
+    inset 0 #{r(1)} 0 $-shine,
+    0 #{r(8)} #{r(20)} color.shadow-soft();
 
   svg {
     flex: none;
@@ -28,7 +58,10 @@
     height: r(28);
     padding: 0 space.sm() 0 space.xs();
     font-size: text.sm();
+    background: color.accent-soft();
+    border-color: color.accent();
     box-shadow: none;
+    backdrop-filter: none;
   }
 
   .root[download] {
