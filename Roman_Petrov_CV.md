@@ -93,7 +93,8 @@ inside and less than a kilobyte of JavaScript —
 
 [`React`](https://react.dev) · [`Node.js`](https://nodejs.org) · [`Flutter`](https://flutter.dev) ·
 [`.NET`](https://dotnet.microsoft.com) · [`CSS Modules`](https://github.com/css-modules/css-modules) ·
-[`Zod`](https://zod.dev) · [`tRPC`](https://trpc.io) · [`Prisma`](https://www.prisma.io) ·
+[`core-js`](https://core-js.io) · [`CLDR`](https://cldr.unicode.org) · [`Zod`](https://zod.dev) ·
+[`tRPC`](https://trpc.io) · [`Prisma`](https://www.prisma.io) ·
 [`WebSockets`](https://developer.mozilla.org/docs/Web/API/WebSockets_API) ·
 [`WebGL`](https://developer.mozilla.org/docs/Web/API/WebGL_API)
 
@@ -187,7 +188,8 @@ only the architecture but the whole **product concept** — **Reactor** started 
   Already **in production**, and technical teams across the company are moving to it.
 
   [`TypeScript`](https://www.typescriptlang.org) · [`React`](https://react.dev) · [`Vite`](https://vite.dev) ·
-  [`SCSS`](https://sass-lang.com) · [`Figma`](https://www.figma.com)
+  [`SCSS`](https://sass-lang.com) · [`core-js`](https://core-js.io) · [`CLDR`](https://cldr.unicode.org) ·
+  [`Figma`](https://www.figma.com)
 
 - **TLUI3.0**
 

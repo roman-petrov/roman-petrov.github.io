@@ -4,8 +4,8 @@ declare const classNames: {
   readonly brand: "brand";
   readonly badge: "badge";
   readonly mark: "mark";
-  readonly name: "name";
   readonly face: "face";
+  readonly name: "name";
   readonly links: "links";
   readonly actions: "actions";
 };

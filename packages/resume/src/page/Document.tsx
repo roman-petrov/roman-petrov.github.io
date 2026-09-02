@@ -1,3 +1,5 @@
+import { preload } from "react-dom";
+
 import type { PageAssets } from "../PageAssets";
 
 import { Assets } from "../Assets";
@@ -15,6 +17,8 @@ export type DocumentProps = PageAssets;
 
 export const Document = ({ css, favicon, fonts, photo, script }: DocumentProps) => {
   const { description, image, jsonLd, title } = Seo;
+  const photoHref = Assets.href(photo);
+  preload(photoHref, { as: `image`, fetchPriority: `high`, type: `image/webp` });
 
   return (
     <html lang="en">
@@ -53,10 +57,10 @@ export const Document = ({ css, favicon, fonts, photo, script }: DocumentProps) 
         <style dangerouslySetInnerHTML={{ __html: css }} />
       </head>
       <body>
-        <Nav photo={Assets.href(photo)} />
+        <Nav photo={photoHref} />
         <Progress />
         <main>
-          <Hero photo={Assets.href(photo)} />
+          <Hero photo={photoHref} />
           <Prose section={Content.section(`about`)} />
           <Prose section={Content.section(`showcase`)} />
           <Prose section={Content.section(`expertise`)} />
