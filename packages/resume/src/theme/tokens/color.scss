@@ -76,6 +76,10 @@
   @return -color("on-accent");
 }
 
+@function rim() {
+  @return -color("rim");
+}
+
 @function shadow() {
   @return -color("shadow");
 }
