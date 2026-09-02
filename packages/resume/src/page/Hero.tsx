@@ -1,8 +1,8 @@
 import { Content } from "../Content";
 import { Contact } from "./Contact";
 import styles from "./Hero.module.scss";
-import { LinkedIn } from "./LinkedIn";
-import { PdfAction } from "./PdfAction";
+import { LinkedInButton } from "./LinkedInButton";
+import { PdfButton } from "./PdfButton";
 
 export type HeroProps = { photo: string };
 
@@ -38,8 +38,8 @@ export const Hero = ({ photo }: HeroProps) => (
             ))}
           </ul>
           <div className={styles.cta}>
-            <PdfAction />
-            <LinkedIn />
+            <PdfButton />
+            <LinkedInButton />
           </div>
         </div>
       </div>
