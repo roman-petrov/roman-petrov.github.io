@@ -22,10 +22,6 @@ $-material-tone-rim: 22%;
   @return color-mix(in srgb, #{-tone()} #{$-material-fill}, #{color.bg()});
 }
 
-@function panel-card() {
-  @return color-mix(in srgb, #{color.card()} var(--panel-sheer), transparent);
-}
-
 @function rim($fill) {
   @return color-mix(in srgb, var(--rim-ink, #{color.highlight()}) var(--rim-weight), #{$fill});
 }
@@ -252,16 +248,29 @@ $-material-tone-rim: 22%;
 }
 
 @mixin well-sheer {
-  $-fill: color.card();
+  $-fill: color-mix(in srgb, #{color.surface()} 20%, #{color.bg()});
+  $-glint: color-mix(in srgb, #{color.highlight()} 22%, transparent);
+  $-shade: color-mix(in srgb, #{color.shadow()} 18%, transparent);
 
-  @include panel;
+  @include print {
+    box-shadow: none;
+  }
 
-  border-color: rim($-fill);
+  background: panel-bg();
+  border: 1px solid color-mix(in srgb, #{color.highlight()} 24%, #{$-fill});
   border-radius: radius.md();
 
   @media not print {
-    background: panel-card();
-    box-shadow: 0 #{r(4)} #{r(14)} color.shadow-soft();
+    background: linear-gradient(
+      145deg,
+      color-mix(in srgb, #{color.highlight()} 16%, #{$-fill}),
+      $-fill 48%,
+      color-mix(in srgb, #{color.card()} 18%, #{$-fill})
+    );
+    box-shadow:
+      inset #{r(1)} #{r(1)} 0 $-glint,
+      inset #{r(-1)} #{r(-1)} 0 $-shade,
+      0 #{r(8)} #{r(20)} color.shadow-soft();
   }
 }
 
