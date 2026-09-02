@@ -1,6 +1,6 @@
 import { Content } from "./Content";
 
-const { email, knowsAbout, meta } = Content;
+const { email, knowsAbout, linkedin, meta } = Content;
 const { description, github, name, pdf, role, site } = meta;
 const title = `${name} — ${role}`;
 const image = `${site}assets/og.png`;
@@ -27,7 +27,7 @@ const jsonLd = JSON.stringify({
       "jobTitle": role,
       "knowsAbout": knowsAbout,
       name,
-      "sameAs": [github],
+      "sameAs": [github, linkedin],
       "url": site,
     },
   ],
@@ -41,6 +41,7 @@ const llms = [
   `- [CV](${site})`,
   `- [PDF](${site}${pdf})`,
   `- [GitHub](${github})`,
+  `- [LinkedIn](${linkedin})`,
   ``,
   `## Skills`,
   ``,

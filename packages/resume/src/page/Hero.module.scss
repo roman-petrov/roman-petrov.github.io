@@ -51,7 +51,7 @@
   display: grid;
   grid-template-columns: auto minmax(0, 1fr);
   gap: space.x3xl();
-  align-items: stretch;
+  align-items: start;
 }
 
 .copy {
@@ -59,9 +59,10 @@
   flex-direction: column;
   gap: space.lg();
   align-items: stretch;
-  width: fit-content;
+  width: 100%;
   max-width: 100%;
-  min-height: 0;
+  height: #{r(240)};
+  min-height: #{r(240)};
 }
 
 .name {
@@ -79,7 +80,10 @@
 .grid {
   display: grid;
   flex: 1 1 auto;
-  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template:
+    "lead contacts" minmax(0, 1fr)
+    "cta contacts" auto
+    / minmax(0, 1fr) auto;
   gap: space.xl();
   align-items: stretch;
   width: 0;
@@ -90,6 +94,7 @@
 .lead {
   display: flex;
   flex-direction: column;
+  grid-area: lead;
   gap: space.md();
   align-items: flex-start;
   min-width: 0;
@@ -130,6 +135,7 @@
 
   display: flex;
   flex-direction: column;
+  grid-area: contacts;
   gap: 0;
   place-self: end;
   width: max-content;
@@ -153,11 +159,13 @@
 
 .cta {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  grid-area: cta;
   gap: space.md();
-  margin-top: auto;
+  align-self: end;
 
   > * {
+    flex: none;
     max-width: 100%;
   }
 }
@@ -180,8 +188,7 @@
 @include print {
   .root::after,
   .glow,
-  .caret,
-  .cta {
+  .caret {
     display: none;
   }
 
@@ -203,6 +210,7 @@
     justify-content: space-between;
     width: fit-content;
     max-width: 100%;
+    height: auto;
     min-height: #{r(240)};
   }
 
@@ -236,6 +244,10 @@
     width: 100%;
   }
 
+  .cta {
+    margin-top: 0;
+  }
+
   .photo {
     align-self: stretch;
     box-shadow: none;
@@ -266,6 +278,8 @@
   .copy {
     gap: space.sm();
     width: auto;
+    height: auto;
+    min-height: 0;
     text-align: center;
   }
 
@@ -279,7 +293,11 @@
 
   .grid {
     flex: none;
-    grid-template-columns: minmax(0, 1fr);
+    grid-template:
+      "lead"
+      "cta"
+      "contacts"
+      / minmax(0, 1fr);
     gap: space.md();
     width: auto;
     min-width: 0;
@@ -300,12 +318,13 @@
   }
 
   .cta {
-    margin-top: space.sm();
+    justify-content: center;
 
     > * {
+      flex: 1 1 0;
       gap: space.xs();
       justify-content: center;
-      width: 100%;
+      min-width: 0;
       height: #{r(36)};
       padding: 0 space.md() 0 space.sm();
       font-size: text.md();

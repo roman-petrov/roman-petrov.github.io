@@ -54,10 +54,11 @@
       "properties": {
         "email": { "type": "string" },
         "github": { "type": "string" },
+        "linkedin": { "type": "string", "format": "uri" },
         "location": { "type": "string" },
         "phone": { "type": "string" }
       },
-      "required": ["email", "github", "location", "phone"],
+      "required": ["email", "github", "linkedin", "location", "phone"],
       "additionalProperties": false
     },
     "education": {

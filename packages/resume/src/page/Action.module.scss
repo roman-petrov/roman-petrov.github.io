@@ -6,20 +6,37 @@
 @use "../theme/tokens/weight";
 
 .root {
-  @include primitives.control(space.xs());
+  @include primitives.control(space.sm());
+  @include materials.interactive-soft;
 
-  font-weight: weight.semibold();
-  line-height: 1;
-  white-space: nowrap;
-}
-
-.lg {
-  gap: space.sm();
   height: r(40);
   padding: 0 space.lg() 0 space.md();
   font-size: text.lg();
+  font-weight: weight.semibold();
+  line-height: 1;
+  white-space: nowrap;
+
+  svg {
+    flex: none;
+    width: r(24);
+    height: r(24);
+  }
 }
 
-.primary {
-  @include materials.interactive-primary;
+@include print {
+  .root {
+    height: r(28);
+    padding: 0 space.sm() 0 space.xs();
+    font-size: text.sm();
+    box-shadow: none;
+  }
+
+  .root[download] {
+    display: none;
+  }
+
+  .root svg {
+    width: r(16);
+    height: r(16);
+  }
 }

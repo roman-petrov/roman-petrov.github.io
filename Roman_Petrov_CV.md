@@ -11,7 +11,8 @@
 - ✉️ [rpetrov.tech@gmail.com](mailto:rpetrov.tech@gmail.com)
 - 🔗 [github.com/roman-petrov](https://github.com/roman-petrov)
 
-[🌐 Web version](https://roman-petrov.github.io/) · [⬇ Download PDF](https://roman-petrov.github.io/Roman_Petrov_CV.pdf)
+[🌐 Web version](https://roman-petrov.github.io/) · [PDF](https://roman-petrov.github.io/Roman_Petrov_CV.pdf) ·
+[LinkedIn](https://www.linkedin.com/in/roman-petrov-ai)
 
 ---
 

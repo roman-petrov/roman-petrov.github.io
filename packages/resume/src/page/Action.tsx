@@ -1,13 +1,12 @@
-import { _ } from "@cv/core";
+import type { ReactNode } from "react";
 
-import { Ico } from "../components";
 import styles from "./Action.module.scss";
 
-export type ActionProps = { download?: boolean; href: string; icon: string; label: string };
+export type ActionProps = { children: ReactNode; download?: boolean; href: string; label: string; rel?: string };
 
-export const Action = ({ download = false, href, icon, label }: ActionProps) => (
-  <a className={_.cn(styles.root, styles.lg, styles.primary)} download={download} href={href}>
-    <Ico>{icon}</Ico>
+export const Action = ({ children, download = false, href, label, rel }: ActionProps) => (
+  <a className={styles.root} download={download} href={href} rel={rel}>
+    {children}
     <span>{label}</span>
   </a>
 );

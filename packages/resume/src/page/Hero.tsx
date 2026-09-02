@@ -1,6 +1,7 @@
 import { Content } from "../Content";
 import { Contact } from "./Contact";
 import styles from "./Hero.module.scss";
+import { LinkedIn } from "./LinkedIn";
 import { PdfAction } from "./PdfAction";
 
 export type HeroProps = { photo: string };
@@ -28,9 +29,6 @@ export const Hero = ({ photo }: HeroProps) => (
               {` ${Content.meta.tagline}`}
               <span className={styles.caret} />
             </p>
-            <div className={styles.cta}>
-              <PdfAction />
-            </div>
           </div>
           <ul className={styles.contacts}>
             {Content.contacts.map(({ href, icon, label, value }) => (
@@ -39,6 +37,10 @@ export const Hero = ({ photo }: HeroProps) => (
               </li>
             ))}
           </ul>
+          <div className={styles.cta}>
+            <PdfAction />
+            <LinkedIn />
+          </div>
         </div>
       </div>
     </div>

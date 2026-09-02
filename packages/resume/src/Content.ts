@@ -136,7 +136,7 @@ const section = (id: string) => {
 
 const meta = resume.meta;
 
-const { email } = resume.contacts;
+const { email, linkedin } = resume.contacts;
 
 const knowsAbout = [
   ...new Set([
@@ -148,4 +148,4 @@ const knowsAbout = [
   ]),
 ];
 
-export const Content = { contacts, email, knowsAbout, meta, section, sections };
+export const Content = { contacts, email, knowsAbout, linkedin, meta, section, sections };

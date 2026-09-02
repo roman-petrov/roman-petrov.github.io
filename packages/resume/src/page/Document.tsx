@@ -27,6 +27,7 @@ export const Document = ({ css, favicon, fonts, photo, script }: DocumentProps) 
         <meta content={Content.meta.name} name="author" />
         <link href={Content.meta.site} rel="canonical" />
         <link href={Content.meta.github} rel="me" />
+        <link href={Content.linkedin} rel="me" />
         <link href={`${Content.meta.site}${Content.meta.pdf}`} rel="alternate" type="application/pdf" />
         <meta content="#dce2eb" media="(prefers-color-scheme: light)" name="theme-color" />
         <meta content="#172839" media="(prefers-color-scheme: dark)" name="theme-color" />

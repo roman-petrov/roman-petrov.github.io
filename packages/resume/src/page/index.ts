@@ -4,6 +4,7 @@ export * from "./Document";
 export * from "./Entries";
 export * from "./Footer";
 export * from "./Hero";
+export * from "./LinkedIn";
 export * from "./Nav";
 export * from "./PdfAction";
 export * from "./Prose";
