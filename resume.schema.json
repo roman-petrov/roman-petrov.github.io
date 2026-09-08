@@ -170,8 +170,20 @@
         "principle": {
           "type": "object",
           "properties": {
-            "formula": { "type": "array", "prefixItems": [{ "type": "string" }, { "type": "string" }] },
-            "meaning": { "type": "array", "prefixItems": [{ "type": "string" }, { "type": "string" }] }
+            "formula": {
+              "type": "array",
+              "prefixItems": [{ "type": "string" }, { "type": "string" }],
+              "items": false,
+              "minItems": 2,
+              "maxItems": 2
+            },
+            "meaning": {
+              "type": "array",
+              "prefixItems": [{ "type": "string" }, { "type": "string" }],
+              "items": false,
+              "minItems": 2,
+              "maxItems": 2
+            }
           },
           "required": ["formula", "meaning"],
           "additionalProperties": false

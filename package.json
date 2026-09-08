@@ -26,6 +26,6 @@
     "@cv/do": "workspace:*"
   },
   "devDependencies": {
-    "actions-up": "^1.16.0"
+    "actions-up": "^1.19.0"
   }
 }
