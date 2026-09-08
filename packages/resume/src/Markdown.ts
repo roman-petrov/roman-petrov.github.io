@@ -68,10 +68,14 @@ const navLink = (item: Section) => `[${headline(item)}](#${slug(headline(item))}
 const section = (item: Section) =>
   [`## ${headline(item)}`, ...(item.entries ?? []).map(entry), ...(item.blocks ?? []).map(block)].join(`\n\n`);
 
-const render = () =>
-  `${[
+const render = () => {
+  const { formula, meaning } = Content.meta.principle;
+  const equation = ([left, right]: typeof formula) => `${left} = ${right}`;
+
+  return `${[
     `# ${Content.meta.name}`,
     chip(`// ${Content.meta.role}: ${Content.meta.tagline}`),
+    `${chip(equation(formula))} — ${equation(meaning)}`,
     Content.sections.map(navLink).join(` · `),
     Content.contacts.map(contactLine).join(`\n`),
     [
@@ -84,5 +88,6 @@ const render = () =>
     `---`,
     `© ${Content.meta.name}`,
   ].join(`\n\n`)}\n`;
+};
 
 export const Markdown = { render };

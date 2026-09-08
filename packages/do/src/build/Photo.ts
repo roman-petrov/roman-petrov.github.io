@@ -36,7 +36,7 @@ const render = async () => {
   const size = 480;
   const quality = 82;
   const pcb = `pcb.svg`;
-  const crop = { sideOfWidth: 0.78, topOfHeight: 0.05 };
+  const crop = { sideOfWidth: 0.78, topOfHeight: 0.1 };
   const { Assets } = await import(`@cv/resume`);
   const source = path.join(Paths.root, Assets.photo);
   const { height, width } = await sharp(source).metadata();

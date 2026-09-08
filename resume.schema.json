@@ -167,11 +167,20 @@
         "name": { "type": "string" },
         "pdf": { "type": "string" },
         "photo": { "type": "string" },
+        "principle": {
+          "type": "object",
+          "properties": {
+            "formula": { "type": "array", "prefixItems": [{ "type": "string" }, { "type": "string" }] },
+            "meaning": { "type": "array", "prefixItems": [{ "type": "string" }, { "type": "string" }] }
+          },
+          "required": ["formula", "meaning"],
+          "additionalProperties": false
+        },
         "role": { "type": "string" },
         "site": { "type": "string", "format": "uri" },
         "tagline": { "type": "string" }
       },
-      "required": ["description", "github", "name", "pdf", "photo", "role", "site", "tagline"],
+      "required": ["description", "github", "name", "pdf", "photo", "principle", "role", "site", "tagline"],
       "additionalProperties": false
     },
     "showcase": {

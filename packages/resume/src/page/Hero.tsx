@@ -3,6 +3,7 @@ import { Contact } from "./Contact";
 import styles from "./Hero.module.scss";
 import { LinkedInButton } from "./LinkedInButton";
 import { PdfButton } from "./PdfButton";
+import { Principle } from "./Principle";
 
 export type HeroProps = { photo: string };
 
@@ -18,6 +19,7 @@ export const Hero = ({ photo }: HeroProps) => (
           src={photo}
           width={240}
         />
+        <Principle />
       </figure>
       <div className={styles.copy}>
         <h1 className={styles.name}>{Content.meta.name}</h1>

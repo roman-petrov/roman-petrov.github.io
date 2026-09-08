@@ -16,6 +16,7 @@ const root = path.resolve(import.meta.dirname, `..`, `..`);
 const content = path.join(root, `resume.yml`);
 const dist = path.join(root, `dist`);
 const src = path.join(import.meta.dirname, `src`);
+const pageAssets = path.join(dist, `page-assets.json`);
 
 const generateScopedName = (name: string, fileName: string) => {
   const seed = `${relative(import.meta.dirname, fileName)}${name}`;
@@ -35,7 +36,7 @@ const pluginPage = (): Plugin => ({
   apply: `serve`,
   configureServer: server => {
     server.middlewares.use(`/assets`, sirv(path.join(dist, `assets`), { dev: true }));
-    server.watcher.add([content, src]);
+    server.watcher.add([content, src, pageAssets]);
     server.watcher.on(`all`, (event, file) => {
       if (event !== `add` && event !== `change` && event !== `unlink`) {
         return;
@@ -47,8 +48,9 @@ const pluginPage = (): Plugin => ({
         !fromSrc.startsWith(`..`) &&
         !path.isAbsolute(fromSrc) &&
         /\.(?:ts|tsx|scss|css)$/i.test(file);
+      const changed = path.resolve(file).toLowerCase();
 
-      if (path.resolve(file).toLowerCase() === content.toLowerCase() || inSrc) {
+      if (changed === content.toLowerCase() || changed === pageAssets.toLowerCase() || inSrc) {
         server.hot.send({ type: `full-reload` });
       }
     });

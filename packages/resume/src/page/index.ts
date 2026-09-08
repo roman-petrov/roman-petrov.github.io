@@ -7,6 +7,7 @@ export * from "./Hero";
 export * from "./LinkedInButton";
 export * from "./Nav";
 export * from "./PdfButton";
+export * from "./Principle";
 export * from "./Prose";
 export * from "./Section";
 export * from "./ThemeToggle";

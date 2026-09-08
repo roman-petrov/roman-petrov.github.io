@@ -1,0 +1,64 @@
+@use "../theme/core" as *;
+@use "../theme/materials";
+@use "../theme/primitives";
+@use "../theme/tokens/color";
+@use "../theme/tokens/leading";
+@use "../theme/tokens/space";
+@use "../theme/tokens/text";
+
+.root {
+  @include materials.chrome-frost;
+
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: grid;
+  grid-template-columns: max-content auto max-content;
+  gap: space.x2s() space.sm();
+  justify-content: center;
+  padding: space.xs() space.sm();
+  font-style: normal;
+  background-color: color.chrome-strong();
+}
+
+.formula,
+.meaning {
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-column: 1 / -1;
+  align-items: baseline;
+  margin: 0;
+  line-height: leading.tight();
+
+  > :first-child {
+    text-align: right;
+  }
+
+  > :last-child {
+    text-align: left;
+    white-space: nowrap;
+  }
+}
+
+.formula {
+  @include primitives.mono(text.md());
+
+  color: color.ink();
+}
+
+.meaning {
+  @include primitives.mono(text.xs());
+
+  color: color.ink-fade();
+}
+
+.eq {
+  color: color.accent();
+}
+
+@include print {
+  .root {
+    background-color: materials.panel-bg();
+  }
+}

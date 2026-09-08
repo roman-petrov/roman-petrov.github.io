@@ -2,6 +2,8 @@
 
 `// Senior Software Engineer: Good is not enough`
 
+`E = mc²` — errors = (more code)²
+
 [👤 About Me](#-about-me) · [🌐 Showcase](#-showcase) · [🧠 Expertise](#-expertise) · [🛠 Stack](#-stack) ·
 [💼 Experience](#-experience) · [🎓 Education](#-education) · [🚀 Activities](#-activities)
 

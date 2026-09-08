@@ -7,6 +7,9 @@ meta:
   name: Roman Petrov
   role: Senior Software Engineer
   tagline: Good is not enough
+  principle:
+    formula: [E, mc²]
+    meaning: [errors, "(more code)²"]
   description: >-
     Roman Petrov is a senior software engineer specializing in AI agent development, TypeScript, React, design systems,
     and front-end architecture.

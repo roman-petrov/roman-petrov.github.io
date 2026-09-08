@@ -71,6 +71,10 @@ export const ResumeSchema = z.strictObject({
     name: z.string(),
     pdf: z.string(),
     photo: z.string(),
+    principle: z.strictObject({
+      formula: z.tuple([z.string(), z.string()]),
+      meaning: z.tuple([z.string(), z.string()]),
+    }),
     role: z.string(),
     site: z.url(),
     tagline: z.string(),

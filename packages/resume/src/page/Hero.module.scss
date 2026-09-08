@@ -207,6 +207,7 @@
 .photo {
   @include materials.scroll-hero(hero-photo);
 
+  position: relative;
   align-self: start;
   width: #{r(240)};
   height: #{r(240)};
