@@ -1,10 +1,19 @@
 @use "../theme/core" as *;
 @use "../theme/materials";
 @use "../theme/primitives";
-@use "../theme/tokens/color";
 @use "../theme/tokens/leading";
 @use "../theme/tokens/space";
 @use "../theme/tokens/text";
+@use "../theme/tokens/tracking";
+@use "../theme/tokens/weight";
+
+$-accent: #2f5fbf;
+$-fill: rgb(255 255 255 / 62%);
+$-ink: #111827;
+$-mark: #9a6b2f;
+$-paper: rgb(255 255 255 / 88%);
+$-shade: rgb(0 0 0 / 45%);
+$-soft: #2f3747;
 
 .root {
   @include materials.chrome-frost;
@@ -17,9 +26,13 @@
   grid-template-columns: max-content auto max-content;
   gap: space.x2s() space.sm();
   justify-content: center;
-  padding: space.xs() space.sm();
+  padding: space.xs() space.md();
   font-style: normal;
-  background-color: color.chrome-strong();
+  color: $-ink;
+  text-shadow:
+    0 #{r(1)} #{r(2)} $-shade,
+    0 0 #{r(10)} $-shade;
+  background: $-fill;
 }
 
 .formula,
@@ -32,6 +45,7 @@
   line-height: leading.tight();
 
   > :first-child {
+    color: $-mark;
     text-align: right;
   }
 
@@ -42,23 +56,25 @@
 }
 
 .formula {
-  @include primitives.mono(text.md());
+  @include primitives.mono(text.lg());
 
-  color: color.ink();
+  font-weight: weight.semibold();
 }
 
 .meaning {
   @include primitives.mono(text.xs());
 
-  color: color.ink-fade();
+  color: $-soft;
+  letter-spacing: tracking.mono();
 }
 
 .eq {
-  color: color.accent();
+  color: $-accent;
 }
 
 @include print {
   .root {
-    background-color: materials.panel-bg();
+    background: $-paper;
+    backdrop-filter: none;
   }
 }
